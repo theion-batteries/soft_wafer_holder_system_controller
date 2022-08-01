@@ -5,13 +5,12 @@
 
 int main ()
 {
-	std::string pyFile ="repetier_manager.py";
-	std::string pyFilePath = "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/";
-	std::string pyCmd = "python ";
-	//cout << "Running keyence program ";
-	//system("C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/build/keyence_bin.exe");
-	std::cout << "Running delta program ";
-	// shell execute 
-	ShellExecute(hwnd, "find", "c:\\MyPrograms", NULL, NULL, 0);
+	LPCWSTR pyFilePath = L"C:\\Users\\SamiDhiab\\Theion_Repos\\soft_wafer_holder_system_controller\\dependencies\\software_repetier_rest_api\\src\\repetier_manager_lib\\repetier_manager.py";
+	LPCWSTR pyCmd = L"C:\\Users\\SamiDhiab\\AppData\\Local\\Programs\\Python\\Python39\\python.exe";
+	LPCWSTR cppFile =L"C:\\Users\\SamiDhiab\\Theion_Repos\\soft_wafer_holder_system_controller\\dependencies\\lib_keyence_distance_sensor\\build\\keyence_bin.exe";
+	std::cout << "Running keyence program "<<std::endl;
+	auto retVALcpp= ShellExecuteW(NULL, L"open", cppFile, NULL, NULL, SW_SHOWDEFAULT);
+	std::cout << "Running delta program "<<std::endl;
+	auto retVALpy = ShellExecuteW(NULL, L"open", pyCmd, pyFilePath, NULL, SW_SHOWDEFAULT);
 	return 0;
 }
