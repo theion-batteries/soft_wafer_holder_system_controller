@@ -153,6 +153,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/whs_controller.obj: src/whs_controller.cpp.obj
+.PHONY : src/whs_controller.obj
+
+# target to build an object file
+src/whs_controller.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj
+.PHONY : src/whs_controller.cpp.obj
+
+src/whs_controller.i: src/whs_controller.cpp.i
+.PHONY : src/whs_controller.i
+
+# target to preprocess a source file
+src/whs_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/src/whs_controller.cpp.i
+.PHONY : src/whs_controller.cpp.i
+
+src/whs_controller.s: src/whs_controller.cpp.s
+.PHONY : src/whs_controller.s
+
+# target to generate assembly for a file
+src/whs_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/src/whs_controller.cpp.s
+.PHONY : src/whs_controller.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/whs_controller.obj"
+	@echo "... src/whs_controller.i"
+	@echo "... src/whs_controller.s"
 .PHONY : help
 
 

@@ -1,7 +1,12 @@
 [
 {
   "directory": "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build",
-  "command": "C:/TDM-GCC-64/bin/c++.exe  @CMakeFiles/whs_controller.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles/whs_controller.dir/src/main.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/src/main.cpp",
+  "command": "\"C:/Program Files/LLVM/bin/clang++.exe\"  @CMakeFiles/whs_controller.dir/includes_CXX.rsp -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17 -o CMakeFiles/whs_controller.dir/src/main.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/src/main.cpp",
   "file": "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/src/main.cpp"
+},
+{
+  "directory": "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build",
+  "command": "\"C:/Program Files/LLVM/bin/clang++.exe\"  @CMakeFiles/whs_controller.dir/includes_CXX.rsp -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17 -o CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/src/whs_controller.cpp",
+  "file": "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/src/whs_controller.cpp"
 }
 ]
