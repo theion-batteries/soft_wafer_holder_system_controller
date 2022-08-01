@@ -4,3 +4,4 @@
 [submodule "dependencies/software_repetier_rest_api"]
 	path = dependencies/software_repetier_rest_api
 	url = https://github.com/samidh93/software_repetier_rest_api.git
+	branch = dev
