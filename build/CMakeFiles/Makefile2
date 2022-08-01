@@ -81,12 +81,12 @@ clean: CMakeFiles/whs_controller.dir/clean
 CMakeFiles/whs_controller.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target whs_controller"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=1,2,3 "Built target whs_controller"
 .PHONY : CMakeFiles/whs_controller.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/whs_controller.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/whs_controller.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles 0
 .PHONY : CMakeFiles/whs_controller.dir/rule

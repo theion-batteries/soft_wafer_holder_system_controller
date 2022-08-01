@@ -12,6 +12,7 @@
 #include <iostream>
 #include <string>
 #include "sockpp/tcp_connector.h"
+#include "Windows.h" 
 #include <shellapi.h> 
 #pragma once
 /**
