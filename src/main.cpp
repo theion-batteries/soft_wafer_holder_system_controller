@@ -1,4 +1,4 @@
-// A C++ program that compiles and runs another C++
+// A C++ program that compiles and runs another C++ and Python apps
 // program
 #include "Windows.h"
 #include "iostream"
