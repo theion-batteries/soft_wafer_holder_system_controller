@@ -1,6 +1,4 @@
-[submodule "dependencies/lib_keyence_distance_sensor"]
-	path = dependencies/lib_keyence_distance_sensor
-	url = https://github.com/theionSami/lib_keyence_distance_sensor.git
+
 [submodule "dependencies/software_repetier_rest_api"]
 	path = dependencies/software_repetier_rest_api
 	url = https://github.com/samidh93/software_repetier_rest_api.git
