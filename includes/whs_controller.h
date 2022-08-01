@@ -12,6 +12,7 @@
 #include <iostream>
 #include <string>
 #include "sockpp/tcp_connector.h"
+#include <shellapi.h> 
 #pragma once
 /**
  * @brief responsible for executing subprocess, handle data in both directions 

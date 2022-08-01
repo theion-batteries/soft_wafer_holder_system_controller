@@ -39,11 +39,11 @@ endif()
 
 # include libs
 include_directories(${PROJECT_SOURCE_DIR}/includes/)
-include_directories(${PROJECT_SOURCE_DIR}/dependencies/sockpp/include/)
+include_directories(${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include)
 
 # source *.cpp
 file(GLOB all_SRCS
-		"${PROJECT_SOURCE_DIR}/dependencies/sockpp/src/*.cpp"
+		"${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/*.cpp"
 
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )

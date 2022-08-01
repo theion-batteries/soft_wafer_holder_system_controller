@@ -1,5 +1,4 @@
 #include "whs_controller.h"
-
 whs_controller:: whs_controller(delta_server* delta, keyence_server* keyence){
 
     _delta_struct->ip=delta->ip;

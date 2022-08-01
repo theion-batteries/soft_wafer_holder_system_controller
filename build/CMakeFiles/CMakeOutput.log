@@ -28,12 +28,12 @@ The CXX compiler identification is Clang, found in "C:/Users/SamiDhiab/Theion_Re
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/TDM-GCC-64/bin/make.exe -f Makefile cmTC_13d29/fast && C:/TDM-GCC-64/bin/make.exe  -f CMakeFiles/cmTC_13d29.dir/build.make CMakeFiles/cmTC_13d29.dir/build
+Run Build Command(s):C:/TDM-GCC-64/bin/make.exe -f Makefile cmTC_a56d1/fast && C:/TDM-GCC-64/bin/make.exe  -f CMakeFiles/cmTC_a56d1.dir/build.make CMakeFiles/cmTC_a56d1.dir/build
 make.exe[1]: Entering directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_13d29.dir/CMakeCCompilerABI.c.obj
-"C:/Program Files/LLVM/bin/clang.exe"   -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_13d29.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles/cmTC_13d29.dir/CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_13d29.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCCompilerABI.c"
-Linking C executable cmTC_13d29.exe
-"C:/Program Files/LLVM/bin/clang.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/cmTC_13d29.dir/objects1.rsp -o cmTC_13d29.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_13d29.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp/cmTC_13d29.pdb -Xlinker /version:0.0  
+Building C object CMakeFiles/cmTC_a56d1.dir/CMakeCCompilerABI.c.obj
+"C:/Program Files/LLVM/bin/clang.exe"   -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_a56d1.dir/CMakeCCompilerABI.c.obj -MF CMakeFiles/cmTC_a56d1.dir/CMakeCCompilerABI.c.obj.d -o CMakeFiles/cmTC_a56d1.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCCompilerABI.c"
+Linking C executable cmTC_a56d1.exe
+"C:/Program Files/LLVM/bin/clang.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/cmTC_a56d1.dir/objects1.rsp -o cmTC_a56d1.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_a56d1.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp/cmTC_a56d1.pdb -Xlinker /version:0.0  
 make.exe[1]: Leaving directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp'
 
 
@@ -41,12 +41,12 @@ make.exe[1]: Leaving directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holde
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/TDM-GCC-64/bin/make.exe -f Makefile cmTC_9e328/fast && C:/TDM-GCC-64/bin/make.exe  -f CMakeFiles/cmTC_9e328.dir/build.make CMakeFiles/cmTC_9e328.dir/build
+Run Build Command(s):C:/TDM-GCC-64/bin/make.exe -f Makefile cmTC_39687/fast && C:/TDM-GCC-64/bin/make.exe  -f CMakeFiles/cmTC_39687.dir/build.make CMakeFiles/cmTC_39687.dir/build
 make.exe[1]: Entering directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_9e328.dir/CMakeCXXCompilerABI.cpp.obj
-"C:/Program Files/LLVM/bin/clang++.exe"   -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_9e328.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles/cmTC_9e328.dir/CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_9e328.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
-Linking CXX executable cmTC_9e328.exe
-"C:/Program Files/LLVM/bin/clang++.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/cmTC_9e328.dir/objects1.rsp -o cmTC_9e328.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_9e328.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp/cmTC_9e328.pdb -Xlinker /version:0.0  
+Building CXX object CMakeFiles/cmTC_39687.dir/CMakeCXXCompilerABI.cpp.obj
+"C:/Program Files/LLVM/bin/clang++.exe"   -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -MD -MT CMakeFiles/cmTC_39687.dir/CMakeCXXCompilerABI.cpp.obj -MF CMakeFiles/cmTC_39687.dir/CMakeCXXCompilerABI.cpp.obj.d -o CMakeFiles/cmTC_39687.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
+Linking CXX executable cmTC_39687.exe
+"C:/Program Files/LLVM/bin/clang++.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/cmTC_39687.dir/objects1.rsp -o cmTC_39687.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_39687.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp/cmTC_39687.pdb -Xlinker /version:0.0  
 make.exe[1]: Leaving directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp'
 
 
@@ -56,12 +56,12 @@ make.exe[1]: Leaving directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holde
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/TDM-GCC-64/bin/make.exe -f Makefile cmTC_16f91/fast && C:/TDM-GCC-64/bin/make.exe  -f CMakeFiles/cmTC_16f91.dir/build.make CMakeFiles/cmTC_16f91.dir/build
+Run Build Command(s):C:/TDM-GCC-64/bin/make.exe -f Makefile cmTC_0bc31/fast && C:/TDM-GCC-64/bin/make.exe  -f CMakeFiles/cmTC_0bc31.dir/build.make CMakeFiles/cmTC_0bc31.dir/build
 make.exe[1]: Entering directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_16f91.dir/feature_tests.cxx.obj
-"C:/Program Files/LLVM/bin/clang++.exe"   -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_16f91.dir/feature_tests.cxx.obj -MF CMakeFiles/cmTC_16f91.dir/feature_tests.cxx.obj.d -o CMakeFiles/cmTC_16f91.dir/feature_tests.cxx.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_16f91.exe
-"C:/Program Files/LLVM/bin/clang++.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/cmTC_16f91.dir/objects1.rsp -o cmTC_16f91.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_16f91.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp/cmTC_16f91.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_16f91.dir/linklibs.rsp 
+Building CXX object CMakeFiles/cmTC_0bc31.dir/feature_tests.cxx.obj
+"C:/Program Files/LLVM/bin/clang++.exe"   -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_0bc31.dir/feature_tests.cxx.obj -MF CMakeFiles/cmTC_0bc31.dir/feature_tests.cxx.obj.d -o CMakeFiles/cmTC_0bc31.dir/feature_tests.cxx.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_0bc31.exe
+"C:/Program Files/LLVM/bin/clang++.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/cmTC_0bc31.dir/objects1.rsp -o cmTC_0bc31.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_0bc31.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp/cmTC_0bc31.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_0bc31.dir/linklibs.rsp 
 make.exe[1]: Leaving directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp'
 
 
@@ -127,12 +127,12 @@ make.exe[1]: Leaving directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holde
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/TDM-GCC-64/bin/make.exe -f Makefile cmTC_d422c/fast && C:/TDM-GCC-64/bin/make.exe  -f CMakeFiles/cmTC_d422c.dir/build.make CMakeFiles/cmTC_d422c.dir/build
+Run Build Command(s):C:/TDM-GCC-64/bin/make.exe -f Makefile cmTC_4ed66/fast && C:/TDM-GCC-64/bin/make.exe  -f CMakeFiles/cmTC_4ed66.dir/build.make CMakeFiles/cmTC_4ed66.dir/build
 make.exe[1]: Entering directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d422c.dir/feature_tests.cxx.obj
-"C:/Program Files/LLVM/bin/clang++.exe"   -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_d422c.dir/feature_tests.cxx.obj -MF CMakeFiles/cmTC_d422c.dir/feature_tests.cxx.obj.d -o CMakeFiles/cmTC_d422c.dir/feature_tests.cxx.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_d422c.exe
-"C:/Program Files/LLVM/bin/clang++.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/cmTC_d422c.dir/objects1.rsp -o cmTC_d422c.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_d422c.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp/cmTC_d422c.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_d422c.dir/linklibs.rsp 
+Building CXX object CMakeFiles/cmTC_4ed66.dir/feature_tests.cxx.obj
+"C:/Program Files/LLVM/bin/clang++.exe"   -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd   -std=c++14 -MD -MT CMakeFiles/cmTC_4ed66.dir/feature_tests.cxx.obj -MF CMakeFiles/cmTC_4ed66.dir/feature_tests.cxx.obj.d -o CMakeFiles/cmTC_4ed66.dir/feature_tests.cxx.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_4ed66.exe
+"C:/Program Files/LLVM/bin/clang++.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/cmTC_4ed66.dir/objects1.rsp -o cmTC_4ed66.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:cmTC_4ed66.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp/cmTC_4ed66.pdb -Xlinker /version:0.0  @CMakeFiles/cmTC_4ed66.dir/linklibs.rsp 
 make.exe[1]: Leaving directory 'C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp'
 
 
