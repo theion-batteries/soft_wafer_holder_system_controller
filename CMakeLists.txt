@@ -5,7 +5,9 @@ cmake_minimum_required(VERSION 3.5.0)
 project(whs_controller VERSION "1.0")
 
 # Tell CMake to run python from the directory where this CMakeLists file exists.
-execute_process(COMMAND python server.py
+execute_process(COMMAND python server_delta.py
+    WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/tests)
+execute_process(COMMAND python server_keyence.py
     WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/tests)
 
 # set the C++17 standard
