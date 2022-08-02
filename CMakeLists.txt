@@ -4,6 +4,10 @@ cmake_minimum_required(VERSION 3.5.0)
 # project name
 project(whs_controller VERSION "1.0")
 
+# Tell CMake to run python from the directory where this CMakeLists file exists.
+execute_process(COMMAND python server.py
+    WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/tests)
+
 # set the C++17 standard
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -59,4 +63,5 @@ INCLUDE_DIRECTORIES(
 LINK_DIRECTORIES(
   c:/src/vcpkg/installed/x64-windows/lib/
 ) 
+
 
