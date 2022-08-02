@@ -10,13 +10,15 @@ whs_controller::whs_controller(delta_server* delta, keyence_server* keyence) {
 }
 whs_controller::whs_controller(/* args */)
 {
-    delete delta_client_sock;
-    delete keyence_client_sock;
+    std::cout << "creating wafer holder system controller " << std::endl;
+
 
 }
 
 whs_controller::~whs_controller()
 {
+    delete delta_client_sock;
+    delete keyence_client_sock;
 }
 /********* run subprocesses *******/
 void whs_controller::run_delta_subprocess() {
