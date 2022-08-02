@@ -129,6 +129,198 @@ whs_controller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/build
 .PHONY : whs_controller/fast
 
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.obj: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.obj
+
+# target to build an object file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.i: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.i
+
+# target to preprocess a source file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.i
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.s: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.s
+
+# target to generate assembly for a file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.s
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.obj: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.obj
+
+# target to build an object file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.i: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.i
+
+# target to preprocess a source file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.i
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.s: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.s
+
+# target to generate assembly for a file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.s
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.obj: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.obj
+
+# target to build an object file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.i: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.i
+
+# target to preprocess a source file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.i
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.s: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.s
+
+# target to generate assembly for a file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.s
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.obj: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.obj
+
+# target to build an object file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.i: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.i
+
+# target to preprocess a source file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.i
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.s: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.s
+
+# target to generate assembly for a file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.s
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.obj: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.obj
+
+# target to build an object file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.i: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.i
+
+# target to preprocess a source file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.i
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.s: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.s
+
+# target to generate assembly for a file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.s
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.obj: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.obj
+
+# target to build an object file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.i: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.i
+
+# target to preprocess a source file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.i
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.s: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.s
+
+# target to generate assembly for a file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.s
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.obj: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.obj
+
+# target to build an object file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.i: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.i
+
+# target to preprocess a source file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.i
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.s: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.s
+
+# target to generate assembly for a file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.s
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.obj: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.obj
+
+# target to build an object file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.i: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.i
+
+# target to preprocess a source file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.i
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.i
+
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.s: dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.s
+
+# target to generate assembly for a file
+dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/whs_controller.dir/build.make CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.s
+.PHONY : dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -186,6 +378,30 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... whs_controller"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.obj"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.i"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.s"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.obj"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.i"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.s"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.obj"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.i"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.s"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.obj"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.i"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.s"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.obj"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.i"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.s"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.obj"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.i"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.s"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.obj"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.i"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.s"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.obj"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.i"
+	@echo "... dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

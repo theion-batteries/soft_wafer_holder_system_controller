@@ -57,8 +57,13 @@ private:
     std::deque<double> keyence_last_mesured; // FIFO last 10 values
     char* keyence_incoming_data;
     u_int keyence_data_length = 255;
+
 public:
+    /******* const/desctr ****/
     whs_controller(/* args */);
+    whs_controller(delta_server* delta, keyence_server* keyence);
+    ~whs_controller();
+    /******* client controller methods ***/
     void run_delta_subprocess();
     void run_keyence_subprocess();
     void run_all_subprocesses();
@@ -66,9 +71,13 @@ public:
     void connect_to_keyence_server();
     void sendCmd(std::string cmd, sockpp::tcp_connector* client);
     void get_keyence_sensor_mesured_Values();
-    whs_controller(delta_server* delta, keyence_server* keyence);
+    void set_keyence_mesurement_mode();
+    void get_delta_position();
+    void get_delta_speed();
+    void set_delta_speed(double_t new_val);
+    void move_delta_up_to(double_t new_pos);
+    void move_delta_down_to(double_t new_pos);
+    void move_delta_up_by(double_t steps);
+    void move_delta_down_by(double_t steps);
 
-
-
-    ~whs_controller();
 };

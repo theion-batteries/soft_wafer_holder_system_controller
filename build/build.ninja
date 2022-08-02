@@ -49,78 +49,6 @@ cmake_ninja_workdir = C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_
 
 build cmake_object_order_depends_target_whs_controller: phony || CMakeFiles/whs_controller.dir
 
-build CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp || cmake_object_order_depends_target_whs_controller
-  DEP_FILE = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\acceptor.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
-  INCLUDES = -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/includes -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include -Ic:/src/vcpkg/installed/x64-windows/include
-  OBJECT_DIR = CMakeFiles\whs_controller.dir
-  OBJECT_FILE_DIR = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src
-  TARGET_COMPILE_PDB = CMakeFiles\whs_controller.dir\
-  TARGET_PDB = whs_controller.pdb
-
-build CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp || cmake_object_order_depends_target_whs_controller
-  DEP_FILE = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\connector.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
-  INCLUDES = -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/includes -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include -Ic:/src/vcpkg/installed/x64-windows/include
-  OBJECT_DIR = CMakeFiles\whs_controller.dir
-  OBJECT_FILE_DIR = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src
-  TARGET_COMPILE_PDB = CMakeFiles\whs_controller.dir\
-  TARGET_PDB = whs_controller.pdb
-
-build CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp || cmake_object_order_depends_target_whs_controller
-  DEP_FILE = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\datagram_socket.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
-  INCLUDES = -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/includes -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include -Ic:/src/vcpkg/installed/x64-windows/include
-  OBJECT_DIR = CMakeFiles\whs_controller.dir
-  OBJECT_FILE_DIR = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src
-  TARGET_COMPILE_PDB = CMakeFiles\whs_controller.dir\
-  TARGET_PDB = whs_controller.pdb
-
-build CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp || cmake_object_order_depends_target_whs_controller
-  DEP_FILE = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\exception.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
-  INCLUDES = -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/includes -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include -Ic:/src/vcpkg/installed/x64-windows/include
-  OBJECT_DIR = CMakeFiles\whs_controller.dir
-  OBJECT_FILE_DIR = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src
-  TARGET_COMPILE_PDB = CMakeFiles\whs_controller.dir\
-  TARGET_PDB = whs_controller.pdb
-
-build CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp || cmake_object_order_depends_target_whs_controller
-  DEP_FILE = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\inet6_address.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
-  INCLUDES = -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/includes -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include -Ic:/src/vcpkg/installed/x64-windows/include
-  OBJECT_DIR = CMakeFiles\whs_controller.dir
-  OBJECT_FILE_DIR = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src
-  TARGET_COMPILE_PDB = CMakeFiles\whs_controller.dir\
-  TARGET_PDB = whs_controller.pdb
-
-build CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp || cmake_object_order_depends_target_whs_controller
-  DEP_FILE = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\inet_address.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
-  INCLUDES = -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/includes -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include -Ic:/src/vcpkg/installed/x64-windows/include
-  OBJECT_DIR = CMakeFiles\whs_controller.dir
-  OBJECT_FILE_DIR = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src
-  TARGET_COMPILE_PDB = CMakeFiles\whs_controller.dir\
-  TARGET_PDB = whs_controller.pdb
-
-build CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp || cmake_object_order_depends_target_whs_controller
-  DEP_FILE = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\socket.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
-  INCLUDES = -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/includes -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include -Ic:/src/vcpkg/installed/x64-windows/include
-  OBJECT_DIR = CMakeFiles\whs_controller.dir
-  OBJECT_FILE_DIR = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src
-  TARGET_COMPILE_PDB = CMakeFiles\whs_controller.dir\
-  TARGET_PDB = whs_controller.pdb
-
-build CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp || cmake_object_order_depends_target_whs_controller
-  DEP_FILE = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\stream_socket.cpp.obj.d
-  FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
-  INCLUDES = -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/includes -IC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include -Ic:/src/vcpkg/installed/x64-windows/include
-  OBJECT_DIR = CMakeFiles\whs_controller.dir
-  OBJECT_FILE_DIR = CMakeFiles\whs_controller.dir\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src
-  TARGET_COMPILE_PDB = CMakeFiles\whs_controller.dir\
-  TARGET_PDB = whs_controller.pdb
-
 build CMakeFiles/whs_controller.dir/src/main.cpp.obj: CXX_COMPILER__whs_controller_Debug C$:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/src/main.cpp || cmake_object_order_depends_target_whs_controller
   DEP_FILE = CMakeFiles\whs_controller.dir\src\main.cpp.obj.d
   FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -std=c++17
@@ -147,10 +75,10 @@ build CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj: CXX_COMPILER__wh
 #############################################
 # Link the executable whs_controller.exe
 
-build whs_controller.exe: CXX_EXECUTABLE_LINKER__whs_controller_Debug CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj CMakeFiles/whs_controller.dir/src/main.cpp.obj CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj
+build whs_controller.exe: CXX_EXECUTABLE_LINKER__whs_controller_Debug CMakeFiles/whs_controller.dir/src/main.cpp.obj CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj | ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/build/Debug/sockpp-static.lib
   FLAGS = -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd
   LINK_FLAGS = -Xlinker /subsystem:console
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
+  LINK_LIBRARIES = ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/build/Debug/sockpp-static.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 -loldnames
   OBJECT_DIR = CMakeFiles\whs_controller.dir
   POST_BUILD = cd .
   PRE_LINK = cd .

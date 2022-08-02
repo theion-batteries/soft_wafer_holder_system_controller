@@ -69,11 +69,131 @@ include CMakeFiles/whs_controller.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/whs_controller.dir/flags.make
 
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj"
+	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj -MF CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj.d -o CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj"
+	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj -MF CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj.d -o CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj"
+	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj -MF CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj.d -o CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj"
+	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj -MF CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj.d -o CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj"
+	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj -MF CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj.d -o CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj"
+	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj -MF CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj.d -o CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj"
+	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj -MF CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj.d -o CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj"
+	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj -MF CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj.d -o CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_PREPROCESSED_SOURCE
+
+CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CXX_CREATE_ASSEMBLY_SOURCE
+
 CMakeFiles/whs_controller.dir/src/main.cpp.obj: CMakeFiles/whs_controller.dir/flags.make
 CMakeFiles/whs_controller.dir/src/main.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
 CMakeFiles/whs_controller.dir/src/main.cpp.obj: ../src/main.cpp
 CMakeFiles/whs_controller.dir/src/main.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/whs_controller.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/whs_controller.dir/src/main.cpp.obj"
 	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/src/main.cpp.obj -MF CMakeFiles/whs_controller.dir/src/main.cpp.obj.d -o CMakeFiles/whs_controller.dir/src/main.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/src/main.cpp
 
 CMakeFiles/whs_controller.dir/src/main.cpp.i: cmake_force
@@ -88,7 +208,7 @@ CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj: CMakeFiles/whs_control
 CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj: CMakeFiles/whs_controller.dir/includes_CXX.rsp
 CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj: ../src/whs_controller.cpp
 CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj: CMakeFiles/whs_controller.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj"
 	"C:/Program Files/LLVM/bin/clang++.exe" $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj -MF CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj.d -o CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj -c C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/src/whs_controller.cpp
 
 CMakeFiles/whs_controller.dir/src/whs_controller.cpp.i: cmake_force
@@ -101,19 +221,34 @@ CMakeFiles/whs_controller.dir/src/whs_controller.cpp.s: cmake_force
 
 # Object files for target whs_controller
 whs_controller_OBJECTS = \
+"CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj" \
+"CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj" \
+"CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj" \
+"CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj" \
+"CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj" \
+"CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj" \
+"CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj" \
+"CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj" \
 "CMakeFiles/whs_controller.dir/src/main.cpp.obj" \
 "CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj"
 
 # External object files for target whs_controller
 whs_controller_EXTERNAL_OBJECTS =
 
+whs_controller.exe: CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp.obj
+whs_controller.exe: CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp.obj
+whs_controller.exe: CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp.obj
+whs_controller.exe: CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp.obj
+whs_controller.exe: CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp.obj
+whs_controller.exe: CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp.obj
+whs_controller.exe: CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp.obj
+whs_controller.exe: CMakeFiles/whs_controller.dir/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp.obj
 whs_controller.exe: CMakeFiles/whs_controller.dir/src/main.cpp.obj
 whs_controller.exe: CMakeFiles/whs_controller.dir/src/whs_controller.cpp.obj
 whs_controller.exe: CMakeFiles/whs_controller.dir/build.make
-whs_controller.exe: ../dependencies/lib_keyence_distance_sensor/dependencies/sockpp/build/Debug/sockpp-static.lib
 whs_controller.exe: CMakeFiles/whs_controller.dir/linklibs.rsp
 whs_controller.exe: CMakeFiles/whs_controller.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable whs_controller.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable whs_controller.exe"
 	"C:/Program Files/LLVM/bin/clang++.exe" -fuse-ld=lld-link -nostartfiles -nostdlib -g -Xclang -gcodeview -O0 -D_DEBUG -D_DLL -D_MT -Xclang --dependent-lib=msvcrtd -Xlinker /subsystem:console @CMakeFiles/whs_controller.dir/objects1.rsp -o whs_controller.exe -Xlinker /MANIFEST:EMBED -Xlinker /implib:whs_controller.lib -Xlinker /pdb:C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/whs_controller.pdb -Xlinker /version:0.0  @CMakeFiles/whs_controller.dir/linklibs.rsp 
 
 # Rule to build all files generated by this target.

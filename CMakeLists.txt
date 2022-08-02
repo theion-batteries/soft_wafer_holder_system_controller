@@ -43,14 +43,13 @@ include_directories(${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sens
 
 # source *.cpp
 file(GLOB all_SRCS
-		#"${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/*.cpp"
-
+		"${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/*.cpp"
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
 )
 # add .exe
 add_executable(whs_controller ${all_SRCS})
 # link againt static lib
-target_link_libraries(whs_controller ${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/build/Debug/sockpp-static.lib)
+#target_link_libraries(whs_controller ${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/build/Debug/sockpp-static.lib)
 
 ## include preinstalled lib with vcpkg
 INCLUDE_DIRECTORIES(

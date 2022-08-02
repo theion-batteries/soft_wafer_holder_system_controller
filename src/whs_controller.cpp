@@ -21,11 +21,11 @@ whs_controller::~whs_controller()
 /********* run subprocesses *******/
 void whs_controller::run_delta_subprocess() {
     std::cout << "Running delta program " << std::endl;
-    auto retVALpy = ShellExecuteW(NULL, L"open", pyCmd, pyFilePath, NULL, SW_SHOWDEFAULT);
+    ShellExecuteW(NULL, L"open", pyCmd, pyFilePath, NULL, SW_SHOWDEFAULT);
 }
 void whs_controller::run_keyence_subprocess() {
     std::cout << "Running keyence program " << std::endl;
-    auto retVALcpp = ShellExecuteW(NULL, L"open", cppFile, NULL, NULL, SW_SHOWDEFAULT);
+    ShellExecuteW(NULL, L"open", cppFile, NULL, NULL, SW_SHOWDEFAULT);
 }
 void whs_controller::run_all_subprocesses()
 {
@@ -94,7 +94,7 @@ void whs_controller::get_keyence_sensor_mesured_Values()
     while (keyence_client_sock->is_connected())
         {
             // Read data from keyence
-            int hasData = keyence_client_sock->read(keyence_incoming_data, keyence_data_length);
+            ssize_t hasData = keyence_client_sock->read(keyence_incoming_data, keyence_data_length);
             if (hasData)
             {
                 current_value = std::stod(std::string(keyence_incoming_data)); // convert the data to double
