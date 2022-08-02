@@ -56,7 +56,7 @@ private:
     };
     std::deque<double> keyence_last_mesured; // FIFO last 10 values
     char* keyence_incoming_data;
-    u_int keyence_data_length = 1024;
+    u_int keyence_data_length = 255;
 
 public:
     /******* const/desctr ****/

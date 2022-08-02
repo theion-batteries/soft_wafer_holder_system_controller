@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue Aug 02 12:50:23 2022
+# Make data base, printed on Tue Aug 02 14:41:37 2022
 
 # Variables
 
@@ -92,7 +92,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10280_TAAIXEUDTIQFGTGH
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13680_HKLYXRNGKRIFHIEO
 # environment
 COMPUTERNAME = DESKTOP-BRFNNCP
 # environment
@@ -204,7 +204,8 @@ PROCESSOR_REVISION = 6001
 # environment
 CVBDATA = C:\ProgramData\STEMMER IMAGING\Common Vision Blox\
 # default
-.RECIPEPREFIX := 
+.RECIPEP 
+REFIX := 
 # environment
 LANG = C
 # environment
@@ -212,7 +213,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 10280
+VSCODE_PID = 13680
 # environment
 USERDOMAIN_ROAMINGPROFILE = AzureAD
 # variable set hash-table stats:
@@ -252,7 +253,7 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # C:\Program Files\doxygen\bin (key C:/Program Files/doxygen/bin, mtime 1652958329): 7 files, no impossibilities.
 # C:\Program Files\nodejs\ (key C:/Program Files/nodejs/, mtime 1632490465): 11 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\MiKTeX\miktex\bin\x64\ (key C:/Users/SamiDhiab/AppData/Local/Programs/MiKTeX/miktex/bin/x64/, mtime 1652959888): 732 files, no impossibilities.
-# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1659309293): 2996 files, no impossibilities.
+# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1659443939): 2996 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\ (key C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/, mtime 1633938602): 19 files, no impossibilities.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1657873902): 13 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\Scripts\ (key C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/Scripts/, mtime 1659097482): 79 files, no impossibilities.
@@ -322,7 +323,7 @@ GNUmakefile:
 # strcache performance: lookups = 4812 / hit rate = 4%
 # hash-table stats:
 # Load=4599/8192=56%, Rehash=0, Collisions=2375/4812=49%
-# Finished Make data base on Tue Aug 02 12:50:23 2022
+# Finished Make data base on Tue Aug 02 14:41:37 2022
 
  
 make.exe: *** No rule to make target 'all'.  Stop.
