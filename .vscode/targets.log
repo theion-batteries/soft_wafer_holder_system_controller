@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue Aug 02 12:39:47 2022
+# Make data base, printed on Tue Aug 02 12:50:23 2022
 
 # Variables
 
@@ -92,7 +92,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15428_MSRRMLOGSPPUHPKO
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_10280_TAAIXEUDTIQFGTGH
 # environment
 COMPUTERNAME = DESKTOP-BRFNNCP
 # environment
@@ -212,7 +212,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 15428
+VSCODE_PID = 10280
 # environment
 USERDOMAIN_ROAMINGPROFILE = AzureAD
 # variable set hash-table stats:
@@ -225,8 +225,7 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # Directories
 
 # : could not be stat'd.
-# C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0 
-/, mtime 1640088842): 34 files, no impossibilities.
+# C:\WINDOWS\System32\WindowsPowerShell\v1.0\ (key C:/WINDOWS/System32/WindowsPowerShell/v1.0/, mtime 1640088842): 34 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Roaming\npm (key C:/Users/SamiDhiab/AppData/Roaming/npm, mtime 1632490459): 2 files, no impossibilities.
 # . (key c:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller, mtime 1659427647): 12 files, no impossibilities.
 # C:\Users\SamiDhiab\.platformio\penv\Scripts\ (key C:/Users/SamiDhiab/.platformio/penv/Scripts/, mtime 1656008720): 25 files, no impossibilities.
@@ -323,7 +322,7 @@ GNUmakefile:
 # strcache performance: lookups = 4812 / hit rate = 4%
 # hash-table stats:
 # Load=4599/8192=56%, Rehash=0, Collisions=2375/4812=49%
-# Finished Make data base on Tue Aug 02 12:39:47 2022
+# Finished Make data base on Tue Aug 02 12:50:23 2022
 
  
 make.exe: *** No rule to make target 'all'.  Stop.

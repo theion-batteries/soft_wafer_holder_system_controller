@@ -25,12 +25,12 @@
 struct keyence_server
 {
     const char* ip="127.0.0.1";
-    uint16_t port=5555;
+    uint16_t port=6555;
 };
 struct delta_server
 {
     const char* ip="127.0.0.1";
-    uint16_t port=5550;
+    uint16_t port=6550;
 };
 
 class whs_controller
