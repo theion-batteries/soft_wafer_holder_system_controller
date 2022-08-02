@@ -1,17 +1,11 @@
 #include "whs_controller.h"
 /*********** constructors and desctructions **********/
-whs_controller::whs_controller(delta_server* delta, keyence_server* keyence) {
 
-    _delta_struct->ip = delta->ip;
-    _delta_struct->port = delta->port;
-    _keyence_struct->ip = keyence->ip;
-    _keyence_struct->port = keyence->port;
-
-}
 whs_controller::whs_controller(/* args */)
 {
     std::cout << "creating wafer holder system controller " << std::endl;
-
+    std::cout << "connect from ip: " <<_keyence_struct.ip<< "port "<< _keyence_struct.port<< std::endl;
+    keyence_client_sock = new sockpp::tcp_connector({ "127.0.0.1", 6555 });
 
 }
 
@@ -39,12 +33,12 @@ void whs_controller::run_all_subprocesses()
 void whs_controller::connect_to_delta_server()
 {
     std::cout << "connecting controller to delta server" << std::endl;
-    delta_client_sock = new sockpp::tcp_connector({ _delta_struct->ip, _delta_struct->port });
+    delta_client_sock = new sockpp::tcp_connector({ _delta_struct.ip, _delta_struct.port });
     // Implicitly creates an inet_address from {host,port}
     // and then tries the connection.
     if (!delta_client_sock) {
         std::cerr << "Error connecting to server at "
-            << sockpp::inet_address(_delta_struct->ip, _delta_struct->port)
+            << sockpp::inet_address(_delta_struct.ip, _delta_struct.port)
             << "\n\t" << delta_client_sock->last_error_str() << std::endl;
         return;
     }
@@ -58,13 +52,13 @@ void whs_controller::connect_to_delta_server()
 }
 void whs_controller::connect_to_keyence_server()
 {
+    
   std::cout << "connecting controller to keyence server" << std::endl;
-    keyence_client_sock = new sockpp::tcp_connector({ _keyence_struct->ip, _keyence_struct->port });
     // Implicitly creates an inet_address from {host,port}
     // and then tries the connection.
     if (!keyence_client_sock) {
         std::cerr << "Error connecting to server at "
-            << sockpp::inet_address(_keyence_struct->ip, _keyence_struct->port)
+            << sockpp::inet_address(_keyence_struct.ip, _keyence_struct.port)
             << "\n\t" << keyence_client_sock->last_error_str() << std::endl;
         return;
     }

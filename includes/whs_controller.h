@@ -39,8 +39,8 @@ private:
 	LPCWSTR pyFilePath = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/command_parser.py";
 	LPCWSTR pyCmd = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
 	LPCWSTR cppFile =L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/build/Debug/keyence_bin.exe";
-    delta_server* _delta_struct;
-    keyence_server* _keyence_struct;
+    delta_server _delta_struct;
+    keyence_server _keyence_struct;
     sockpp::socket_initializer sockInit;
     sockpp::tcp_connector* delta_client_sock;
     sockpp::tcp_connector* keyence_client_sock;
@@ -56,12 +56,11 @@ private:
     };
     std::deque<double> keyence_last_mesured; // FIFO last 10 values
     char* keyence_incoming_data;
-    u_int keyence_data_length = 255;
+    u_int keyence_data_length = 1024;
 
 public:
     /******* const/desctr ****/
     whs_controller(/* args */);
-    whs_controller(delta_server* delta, keyence_server* keyence);
     ~whs_controller();
     /******* client controller methods ***/
     void run_delta_subprocess();
