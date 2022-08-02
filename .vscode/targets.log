@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Mon Aug 01 09:56:18 2022
+# Make data base, printed on Tue Aug 02 09:22:05 2022
 
 # Variables
 
@@ -76,8 +76,7 @@ COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
 CHOCOLATEYLASTPATHUPDATE = 132776740991238767
 # environment
-PROCESSOR_ARCHITECTURE  
-= x86
+PROCESSOR_ARCHITECTURE = x86
 # environment
 PLATFORMIO = C:\Users\SamiDhiab\.platformio\penv\Scripts\platformio.exe
 # environment
@@ -93,7 +92,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15156_UQJSWOHCUZUAUHOJ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18924_EWKYEAVHGDRZZDYX
 # environment
 COMPUTERNAME = DESKTOP-BRFNNCP
 # environment
@@ -213,7 +212,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 15156
+VSCODE_PID = 18924
 # environment
 USERDOMAIN_ROAMINGPROFILE = AzureAD
 # variable set hash-table stats:
@@ -238,8 +237,7 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # C:\TDM-GCC-64\bin (key C:/TDM-GCC-64/bin, mtime 1658999076): 89 files, no impossibilities.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1631803578): 8 files, no impossibilities.
 # C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
-# C:\Program Files (x86)\Graphviz\bin (key C:/Program Files (x86)/Graphviz/bin, mtime 1652959808): 62  
-files, no impossibilities.
+# C:\Program Files (x86)\Graphviz\bin (key C:/Program Files (x86)/Graphviz/bin, mtime 1652959808): 62 files, no impossibilities.
 # C:\Program Files\CMake\bin (key C:/Program Files/CMake/bin, mtime 1637523212): 7 files, no impossibilities.
 # C:\WINDOWS (key C:/WINDOWS, mtime 1657876237): 134 files, no impossibilities.
 # C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.2\bin (key C:/Program Files/JetBrains/PyCharm Community Edition 2021.2.2/bin, mtime 1634660577): 28 files, no impossibilities.
@@ -324,7 +322,7 @@ GNUmakefile:
 # strcache performance: lookups = 4811 / hit rate = 4%
 # hash-table stats:
 # Load=4598/8192=56%, Rehash=0, Collisions=2373/4811=49%
-# Finished Make data base on Mon Aug 01 09:56:18 2022
+# Finished Make data base on Tue Aug 02 09:22:05 2022
 
  
 make.exe: *** No rule to make target 'all'.  Stop.
