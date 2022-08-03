@@ -55,9 +55,10 @@ private:
         {5,"up_by"}, {6,"down_by"}, 
     };
     std::deque<double> keyence_last_mesured; // FIFO last 10 values
-    char* keyence_incoming_data;
-    u_int keyence_data_length = 255;
-
+    std::string keyence_incoming_data;
+    u_int keyence_data_length = 1024;
+    std::string delta_incoming_data;
+    u_int delta_data_length = 1024;
 public:
     /******* const/desctr ****/
     whs_controller(/* args */);
