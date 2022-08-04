@@ -64,6 +64,7 @@ public:
     whs_controller(/* args */);
     ~whs_controller();
     /******* client controller methods ***/
+    void close_all_sockets();
     void run_delta_subprocess();
     void run_keyence_subprocess();
     void run_all_subprocesses();

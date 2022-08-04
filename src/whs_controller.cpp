@@ -11,6 +11,13 @@ whs_controller::~whs_controller()
     delete delta_client_sock;
     delete keyence_client_sock;
 }
+void whs_controller::close_all_sockets()
+{
+    if(!keyence_client_sock) keyence_client_sock->close();
+    if(!delta_client_sock) delta_client_sock->close();
+
+}
+
 /********* run subprocesses *******/
 void whs_controller::run_delta_subprocess() {
     std::cout << "Running delta program " << std::endl;
@@ -122,14 +129,14 @@ void whs_controller::get_keyence_sensor_mesured_Values()
     {
 
         // Read data from keyence
-        ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], command->second.length());
+        ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], 1024);
         std::cout << "n bytes: " << n << std::endl;
         std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
-        if (n != ssize_t(command->second.length())) {
-            std::cerr << "Error reading from TCP stream: "
-                << keyence_client_sock->last_error_str() << std::endl;
-            break;
-        }
+        //if (n != ssize_t(command->second.length())) {
+        //    std::cerr << "Error reading from TCP stream: "
+        //        << keyence_client_sock->last_error_str() << std::endl;
+        //    break;
+        //}
         std::cout << "server replied succeffully: " << keyence_incoming_data.c_str() << std::endl;
         current_value = std::stod(keyence_incoming_data); // convert the data to double
         keyence_last_mesured.push_back(current_value); // add to table
@@ -150,16 +157,14 @@ void whs_controller::get_delta_position()
     while (delta_client_sock->is_connected())
     {
         // Read_n data from keyence
-        ssize_t n = delta_client_sock->read_n(&delta_incoming_data[0], command->second.length());
-        std::cout << "data: " << delta_incoming_data << std::endl;
-
-        if (n != ssize_t(command->second.length())) {
-            std::cerr << "Error reading from TCP stream: "
-                << delta_client_sock->last_error_str() << std::endl;
-            break;
+        ssize_t n = delta_client_sock->read_n(&delta_incoming_data[0], 1024);
+        std::cout << "n bytes: " << n << std::endl;
+        std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
+        if (n>0)
+        {
+        std::cout << "server replied succeffully: " << delta_incoming_data.c_str() << std::endl;
+        break;
         }
-        std::cout << "data: " << delta_incoming_data << std::endl;
-
     }
 }
 void whs_controller::get_delta_speed()

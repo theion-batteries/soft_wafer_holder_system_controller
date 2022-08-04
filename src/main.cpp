@@ -14,5 +14,6 @@ int main ()
 
 	wafer_sys_control.connect_to_delta_server();
 	wafer_sys_control.get_delta_position();
+	wafer_sys_control.close_all_sockets();
 	return 0;
 }
