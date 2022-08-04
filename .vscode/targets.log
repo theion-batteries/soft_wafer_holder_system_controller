@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue Aug 02 14:41:37 2022
+# Make data base, printed on Thu Aug 04 12:25:20 2022
 
 # Variables
 
@@ -28,7 +28,8 @@ PLATFORMIO_IDE = 2.5.1
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-HOMEDRIVE = C:
+HOMEDRIVE = C 
+:
 # automatic
 @F = $(notdir $@)
 # automatic
@@ -92,7 +93,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_13680_HKLYXRNGKRIFHIEO
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_16436_WPQQNGECTQABIQGH
 # environment
 COMPUTERNAME = DESKTOP-BRFNNCP
 # environment
@@ -160,7 +161,8 @@ OS = Windows_NT
 # environment
 VSCODE_IPC_HOOK = \\.\pipe\66617ee1df8269f425333cb861d18dbe-1.69.2-main-sock
 # environment
-PYTHONPATH = C:\Users\SamiDhiab\Theion_Repos;C:\Users\SamiDhiab\Theion_Repos\IR_Thermal_Camera\test\Medium_Imports_Tutorial\utils;C:\Users\SamiDhiab\Theion_Repos\soft_temperature_control_module\lib;
+PYTHONPATH = C:\Users\SamiDhiab\Theion_Repos;C:\Users\SamiDhiab\Theion_Repos\IR_Th 
+ermal_Camera\test\Medium_Imports_Tutorial\utils;C:\Users\SamiDhiab\Theion_Repos\soft_temperature_control_module\lib;
 # environment
 HOMEPATH = \Users\SamiDhiab
 # environment
@@ -213,7 +215,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 13680
+VSCODE_PID = 16436
 # environment
 USERDOMAIN_ROAMINGPROFILE = AzureAD
 # variable set hash-table stats:
@@ -234,13 +236,14 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # C:\Program Files (x86)\Common Files\Oracle\Java\javapath (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 1652174015): 5 files, no impossibilities.
 # C:\Program Files\STEMMER IMAGING\Common Vision Blox\ (key C:/Program Files/STEMMER IMAGING/Common Vision Blox/, mtime 1634050659): 73 files, no impossibilities.
 # C: could not be stat'd.
-# C:\Users\SamiDhiab\AppData\Local\Microsoft\WindowsApps (key C:/Users/SamiDhiab/AppData/Local/Microsoft/WindowsApps, mtime 1658743225): 17 files, no impossibilities.
+# C:\Users\SamiDhiab\AppData\Local\Microsoft\WindowsApps (key C:/Users/SamiDhiab/AppData/Local/Microsoft/WindowsApps, mtime 1659598087): 17 files, no impossibilities.
 # C:\TDM-GCC-64\bin (key C:/TDM-GCC-64/bin, mtime 1658999076): 89 files, no impossibilities.
 # C:\Program Files\Git\cmd (key C:/Program Files/Git/cmd, mtime 1631803578): 8 files, no impossibilities.
 # C:\WINDOWS\System32\OpenSSH\: could not be stat'd.
-# C:\Program Files (x86)\Graphviz\bin (key C:/Program Files (x86)/Graphviz/bin, mtime 1652959808): 62 files, no impossibilities.
+# C:\Program Files (x86)\Graphviz\bin (key C:/Program Files (x86)/Graphviz/bin, mtime 1652959808): 62  
+files, no impossibilities.
 # C:\Program Files\CMake\bin (key C:/Program Files/CMake/bin, mtime 1637523212): 7 files, no impossibilities.
-# C:\WINDOWS (key C:/WINDOWS, mtime 1657876237): 134 files, no impossibilities.
+# C:\WINDOWS (key C:/WINDOWS, mtime 1659539556): 134 files, no impossibilities.
 # C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.2\bin (key C:/Program Files/JetBrains/PyCharm Community Edition 2021.2.2/bin, mtime 1634660577): 28 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/SamiDhiab/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1658231940): 4 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\BFGroup\B2\ (key C:/Users/SamiDhiab/AppData/Local/Programs/BFGroup/B2/, mtime 1657788032): 4 files, no impossibilities.
@@ -253,7 +256,7 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # C:\Program Files\doxygen\bin (key C:/Program Files/doxygen/bin, mtime 1652958329): 7 files, no impossibilities.
 # C:\Program Files\nodejs\ (key C:/Program Files/nodejs/, mtime 1632490465): 11 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\MiKTeX\miktex\bin\x64\ (key C:/Users/SamiDhiab/AppData/Local/Programs/MiKTeX/miktex/bin/x64/, mtime 1652959888): 732 files, no impossibilities.
-# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1659443939): 2996 files, no impossibilities.
+# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1659539563): 2996 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\ (key C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/, mtime 1633938602): 19 files, no impossibilities.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1657873902): 13 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\Scripts\ (key C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/Scripts/, mtime 1659097482): 79 files, no impossibilities.
@@ -323,7 +326,7 @@ GNUmakefile:
 # strcache performance: lookups = 4812 / hit rate = 4%
 # hash-table stats:
 # Load=4599/8192=56%, Rehash=0, Collisions=2375/4812=49%
-# Finished Make data base on Tue Aug 02 14:41:37 2022
+# Finished Make data base on Thu Aug 04 12:25:20 2022
 
  
 make.exe: *** No rule to make target 'all'.  Stop.
