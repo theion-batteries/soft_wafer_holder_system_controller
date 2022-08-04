@@ -96,7 +96,7 @@ void  whs_controller::set_keyence_mesurement_mode()
     while (keyence_client_sock->is_connected())
     {
         // Read data from keyence
-        ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], command->second.length());
+        ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], 1024);
         std::cout << "n bytes: " << n << std::endl;
         std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
         if (n != ssize_t(command->second.length())) {
