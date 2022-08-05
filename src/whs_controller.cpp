@@ -96,14 +96,14 @@ void  whs_controller::set_keyence_mesurement_mode()
     while (keyence_client_sock->is_connected())
     {
         // Read data from keyence
-        ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], 1024);
+        ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], command->second.length());
         std::cout << "n bytes: " << n << std::endl;
         std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
-        //if (n != ssize_t(command->second.length())) {
-        //    std::cerr << "Error reading from TCP stream: "
-        //        << keyence_client_sock->last_error_str() << std::endl;
-        //    break;
-        //}
+        if (n != ssize_t(command->second.length())) {
+            std::cerr << "Error reading from TCP stream: "
+                << keyence_client_sock->last_error_str() << std::endl;
+            break;
+        }
         if (keyence_incoming_data.c_str() == command->second) //reply with same msg is success
         {
             std::cout << "server replied succeffully: " << keyence_incoming_data.c_str() << std::endl;
@@ -129,14 +129,14 @@ void whs_controller::get_keyence_sensor_mesured_Values()
     {
 
         // Read data from keyence
-        ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], 1024);
+        ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], command->second.length());
         std::cout << "n bytes: " << n << std::endl;
         std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
-        //if (n != ssize_t(command->second.length())) {
-        //    std::cerr << "Error reading from TCP stream: "
-        //        << keyence_client_sock->last_error_str() << std::endl;
-        //    break;
-        //}
+        if (n != ssize_t(command->second.length())) {
+            std::cerr << "Error reading from TCP stream: "
+                << keyence_client_sock->last_error_str() << std::endl;
+            break;
+        }
         std::cout << "server replied succeffully: " << keyence_incoming_data.c_str() << std::endl;
         current_value = std::stod(keyence_incoming_data); // convert the data to double
         keyence_last_mesured.push_back(current_value); // add to table
