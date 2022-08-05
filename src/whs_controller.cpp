@@ -99,11 +99,11 @@ void  whs_controller::set_keyence_mesurement_mode()
         ssize_t n = keyence_client_sock->read_n(&keyence_incoming_data[0], 1024);
         std::cout << "n bytes: " << n << std::endl;
         std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
-        if (n != ssize_t(command->second.length())) {
-            std::cerr << "Error reading from TCP stream: "
-                << keyence_client_sock->last_error_str() << std::endl;
-            break;
-        }
+        //if (n != ssize_t(command->second.length())) {
+        //    std::cerr << "Error reading from TCP stream: "
+        //        << keyence_client_sock->last_error_str() << std::endl;
+        //    break;
+        //}
         if (keyence_incoming_data.c_str() == command->second) //reply with same msg is success
         {
             std::cout << "server replied succeffully: " << keyence_incoming_data.c_str() << std::endl;
