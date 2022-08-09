@@ -3,3 +3,6 @@
 	path = dependencies/software_repetier_rest_api
 	url = https://github.com/samidh93/software_repetier_rest_api.git
 	branch = dev
+[submodule "dependencies/lib_keyence_sdk"]
+	path = dependencies/lib_keyence_sdk
+	url = https://github.com/theionSami/lib_keyence_sdk.git
