@@ -11,7 +11,7 @@ int main()
 	// delta
 	wafer_sys_control.run_delta_subprocess();
 	wafer_sys_control.connect_to_delta_server();
-	wafer_sys_control.get_delta_position();
+	//wafer_sys_control.get_delta_position();
 
 
 
