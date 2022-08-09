@@ -58,6 +58,11 @@ private:
         {5,"up_by"}, {6,"down_by"}, 
     };
     std::deque<double> keyence_last_mesured; // FIFO last 10 values
+    std::deque<double> keyence_last_mesured_output0; // FIFO last 10 values
+    std::deque<double> keyence_last_mesured_output1; // FIFO last 10 values
+    std::deque<double> keyence_last_mesured_output2; // FIFO last 10 values
+    std::deque<double> delta_last_position; // FIFO last 10 values
+
     std::string keyence_incoming_data;
     u_int keyence_data_length = 1024;
     std::string delta_incoming_data;
@@ -71,6 +76,9 @@ public:
     void run_delta_subprocess();
     void run_keyence_subprocess();
     void keyence_client_connect();
+    void keyence_client_get_value_output0();
+    void keyence_client_get_value_output1();
+    void keyence_client_get_value_output2();
     void run_all_subprocesses();
     void connect_to_delta_server();
     void connect_to_keyence_server();
