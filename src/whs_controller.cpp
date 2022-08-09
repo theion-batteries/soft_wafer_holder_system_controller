@@ -17,6 +17,13 @@ void whs_controller::close_all_sockets()
     if(!delta_client_sock) delta_client_sock->close();
 
 }
+/********* keyence client *********/
+void whs_controller::keyence_client_connect()
+{
+    std::cout << "Running keyence client " << std::endl;
+    Kclient= new keyence_client(keyence_ip);
+    Kclient->connect();
+}
 
 /********* run subprocesses *******/
 void whs_controller::run_delta_subprocess() {

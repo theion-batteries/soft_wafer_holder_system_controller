@@ -16,6 +16,7 @@
 #include <shellapi.h> 
 #include <map>
 #include <queue>
+#include "keyence_client.h"
 #pragma once
 /**
  * @brief responsible for executing subprocess, handle data in both directions 
@@ -44,6 +45,8 @@ private:
     sockpp::socket_initializer sockInit;
     sockpp::tcp_connector* delta_client_sock;
     sockpp::tcp_connector* keyence_client_sock;
+    const char* keyence_ip = "192.168.0.104";
+    keyence_client* Kclient;
     std::map<u_int, std::string> keyence_cmds={
         {1,"get1"}, {2,"get2"}, 
         {3,"get3"}, {4,"get_all"}, 
@@ -67,6 +70,7 @@ public:
     void close_all_sockets();
     void run_delta_subprocess();
     void run_keyence_subprocess();
+    void keyence_client_connect();
     void run_all_subprocesses();
     void connect_to_delta_server();
     void connect_to_keyence_server();
