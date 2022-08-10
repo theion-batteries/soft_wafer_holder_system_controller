@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue Aug 09 16:00:01 2022
+# Make data base, printed on Wed Aug 10 10:03:51 2022
 
 # Variables
 
@@ -44,7 +44,8 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 VBOX_MSI_INSTALL_PATH = C:\Program Files\Oracle\VirtualBox\
 # environment
-PYCHARM COMMUNITY EDITION = C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.2\bin;
+PYCHARM COMMUNITY EDITION = C:\Program Files\JetBrains\PyCharm Community Edit 
+ion 2021.2.2\bin;
 # environment
 ONEDRIVE = C:\Users\SamiDhiab\OneDrive - Theion GmbH
 # environment
@@ -92,7 +93,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_6152_VQFKKJEIGMJPQSNA
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_15120_MVBYTSWHTGEFGPBB
 # environment
 COMPUTERNAME = DESKTOP-BRFNNCP
 # environment
@@ -212,7 +213,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 6152
+VSCODE_PID = 15120
 # environment
 USERDOMAIN_ROAMINGPROFILE = AzureAD
 # variable set hash-table stats:
@@ -249,7 +250,8 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # C:\Program Files\Eclipse Foundation\jdk-8.0.302.8-hotspot\bin (key C:/Program Files/Eclipse Foundation/jdk-8.0.302.8-hotspot/bin, mtime 1637168167): 53 files, no impossibilities.
 # C:\Program Files\Microsoft SQL Server\130\Tools\Binn\ (key C:/Program Files/Microsoft SQL Server/130/Tools/Binn/, mtime 1636023284): 4 files, no impossibilities.
 # C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1657876240): 174 files, no impossibilities.
-# C:\Program Files\doxygen\bin (key C:/Program Files/doxygen/bin, mtime 1652958329): 7 files, no impossibilities.
+# C:\Program Files\doxygen\bin (key C:/Progra 
+m Files/doxygen/bin, mtime 1652958329): 7 files, no impossibilities.
 # C:\Program Files\nodejs\ (key C:/Program Files/nodejs/, mtime 1632490465): 11 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\MiKTeX\miktex\bin\x64\ (key C:/Users/SamiDhiab/AppData/Local/Programs/MiKTeX/miktex/bin/x64/, mtime 1652959888): 732 files, no impossibilities.
 # C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1660045726): 2996 files, no impossibilities.
@@ -322,7 +324,7 @@ GNUmakefile:
 # strcache performance: lookups = 4813 / hit rate = 4%
 # hash-table stats:
 # Load=4600/8192=56%, Rehash=0, Collisions=2375/4813=49%
-# Finished Make data base on Tue Aug 09 16:00:01 2022
+# Finished Make data base on Wed Aug 10 10:03:51 2022
 
  
 make.exe: *** No rule to make target 'all'.  Stop.
