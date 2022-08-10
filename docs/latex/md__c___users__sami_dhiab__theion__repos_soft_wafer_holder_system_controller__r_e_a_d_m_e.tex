@@ -1,0 +1,57 @@
+contains wafer holder system controller source code
+
+
+\begin{DoxyItemize}
+\item author\+: Sami dhiab
+\item email\+: \href{mailto:sami@theion.de}{\texttt{ sami@theion.\+de}}
+\end{DoxyItemize}\hypertarget{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md1}{}\doxysection{Concept (version 0.\+1)}\label{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md1}
+the image below explains how concept is made\+:
+
+
+
+the wafer holder motion system is based on two subsystem\+:
+\begin{DoxyItemize}
+\item delta motion system
+\item keyence distance sensor controller
+\end{DoxyItemize}
+
+these 2 subsystems shall run on independant processes and communicate with a controller process via socket.
+
+the image below show some output after running first tests\+: \hypertarget{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md2}{}\doxysection{Concept (version 0.\+2)}\label{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md2}
+After including the keyence sdk, the server bridge in the above foto is neglected and keyence lib sdk will be directly included in the whs controller class (without server) to controll the keyence controller and get mesurement.\hypertarget{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md3}{}\doxysection{dependencies}\label{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md3}
+The whs controller lib depends on\+:
+\begin{DoxyItemize}
+\item 1. keyence\+\_\+sdk submodule\+: see dependecies/
+\item 2. software\+\_\+repetier\+\_\+rest\+\_\+api submodule\+: see dependencies/
+\end{DoxyItemize}
+\begin{DoxyEnumerate}
+\item keyence lib rely on 3 dlls (dynamic libaries). these dlls must be included in the same folder as the .exe file (see build/debug/) for debug or (build/release/) for release version. see dependencies/lib\+\_\+keyence\+\_\+sdk/includes
+\item repetier (delta) lib rely on\+:
+\begin{DoxyItemize}
+\item pip modules\+: see requirements.\+txt
+\item delta\+\_\+server.\+py\+: run this server as subprocess and process data. see dependencies/software\+\_\+repetier\+\_\+rest\+\_\+api/src/repetier\+\_\+manager\+\_\+lib/ 
+\end{DoxyItemize}
+\end{DoxyEnumerate}\hypertarget{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md4}{}\doxysection{Design}\label{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md4}
+the design should rely on mvc pattern (model-\/view-\/control) to comply with the high level architecture and the user interface later. Details can be found in the parent folder.\hypertarget{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md5}{}\doxysection{APIs}\label{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md5}
+\hypertarget{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md6}{}\doxysection{Tests}\label{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md6}
+unit tests will included under tests/ folder to test teh following\+:
+\begin{DoxyItemize}
+\item 
+\item 
+\end{DoxyItemize}\hypertarget{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md7}{}\doxysection{Q\&A}\label{md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyEnumerate}
+\item if cmake failed to build due to socket dependecies problems, do the following 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{comment}{// in file dependencies/lib\_keyence\_distance\_sensor/dependencies/sockpp/include/sockpp/platform.h}}
+\DoxyCodeLine{\textcolor{comment}{// paste these lines anywhere}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{comment}{/* Need to link with Ws2\_32.lib, Mswsock.lib, and Advapi32.lib*/}}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma comment (lib, "{}Ws2\_32.lib"{}})}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma comment (lib, "{}Mswsock.lib"{}})}
+\DoxyCodeLine{\textcolor{preprocessor}{\#pragma comment (lib, "{}AdvApi32.lib"{}})}
+
+\end{DoxyCode}
+
+\item if the executable doesn\textquotesingle{}t run properly, check if the dlls are put in the same folder as teh .exe file 
+\end{DoxyEnumerate}

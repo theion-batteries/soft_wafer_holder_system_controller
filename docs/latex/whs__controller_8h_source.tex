@@ -1,0 +1,88 @@
+\hypertarget{whs__controller_8h_source}{}\doxysection{whs\+\_\+controller.\+h}
+\label{whs__controller_8h_source}\index{whs\_controller.h@{whs\_controller.h}}
+\mbox{\hyperlink{whs__controller_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}sockpp/socket.h"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include "{}sockpp/tcp\_connector.h"{}}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}Windows.h"{}} }
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <shellapi.h>} }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}keyence\_client.h"{}}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{26 \textcolor{keyword}{struct }\mbox{\hyperlink{structkeyence__server}{keyence\_server}}}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* ip=\textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{29     uint16\_t port=6555;}
+\DoxyCodeLine{30 \};}
+\DoxyCodeLine{31 \textcolor{keyword}{struct }\mbox{\hyperlink{structdelta__server}{delta\_server}}}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* ip=\textcolor{stringliteral}{"{}127.0.0.1"{}};}
+\DoxyCodeLine{34     uint16\_t port=6550;}
+\DoxyCodeLine{35 \};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keyword}{class }\mbox{\hyperlink{classwhs__controller}{whs\_controller}}}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{39 \textcolor{keyword}{private}:}
+\DoxyCodeLine{40     LPCWSTR pyFilePath = L\textcolor{stringliteral}{"{}C:/Users/SamiDhiab/Theion\_Repos/soft\_wafer\_holder\_system\_controller/dependencies/software\_repetier\_rest\_api/src/repetier\_manager\_lib/delta\_server.py"{}};}
+\DoxyCodeLine{41     LPCWSTR pyCmd = L\textcolor{stringliteral}{"{}C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe"{}};}
+\DoxyCodeLine{42     LPCWSTR cppFile =L\textcolor{stringliteral}{"{}C:/Users/SamiDhiab/Theion\_Repos/soft\_wafer\_holder\_system\_controller/dependencies/lib\_keyence\_distance\_sensor/build/Debug/keyence\_bin.exe"{}};}
+\DoxyCodeLine{43     \mbox{\hyperlink{structdelta__server}{delta\_server}} \_delta\_struct;}
+\DoxyCodeLine{44     \mbox{\hyperlink{structkeyence__server}{keyence\_server}} \_keyence\_struct;}
+\DoxyCodeLine{45     sockpp::socket\_initializer sockInit;}
+\DoxyCodeLine{46     sockpp::tcp\_connector* delta\_client\_sock;}
+\DoxyCodeLine{47     sockpp::tcp\_connector* keyence\_client\_sock;}
+\DoxyCodeLine{48     \textcolor{keyword}{const} \textcolor{keywordtype}{char}* keyence\_ip = \textcolor{stringliteral}{"{}192.168.0.104"{}};}
+\DoxyCodeLine{49     keyence\_client* Kclient;}
+\DoxyCodeLine{50     std::map<u\_int, std::string> keyence\_cmds=\{}
+\DoxyCodeLine{51         \{1,\textcolor{stringliteral}{"{}get1"{}}\}, \{2,\textcolor{stringliteral}{"{}get2"{}}\}, }
+\DoxyCodeLine{52         \{3,\textcolor{stringliteral}{"{}get3"{}}\}, \{4,\textcolor{stringliteral}{"{}get\_all"{}}\}, }
+\DoxyCodeLine{53         \{5,\textcolor{stringliteral}{"{}set\_R0"{}}\}, \{6,\textcolor{stringliteral}{"{}set\_Q0"{}}\}, }
+\DoxyCodeLine{54     \};}
+\DoxyCodeLine{55     std::map<u\_int, std::string> delta\_cmds=\{}
+\DoxyCodeLine{56         \{1,\textcolor{stringliteral}{"{}get\_pos"{}}\}, \{2,\textcolor{stringliteral}{"{}get\_speed"{}}\}, }
+\DoxyCodeLine{57         \{3,\textcolor{stringliteral}{"{}up\_to"{}}\}, \{4,\textcolor{stringliteral}{"{}down\_to"{}}\}, }
+\DoxyCodeLine{58         \{5,\textcolor{stringliteral}{"{}up\_by"{}}\}, \{6,\textcolor{stringliteral}{"{}down\_by"{}}\}, }
+\DoxyCodeLine{59     \};}
+\DoxyCodeLine{60     std::deque<double> keyence\_last\_mesured; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{61     std::deque<double> keyence\_last\_mesured\_output0; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{62     std::deque<double> keyence\_last\_mesured\_output1; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{63     std::deque<double> keyence\_last\_mesured\_output2; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{64     std::deque<double> delta\_last\_position; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{65 }
+\DoxyCodeLine{66     std::string keyence\_incoming\_data;}
+\DoxyCodeLine{67     u\_int keyence\_data\_length = 1024;}
+\DoxyCodeLine{68     std::string delta\_incoming\_data;}
+\DoxyCodeLine{69     u\_int delta\_data\_length = 1024;}
+\DoxyCodeLine{70 \textcolor{keyword}{public}:}
+\DoxyCodeLine{71 \textcolor{comment}{    /******* const/desctr ****/}}
+\DoxyCodeLine{72     \mbox{\hyperlink{classwhs__controller}{whs\_controller}}(\textcolor{comment}{/* args */});}
+\DoxyCodeLine{73     \mbox{\hyperlink{classwhs__controller}{\string~whs\_controller}}();}
+\DoxyCodeLine{74 \textcolor{comment}{    /******* client controller methods ***/}}
+\DoxyCodeLine{75     \textcolor{keywordtype}{void} close\_all\_sockets();}
+\DoxyCodeLine{76     \textcolor{keywordtype}{void} run\_delta\_subprocess();}
+\DoxyCodeLine{77     \textcolor{keywordtype}{void} run\_keyence\_subprocess();}
+\DoxyCodeLine{78     \textcolor{keywordtype}{void} keyence\_client\_connect();}
+\DoxyCodeLine{79     \textcolor{keywordtype}{void} keyence\_client\_get\_value\_output0();}
+\DoxyCodeLine{80     \textcolor{keywordtype}{void} keyence\_client\_get\_value\_output1();}
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} keyence\_client\_get\_value\_output2();}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} run\_all\_subprocesses();}
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} connect\_to\_delta\_server();}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} connect\_to\_keyence\_server();}
+\DoxyCodeLine{85     \textcolor{keywordtype}{void} sendCmd(std::string cmd, sockpp::tcp\_connector* client);}
+\DoxyCodeLine{86     \textcolor{keywordtype}{void} get\_keyence\_sensor\_mesured\_Values();}
+\DoxyCodeLine{87     \textcolor{keywordtype}{void} set\_keyence\_mesurement\_mode();}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} get\_delta\_position();}
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} get\_delta\_speed();}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} set\_delta\_speed(double\_t new\_val);}
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} move\_delta\_up\_to(double\_t new\_pos);}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} move\_delta\_down\_to(double\_t new\_pos);}
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} move\_delta\_up\_by(double\_t steps);}
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} move\_delta\_down\_by(double\_t steps);}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96 \};}
+
+\end{DoxyCode}

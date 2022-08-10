@@ -41,7 +41,7 @@ DOXYFILE_ENCODING      = UTF-8
 # title of most generated pages and in a few other places.
 # The default value is: My Project.
 
-PROJECT_NAME           = "Keyence Library"
+PROJECT_NAME           = "wafer holder motion system"
 
 # The PROJECT_NUMBER tag can be used to enter a project or revision number. This
 # could be handy for archiving the generated documentation or if some version
@@ -908,7 +908,9 @@ WARN_LOGFILE           =
 
 INPUT                  = ../src \
                          ../includes \
-                         ../dependencies/include \
+                         ../dependencies/lib_keyence_sdk/src \
+                         ../dependencies/lib_keyence_sdk/icludes \
+                         ../dependencies/software_repetier_rest_api/src/repetier_manager_lib \
                          ../README.md
 
 # This tag can be used to specify the character encoding of the source files
