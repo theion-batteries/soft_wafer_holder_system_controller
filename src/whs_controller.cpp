@@ -130,37 +130,58 @@ void whs_controller::keyence_client_connect()
     Kclient->connect();
 }
 
-void  whs_controller::keyence_client_get_value_output0()
+double  whs_controller::keyence_client_get_value_output0()
 {
-
     std::cout << "get reading keyence sensor output0" << std::endl;
     if (keyence_last_mesured_output0.size() > 10) keyence_last_mesured_output0.pop_back(); // remove last if 10
     double current_value = Kclient->get_value_output(0);
+    if (current_value == 0) return 0;
     keyence_last_mesured_output0.push_back(current_value); // add to table
     std::cout << "value added to table " << keyence_last_mesured_output0.front() << std::endl;
 }
-void  whs_controller::keyence_client_get_value_output1()
+double  whs_controller::keyence_client_get_value_output1()
 {
 
     std::cout << "get reading keyence sensor output1" << std::endl;
     if (keyence_last_mesured_output1.size() > 10) keyence_last_mesured_output1.pop_back(); // remove last if 10
     double current_value = Kclient->get_value_output(1);
+    if (current_value == 0) return 0;
     keyence_last_mesured_output1.push_back(current_value); // add to table
     std::cout << "value added to table " << keyence_last_mesured_output1.front() << std::endl;
 }
-void  whs_controller::keyence_client_get_value_output2()
+double  whs_controller::keyence_client_get_value_output2()
 {
 
     std::cout << "get reading keyence sensor output2" << std::endl;
     if (keyence_last_mesured_output2.size() > 10) keyence_last_mesured_output2.pop_back(); // remove last if 10
     double current_value = Kclient->get_value_output(2);
+    if (current_value == 0) return 0;
     keyence_last_mesured_output2.push_back(current_value); // add to table
     std::cout << "value added to table " << keyence_last_mesured_output2.front() << std::endl;
 }
+void whs_controller::keyence_client_get_value_all()
+{
+    keyence_client_get_value_output0();
+    keyence_client_get_value_output1();
+    keyence_client_get_value_output2();
+    keyenceReady = true;
+}
 
 
+/**************** Algorithms conntroller ***************/
 
 
+void whs_controller::move_down_until_data_availble()
+{
+    while (keyence_client_get_value_output0()==0) // while data invalid, we go down further
+    {
+    std::cout << "moving down until reading values " << std::endl;
+    
+    }
+    
+
+
+}
 
 
 
@@ -229,13 +250,39 @@ void whs_controller::get_delta_position()
         if (n > 0)
         {
             std::cout << "server replied succeffully: " << delta_incoming_data.c_str() << std::endl;
-            double delta_pos= atof(delta_incoming_data.c_str());
+            double delta_pos = atof(delta_incoming_data.c_str());
             delta_last_position.push_back(delta_pos); // add to table
             std::cout << "value added to table " << delta_last_position.front() << std::endl;
             break;
         }
     }
 }
+
+void whs_controller::move_delta_home()
+{
+    //if (delta_last_position.front()==300) return ; // already homed
+    auto command = delta_cmds.find(7);
+    if (command != delta_cmds.end()) {
+        std::cout << "sending command: " << command->second << '\n';
+        sendCmd(command->second, delta_client_sock);
+    }
+    while (delta_client_sock->is_connected())
+    {
+        // Read_n data from keyence
+        ssize_t n = delta_client_sock->read_n(&delta_incoming_data[0], 1024);
+        std::cout << "n bytes: " << n << std::endl;
+        std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
+        if (n > 0)
+        {
+            std::cout << "server replied succeffully: " << delta_incoming_data.c_str() << std::endl;
+            std::cout << "delta is ready " << std::endl;
+            deltaReady = true;
+            break;
+        }
+    }
+
+}
+
 void whs_controller::get_delta_speed()
 {
 

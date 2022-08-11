@@ -54,8 +54,9 @@ private:
     };
     std::map<u_int, std::string> delta_cmds={
         {1,"get_pos"}, {2,"get_speed"}, 
-        {3,"up_to"}, {4,"down_to"}, 
-        {5,"up_by"}, {6,"down_by"}, 
+        {3,"move_to_z"}, {4,"move_to_xyz"}, 
+        {5,"move_up_by"}, {6,"move_down_by"}, 
+        {7,"move_home"}
     };
     std::deque<double> keyence_last_mesured; // FIFO last 10 values
     std::deque<double> keyence_last_mesured_output0; // FIFO last 10 values
@@ -67,6 +68,9 @@ private:
     u_int keyence_data_length = 1024;
     std::string delta_incoming_data;
     u_int delta_data_length = 1024;
+    bool deltaReady = false;
+    bool keyenceReady = false;
+    
 public:
     /******* const/desctr ****/
     whs_controller(/* args */);
@@ -76,9 +80,10 @@ public:
     void run_delta_subprocess();
     void run_keyence_subprocess();
     void keyence_client_connect();
-    void keyence_client_get_value_output0();
-    void keyence_client_get_value_output1();
-    void keyence_client_get_value_output2();
+    double keyence_client_get_value_output0();
+    double keyence_client_get_value_output1();
+    double keyence_client_get_value_output2();
+    void keyence_client_get_value_all();
     void run_all_subprocesses();
     void connect_to_delta_server();
     void connect_to_keyence_server();
@@ -92,5 +97,8 @@ public:
     void move_delta_down_to(double_t new_pos);
     void move_delta_up_by(double_t steps);
     void move_delta_down_by(double_t steps);
+    void move_delta_home();
+    /******** algorithms controller **********/
+    void move_down_until_data_availble();
 
 };
