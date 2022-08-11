@@ -70,7 +70,7 @@ private:
     u_int delta_data_length = 1024;
     bool deltaReady = false;
     bool keyenceReady = false;
-    
+    int counter = 0;
 public:
     /******* const/desctr ****/
     whs_controller(/* args */);
@@ -87,10 +87,10 @@ public:
     void run_all_subprocesses();
     void connect_to_delta_server();
     void connect_to_keyence_server();
-    void sendCmd(std::string cmd, sockpp::tcp_connector* client);
+    void sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string& args=std::string());
     void get_keyence_sensor_mesured_Values();
     void set_keyence_mesurement_mode();
-    void get_delta_position();
+    double get_delta_position();
     void get_delta_speed();
     void set_delta_speed(double_t new_val);
     void move_delta_up_to(double_t new_pos);
@@ -100,5 +100,5 @@ public:
     void move_delta_home();
     /******** algorithms controller **********/
     void move_down_until_data_availble();
-
+    double calculate_time_to_move_steps(float mm);
 };

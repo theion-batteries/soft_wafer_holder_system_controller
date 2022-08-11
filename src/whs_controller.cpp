@@ -33,13 +33,13 @@ void whs_controller::run_all_subprocesses()
     run_keyence_subprocess();
 }
 
-void whs_controller::sendCmd(std::string cmd, sockpp::tcp_connector* client)
+void whs_controller::sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string& args)
 {
-    if (client->write(cmd) != ssize_t(std::string(cmd).length())) {
+    if (client->write(cmd + args) != ssize_t(std::string(cmd + args).length())) {
         std::cerr << "Error writing to the TCP stream: "
             << client->last_error_str() << std::endl;
     }
-    std::cout << "command " << cmd << " sent" << std::endl;
+    std::cout << "command " << cmd + args << " sent" << std::endl;
 }
 /****** connect to kyence bridge server *******/
 
@@ -138,6 +138,8 @@ double  whs_controller::keyence_client_get_value_output0()
     if (current_value == 0) return 0;
     keyence_last_mesured_output0.push_back(current_value); // add to table
     std::cout << "value added to table " << keyence_last_mesured_output0.front() << std::endl;
+    return current_value;
+
 }
 double  whs_controller::keyence_client_get_value_output1()
 {
@@ -148,6 +150,8 @@ double  whs_controller::keyence_client_get_value_output1()
     if (current_value == 0) return 0;
     keyence_last_mesured_output1.push_back(current_value); // add to table
     std::cout << "value added to table " << keyence_last_mesured_output1.front() << std::endl;
+    return current_value;
+
 }
 double  whs_controller::keyence_client_get_value_output2()
 {
@@ -158,6 +162,8 @@ double  whs_controller::keyence_client_get_value_output2()
     if (current_value == 0) return 0;
     keyence_last_mesured_output2.push_back(current_value); // add to table
     std::cout << "value added to table " << keyence_last_mesured_output2.front() << std::endl;
+    return current_value;
+
 }
 void whs_controller::keyence_client_get_value_all()
 {
@@ -169,16 +175,35 @@ void whs_controller::keyence_client_get_value_all()
 
 
 /**************** Algorithms conntroller ***************/
-
+double whs_controller::calculate_time_to_move_steps(float mm)
+{
+    return mm * 100; // assume time step
+}
 
 void whs_controller::move_down_until_data_availble()
 {
-    while (keyence_client_get_value_output0()==0) // while data invalid, we go down further
+    // test version: delta z pos: 125, keyence get data
+    double last_pos=0;
+    float mm_steps = 10; // 
+    if (!delta_last_position.empty())
     {
-    std::cout << "moving down until reading values " << std::endl;
-    
+     last_pos = delta_last_position.front(); // this shall start at 300
     }
-    
+    else{
+        last_pos = get_delta_position();
+    }
+    std::cout << "start pos:  " << last_pos << std::endl;
+    while (keyence_client_get_value_output0() == 0 || keyence_client_get_value_output1() == 0 || keyence_client_get_value_output2() ==0) // while data invalid, we go down further
+    {
+        std::cout << "moving down by " << mm_steps << "mm_steps until reading values " << std::endl;
+        move_delta_down_by(mm_steps); // move down by mm steps
+        std::cout << "wait for cmd moving down to finish, asking for new position  " << std::endl;
+        Sleep(2000);
+        get_delta_position();
+        std::cout << "current pos:  " << delta_last_position.front() << std::endl;
+        Sleep(2000);
+    }
+
 
 
 }
@@ -231,31 +256,38 @@ void whs_controller::connect_to_delta_server()
             << delta_client_sock->last_error_str() << std::endl;
     }
 }
-void whs_controller::get_delta_position()
+double whs_controller::get_delta_position()
 {
+    double delta_pos = 0;
     std::cout << "get delta curent position" << std::endl;
+    if (!delta_last_position.empty()){
     if (delta_last_position.size() > 10) delta_last_position.pop_back(); // remove last if 10
-
+    }
     auto command = delta_cmds.find(1);
     if (command != delta_cmds.end()) {
         std::cout << "sending command: " << command->second << '\n';
         sendCmd(command->second, delta_client_sock);
     }
+    std::cout << "awaiting server response" << std::endl;
+
     while (delta_client_sock->is_connected())
     {
         // Read_n data from keyence
-        ssize_t n = delta_client_sock->read_n(&delta_incoming_data[0], 1024);
-        std::cout << "n bytes: " << n << std::endl;
-        std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
+        ssize_t n = delta_client_sock->read(&delta_incoming_data[0], 1024);
+        //std::cout << "n bytes: " << n << std::endl;
+        //std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
         if (n > 0)
         {
-            std::cout << "server replied succeffully: " << delta_incoming_data.c_str() << std::endl;
-            double delta_pos = atof(delta_incoming_data.c_str());
-            delta_last_position.push_back(delta_pos); // add to table
+            std::cout << "server replied : " << delta_incoming_data.c_str() << std::endl;
+            delta_pos = atof(delta_incoming_data.c_str()); // to double
+            std::cout << "filter val : " << delta_pos << std::endl;
+            delta_last_position.push_front(delta_pos); // add to table
+
             std::cout << "value added to table " << delta_last_position.front() << std::endl;
             break;
         }
     }
+    return delta_pos;
 }
 
 void whs_controller::move_delta_home()
@@ -266,15 +298,16 @@ void whs_controller::move_delta_home()
         std::cout << "sending command: " << command->second << '\n';
         sendCmd(command->second, delta_client_sock);
     }
+    std::cout << "awaiting server response" << std::endl;
     while (delta_client_sock->is_connected())
     {
         // Read_n data from keyence
-        ssize_t n = delta_client_sock->read_n(&delta_incoming_data[0], 1024);
-        std::cout << "n bytes: " << n << std::endl;
-        std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
+        ssize_t n = delta_client_sock->read(&delta_incoming_data[0], 1024);
+        // std::cout << "n bytes: " << n << std::endl;
+        // std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
         if (n > 0)
         {
-            std::cout << "server replied succeffully: " << delta_incoming_data.c_str() << std::endl;
+            std::cout << "server replied : " << delta_incoming_data.c_str() << std::endl;
             std::cout << "delta is ready " << std::endl;
             deltaReady = true;
             break;
@@ -305,5 +338,28 @@ void whs_controller::move_delta_up_by(double_t steps)
 }
 void whs_controller::move_delta_down_by(double_t steps)
 {
+
+    std::cout << "moving down by " << steps << std::endl;
+    auto command = delta_cmds.find(6);
+    if (command != delta_cmds.end()) {
+        std::cout << "sending command: " << command->second << " args: " << steps << '\n';
+        std::string args = " " + std::to_string(steps);
+        sendCmd(command->second, delta_client_sock, args);
+    }
+    std::cout << "awaiting server response" << std::endl;
+
+    while (delta_client_sock->is_connected())
+    {
+        // Read_n data from keyence
+        ssize_t n = delta_client_sock->read(&delta_incoming_data[0], 1024);
+        // std::cout << "n bytes: " << n << std::endl;
+        // std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
+        if (n > 0)
+        {
+            std::cout << "server replied : " << delta_incoming_data.c_str() << std::endl;
+            std::cout << "delta is moving down " << std::endl;
+            break;
+        }
+    }
 
 }
