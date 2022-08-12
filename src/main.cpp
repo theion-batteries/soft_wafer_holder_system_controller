@@ -18,10 +18,6 @@ int main()
 	wafer_sys_control.keyence_client_get_value_all(); //ready
 	//// controller 
 	wafer_sys_control.move_down_until_data_availble();
-	
-
-
-
 
 	return 0;
 }

@@ -70,7 +70,7 @@ private:
     u_int delta_data_length = 1024;
     bool deltaReady = false;
     bool keyenceReady = false;
-    int counter = 0;
+    double reference_distance = 0;
 public:
     /******* const/desctr ****/
     whs_controller(/* args */);
@@ -101,4 +101,6 @@ public:
     /******** algorithms controller **********/
     void move_down_until_data_availble();
     double calculate_time_to_move_steps(float mm);
+    void move_down_to_surface(double ref_dis=0);
+    void deep_wafer_holder_desired_thickness(double thickness=0.1, double mm_step_res=0.01 ); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
 };
