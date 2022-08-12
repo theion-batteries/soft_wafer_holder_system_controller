@@ -325,7 +325,7 @@ void whs_controller::move_down_until_data_availble()
         last_pos = get_delta_position();
     }
     std::cout << "start pos:  " << last_pos << std::endl;
-    while (keyence_client_get_value_output0() == 0 ) // while data invalid, we go down further
+    while (keyence_client_get_value_output1() == 0 ) // while data invalid, we go down further
     {
         std::cout << "moving down by " << mm_steps << "mm_steps until reading values " << std::endl;
         move_delta_down_by(mm_steps); // move down by mm steps
@@ -352,7 +352,7 @@ void whs_controller::move_down_to_surface(double ref_dis)
     else{
         last_pos = get_delta_position();
     }
-    while (!keyence_client_get_value_output0() == ref_dis) // while keyence reading is not equalö to reference distance
+    while (keyence_client_get_value_output1() >= ref_dis) // while keyence reading is <= to reference distance
     {
         std::cout << "moving down by " << mm_steps << "mm_steps until reading values " << std::endl;
         move_delta_down_by(mm_steps); // move down by mm steps
@@ -369,10 +369,23 @@ void whs_controller::deep_wafer_holder_desired_thickness(double thickness, doubl
     int steps = thickness/mm_step_res;
     for (int step_counter=0; step_counter<steps; step_counter++ )
     {
+        std::cout << "iteration number "<< step_counter <<std::endl;
         move_delta_down_by(mm_step_res); // move mm step default 0.01 mm
         Sleep(200); //wait for movement to finish
-        // check distance with keyence= should be -0.01mm every iteration 
-        keyence_client_get_value_output0(); 
+        // to check
+        keyence_client_get_value_output1(); 
+        // to verify step res
+        get_delta_position();
     }
+    waferHolderReady=true; 
+}
+/**
+ * @brief function to monitor the distance and calibrate depth
+ */
+void whs_controller::monitor_and_calibrate()
+{
+    std::cout << "monitor calibration started" << std::endl;
+    
+
 
 }

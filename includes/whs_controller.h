@@ -70,7 +70,9 @@ private:
     u_int delta_data_length = 1024;
     bool deltaReady = false;
     bool keyenceReady = false;
+    bool waferHolderReady = false;
     double reference_distance = 0;
+    // stbility range is betweeen 140 and 145 or 5 mm range green
 public:
     /******* const/desctr ****/
     whs_controller(/* args */);
@@ -103,4 +105,5 @@ public:
     double calculate_time_to_move_steps(float mm);
     void move_down_to_surface(double ref_dis=0);
     void deep_wafer_holder_desired_thickness(double thickness=0.1, double mm_step_res=0.01 ); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
+    void monitor_and_calibrate(); // we will launch a monitor to check if we are inside the desired depth during next processes
 };
