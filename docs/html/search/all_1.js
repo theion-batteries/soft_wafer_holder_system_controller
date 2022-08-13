@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['keyence_5fserver_0',['keyence_server',['../structkeyence__server.html',1,'']]]
+  ['deep_5fwafer_5fholder_5fdesired_5fthickness_0',['deep_wafer_holder_desired_thickness',['../classwhs__controller.html#a4cf80fed7a0abc39fd8c7a0b1ab35f75',1,'whs_controller']]],
+  ['delta_5fserver_1',['delta_server',['../structdelta__server.html',1,'']]]
 ];

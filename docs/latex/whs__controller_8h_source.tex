@@ -66,35 +66,35 @@
 \DoxyCodeLine{76 \textcolor{keyword}{public}:}
 \DoxyCodeLine{77 \textcolor{comment}{    /******* const/desctr ****/}}
 \DoxyCodeLine{78     \mbox{\hyperlink{classwhs__controller}{whs\_controller}}(\textcolor{comment}{/* args */});}
-\DoxyCodeLine{79     \mbox{\hyperlink{classwhs__controller}{\string~whs\_controller}}();}
+\DoxyCodeLine{79     \mbox{\hyperlink{classwhs__controller_aefe7537cb91ffbe8432f11bea816c3c0}{\string~whs\_controller}}();}
 \DoxyCodeLine{80 \textcolor{comment}{    /******* client controller methods ***/}}
 \DoxyCodeLine{81     \textcolor{keywordtype}{void} close\_all\_sockets();}
 \DoxyCodeLine{82     \textcolor{keywordtype}{void} run\_delta\_subprocess();}
 \DoxyCodeLine{83     \textcolor{keywordtype}{void} run\_keyence\_subprocess();}
 \DoxyCodeLine{84     \textcolor{keywordtype}{void} keyence\_client\_connect();}
-\DoxyCodeLine{85     \textcolor{keywordtype}{double} keyence\_client\_get\_value\_output0();}
-\DoxyCodeLine{86     \textcolor{keywordtype}{double} keyence\_client\_get\_value\_output1();}
-\DoxyCodeLine{87     \textcolor{keywordtype}{double} keyence\_client\_get\_value\_output2();}
+\DoxyCodeLine{85     \textcolor{keywordtype}{double} \mbox{\hyperlink{classwhs__controller_ab16fb533a80b921e3e77ba007518e2b7}{keyence\_client\_get\_value\_output0}}();}
+\DoxyCodeLine{86     \textcolor{keywordtype}{double} \mbox{\hyperlink{classwhs__controller_a8683aedd564371f19d7f7c4ca2df478c}{keyence\_client\_get\_value\_output1}}();}
+\DoxyCodeLine{87     \textcolor{keywordtype}{double} \mbox{\hyperlink{classwhs__controller_a791573f854d3080d2be0e830ae374597}{keyence\_client\_get\_value\_output2}}();}
 \DoxyCodeLine{88     \textcolor{keywordtype}{void} keyence\_client\_get\_value\_all();}
 \DoxyCodeLine{89     \textcolor{keywordtype}{void} run\_all\_subprocesses();}
 \DoxyCodeLine{90     \textcolor{keywordtype}{void} connect\_to\_delta\_server();}
 \DoxyCodeLine{91     \textcolor{keywordtype}{void} connect\_to\_keyence\_server();}
-\DoxyCodeLine{92     \textcolor{keywordtype}{void} sendCmd(std::string\& cmd, sockpp::tcp\_connector* client, std::string\& args=std::string());}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} \mbox{\hyperlink{classwhs__controller_a219385f1c209565f80cd625fe7e99f19}{sendCmd}}(std::string\& cmd, sockpp::tcp\_connector* client, std::string\& args=std::string());}
 \DoxyCodeLine{93     \textcolor{keywordtype}{void} get\_keyence\_sensor\_mesured\_Values();}
 \DoxyCodeLine{94     \textcolor{keywordtype}{void} set\_keyence\_mesurement\_mode();}
-\DoxyCodeLine{95     \textcolor{keywordtype}{double} get\_delta\_position();}
+\DoxyCodeLine{95     \textcolor{keywordtype}{double} \mbox{\hyperlink{classwhs__controller_afc9f5571d7270784614c1ef1089e666c}{get\_delta\_position}}();}
 \DoxyCodeLine{96     \textcolor{keywordtype}{void} get\_delta\_speed();}
 \DoxyCodeLine{97     \textcolor{keywordtype}{void} set\_delta\_speed(double\_t new\_val);}
 \DoxyCodeLine{98     \textcolor{keywordtype}{void} move\_delta\_up\_to(double\_t new\_pos);}
 \DoxyCodeLine{99     \textcolor{keywordtype}{void} move\_delta\_down\_to(double\_t new\_pos);}
 \DoxyCodeLine{100     \textcolor{keywordtype}{void} move\_delta\_up\_by(double\_t steps);}
-\DoxyCodeLine{101     \textcolor{keywordtype}{void} move\_delta\_down\_by(double\_t steps);}
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} \mbox{\hyperlink{classwhs__controller_aeecf7f1ac2f6b52690d4516b25ac3497}{move\_delta\_down\_by}}(double\_t steps);}
 \DoxyCodeLine{102     \textcolor{keywordtype}{void} move\_delta\_home();}
 \DoxyCodeLine{103 \textcolor{comment}{    /******** algorithms controller **********/}}
 \DoxyCodeLine{104     \textcolor{keywordtype}{void} move\_down\_until\_data\_availble();}
-\DoxyCodeLine{105     \textcolor{keywordtype}{double} calculate\_time\_to\_move\_steps(\textcolor{keywordtype}{float} mm);}
-\DoxyCodeLine{106     \textcolor{keywordtype}{void} move\_down\_to\_surface(\textcolor{keywordtype}{double} ref\_dis=0);}
-\DoxyCodeLine{107     \textcolor{keywordtype}{void} deep\_wafer\_holder\_desired\_thickness(\textcolor{keywordtype}{double} thickness=0.1, \textcolor{keywordtype}{double} mm\_step\_res=0.01 ); \textcolor{comment}{//default to 0.01 mm\_step x 10 steps= 0.1mm or 100µm}}
+\DoxyCodeLine{105     \textcolor{keywordtype}{double} \mbox{\hyperlink{classwhs__controller_aebcc0bb7de47afb130eb20c73bca7749}{calculate\_time\_to\_move\_steps}}(\textcolor{keywordtype}{float} mm);}
+\DoxyCodeLine{106     \textcolor{keywordtype}{void} \mbox{\hyperlink{classwhs__controller_a667c311a6275743ec41194ac438249f7}{move\_down\_to\_surface}}(\textcolor{keywordtype}{double} ref\_dis=0);}
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} \mbox{\hyperlink{classwhs__controller_a4cf80fed7a0abc39fd8c7a0b1ab35f75}{deep\_wafer\_holder\_desired\_thickness}}(\textcolor{keywordtype}{double} thickness=0.1, \textcolor{keywordtype}{double} mm\_step\_res=0.01 ); \textcolor{comment}{//default to 0.01 mm\_step x 10 steps= 0.1mm or 100µm}}
 \DoxyCodeLine{108     \textcolor{keywordtype}{void} \mbox{\hyperlink{classwhs__controller_a5e73938c8a8518766e1b26cfb053dcd8}{monitor\_and\_calibrate}}(); \textcolor{comment}{// we will launch a monitor to check if we are inside the desired depth during next processes}}
 \DoxyCodeLine{109 \};}
 

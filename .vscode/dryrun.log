@@ -1,7 +1,6 @@
-make.exe --dry-run --keep-going --print-directory
+make.exe --dry-run --always-make --keep-going --print-directory
 make.exe: Entering directory 'c:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller'
+make.exe: Leaving directory 'c:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller'
  
 make.exe: *** No targets specified and no makefile found.  Stop.
 
-make.exe: Leaving directory 'c:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller'
- 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['monitor_5fand_5fcalibrate_0',['monitor_and_calibrate',['../classwhs__controller.html#a5e73938c8a8518766e1b26cfb053dcd8',1,'whs_controller']]]
+  ['calculate_5ftime_5fto_5fmove_5fsteps_0',['calculate_time_to_move_steps',['../classwhs__controller.html#aebcc0bb7de47afb130eb20c73bca7749',1,'whs_controller']]]
 ];

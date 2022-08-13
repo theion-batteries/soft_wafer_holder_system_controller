@@ -109,19 +109,23 @@ doc and APIs</h1>
 <div class="line"><span class="comment">// connect to the keyence controller</span></div>
 <div class="line">wafer_sys_control.keyence_client_connect();</div>
 <div class="line"><span class="comment">// get mesured value output0</span></div>
-<div class="line">wafer_sys_control.keyence_client_get_value_output0();</div>
+<div class="line">wafer_sys_control.<a class="code hl_function" href="classwhs__controller.html#ab16fb533a80b921e3e77ba007518e2b7">keyence_client_get_value_output0</a>();</div>
 <div class="line"><span class="comment">// get mesured value output1</span></div>
-<div class="line">wafer_sys_control.keyence_client_get_value_output1();</div>
+<div class="line">wafer_sys_control.<a class="code hl_function" href="classwhs__controller.html#a8683aedd564371f19d7f7c4ca2df478c">keyence_client_get_value_output1</a>();</div>
 <div class="line"><span class="comment">// get mesured value output2</span></div>
-<div class="line">wafer_sys_control.keyence_client_get_value_output2();</div>
+<div class="line">wafer_sys_control.<a class="code hl_function" href="classwhs__controller.html#a791573f854d3080d2be0e830ae374597">keyence_client_get_value_output2</a>();</div>
 <div class="line"><span class="comment">// delta interface</span></div>
 <div class="line"><span class="comment">// run delta subprocess: a server that redirects requests </span></div>
 <div class="line">wafer_sys_control.run_delta_subprocess();</div>
 <div class="line"><span class="comment">// connecto to that bridge server</span></div>
 <div class="line">wafer_sys_control.connect_to_delta_server();</div>
 <div class="line"><span class="comment">// get delta current position</span></div>
-<div class="line">wafer_sys_control.get_delta_position();</div>
+<div class="line">wafer_sys_control.<a class="code hl_function" href="classwhs__controller.html#afc9f5571d7270784614c1ef1089e666c">get_delta_position</a>();</div>
 <div class="ttc" id="aclasswhs__controller_html"><div class="ttname"><a href="classwhs__controller.html">whs_controller</a></div><div class="ttdef"><b>Definition:</b> whs_controller.h:38</div></div>
+<div class="ttc" id="aclasswhs__controller_html_a791573f854d3080d2be0e830ae374597"><div class="ttname"><a href="classwhs__controller.html#a791573f854d3080d2be0e830ae374597">whs_controller::keyence_client_get_value_output2</a></div><div class="ttdeci">double keyence_client_get_value_output2()</div><div class="ttdef"><b>Definition:</b> whs_controller.cpp:226</div></div>
+<div class="ttc" id="aclasswhs__controller_html_a8683aedd564371f19d7f7c4ca2df478c"><div class="ttname"><a href="classwhs__controller.html#a8683aedd564371f19d7f7c4ca2df478c">whs_controller::keyence_client_get_value_output1</a></div><div class="ttdeci">double keyence_client_get_value_output1()</div><div class="ttdef"><b>Definition:</b> whs_controller.cpp:209</div></div>
+<div class="ttc" id="aclasswhs__controller_html_ab16fb533a80b921e3e77ba007518e2b7"><div class="ttname"><a href="classwhs__controller.html#ab16fb533a80b921e3e77ba007518e2b7">whs_controller::keyence_client_get_value_output0</a></div><div class="ttdeci">double keyence_client_get_value_output0()</div><div class="ttdef"><b>Definition:</b> whs_controller.cpp:192</div></div>
+<div class="ttc" id="aclasswhs__controller_html_afc9f5571d7270784614c1ef1089e666c"><div class="ttname"><a href="classwhs__controller.html#afc9f5571d7270784614c1ef1089e666c">whs_controller::get_delta_position</a></div><div class="ttdeci">double get_delta_position()</div><div class="ttdef"><b>Definition:</b> whs_controller.cpp:284</div></div>
 </div><!-- fragment --><h1><a class="anchor" id="autotoc_md6"></a>
 Tests</h1>
 <p >unit tests will included under tests/ folder to test teh following:</p><ul>
