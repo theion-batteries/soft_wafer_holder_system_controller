@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['execute_5fcommand_0',['execute_command',['../classrepetier__manager__lib_1_1repetier__manager_1_1_delta_control.html#a2909ed48d7a5e6b0dae6f58a83493993',1,'repetier_manager_lib::repetier_manager::DeltaControl']]]
+  ['soft_5fwafer_5fholder_5fsystem_5fcontroller_0',['soft_wafer_holder_system_controller',['../md__c___users__sami_dhiab__theion__repos_soft_wafer_holder_system_controller__r_e_a_d_m_e.html',1,'']]]
 ];

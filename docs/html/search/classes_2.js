@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['keyence_5fserver_0',['keyence_server',['../structkeyence__server.html',1,'']]]
+  ['whs_5fcontroller_0',['whs_controller',['../classwhs__controller.html',1,'']]]
 ];

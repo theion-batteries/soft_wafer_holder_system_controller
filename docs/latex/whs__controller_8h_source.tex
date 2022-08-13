@@ -44,45 +44,58 @@
 \DoxyCodeLine{54     \};}
 \DoxyCodeLine{55     std::map<u\_int, std::string> delta\_cmds=\{}
 \DoxyCodeLine{56         \{1,\textcolor{stringliteral}{"{}get\_pos"{}}\}, \{2,\textcolor{stringliteral}{"{}get\_speed"{}}\}, }
-\DoxyCodeLine{57         \{3,\textcolor{stringliteral}{"{}up\_to"{}}\}, \{4,\textcolor{stringliteral}{"{}down\_to"{}}\}, }
-\DoxyCodeLine{58         \{5,\textcolor{stringliteral}{"{}up\_by"{}}\}, \{6,\textcolor{stringliteral}{"{}down\_by"{}}\}, }
-\DoxyCodeLine{59     \};}
-\DoxyCodeLine{60     std::deque<double> keyence\_last\_mesured; \textcolor{comment}{// FIFO last 10 values}}
-\DoxyCodeLine{61     std::deque<double> keyence\_last\_mesured\_output0; \textcolor{comment}{// FIFO last 10 values}}
-\DoxyCodeLine{62     std::deque<double> keyence\_last\_mesured\_output1; \textcolor{comment}{// FIFO last 10 values}}
-\DoxyCodeLine{63     std::deque<double> keyence\_last\_mesured\_output2; \textcolor{comment}{// FIFO last 10 values}}
-\DoxyCodeLine{64     std::deque<double> delta\_last\_position; \textcolor{comment}{// FIFO last 10 values}}
-\DoxyCodeLine{65 }
-\DoxyCodeLine{66     std::string keyence\_incoming\_data;}
-\DoxyCodeLine{67     u\_int keyence\_data\_length = 1024;}
-\DoxyCodeLine{68     std::string delta\_incoming\_data;}
-\DoxyCodeLine{69     u\_int delta\_data\_length = 1024;}
-\DoxyCodeLine{70 \textcolor{keyword}{public}:}
-\DoxyCodeLine{71 \textcolor{comment}{    /******* const/desctr ****/}}
-\DoxyCodeLine{72     \mbox{\hyperlink{classwhs__controller}{whs\_controller}}(\textcolor{comment}{/* args */});}
-\DoxyCodeLine{73     \mbox{\hyperlink{classwhs__controller}{\string~whs\_controller}}();}
-\DoxyCodeLine{74 \textcolor{comment}{    /******* client controller methods ***/}}
-\DoxyCodeLine{75     \textcolor{keywordtype}{void} close\_all\_sockets();}
-\DoxyCodeLine{76     \textcolor{keywordtype}{void} run\_delta\_subprocess();}
-\DoxyCodeLine{77     \textcolor{keywordtype}{void} run\_keyence\_subprocess();}
-\DoxyCodeLine{78     \textcolor{keywordtype}{void} keyence\_client\_connect();}
-\DoxyCodeLine{79     \textcolor{keywordtype}{void} keyence\_client\_get\_value\_output0();}
-\DoxyCodeLine{80     \textcolor{keywordtype}{void} keyence\_client\_get\_value\_output1();}
-\DoxyCodeLine{81     \textcolor{keywordtype}{void} keyence\_client\_get\_value\_output2();}
-\DoxyCodeLine{82     \textcolor{keywordtype}{void} run\_all\_subprocesses();}
-\DoxyCodeLine{83     \textcolor{keywordtype}{void} connect\_to\_delta\_server();}
-\DoxyCodeLine{84     \textcolor{keywordtype}{void} connect\_to\_keyence\_server();}
-\DoxyCodeLine{85     \textcolor{keywordtype}{void} sendCmd(std::string cmd, sockpp::tcp\_connector* client);}
-\DoxyCodeLine{86     \textcolor{keywordtype}{void} get\_keyence\_sensor\_mesured\_Values();}
-\DoxyCodeLine{87     \textcolor{keywordtype}{void} set\_keyence\_mesurement\_mode();}
-\DoxyCodeLine{88     \textcolor{keywordtype}{void} get\_delta\_position();}
-\DoxyCodeLine{89     \textcolor{keywordtype}{void} get\_delta\_speed();}
-\DoxyCodeLine{90     \textcolor{keywordtype}{void} set\_delta\_speed(double\_t new\_val);}
-\DoxyCodeLine{91     \textcolor{keywordtype}{void} move\_delta\_up\_to(double\_t new\_pos);}
-\DoxyCodeLine{92     \textcolor{keywordtype}{void} move\_delta\_down\_to(double\_t new\_pos);}
-\DoxyCodeLine{93     \textcolor{keywordtype}{void} move\_delta\_up\_by(double\_t steps);}
-\DoxyCodeLine{94     \textcolor{keywordtype}{void} move\_delta\_down\_by(double\_t steps);}
-\DoxyCodeLine{95 }
-\DoxyCodeLine{96 \};}
+\DoxyCodeLine{57         \{3,\textcolor{stringliteral}{"{}move\_to\_z"{}}\}, \{4,\textcolor{stringliteral}{"{}move\_to\_xyz"{}}\}, }
+\DoxyCodeLine{58         \{5,\textcolor{stringliteral}{"{}move\_up\_by"{}}\}, \{6,\textcolor{stringliteral}{"{}move\_down\_by"{}}\}, }
+\DoxyCodeLine{59         \{7,\textcolor{stringliteral}{"{}move\_home"{}}\}}
+\DoxyCodeLine{60     \};}
+\DoxyCodeLine{61     std::deque<double> keyence\_last\_mesured; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{62     std::deque<double> keyence\_last\_mesured\_output0; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{63     std::deque<double> keyence\_last\_mesured\_output1; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{64     std::deque<double> keyence\_last\_mesured\_output2; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{65     std::deque<double> delta\_last\_position; \textcolor{comment}{// FIFO last 10 values}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67     std::string keyence\_incoming\_data;}
+\DoxyCodeLine{68     u\_int keyence\_data\_length = 1024;}
+\DoxyCodeLine{69     std::string delta\_incoming\_data;}
+\DoxyCodeLine{70     u\_int delta\_data\_length = 1024;}
+\DoxyCodeLine{71     \textcolor{keywordtype}{bool} deltaReady = \textcolor{keyword}{false};}
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} keyenceReady = \textcolor{keyword}{false};}
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} waferHolderReady = \textcolor{keyword}{false};}
+\DoxyCodeLine{74     \textcolor{keywordtype}{double} reference\_distance = 0;}
+\DoxyCodeLine{75     \textcolor{comment}{// stbility range is betweeen 140 and 145 or 5 mm range green}}
+\DoxyCodeLine{76 \textcolor{keyword}{public}:}
+\DoxyCodeLine{77 \textcolor{comment}{    /******* const/desctr ****/}}
+\DoxyCodeLine{78     \mbox{\hyperlink{classwhs__controller}{whs\_controller}}(\textcolor{comment}{/* args */});}
+\DoxyCodeLine{79     \mbox{\hyperlink{classwhs__controller}{\string~whs\_controller}}();}
+\DoxyCodeLine{80 \textcolor{comment}{    /******* client controller methods ***/}}
+\DoxyCodeLine{81     \textcolor{keywordtype}{void} close\_all\_sockets();}
+\DoxyCodeLine{82     \textcolor{keywordtype}{void} run\_delta\_subprocess();}
+\DoxyCodeLine{83     \textcolor{keywordtype}{void} run\_keyence\_subprocess();}
+\DoxyCodeLine{84     \textcolor{keywordtype}{void} keyence\_client\_connect();}
+\DoxyCodeLine{85     \textcolor{keywordtype}{double} keyence\_client\_get\_value\_output0();}
+\DoxyCodeLine{86     \textcolor{keywordtype}{double} keyence\_client\_get\_value\_output1();}
+\DoxyCodeLine{87     \textcolor{keywordtype}{double} keyence\_client\_get\_value\_output2();}
+\DoxyCodeLine{88     \textcolor{keywordtype}{void} keyence\_client\_get\_value\_all();}
+\DoxyCodeLine{89     \textcolor{keywordtype}{void} run\_all\_subprocesses();}
+\DoxyCodeLine{90     \textcolor{keywordtype}{void} connect\_to\_delta\_server();}
+\DoxyCodeLine{91     \textcolor{keywordtype}{void} connect\_to\_keyence\_server();}
+\DoxyCodeLine{92     \textcolor{keywordtype}{void} sendCmd(std::string\& cmd, sockpp::tcp\_connector* client, std::string\& args=std::string());}
+\DoxyCodeLine{93     \textcolor{keywordtype}{void} get\_keyence\_sensor\_mesured\_Values();}
+\DoxyCodeLine{94     \textcolor{keywordtype}{void} set\_keyence\_mesurement\_mode();}
+\DoxyCodeLine{95     \textcolor{keywordtype}{double} get\_delta\_position();}
+\DoxyCodeLine{96     \textcolor{keywordtype}{void} get\_delta\_speed();}
+\DoxyCodeLine{97     \textcolor{keywordtype}{void} set\_delta\_speed(double\_t new\_val);}
+\DoxyCodeLine{98     \textcolor{keywordtype}{void} move\_delta\_up\_to(double\_t new\_pos);}
+\DoxyCodeLine{99     \textcolor{keywordtype}{void} move\_delta\_down\_to(double\_t new\_pos);}
+\DoxyCodeLine{100     \textcolor{keywordtype}{void} move\_delta\_up\_by(double\_t steps);}
+\DoxyCodeLine{101     \textcolor{keywordtype}{void} move\_delta\_down\_by(double\_t steps);}
+\DoxyCodeLine{102     \textcolor{keywordtype}{void} move\_delta\_home();}
+\DoxyCodeLine{103 \textcolor{comment}{    /******** algorithms controller **********/}}
+\DoxyCodeLine{104     \textcolor{keywordtype}{void} move\_down\_until\_data\_availble();}
+\DoxyCodeLine{105     \textcolor{keywordtype}{double} calculate\_time\_to\_move\_steps(\textcolor{keywordtype}{float} mm);}
+\DoxyCodeLine{106     \textcolor{keywordtype}{void} move\_down\_to\_surface(\textcolor{keywordtype}{double} ref\_dis=0);}
+\DoxyCodeLine{107     \textcolor{keywordtype}{void} deep\_wafer\_holder\_desired\_thickness(\textcolor{keywordtype}{double} thickness=0.1, \textcolor{keywordtype}{double} mm\_step\_res=0.01 ); \textcolor{comment}{//default to 0.01 mm\_step x 10 steps= 0.1mm or 100µm}}
+\DoxyCodeLine{108     \textcolor{keywordtype}{void} \mbox{\hyperlink{classwhs__controller_a5e73938c8a8518766e1b26cfb053dcd8}{monitor\_and\_calibrate}}(); \textcolor{comment}{// we will launch a monitor to check if we are inside the desired depth during next processes}}
+\DoxyCodeLine{109 \};}
 
 \end{DoxyCode}

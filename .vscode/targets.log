@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Fri Aug 12 11:03:12 2022
+# Make data base, printed on Sat Aug 13 13:30:59 2022
 
 # Variables
 
@@ -60,7 +60,8 @@ TMP = C:\Users\SAMIDH~1\AppData\Local\Temp
 # environment
 GENICAM_GENTL64_PATH = C:\Program Files\STEMMER IMAGING\Common Vision Blox\GenICam\bin\win64_x64\TLIs
 # environment
-PROGRAMW6432 = C:\Program Files
+PROGRAMW6 
+432 = C:\Program Files
 # environment
 CVGENICAM_REGISTRY = C:\ProgramData\STEMMER IMAGING\Common Vision Blox\GenICam\xml\Registry
 # environment
@@ -90,7 +91,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_3436_YBSYOGQOZZLZKHAZ
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_960_KNTUGWZCEBWWZQXF
 # environment
 COMPUTERNAME = DESKTOP-BRFNNCP
 # environment
@@ -208,7 +209,7 @@ LANG = C
 # environment
 PROCESSOR_LEVEL = 23
 # environment
-VSCODE_PID = 3436
+VSCODE_PID = 960
 # environment
 USERDOMAIN_ROAMINGPROFILE = AzureAD
 # variable set hash-table stats:
@@ -310,7 +311,10 @@ GNUmakefile:
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 9 (8) / strings = 4600 / storage = 70070 B / avg = 15 B
+# strcache buffers: 9  
+make.exe: *** No rule to make target 'all'.  Stop.
+
+(8) / strings = 4600 / storage = 70070 B / avg = 15 B
 # current buf: size = 8174 B / used = 4751 B / count = 310 / avg = 15 B
 # other used: total = 61896 B / count = 4290 / avg = 14 B
 # other free: total = 73 B / max = 14 B / min = 1 B / avg = 9 B
@@ -318,8 +322,6 @@ GNUmakefile:
 # strcache performance: lookups = 4813 / hit rate = 4%
 # hash-table stats:
 # Load=4600/8192=56%, Rehash=0, Collisions=2375/4813=49%
-# Finished Make data base on Fri Aug 12 11:03:12 2022
+# Finished Make data base on Sat Aug 13 13:30:59 2022
 
  
-make.exe: *** No rule to make target 'all'.  Stop.
-

@@ -15,14 +15,17 @@ void {\bfseries run\+\_\+keyence\+\_\+subprocess} ()
 \mbox{\Hypertarget{classwhs__controller_a7b7abeffd297cd40d3c3bec27e1735e0}\label{classwhs__controller_a7b7abeffd297cd40d3c3bec27e1735e0}} 
 void {\bfseries keyence\+\_\+client\+\_\+connect} ()
 \item 
-\mbox{\Hypertarget{classwhs__controller_a341327d67e73ce357f1dbd866e9f6b86}\label{classwhs__controller_a341327d67e73ce357f1dbd866e9f6b86}} 
-void {\bfseries keyence\+\_\+client\+\_\+get\+\_\+value\+\_\+output0} ()
+\mbox{\Hypertarget{classwhs__controller_ab16fb533a80b921e3e77ba007518e2b7}\label{classwhs__controller_ab16fb533a80b921e3e77ba007518e2b7}} 
+double {\bfseries keyence\+\_\+client\+\_\+get\+\_\+value\+\_\+output0} ()
 \item 
-\mbox{\Hypertarget{classwhs__controller_af8c13b7f314e55ff5d532aae1b9e883f}\label{classwhs__controller_af8c13b7f314e55ff5d532aae1b9e883f}} 
-void {\bfseries keyence\+\_\+client\+\_\+get\+\_\+value\+\_\+output1} ()
+\mbox{\Hypertarget{classwhs__controller_a8683aedd564371f19d7f7c4ca2df478c}\label{classwhs__controller_a8683aedd564371f19d7f7c4ca2df478c}} 
+double {\bfseries keyence\+\_\+client\+\_\+get\+\_\+value\+\_\+output1} ()
 \item 
-\mbox{\Hypertarget{classwhs__controller_a0020e2a36663cec4e24f0b8cb6b282ee}\label{classwhs__controller_a0020e2a36663cec4e24f0b8cb6b282ee}} 
-void {\bfseries keyence\+\_\+client\+\_\+get\+\_\+value\+\_\+output2} ()
+\mbox{\Hypertarget{classwhs__controller_a791573f854d3080d2be0e830ae374597}\label{classwhs__controller_a791573f854d3080d2be0e830ae374597}} 
+double {\bfseries keyence\+\_\+client\+\_\+get\+\_\+value\+\_\+output2} ()
+\item 
+\mbox{\Hypertarget{classwhs__controller_a335017094124ea19fe539361f9b24705}\label{classwhs__controller_a335017094124ea19fe539361f9b24705}} 
+void {\bfseries keyence\+\_\+client\+\_\+get\+\_\+value\+\_\+all} ()
 \item 
 \mbox{\Hypertarget{classwhs__controller_aee33195c5507b329dcd3f694ac67a3a3}\label{classwhs__controller_aee33195c5507b329dcd3f694ac67a3a3}} 
 void {\bfseries run\+\_\+all\+\_\+subprocesses} ()
@@ -33,8 +36,8 @@ void {\bfseries connect\+\_\+to\+\_\+delta\+\_\+server} ()
 \mbox{\Hypertarget{classwhs__controller_a34a47ebf6b142672f039d35561475ae8}\label{classwhs__controller_a34a47ebf6b142672f039d35561475ae8}} 
 void {\bfseries connect\+\_\+to\+\_\+keyence\+\_\+server} ()
 \item 
-\mbox{\Hypertarget{classwhs__controller_a50704eb38a23b5f5a008fcbe386e2ca3}\label{classwhs__controller_a50704eb38a23b5f5a008fcbe386e2ca3}} 
-void {\bfseries send\+Cmd} (std\+::string cmd, sockpp\+::tcp\+\_\+connector $\ast$client)
+\mbox{\Hypertarget{classwhs__controller_a219385f1c209565f80cd625fe7e99f19}\label{classwhs__controller_a219385f1c209565f80cd625fe7e99f19}} 
+void {\bfseries send\+Cmd} (std\+::string \&cmd, sockpp\+::tcp\+\_\+connector $\ast$client, std\+::string \&args=std\+::string())
 \item 
 \mbox{\Hypertarget{classwhs__controller_a7fb68947979c20c66f401b0fb3e6e82c}\label{classwhs__controller_a7fb68947979c20c66f401b0fb3e6e82c}} 
 void {\bfseries get\+\_\+keyence\+\_\+sensor\+\_\+mesured\+\_\+\+Values} ()
@@ -42,8 +45,8 @@ void {\bfseries get\+\_\+keyence\+\_\+sensor\+\_\+mesured\+\_\+\+Values} ()
 \mbox{\Hypertarget{classwhs__controller_ab9c65c6ca0f60e3b0ba29f5a0d1c570e}\label{classwhs__controller_ab9c65c6ca0f60e3b0ba29f5a0d1c570e}} 
 void {\bfseries set\+\_\+keyence\+\_\+mesurement\+\_\+mode} ()
 \item 
-\mbox{\Hypertarget{classwhs__controller_a4b375d78a5bfabb77a513d4c0ea356f4}\label{classwhs__controller_a4b375d78a5bfabb77a513d4c0ea356f4}} 
-void {\bfseries get\+\_\+delta\+\_\+position} ()
+\mbox{\Hypertarget{classwhs__controller_afc9f5571d7270784614c1ef1089e666c}\label{classwhs__controller_afc9f5571d7270784614c1ef1089e666c}} 
+double {\bfseries get\+\_\+delta\+\_\+position} ()
 \item 
 \mbox{\Hypertarget{classwhs__controller_a58dca99ec8e2e001c798523e4a0b5561}\label{classwhs__controller_a58dca99ec8e2e001c798523e4a0b5561}} 
 void {\bfseries get\+\_\+delta\+\_\+speed} ()
@@ -62,7 +65,25 @@ void {\bfseries move\+\_\+delta\+\_\+up\+\_\+by} (double\+\_\+t steps)
 \item 
 \mbox{\Hypertarget{classwhs__controller_aeecf7f1ac2f6b52690d4516b25ac3497}\label{classwhs__controller_aeecf7f1ac2f6b52690d4516b25ac3497}} 
 void {\bfseries move\+\_\+delta\+\_\+down\+\_\+by} (double\+\_\+t steps)
-\end{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classwhs__controller_af0cbc6ff97398704d984e3f7833e1d4e}\label{classwhs__controller_af0cbc6ff97398704d984e3f7833e1d4e}} 
+void {\bfseries move\+\_\+delta\+\_\+home} ()
+\item 
+\mbox{\Hypertarget{classwhs__controller_af4f69dfb23179940eec4f208599bfef7}\label{classwhs__controller_af4f69dfb23179940eec4f208599bfef7}} 
+void {\bfseries move\+\_\+down\+\_\+until\+\_\+data\+\_\+availble} ()
+\item 
+\mbox{\Hypertarget{classwhs__controller_aebcc0bb7de47afb130eb20c73bca7749}\label{classwhs__controller_aebcc0bb7de47afb130eb20c73bca7749}} 
+double {\bfseries calculate\+\_\+time\+\_\+to\+\_\+move\+\_\+steps} (float mm)
+\item 
+\mbox{\Hypertarget{classwhs__controller_a667c311a6275743ec41194ac438249f7}\label{classwhs__controller_a667c311a6275743ec41194ac438249f7}} 
+void {\bfseries move\+\_\+down\+\_\+to\+\_\+surface} (double ref\+\_\+dis=0)
+\item 
+\mbox{\Hypertarget{classwhs__controller_a4cf80fed7a0abc39fd8c7a0b1ab35f75}\label{classwhs__controller_a4cf80fed7a0abc39fd8c7a0b1ab35f75}} 
+void {\bfseries deep\+\_\+wafer\+\_\+holder\+\_\+desired\+\_\+thickness} (double thickness=0.\+1, double mm\+\_\+step\+\_\+res=0.\+01)
+\item 
+\mbox{\Hypertarget{classwhs__controller_a5e73938c8a8518766e1b26cfb053dcd8}\label{classwhs__controller_a5e73938c8a8518766e1b26cfb053dcd8}} 
+void {\bfseries monitor\+\_\+and\+\_\+calibrate} ()
+\begin{DoxyCompactList}\small\item\em function to monitor the distance and calibrate depth \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

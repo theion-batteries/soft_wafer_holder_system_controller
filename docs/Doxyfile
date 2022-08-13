@@ -908,9 +908,6 @@ WARN_LOGFILE           =
 
 INPUT                  = ../src \
                          ../includes \
-                         ../dependencies/lib_keyence_sdk/src \
-                         ../dependencies/lib_keyence_sdk/icludes \
-                         ../dependencies/software_repetier_rest_api/src/repetier_manager_lib \
                          ../README.md
 
 # This tag can be used to specify the character encoding of the source files
