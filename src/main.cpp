@@ -2,9 +2,10 @@
 // program
 
 #include "whs_controller.h"
-
-int main()
+#include "cmdParser.h"
+int main(int argc, char *argv[])
 {
+	cmdParser cli(argc, argv); // pass cmd line args to bject
 	whs_controller wafer_sys_control;
 	// delta
 	wafer_sys_control.run_delta_subprocess();
@@ -15,7 +16,7 @@ int main()
 	wafer_sys_control.keyence_client_get_value_all(); //ready
 	// controller  algorithm
 	wafer_sys_control.move_down_until_data_availble();
-	wafer_sys_control.move_down_to_surface(158);
+	wafer_sys_control.move_down_to_surface(cli.parse_arg_float("--ref_dis"));
 	wafer_sys_control.deep_wafer_holder_desired_thickness(0.1, 0.01);
 	return 0;
 }
