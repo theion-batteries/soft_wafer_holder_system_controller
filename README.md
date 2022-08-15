@@ -84,8 +84,6 @@ The *.dll amust be inside same folder when extracting the zip.
 whs_controller.exe --sensor_ref <float value>
 ~~~
 
-
-
 ## Q&A
 1. if cmake failed to build due to socket dependecies problems, do the following
 ~~~cpp
