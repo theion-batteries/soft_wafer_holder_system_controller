@@ -475,7 +475,7 @@ void whs_controller::move_down_to_surface(double ref_dis)
 void whs_controller::deep_wafer_holder_desired_thickness(double thickness, double mm_step_res ) //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
 {
     unsigned int steps = thickness/mm_step_res;
-    for (int step_counter=0; step_counter<steps; step_counter++ )
+    for (unsigned int step_counter=0; step_counter<steps; step_counter++ )
     {
         std::cout << "iteration number "<< step_counter <<std::endl;
         move_delta_down_by(mm_step_res); // move mm step default 0.01 mm
