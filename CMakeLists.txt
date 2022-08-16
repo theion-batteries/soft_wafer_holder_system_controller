@@ -11,7 +11,7 @@ project(whs_controller VERSION "1.0")
 #    WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}/tests)
 
 # set the C++17 standard
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 ## library name
@@ -48,17 +48,23 @@ endif()
 include_directories(${PROJECT_SOURCE_DIR}/includes/)
 include_directories(${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include)
 include_directories(${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes)
+include_directories(${PROJECT_SOURCE_DIR}/dependencies/yaml-cpp/include/)
 
 # source *.cpp
 file(GLOB all_SRCS
 		"${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/*.cpp"
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
 		"${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_sdk/src/*.cpp"
+		"${PROJECT_SOURCE_DIR}/dependencies/yaml-cpp/src/*.cpp"
+
 )
 # add .exe
 add_executable(whs_controller ${all_SRCS})
 # link againt static lib
-target_link_libraries(whs_controller ${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_sdk/LKIF2.lib)
+target_link_libraries(whs_controller ${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_sdk/LKIF2.lib
+									 ${PROJECT_SOURCE_DIR}/dependencies/yaml-cpp/build/Debug/libyaml-cppmdd.lib
+
+)
 
 ## include preinstalled lib with vcpkg
 INCLUDE_DIRECTORIES(

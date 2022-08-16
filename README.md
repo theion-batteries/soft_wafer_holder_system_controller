@@ -32,8 +32,8 @@ The whs controller lib depends on:
 2. repetier (delta) lib rely on:
     - pip modules: see requirements.txt
     - delta_server.py: run this server as subprocess and process data. see dependencies/software_repetier_rest_api/src/repetier_manager_lib/
+3. yaml-cpp: lib to laod yaml file: please use the 0.6.3 version instead of latest
 ## Design
-
 the design should rely on mvc pattern (model-view-control) to comply with the high level architecture and the user interface later.
 Details can be found in the parent folder.
 Here we can identify our design in compliance to the higher level:
@@ -62,6 +62,15 @@ wafer_sys_control.run_delta_subprocess();
 wafer_sys_control.connect_to_delta_server();
 // get delta current position
 wafer_sys_control.get_delta_position();
+// controller  algorithm
+// first step algortihm: move down until sensor data become valid
+wafer_sys_control.move_down_until_data_availble(10, 2000);
+// second step algortihm: move down to surface contact
+wafer_sys_control.move_down_to_surface(cli.parse_arg_float("--ref_dis"));
+// third step algortihm: move down the thickness
+wafer_sys_control.deep_wafer_holder_desired_thickness(0.1, 0.01);
+// optional: run a monitor after the process is finished
+wafer_sys_control.monitor_and_calibrate();
 ~~~
 
 ## Tests
@@ -77,11 +86,18 @@ The picture below show the first test result:
 ## How to use the app
 the app is compacted inside a zip file. 
 In order for the app to run properly, it needs its dependencies.
-The *.dll amust be inside same folder when extracting the zip.
+The *.dll must be inside same folder when extracting the zip.
 - running as default: double click the executable an it will run with default  parameters.
-- running with user parameters: to change the sensor reference, run the app with these arguments:
-~~~cmd
+- running with user parameters: to change some default paarmeters, we included 2 methods:
+* method1: cli command line arguments (deprecated)
+~~~bash
+# run whs_controller.exe with customized arguments
 whs_controller.exe --sensor_ref <float value>
+~~~
+* method2: config.yaml (recommended)
+~~~bash
+# change the value inside the config file and run the script without args
+whs_controller.exe 
 ~~~
 
 ## Q&A
@@ -96,3 +112,4 @@ whs_controller.exe --sensor_ref <float value>
 #pragma comment (lib, "AdvApi32.lib")
 ~~~
 2. if the executable doesn't run properly, check if the dlls are put in the same folder as the .exe file
+3. if build error when linking yaml-cpp, change to previous version of the lib. working version is yaml-cpp-0.6.3

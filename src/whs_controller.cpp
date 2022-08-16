@@ -415,11 +415,10 @@ double whs_controller::calculate_time_to_move_steps(float mm)
     return mm * 100; // assume time step
 }
 
-void whs_controller::move_down_until_data_availble()
+void whs_controller::move_down_until_data_availble(double mm_steps, DWORD delay_to_move_request)
 {
     // test version: delta z pos: 125, keyence get data
     double last_pos=0;
-    float mm_steps = 10; // 
     if (!delta_last_position.empty())
     {
      last_pos = delta_last_position.front(); // this shall start at 300
@@ -433,10 +432,7 @@ void whs_controller::move_down_until_data_availble()
         std::cout << "moving down by " << mm_steps << "mm_steps until reading values " << std::endl;
         move_delta_down_by(mm_steps); // move down by mm steps
         std::cout << "wait for cmd moving down to finish, asking for new position  " << std::endl;
-        Sleep(2000);
-        get_delta_position();
-        std::cout << "current pos:  " << delta_last_position.front() << std::endl;
-        Sleep(2000);
+        Sleep(delay_to_move_request);
     }
 }
 /**
@@ -478,7 +474,7 @@ void whs_controller::move_down_to_surface(double ref_dis)
  */
 void whs_controller::deep_wafer_holder_desired_thickness(double thickness, double mm_step_res ) //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
 {
-    int steps = thickness/mm_step_res;
+    unsigned int steps = thickness/mm_step_res;
     for (int step_counter=0; step_counter<steps; step_counter++ )
     {
         std::cout << "iteration number "<< step_counter <<std::endl;
