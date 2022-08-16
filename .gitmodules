@@ -6,3 +6,6 @@
 [submodule "dependencies/lib_keyence_sdk"]
 	path = dependencies/lib_keyence_sdk
 	url = https://github.com/theionSami/lib_keyence_sdk.git
+[submodule "dependencies/yaml-cpp"]
+	path = dependencies/yaml-cpp
+	url = https://github.com/jbeder/yaml-cpp.git
