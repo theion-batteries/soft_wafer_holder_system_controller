@@ -1,0 +1,6 @@
+# Run the whs_controller.exe to execute the wafer holder motion automation
+# change parameters in config.yaml before running.
+
+if issues, refer to the author.
+author: sami dhiab
+contact: sami@theion.de

@@ -7,7 +7,7 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # There is NO WARRANTY, to the extent permitted by law.
  
 
-# Make data base, printed on Tue Aug 16 12:40:47 2022
+# Make data base, printed on Tue Aug 16 12:57:38 2022
 
 # Variables
 
@@ -76,8 +76,7 @@ COMMONPROGRAMW6432 = C:\Program Files\Common Files
 # environment
 CHOCOLATEYLASTPATHUPDATE = 132776740991238767
 # environment
-PROCESSOR_ARCHITECTURE  
-= x86
+PROCESSOR_ARCHITECTURE = x86
 # environment
 PLATFORMIO = C:\Users\SamiDhiab\.platformio\penv\Scripts\platformio.exe
 # environment
@@ -93,7 +92,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_4268_MCFBISQGJNNUACPP
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14040_GJCPUEXJVGUWFAAH
 # environment
 COMPUTERNAME = DESKTOP-BRFNNCP
 # environment
@@ -213,7 +212,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 4268
+VSCODE_PID = 14040
 # environment
 USERDOMAIN_ROAMINGPROFILE = AzureAD
 # variable set hash-table stats:
@@ -243,8 +242,7 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # C:\WINDOWS (key C:/WINDOWS, mtime 1660210578): 134 files, no impossibilities.
 # C:\Program Files\JetBrains\PyCharm Community Edition 2021.2.2\bin (key C:/Program Files/JetBrains/PyCharm Community Edition 2021.2.2/bin, mtime 1634660577): 28 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\Microsoft VS Code\bin (key C:/Users/SamiDhiab/AppData/Local/Programs/Microsoft VS Code/bin, mtime 1660211790): 4 files, no impossibilities.
-# C:\Users\SamiDhiab\AppData\Local\Programs\BFGroup\B2\ (key C:/Users/SamiDhiab/AppData/Local/Programs/BFGroup/B2/, mti 
-me 1657788032): 4 files, no impossibilities.
+# C:\Users\SamiDhiab\AppData\Local\Programs\BFGroup\B2\ (key C:/Users/SamiDhiab/AppData/Local/Programs/BFGroup/B2/, mtime 1657788032): 4 files, no impossibilities.
 # C:\ProgramData\chocolatey\bin (key C:/ProgramData/chocolatey/bin, mtime 1633200592): 41 files, no impossibilities.
 # C:\Users\SamiDhiab\.dotnet\tools: could not be stat'd.
 # C:\Program Files\LLVM\bin (key C:/Program Files/LLVM/bin, mtime 1659010009): 120 files, no impossibilities.
@@ -320,11 +318,12 @@ GNUmakefile:
 # other used: total = 51638 B / count = 3770 / avg = 13 B
 # other free: total = 165 B / max = 37 B / min = 5 B / avg = 23 B
 
-# strcache performance: lookups = 4081 / hit rate = 3%
-# hash-table stats:
-# Load=3935/8192=48%, Rehash=0, Collisions=1607/4081=39%
-# Finished Make data base on Tue Aug 16 12:40:47 2022
-
- 
+# strca 
 make.exe: *** No rule to make target 'all'.  Stop.
 
+che performance: lookups = 4081 / hit rate = 3%
+# hash-table stats:
+# Load=3935/8192=48%, Rehash=0, Collisions=1607/4081=39%
+# Finished Make data base on Tue Aug 16 12:57:38 2022
+
+ 
