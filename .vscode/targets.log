@@ -5,9 +5,8 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Tue Aug 16 12:57:38 2022
+# Make data base, printed on Tue Aug 16 14:28:35 2022
 
 # Variables
 
@@ -92,7 +91,7 @@ ELECTRON_RUN_AS_NODE = 1
 # automatic
 %F = $(notdir $%)
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14040_GJCPUEXJVGUWFAAH
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_8992_TFLQLOZDQULIHMNG
 # environment
 COMPUTERNAME = DESKTOP-BRFNNCP
 # environment
@@ -212,7 +211,7 @@ PROCESSOR_LEVEL = 23
 # environment
 FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
-VSCODE_PID = 14040
+VSCODE_PID = 8992
 # environment
 USERDOMAIN_ROAMINGPROFILE = AzureAD
 # variable set hash-table stats:
@@ -251,7 +250,7 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # C:\WINDOWS\System32\Wbem (key C:/WINDOWS/System32/Wbem, mtime 1660210111): 174 files, no impossibilities.
 # C:\Program Files\doxygen\bin (key C:/Program Files/doxygen/bin, mtime 1652958329): 7 files, no impossibilities.
 # C:\Program Files\nodejs\ (key C:/Program Files/nodejs/, mtime 1632490465): 11 files, no impossibilities.
-# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1660560040): 2996 files, no impossibilities.
+# C:\WINDOWS\system32 (key C:/WINDOWS/system32, mtime 1660650201): 2996 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\ (key C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/, mtime 1633938602): 19 files, no impossibilities.
 # C:\Program Files\dotnet\ (key C:/Program Files/dotnet/, mtime 1660207567): 13 files, no impossibilities.
 # C:\Users\SamiDhiab\AppData\Local\Programs\Python\Python39\Scripts\ (key C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/Scripts/, mtime 1659097482): 79 files, no impossibilities.
@@ -318,12 +317,11 @@ GNUmakefile:
 # other used: total = 51638 B / count = 3770 / avg = 13 B
 # other free: total = 165 B / max = 37 B / min = 5 B / avg = 23 B
 
-# strca 
-make.exe: *** No rule to make target 'all'.  Stop.
-
-che performance: lookups = 4081 / hit rate = 3%
+# strcache performance: lookups = 4081 / hit rate = 3%
 # hash-table stats:
 # Load=3935/8192=48%, Rehash=0, Collisions=1607/4081=39%
-# Finished Make data base on Tue Aug 16 12:57:38 2022
+# Finished Make data base on Tue Aug 16 14:28:35 2022
 
  
+make.exe: *** No rule to make target 'all'.  Stop.
+

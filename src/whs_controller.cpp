@@ -1,27 +1,27 @@
 /**
  * @file whs_controller.cpp
  * @author your name (you@domain.com)
- * @brief 
+ * @brief
  * @version 0.1
  * @date 2022-08-13
- * 
+ *
  * @copyright Copyright (c) 2022
- * 
+ *
  */
 #include "whs_controller.h"
-/*********** constructors and desctructions **********/
+ /*********** constructors and desctructions **********/
 
-/**
- * @brief 
- * 
- */
+ /**
+  * @brief
+  *
+  */
 whs_controller::whs_controller(/* args */)
 {
     std::cout << "creating wafer holder system controller " << std::endl;
 }
 /**
  * @brief Destroy the whs controller::whs controller object
- * 
+ *
  */
 whs_controller::~whs_controller()
 {
@@ -29,8 +29,8 @@ whs_controller::~whs_controller()
     delete keyence_client_sock;
 }
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::close_all_sockets()
 {
@@ -42,24 +42,24 @@ void whs_controller::close_all_sockets()
 /********* run subprocesses *******/
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::run_delta_subprocess() {
     std::cout << "Running delta program " << std::endl;
     ShellExecuteW(NULL, L"open", pyCmd, pyFilePath, NULL, SW_SHOWDEFAULT);
 }
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::run_keyence_subprocess() {
     std::cout << "Running keyence program " << std::endl;
     ShellExecuteW(NULL, L"open", cppFile, NULL, NULL, SW_SHOWDEFAULT);
 }
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::run_all_subprocesses()
 {
@@ -67,11 +67,11 @@ void whs_controller::run_all_subprocesses()
     run_keyence_subprocess();
 }
 /**
- * @brief 
- * 
- * @param cmd 
- * @param client 
- * @param args 
+ * @brief
+ *
+ * @param cmd
+ * @param client
+ * @param args
  */
 void whs_controller::sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string& args)
 {
@@ -84,8 +84,8 @@ void whs_controller::sendCmd(std::string& cmd, sockpp::tcp_connector* client, st
 /****** connect to kyence bridge server *******/
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::connect_to_keyence_server()
 {
@@ -108,8 +108,8 @@ void whs_controller::connect_to_keyence_server()
     }
 }
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void  whs_controller::set_keyence_mesurement_mode()
 {
@@ -140,8 +140,8 @@ void  whs_controller::set_keyence_mesurement_mode()
     }
 }
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::get_keyence_sensor_mesured_Values()
 {
@@ -175,19 +175,21 @@ void whs_controller::get_keyence_sensor_mesured_Values()
 /************************* keyence client methods*****************/
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::keyence_client_connect()
 {
     std::cout << "Running keyence client " << std::endl;
     Kclient = new keyence_client(keyence_ip);
     Kclient->connect();
+    keyenceReady = true;
+
 }
 /**
- * @brief 
- * 
- * @return double 
+ * @brief
+ *
+ * @return double
  */
 double  whs_controller::keyence_client_get_value_output0()
 {
@@ -202,9 +204,9 @@ double  whs_controller::keyence_client_get_value_output0()
 }
 
 /**
- * @brief 
- * 
- * @return double 
+ * @brief
+ *
+ * @return double
  */
 double  whs_controller::keyence_client_get_value_output1()
 {
@@ -219,9 +221,9 @@ double  whs_controller::keyence_client_get_value_output1()
 
 }
 /**
- * @brief 
- * 
- * @return double 
+ * @brief
+ *
+ * @return double
  */
 double  whs_controller::keyence_client_get_value_output2()
 {
@@ -236,23 +238,22 @@ double  whs_controller::keyence_client_get_value_output2()
 
 }
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::keyence_client_get_value_all()
 {
     keyence_client_get_value_output0();
     keyence_client_get_value_output1();
     keyence_client_get_value_output2();
-    keyenceReady = true;
 }
 
 /****************** Delta repetier server methods **********/
 
 
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::connect_to_delta_server()
 {
@@ -275,18 +276,20 @@ void whs_controller::connect_to_delta_server()
         std::cerr << "Error setting timeout on TCP stream: "
             << delta_client_sock->last_error_str() << std::endl;
     }
+    deltaReady = true;
+
 }
 /**
- * @brief 
- * 
- * @return double 
+ * @brief
+ *
+ * @return double
  */
 double whs_controller::get_delta_position()
 {
     double delta_pos = 0;
     std::cout << "get delta curent position" << std::endl;
-    if (!delta_last_position.empty()){
-    if (delta_last_position.size() > 10) delta_last_position.pop_back(); // remove last if 10
+    if (!delta_last_position.empty()) {
+        if (delta_last_position.size() > 10) delta_last_position.pop_back(); // remove last if 10
     }
     auto command = delta_cmds.find(1);
     if (command != delta_cmds.end()) {
@@ -315,8 +318,8 @@ double whs_controller::get_delta_position()
     return delta_pos;
 }
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::move_delta_home()
 {
@@ -337,15 +340,14 @@ void whs_controller::move_delta_home()
         {
             std::cout << "server replied : " << delta_incoming_data.c_str() << std::endl;
             std::cout << "delta is ready " << std::endl;
-            deltaReady = true;
             break;
         }
     }
 
 }
 /**
- * @brief 
- * 
+ * @brief
+ *
  */
 void whs_controller::get_delta_speed()
 {
@@ -369,9 +371,9 @@ void whs_controller::move_delta_up_by(double_t steps)
 }
 
 /**
- * @brief 
- * 
- * @param steps 
+ * @brief
+ *
+ * @param steps
  */
 void whs_controller::move_delta_down_by(double_t steps)
 {
@@ -405,10 +407,10 @@ void whs_controller::move_delta_down_by(double_t steps)
 /**************** Algorithms conntroller ***************/
 
 /**
- * @brief 
- * 
- * @param mm 
- * @return double 
+ * @brief
+ *
+ * @param mm
+ * @return double
  */
 double whs_controller::calculate_time_to_move_steps(float mm)
 {
@@ -418,16 +420,16 @@ double whs_controller::calculate_time_to_move_steps(float mm)
 void whs_controller::move_down_until_data_availble(double mm_steps, DWORD delay_to_move_request)
 {
     // test version: delta z pos: 125, keyence get data
-    double last_pos=0;
+    double last_pos = 0;
     if (!delta_last_position.empty())
     {
-     last_pos = delta_last_position.front(); // this shall start at 300
+        last_pos = delta_last_position.front(); // this shall start at 300
     }
-    else{
+    else {
         last_pos = get_delta_position();
     }
     std::cout << "start pos:  " << last_pos << std::endl;
-    while (keyence_client_get_value_output1() == 0 ) // while data invalid, we go down further
+    while (keyence_client_get_value_output1() == 0) // while data invalid, we go down further
     {
         std::cout << "moving down by " << mm_steps << "mm_steps until reading values " << std::endl;
         move_delta_down_by(mm_steps); // move down by mm steps
@@ -436,23 +438,23 @@ void whs_controller::move_down_until_data_availble(double mm_steps, DWORD delay_
     }
 }
 /**
- * @brief 
- * 
- * @param ref_dis 
+ * @brief
+ *
+ * @param ref_dis
  */
 void whs_controller::move_down_to_surface(double ref_dis)
 {
-    if(ref_dis == 0) ref_dis =reference_distance;
+    if (ref_dis == 0) ref_dis = reference_distance;
     std::cout << "moving down to surface" << std::endl;
-    std::cout << "moving down until sensor reading is equal the refernce distance: " <<ref_dis<< std::endl;
+    std::cout << "moving down until sensor reading is equal the refernce distance: " << ref_dis << std::endl;
     // test version: delta z pos: 125, keyence get data
-    double last_pos=0;
+    double last_pos = 0;
     float mm_steps = 1; // 
     if (!delta_last_position.empty())
     {
-     last_pos = delta_last_position.front(); 
+        last_pos = delta_last_position.front();
     }
-    else{
+    else {
         last_pos = get_delta_position();
     }
     while (keyence_client_get_value_output1() >= ref_dis) // while keyence reading is <= to reference distance
@@ -467,25 +469,25 @@ void whs_controller::move_down_to_surface(double ref_dis)
     }
 }
 /**
- * @brief 
- * 
- * @param thickness 
- * @param mm_step_res 
+ * @brief
+ *
+ * @param thickness
+ * @param mm_step_res
  */
-void whs_controller::deep_wafer_holder_desired_thickness(double thickness, double mm_step_res ) //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
+void whs_controller::deep_wafer_holder_desired_thickness(double thickness, double mm_step_res) //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
 {
-    unsigned int steps = thickness/mm_step_res;
-    for (unsigned int step_counter=0; step_counter<steps; step_counter++ )
+    unsigned int steps = thickness / mm_step_res;
+    for (unsigned int step_counter = 0; step_counter < steps; step_counter++)
     {
-        std::cout << "iteration number "<< step_counter <<std::endl;
+        std::cout << "iteration number " << step_counter << std::endl;
         move_delta_down_by(mm_step_res); // move mm step default 0.01 mm
         Sleep(200); //wait for movement to finish
         // to check
-        keyence_client_get_value_output1(); 
+        keyence_client_get_value_output1();
         // to verify step res
         get_delta_position();
     }
-    waferHolderReady=true; 
+    waferHolderReady = true;
 }
 /**
  * @brief function to monitor the distance and calibrate depth
@@ -493,7 +495,6 @@ void whs_controller::deep_wafer_holder_desired_thickness(double thickness, doubl
 void whs_controller::monitor_and_calibrate()
 {
     std::cout << "monitor calibration started" << std::endl;
-    
-
-
 }
+
+

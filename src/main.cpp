@@ -9,6 +9,7 @@ int main(int argc, char* argv[])
 {
 	//cmdParser cli(argc, argv); // pass cmd line args to bject
 	whs_controller wafer_sys_control;
+	// thread test
 	// laod config file
 	YAML::Node config = YAML::LoadFile("./config.yaml");
 	std::cout << "config file loaded, printing parameters: " << std::endl;
@@ -20,8 +21,8 @@ int main(int argc, char* argv[])
 
 	// delta
 	wafer_sys_control.run_delta_subprocess();
-	wafer_sys_control.connect_to_delta_server();
-	wafer_sys_control.move_delta_home(); // ready
+	wafer_sys_control.connect_to_delta_server(); // ready
+	wafer_sys_control.move_delta_home(); 
 	// keyence
 	wafer_sys_control.keyence_client_connect();
 	wafer_sys_control.keyence_client_get_value_all(); //ready

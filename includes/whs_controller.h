@@ -17,6 +17,9 @@
 #include <map>
 #include <queue>
 #include "keyence_client.h"
+#include <thread>
+#include <atomic>
+
 #pragma once
 /**
  * @brief responsible for executing subprocess, handle data in both directions 
@@ -37,6 +40,9 @@ struct delta_server
 class whs_controller
 {
 private:
+    // thread shared var
+    //std::atomic<int> shared_var{0};
+    
 	LPCWSTR pyFilePath = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/delta_server.py";
 	LPCWSTR pyCmd = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
 	LPCWSTR cppFile =L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/build/Debug/keyence_bin.exe";
@@ -106,4 +112,5 @@ public:
     void move_down_to_surface(double ref_dis=0);
     void deep_wafer_holder_desired_thickness(double thickness=0.1, double mm_step_res=0.01 ); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
     void monitor_and_calibrate(); // we will launch a monitor to check if we are inside the desired depth during next processes
+
 };
