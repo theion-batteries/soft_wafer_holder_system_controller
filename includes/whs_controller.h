@@ -78,6 +78,8 @@ private:
     bool keyenceReady = false;
     bool waferHolderReady = false;
     double reference_distance = 0;
+    double thickness = 0.1;
+    double lowest_step_res = 0.01;
     // stbility range is betweeen 140 and 145 or 5 mm range green
 public:
     /******* const/desctr ****/

@@ -365,9 +365,35 @@ void whs_controller::move_delta_down_to(double_t new_pos)
 {
 
 }
+/**
+ * @brief 
+ * 
+ * @param steps 
+ */
 void whs_controller::move_delta_up_by(double_t steps)
 {
+std::cout << "moving up by " << steps << std::endl;
+    auto command = delta_cmds.find(5);
+    if (command != delta_cmds.end()) {
+        std::cout << "sending command: " << command->second << " args: " << steps << '\n';
+        std::string args = " " + std::to_string(steps);
+        sendCmd(command->second, delta_client_sock, args);
+    }
+    std::cout << "awaiting server response" << std::endl;
 
+    while (delta_client_sock->is_connected())
+    {
+        // Read_n data from keyence
+        ssize_t n = delta_client_sock->read(&delta_incoming_data[0], 1024);
+        // std::cout << "n bytes: " << n << std::endl;
+        // std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
+        if (n > 0)
+        {
+            std::cout << "server replied : " << delta_incoming_data.c_str() << std::endl;
+            std::cout << "delta is moving up " << std::endl;
+            break;
+        }
+    }
 }
 
 /**
@@ -476,6 +502,8 @@ void whs_controller::move_down_to_surface(double ref_dis)
  */
 void whs_controller::deep_wafer_holder_desired_thickness(double thickness, double mm_step_res) //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
 {
+    this->thickness = thickness;
+    lowest_step_res = mm_step_res;
     unsigned int steps = thickness / mm_step_res;
     for (unsigned int step_counter = 0; step_counter < steps; step_counter++)
     {
@@ -495,6 +523,34 @@ void whs_controller::deep_wafer_holder_desired_thickness(double thickness, doubl
 void whs_controller::monitor_and_calibrate()
 {
     std::cout << "monitor calibration started" << std::endl;
+    // algorithm: if current distance is not equal desired thickness, calibrate
+    // 1. check if diff is a value that is below the step resolution, continue or
+    // 2. move up if diff negativ
+    // 3. move down if diff positiv
+    while (true)
+    {
+        double diff = keyence_client_get_value_output1()- thickness;
+        if (abs(diff) <= lowest_step_res) // if the difference mesured lower than min step res, we skip calibration
+        {
+            continue;
+        }
+        else
+        {
+            if (diff <0) // if diff negativ, we move up
+            {
+                move_delta_up_by(diff);
+            }
+            else
+            {
+                move_delta_down_by(diff);
+
+            }
+
+        }
+
+    }
+    
+
 }
 
 
