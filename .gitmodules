@@ -9,3 +9,6 @@
 [submodule "dependencies/yaml-cpp"]
 	path = dependencies/yaml-cpp
 	url = https://github.com/jbeder/yaml-cpp.git
+[submodule "dependencies/lib_keyence_distance_sensor"]
+	path = dependencies/lib_keyence_distance_sensor
+	url = https://github.com/theionSami/lib_keyence_distance_sensor.git
