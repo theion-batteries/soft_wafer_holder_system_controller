@@ -5,9 +5,8 @@ make.exe all --print-data-base --no-builtin-variables --no-builtin-rules --quest
 # License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
- 
 
-# Make data base, printed on Fri Aug 19 14:57:01 2022
+# Make data base, printed on Fri Aug 19 15:39:01 2022
 
 # Variables
 
@@ -227,7 +226,10 @@ USERDOMAIN_ROAMINGPROFILE = AzureAD
 # C:\Users\SamiDhiab\.platformio\penv\Scripts\ (key C:/Users/SamiDhiab/.platformio/penv/Scripts/, mtime 1656008720): 25 files, no impossibilities.
 # C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\ (key C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/, mtime 1636023288): 7 files, no impossibilities.
 # C:\Program Files (x86)\Common Files\Oracle\Java\javapath (key C:/Program Files (x86)/Common Files/Oracle/Java/javapath, mtime 1660515922): 5 files, no impossibilities.
-# C:\Program Files\STEMMER IMAGING\Common Vision Blox\ (key C:/Program Files/STEMMER IMAGING/Common Vision Blox/, mtime 1634050659): 73 files, no impossibilities.
+# C: 
+make.exe: *** No rule to make target 'all'.  Stop.
+
+\Program Files\STEMMER IMAGING\Common Vision Blox\ (key C:/Program Files/STEMMER IMAGING/Common Vision Blox/, mtime 1634050659): 73 files, no impossibilities.
 # C: could not be stat'd.
 # C:\Users\SamiDhiab\AppData\Local\Microsoft\WindowsApps (key C:/Users/SamiDhiab/AppData/Local/Microsoft/WindowsApps, mtime 1659598087): 17 files, no impossibilities.
 # C:\TDM-GCC-64\bin (key C:/TDM-GCC-64/bin, mtime 1658999076): 89 files, no impossibilities.
@@ -317,8 +319,6 @@ GNUmakefile:
 # strcache performance: lookups = 4081 / hit rate = 3%
 # hash-table stats:
 # Load=3935/8192=48%, Rehash=0, Collisions=1607/4081=39%
-# Finished Make data base on Fri Aug 19 14:57:01 2022
+# Finished Make data base on Fri Aug 19 15:39:01 2022
 
  
-make.exe: *** No rule to make target 'all'.  Stop.
-

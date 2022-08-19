@@ -6,9 +6,12 @@
 [submodule "dependencies/lib_keyence_sdk"]
 	path = dependencies/lib_keyence_sdk
 	url = https://github.com/theionSami/lib_keyence_sdk.git
+	branch = main
 [submodule "dependencies/yaml-cpp"]
 	path = dependencies/yaml-cpp
 	url = https://github.com/jbeder/yaml-cpp.git
+	branch = 9a36242
 [submodule "dependencies/lib_keyence_distance_sensor"]
 	path = dependencies/lib_keyence_distance_sensor
 	url = https://github.com/theionSami/lib_keyence_distance_sensor.git
+	branch = main
