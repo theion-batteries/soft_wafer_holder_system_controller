@@ -47,7 +47,16 @@ void whs_controller::close_all_sockets()
  */
 void whs_controller::run_delta_subprocess() {
     std::cout << "Running delta program " << std::endl;
-    ShellExecuteW(NULL, L"open", pyCmd, pyFilePath, NULL, SW_SHOWDEFAULT);
+    HINSTANCE retVal = ShellExecuteW(NULL, L"open", pyCmd, pyFilePath, NULL, SW_SHOWDEFAULT);
+    if (reinterpret_cast<INT_PTR>(retVal) != HINSTANCE_ERROR) 
+    {
+        std::cout << "executed succefully " << std::endl;
+        return;
+    }
+    std::cout << "error: " <<GetLastError()<< std::endl;
+
+
+
 }
 /**
  * @brief
