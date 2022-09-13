@@ -97,7 +97,7 @@ public:
     void run_all_subprocesses();
     void connect_to_delta_server();
     void connect_to_keyence_server();
-    void sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string& args=std::string());
+    void sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string args=std::string());
     void get_keyence_sensor_mesured_Values();
     void set_keyence_mesurement_mode();
     double get_delta_position();
