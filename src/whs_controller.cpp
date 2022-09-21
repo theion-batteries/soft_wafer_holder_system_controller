@@ -17,7 +17,7 @@
   */
 whs_controller::whs_controller(/* args */)
 {
-    std::cout << "creating wafer holder system controller " << std::endl;
+    std::cout << "creating wafer holder motion controller " << std::endl;
 }
 /**
  * @brief Destroy the whs controller::whs controller object
@@ -26,7 +26,7 @@ whs_controller::whs_controller(/* args */)
 whs_controller::~whs_controller()
 {
     if (delta_client_sock != nullptr) delete delta_client_sock;
-    if (keyence_client_sock != nullptr) delete keyence_client_sock;
+    if (Kclient != nullptr) delete Kclient;
 }
 /**
  * @brief
@@ -187,12 +187,18 @@ void whs_controller::get_keyence_sensor_mesured_Values()
  * @brief
  *
  */
-void whs_controller::keyence_client_connect()
+enum_sub_sys_feedback whs_controller::keyence_client_connect()
 {
     std::cout << "Running keyence client " << std::endl;
     Kclient = new keyence_client(keyence_ip);
-    Kclient->connect();
-    keyenceReady = true;
+    enum_hw_feedback Keyence_feedback = Kclient->connect();
+    if (Keyence_feedback == enum_hw_feedback::hw_success)
+    {
+        keyenceReady = true;
+        return enum_sub_sys_feedback::sub_success;
+    }
+     return enum_sub_sys_feedback::sub_error;
+    
 
 }
 /**
@@ -332,6 +338,16 @@ double whs_controller::get_delta_position()
  */
 void whs_controller::move_delta_home()
 {
+    double last_pos = 0;
+    if (!delta_last_position.empty())
+    {
+        last_pos = delta_last_position.front(); // this shall start at 300
+        if (last_pos == 300) return; //already
+    }
+    else {
+        last_pos = get_delta_position();
+        if (last_pos == 300) return; //already
+    }
     //if (delta_last_position.front()==300) return ; // already homed
     auto command = delta_cmds.find(7);
     if (command != delta_cmds.end()) {
@@ -345,17 +361,20 @@ void whs_controller::move_delta_home()
         ssize_t n = delta_client_sock->read(&delta_incoming_data[0], 1024);
         // std::cout << "n bytes: " << n << std::endl;
         // std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
-        //if (n > 0)
-        //{
+        if (n > 0)
+        {
             std::cout << "server replied : " << delta_incoming_data.c_str() << std::endl;
             std::cout << "delta is ready " << std::endl;
             break;
-        //}
-        if (!delta_client_sock->read_timeout(std::chrono::seconds(5))) {
+        }
+        if (delta_client_sock->read_timeout(std::chrono::seconds(5))) {
             std::cerr << "Error setting timeout on TCP stream: "
                 << delta_client_sock->last_error_str() << std::endl;
+                break;
         }
     }
+    // mandatory wait for mechanical movement: 1000-2000 ms
+    Sleep(2000);
 
 }
 /**
