@@ -1,6 +1,6 @@
-^C:\USERS\SAMIDHIAB\THEION_REPOS\SOFT_WAFER_HOLDER_SYSTEM_CONTROLLER\CMAKELISTS.TXT
+^C:\USERS\SAMIDHIAB\THEION_REPOS\SOFTWARE_WGM_V2_CPP\DEPENDENCIES\SOFT_WAFER_HOLDER_SYSTEM_CONTROLLER\CMAKELISTS.TXT
 setlocal
-"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/generate.stamp
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
