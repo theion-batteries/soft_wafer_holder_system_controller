@@ -19,6 +19,15 @@ whs_controller::whs_controller(LPCWSTR pythonPath )
 {
     std::cout << "creating wafer holder motion controller " << std::endl;
     pyCmd = pythonPath ;
+    auto cwd = std::filesystem::current_path();
+    auto tempStr =(cwd.generic_string())+ PyScriptName;
+
+	std::wstring temp = std::wstring(tempStr.begin(), tempStr.end());
+    pyFilePath=temp.c_str();
+    std::cout << "loading script:  "<< tempStr.c_str() << std::endl;
+
+
+
 }
 /**
  * @brief Destroy the whs controller::whs controller object
@@ -48,6 +57,9 @@ void whs_controller::close_all_sockets()
  */
 void whs_controller::run_delta_subprocess() {
     std::cout << "Running delta program " << std::endl;
+    std::wcout << "Running script " <<pyCmd;
+   //auto pp = L"C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/Debug/delta_server.py";
+    //auto py = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
     HINSTANCE retVal = ShellExecuteW(NULL, L"open", pyCmd, pyFilePath, NULL, SW_SHOWDEFAULT);
     if (reinterpret_cast<INT_PTR>(retVal) != HINSTANCE_ERROR)
     {

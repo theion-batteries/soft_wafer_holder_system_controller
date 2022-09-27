@@ -19,6 +19,7 @@
 #include "keyence_client.h"
 #include <thread>
 #include <atomic>
+#include <filesystem>
 
 #pragma once
 /**
@@ -48,8 +49,8 @@ class whs_controller
 private:
     // thread shared var
     //std::atomic<int> shared_var{0};
-
-    LPCWSTR pyFilePath = L"./delta_server.py";   // = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/delta_server.py";
+    std::string PyScriptName = "/delta_server.py";
+    LPCWSTR pyFilePath; // = L"./delta_server.py";   // = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/delta_server.py";
     LPCWSTR pyCmd;  // = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
     LPCWSTR cppFile = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/build/Debug/keyence_bin.exe";
     delta_server _delta_struct;
