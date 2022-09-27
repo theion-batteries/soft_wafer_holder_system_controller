@@ -15,9 +15,10 @@
   * @brief
   *
   */
-whs_controller::whs_controller(/* args */)
+whs_controller::whs_controller(LPCWSTR pythonPath )
 {
     std::cout << "creating wafer holder motion controller " << std::endl;
+    pyCmd = pythonPath ;
 }
 /**
  * @brief Destroy the whs controller::whs controller object

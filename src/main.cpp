@@ -8,7 +8,6 @@
 int main(int argc, char* argv[])
 {
 	//cmdParser cli(argc, argv); // pass cmd line args to bject
-	whs_controller wafer_sys_control;
 	// thread test
 	// laod config file
 	YAML::Node config = YAML::LoadFile("./config.yaml");
@@ -18,6 +17,9 @@ int main(int argc, char* argv[])
 	std::cout << "ref_dis: " << config["ref_dis"].as<std::string>() << std::endl;
 	std::cout << "thickness: " << config["thickness"].as<std::string>() << std::endl;
 	std::cout << "mm_step_res: " << config["mm_step_res"].as<std::string>() << std::endl;
+	std::cout << "python path: " << config["python_path"].as<std::string>() << std::endl;
+
+	whs_controller wafer_sys_control(config["python_path"].as<LPCWSTR>());
 
 	// delta
 	wafer_sys_control.run_delta_subprocess();

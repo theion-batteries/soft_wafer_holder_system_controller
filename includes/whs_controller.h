@@ -49,8 +49,8 @@ private:
     // thread shared var
     //std::atomic<int> shared_var{0};
 
-    LPCWSTR pyFilePath = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/delta_server.py";
-    LPCWSTR pyCmd = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
+    LPCWSTR pyFilePath = L"./delta_server.py";   // = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/delta_server.py";
+    LPCWSTR pyCmd;  // = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
     LPCWSTR cppFile = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/build/Debug/keyence_bin.exe";
     delta_server _delta_struct;
     keyence_server _keyence_struct;
@@ -89,7 +89,7 @@ private:
     // stbility range is betweeen 140 and 145 or 5 mm range green
 public:
     /******* const/desctr ****/
-    whs_controller(/* args */);
+    whs_controller(LPCWSTR pythonPath ) ;
     ~whs_controller();
     /******* client controller methods ***/
     void close_all_sockets();
