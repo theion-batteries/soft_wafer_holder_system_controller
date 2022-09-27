@@ -18,10 +18,12 @@ int main(int argc, char* argv[])
 	std::cout << "thickness: " << config["thickness"].as<std::string>() << std::endl;
 	std::cout << "mm_step_res: " << config["mm_step_res"].as<std::string>() << std::endl;
 	std::cout << "python path: " << config["python_path"].as<std::string>() << std::endl;
-	// convert std::String to LPCWSTR
-	std::string pyPath = (config["python_path"].as<std::string>());
-	std::wstring temp = std::wstring(pyPath.begin(), pyPath.end());
-	whs_controller wafer_sys_control(temp.c_str());
+	std::cout << "python script: " << config["python_script"].as<std::string>() << std::endl;
+	auto path =  (config["python_path"].as<std::string>() );
+	auto script = (config["python_script"].as<std::string>());
+	std::wstring tempPath = std::wstring(path.begin(), path.end());
+    std::wstring tempScript = std::wstring( script.begin(),  script.end());
+	whs_controller wafer_sys_control( tempPath.c_str(), tempScript.c_str());
 
 	// delta
 	wafer_sys_control.run_delta_subprocess();

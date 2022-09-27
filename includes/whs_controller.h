@@ -90,7 +90,7 @@ private:
     // stbility range is betweeen 140 and 145 or 5 mm range green
 public:
     /******* const/desctr ****/
-    whs_controller(LPCWSTR pythonPath ) ;
+    whs_controller(LPCWSTR pythonPath,  LPCWSTR pythonScript) ;
     ~whs_controller();
     /******* client controller methods ***/
     void close_all_sockets();
