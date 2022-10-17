@@ -1,0 +1,105 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"dependencies/yaml-cpp/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 302,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 303,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 336,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 340,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"dependencies/yaml-cpp/MinSizeRel/libyaml-cppmd.lib"
+			],
+			"targetId" : "yaml-cpp::@bbf290e3af8838e0ff35",
+			"targetIndex" : 15,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/yaml-cpp",
+			"paths" : 
+			[
+				{
+					"from" : "dependencies/yaml-cpp/include/yaml-cpp",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "dev",
+			"destination" : "CMake",
+			"paths" : 
+			[
+				"build/dependencies/yaml-cpp/CMakeFiles/yaml-cpp-config.cmake",
+				"build/dependencies/yaml-cpp/yaml-cpp-config-version.cmake"
+			],
+			"type" : "file"
+		},
+		{
+			"backtrace" : 4,
+			"component" : "Unspecified",
+			"destination" : "CMake",
+			"exportName" : "yaml-cpp-targets",
+			"exportTargets" : 
+			[
+				{
+					"id" : "yaml-cpp::@bbf290e3af8838e0ff35",
+					"index" : 15
+				}
+			],
+			"paths" : 
+			[
+				"dependencies/yaml-cpp/CMakeFiles/Export/CMake/yaml-cpp-targets.cmake"
+			],
+			"type" : "export"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "dependencies/yaml-cpp",
+		"source" : "dependencies/yaml-cpp"
+	}
+}

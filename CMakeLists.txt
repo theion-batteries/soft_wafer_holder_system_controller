@@ -9,6 +9,12 @@ project(whs_controller VERSION "1.0")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+# add dependencies cmake
+add_subdirectory(dependencies/lib_keyence_distance_sensor/dependencies/sockpp/)
+add_subdirectory(dependencies/lib_keyence_sdk)
+add_subdirectory(dependencies/yaml-cpp)
+
 ## library name
 set(WHS_CONTROLLER whs_controller)
 set(WHS_CONTROLLER_STATIC ${whs_controller}-static)
@@ -21,10 +27,10 @@ include_directories(${PROJECT_SOURCE_DIR}/dependencies/yaml-cpp/include/)
 
 # source *.cpp
 file(GLOB all_SRCS
-		"${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/*.cpp"
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
 		"${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_sdk/src/*.cpp"
 		"${PROJECT_SOURCE_DIR}/dependencies/yaml-cpp/src/*.cpp"
+		"${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/*.cpp"
 
 )
 

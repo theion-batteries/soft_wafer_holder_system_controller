@@ -1,0 +1,1 @@
+cmd='C:/Qt/Tools/CMake_64/bin/cmake.exe;-DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>;-DBUILD_GMOCK=ON;-Dgtest_force_shared_crt=ON;-GVisual Studio 17 2022;-Ax64;-Thost=x64;-DCMAKE_GENERATOR_INSTANCE:INTERNAL=C:/Program Files/Microsoft Visual Studio/2022/Community;<SOURCE_DIR><SOURCE_SUBDIR>'

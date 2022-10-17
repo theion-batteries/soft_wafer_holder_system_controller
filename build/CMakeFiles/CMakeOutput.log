@@ -7,8 +7,13 @@ Id flags:
 The output was:
 0
 MSBuild version 17.3.1+2badb37d1 for .NET Framework
+<<<<<<< HEAD
 Build started 17/10/2022 13:29:04.
 Project "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+=======
+Build started 12/10/2022 17:21:56.
+Project "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdC.tlog\".
@@ -21,6 +26,7 @@ ClCompile:
   CMakeCCompilerId.c
 Link:
   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdC.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\src\vcpkg\installed\x64-windows\debug\lib" /LIBPATH:"C:\src\vcpkg\installed\x64-windows\debug\lib\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\src\vcpkg\installed\x64-windows\debug\lib\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdC.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdC.lib" /MACHINE:X64 Debug\CMakeCCompilerId.obj
+<<<<<<< HEAD
   CompilerIdC.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.exe
 AppLocalFromInstalled:
   pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"
@@ -28,6 +34,15 @@ AppLocalFromInstalled:
   operable program or batch file.
   The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"" exited with code 9009.
   "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"
+=======
+  CompilerIdC.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.exe
+AppLocalFromInstalled:
+  pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+  The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"" exited with code 9009.
+  "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdC.tlog\CompilerIdC.write.1u.tlog" "Debug\vcpkg.applocal.log"
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_C_COMPILER=%%~$PATH:i
   :VCEnd
@@ -35,20 +50,32 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdC.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdC.tlog\CompilerIdC.lastbuildstate".
+<<<<<<< HEAD
 Done Building Project "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+=======
+Done Building Project "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.vcxproj" (default targets).
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
+<<<<<<< HEAD
 Time Elapsed 00:00:01.10
+=======
+Time Elapsed 00:00:01.35
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.vcxproj"
 
+<<<<<<< HEAD
 The C compiler identification is MSVC, found in "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/3.23.2/CompilerIdC/CompilerIdC.exe"
+=======
+The C compiler identification is MSVC, found in "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/CMakeFiles/3.23.2/CompilerIdC/CompilerIdC.exe"
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
@@ -58,8 +85,13 @@ Id flags:
 The output was:
 0
 MSBuild version 17.3.1+2badb37d1 for .NET Framework
+<<<<<<< HEAD
 Build started 17/10/2022 13:29:06.
 Project "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+=======
+Build started 12/10/2022 17:21:57.
+Project "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 PrepareForBuild:
   Creating directory "Debug\".
   Creating directory "Debug\CompilerIdCXX.tlog\".
@@ -72,6 +104,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.33.31629\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\src\vcpkg\installed\x64-windows\debug\lib" /LIBPATH:"C:\src\vcpkg\installed\x64-windows\debug\lib\manual-link" kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib "C:\src\vcpkg\installed\x64-windows\debug\lib\*.lib" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
+<<<<<<< HEAD
   CompilerIdCXX.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.exe
 AppLocalFromInstalled:
   pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"
@@ -79,6 +112,15 @@ AppLocalFromInstalled:
   operable program or batch file.
   The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"" exited with code 9009.
   "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"
+=======
+  CompilerIdCXX.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.exe
+AppLocalFromInstalled:
+  pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
+  The command "pwsh.exe -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"" exited with code 9009.
+  "C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe" -ExecutionPolicy Bypass -noprofile -File "C:\src\vcpkg\scripts\buildsystems\msbuild\applocal.ps1" "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.exe" "C:\src\vcpkg\installed\x64-windows\debug\bin" "Debug\CompilerIdCXX.tlog\CompilerIdCXX.write.1u.tlog" "Debug\vcpkg.applocal.log"
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -86,42 +128,72 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Deleting file "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Touching "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
+<<<<<<< HEAD
 Done Building Project "C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+=======
+Done Building Project "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.vcxproj" (default targets).
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 
 Build succeeded.
     0 Warning(s)
     0 Error(s)
 
+<<<<<<< HEAD
 Time Elapsed 00:00:00.94
+=======
+Time Elapsed 00:00:01.49
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
+<<<<<<< HEAD
 The CXX compiler identification is MSVC, found in "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/3.23.2/CompilerIdCXX/CompilerIdCXX.exe"
+=======
+The CXX compiler identification is MSVC, found in "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/CMakeFiles/3.23.2/CompilerIdCXX/CompilerIdCXX.exe"
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_25ea0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
   Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
   CMakeCCompilerABI.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
   cl /c /I"C:\src\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_25ea0.dir\Debug\\" /Fd"cmTC_25ea0.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
   cmTC_25ea0.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\CMakeTmp\Debug\cmTC_25ea0.exe
+=======
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_29dfb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
+  CMakeCCompilerABI.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\src\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_29dfb.dir\Debug\\" /Fd"cmTC_29dfb.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+  cmTC_29dfb.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\CMakeTmp\Debug\cmTC_29dfb.exe
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
 
+<<<<<<< HEAD
 Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_b2f18.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
   Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
   CMakeCXXCompilerABI.cpp
   Copyright (C) Microsoft Corporation.  All rights reserved.
   cl /c /I"C:\src\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_b2f18.dir\Debug\\" /Fd"cmTC_b2f18.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp"
   cmTC_b2f18.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\CMakeTmp\Debug\cmTC_b2f18.exe
+=======
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_4c1bc.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
+  CMakeCXXCompilerABI.cpp
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"C:\src\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_4c1bc.dir\Debug\\" /Fd"cmTC_4c1bc.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_4c1bc.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\CMakeTmp\Debug\cmTC_4c1bc.exe
+>>>>>>> 8689f4db48649795843818f8a6003ffd87e8bbd8
 
 
 

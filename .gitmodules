@@ -14,4 +14,4 @@
 [submodule "dependencies/lib_keyence_distance_sensor"]
 	path = dependencies/lib_keyence_distance_sensor
 	url = https://github.com/theionSami/lib_keyence_distance_sensor.git
-	branch = main
+	branch = dev
