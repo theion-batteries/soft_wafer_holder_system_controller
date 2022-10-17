@@ -1,0 +1,10 @@
+^C:\USERS\SAMIDHIAB\THEION_REPOS\SOFTWARE_WGM_V2_CPP\DEPENDENCIES\SOFT_WAFER_HOLDER_SYSTEM_CONTROLLER\BUILD\CMAKEFILES\1D5F78490BE72C8DB0ADEF5067FB8CFE\GENERATE.STAMP.RULE
+setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/whs_controller.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
