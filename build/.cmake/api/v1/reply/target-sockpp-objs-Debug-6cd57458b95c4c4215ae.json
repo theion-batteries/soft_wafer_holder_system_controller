@@ -1,0 +1,195 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/sockpp-objs.dir/Debug/acceptor.obj"
+		},
+		{
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/sockpp-objs.dir/Debug/connector.obj"
+		},
+		{
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/sockpp-objs.dir/Debug/datagram_socket.obj"
+		},
+		{
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/sockpp-objs.dir/Debug/exception.obj"
+		},
+		{
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/sockpp-objs.dir/Debug/inet_address.obj"
+		},
+		{
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/sockpp-objs.dir/Debug/inet6_address.obj"
+		},
+		{
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/sockpp-objs.dir/Debug/socket.obj"
+		},
+		{
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/sockpp-objs.dir/Debug/stream_socket.obj"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/CMakeLists.txt",
+			"dependencies/lib_keyence_distance_sensor/dependencies/sockpp/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 39,
+				"parent" : 0
+			},
+			{
+				"file" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 84,
+				"parent" : 2
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1"
+				},
+				{
+					"fragment" : "-std:c++14"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/generated"
+				},
+				{
+					"backtrace" : 3,
+					"path" : "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					1
+				],
+				"standard" : "14"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "sockpp-objs::@07bb87f9ed4e91a15fa1",
+	"name" : "sockpp-objs",
+	"paths" : 
+	{
+		"build" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src",
+		"source" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/acceptor.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/connector.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/datagram_socket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/exception.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet_address.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/inet6_address.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/socket.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/src/stream_socket.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "OBJECT_LIBRARY"
+}

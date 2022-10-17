@@ -1,0 +1,83 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"dependencies/lib_keyence_distance_sensor/dependencies/sockpp/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 159,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 171,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 175,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"dependencies/lib_keyence_distance_sensor/dependencies/sockpp/Release/sockpp-static.lib"
+			],
+			"targetId" : "sockpp-static::@7a92092c6bbca101d94b",
+			"targetIndex" : 13,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/sockpp",
+			"paths" : 
+			[
+				{
+					"from" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include/sockpp",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		},
+		{
+			"backtrace" : 3,
+			"component" : "Unspecified",
+			"destination" : "include/sockpp",
+			"paths" : 
+			[
+				{
+					"from" : "build/generated/sockpp",
+					"to" : "."
+				}
+			],
+			"type" : "directory"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp",
+		"source" : "dependencies/lib_keyence_distance_sensor/dependencies/sockpp"
+	}
+}

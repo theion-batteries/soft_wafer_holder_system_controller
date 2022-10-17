@@ -1,0 +1,63 @@
+{
+	"backtrace" : 0,
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : 
+		[
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "googletest_project::@e8f65fadc0462c4f74d8"
+		},
+		{
+			"id" : "run-tests::@e8f65fadc0462c4f74d8"
+		},
+		{
+			"id" : "sockpp-static::@7a92092c6bbca101d94b"
+		},
+		{
+			"id" : "sockpp-objs::@07bb87f9ed4e91a15fa1"
+		},
+		{
+			"id" : "whs_controller::@6890427a1f51a3e7e1df"
+		},
+		{
+			"id" : "keyence_sdk::@0a7a7e2731b30d4fd3c1"
+		},
+		{
+			"id" : "yaml-cpp::@bbf290e3af8838e0ff35"
+		},
+		{
+			"id" : "parse::@0c96d07569f4c0de5997"
+		},
+		{
+			"id" : "sandbox::@0c96d07569f4c0de5997"
+		},
+		{
+			"id" : "read::@0c96d07569f4c0de5997"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+	"isGeneratorProvided" : true,
+	"name" : "ALL_BUILD",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sources" : [],
+	"type" : "UTILITY"
+}
