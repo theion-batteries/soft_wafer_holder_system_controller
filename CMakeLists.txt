@@ -11,13 +11,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # add dependencies cmake
-add_subdirectory(dependencies/lib_keyence_distance_sensor/dependencies/sockpp/)
+add_subdirectory(dependencies/lib_keyence_distance_sensor)
 add_subdirectory(dependencies/lib_keyence_sdk)
 add_subdirectory(dependencies/yaml-cpp)
-
-## library name
-set(WHS_CONTROLLER whs_controller)
-set(WHS_CONTROLLER_STATIC ${whs_controller}-static)
 
 # include libs
 include_directories(${PROJECT_SOURCE_DIR}/includes/)
