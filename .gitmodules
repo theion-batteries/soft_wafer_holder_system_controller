@@ -16,5 +16,5 @@
 	url = https://github.com/theionSami/lib_keyence_distance_sensor.git
 	branch = dev
 [submodule "sockpp"]
-	path = sockpp
+	path = dependencies/sockpp
 	url = https://github.com/theionSami/sockpp.git
