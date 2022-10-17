@@ -22,7 +22,15 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
     <ProjectGuid>{9C30D871-C5FB-37E3-BCAF-3084AA141310}</ProjectGuid>
+========
+    <ProjectGuid>{1BDEC55E-503C-3F9B-9AF3-ECB505B08C91}</ProjectGuid>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+    <ProjectGuid>{9C30D871-C5FB-37E3-BCAF-3084AA141310}</ProjectGuid>
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,6 +67,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sockpp-static.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sockpp-static</TargetName>
@@ -79,6 +91,39 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+<<<<<<< HEAD
+========
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">parse.dir\Debug\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">parse</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">parse.dir\Release\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">parse</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\MinSizeRel\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">parse.dir\MinSizeRel\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">parse</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\RelWithDebInfo\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">parse.dir\RelWithDebInfo\</IntDir>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">parse</TargetName>
+    <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</LinkIncremental>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -96,10 +141,23 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+<<<<<<< HEAD
+========
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -108,11 +166,33 @@
     </Midl>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+<<<<<<< HEAD
+========
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Debug/parse.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Debug/parse.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -130,10 +210,23 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+<<<<<<< HEAD
+========
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -142,11 +235,33 @@
     </Midl>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+<<<<<<< HEAD
+========
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Release/parse.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Release/parse.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -164,10 +279,23 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+<<<<<<< HEAD
+========
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -176,11 +304,33 @@
     </Midl>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+<<<<<<< HEAD
+========
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/MinSizeRel/parse.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/MinSizeRel/parse.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -197,10 +347,23 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
       <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\generated;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+<<<<<<< HEAD
+========
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Midl>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -209,6 +372,10 @@
     </Midl>
     <Lib>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -217,6 +384,27 @@
       <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/sockpp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
 C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/sockpp/CMakeFiles/generate.stamp
+<<<<<<< HEAD
+========
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/RelWithDebInfo/parse.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/RelWithDebInfo/parse.pdb</ProgramDataBaseFile>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <ProjectReference>
+      <LinkLibraryDependencies>false</LinkLibraryDependencies>
+    </ProjectReference>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\util\CMakeLists.txt">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -224,12 +412,27 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\version.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/sockpp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
 C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/sockpp/CMakeFiles/generate.stamp
+<<<<<<< HEAD
+========
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -237,12 +440,27 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\version.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/sockpp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
 C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/sockpp/CMakeFiles/generate.stamp
+<<<<<<< HEAD
+========
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -250,12 +468,27 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\version.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
       <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/sockpp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
 C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/sockpp/CMakeFiles/generate.stamp
+<<<<<<< HEAD
+========
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -263,12 +496,26 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\version.h.in;%(AdditionalInputs)</AdditionalInputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\CMakeFiles\generate.stamp</Outputs>
+========
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\GNUInstallDirs.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\version.h.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\CMakeFiles\generate.stamp</Outputs>
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     <Object Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\src\sockpp-objs.dir\$(Configuration)\acceptor.obj" />
     <Object Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\src\sockpp-objs.dir\$(Configuration)\connector.obj" />
     <Object Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\src\sockpp-objs.dir\$(Configuration)\datagram_socket.obj" />
@@ -277,6 +524,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <Object Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\src\sockpp-objs.dir\$(Configuration)\inet6_address.obj" />
     <Object Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\src\sockpp-objs.dir\$(Configuration)\socket.obj" />
     <Object Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\src\sockpp-objs.dir\$(Configuration)\stream_socket.obj" />
+<<<<<<< HEAD
+========
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\util\parse.cpp" />
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\ZERO_CHECK.vcxproj">
@@ -285,11 +538,23 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/sockpp-static.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\sockpp\src\sockpp-objs.vcxproj">
       <Project>{BDCDA523-AD36-314A-8095-329020241957}</Project>
       <Name>sockpp-objs</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+<<<<<<< HEAD
+========
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\yaml-cpp.vcxproj">
+      <Project>{11197C1F-22A1-3300-AD8F-CB1BF2385011}</Project>
+      <Name>yaml-cpp</Name>
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/util/parse.vcxproj
+=======
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

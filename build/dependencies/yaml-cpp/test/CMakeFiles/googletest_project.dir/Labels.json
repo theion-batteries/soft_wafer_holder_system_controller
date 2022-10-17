@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/test/CMakeFiles/googletest_project"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/9549286eba1a193588838e3fa628669f/googletest_project.rule"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/588af1d9cb93888f28c9f9e6bc894673/googletest_project-complete.rule"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/cacbd7abb5bf8ee7ff8fef9568852cfd/googletest_project-build.rule"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/cacbd7abb5bf8ee7ff8fef9568852cfd/googletest_project-configure.rule"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/cacbd7abb5bf8ee7ff8fef9568852cfd/googletest_project-download.rule"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/cacbd7abb5bf8ee7ff8fef9568852cfd/googletest_project-install.rule"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/cacbd7abb5bf8ee7ff8fef9568852cfd/googletest_project-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/cacbd7abb5bf8ee7ff8fef9568852cfd/googletest_project-patch.rule"
+		},
+		{
+			"file" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/CMakeFiles/cacbd7abb5bf8ee7ff8fef9568852cfd/googletest_project-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest_project"
+		],
+		"name" : "googletest_project"
+	}
+}

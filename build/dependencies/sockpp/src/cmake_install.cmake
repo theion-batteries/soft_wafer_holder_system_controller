@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<<< HEAD:build/dependencies/sockpp/src/cmake_install.cmake
 # Install script for directory: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/sockpp/src
+========
+# Install script for directory: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/test
+>>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362:build/dependencies/yaml-cpp/test/cmake_install.cmake
+=======
+# Install script for directory: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/sockpp/src
+>>>>>>> f0496ee0a8cd6eb065b714087bc102259d9a4362
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
