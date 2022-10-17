@@ -11,13 +11,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 # add dependencies cmake
-add_subdirectory(dependencies/lib_keyence_distance_sensor)
+add_subdirectory(dependencies/sockpp)
 add_subdirectory(dependencies/lib_keyence_sdk)
 add_subdirectory(dependencies/yaml-cpp)
 
 # include libs
 include_directories(${PROJECT_SOURCE_DIR}/includes/)
-include_directories(${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_distance_sensor/dependencies/sockpp/include)
+include_directories(${PROJECT_SOURCE_DIR}/dependencies/sockpp/include)
 include_directories(${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes)
 include_directories(${PROJECT_SOURCE_DIR}/dependencies/yaml-cpp/include/)
 
