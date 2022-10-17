@@ -1,0 +1,1380 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						15,
+						16
+					]
+				},
+				{
+					"build" : "dependencies/sockpp",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-dependencies.sockpp-Debug-306e1f737fee97bebca9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "dependencies/sockpp",
+					"targetIndexes" : 
+					[
+						1,
+						14
+					]
+				},
+				{
+					"build" : "dependencies/sockpp/src",
+					"jsonFile" : "directory-dependencies.sockpp.src-Debug-f6776151ed901f58ae38.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "dependencies/sockpp/src",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "dependencies/lib_keyence_sdk",
+					"jsonFile" : "directory-dependencies.lib_keyence_sdk-Debug-8994b7b8bf651442e70a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "dependencies/lib_keyence_sdk",
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp",
+					"childIndexes" : 
+					[
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-dependencies.yaml-cpp-Debug-1a76a14de4d82004abbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp",
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						17
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp/test",
+					"jsonFile" : "directory-dependencies.yaml-cpp.test-Debug-2bc3d457edd5091e1fa9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp/test",
+					"targetIndexes" : 
+					[
+						6,
+						11
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp/util",
+					"jsonFile" : "directory-dependencies.yaml-cpp.util-Debug-98b57dc75c22c0cf24fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp/util",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "whs_controller",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						15,
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "sockpp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						13,
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "keyence_sdk",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4,
+						5,
+						6
+					],
+					"name" : "YAML_CPP",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Debug-2a47854be2d547bfd872.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@e6949179b2bb01c085fb",
+					"jsonFile" : "target-ALL_BUILD-Debug-a9e56a056cb6f230922f.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-ALL_BUILD-Debug-d38111b537cfb48ffabb.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-ALL_BUILD-Debug-beeb0a6268dbbf087a11.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Debug-b623164dd217092154b2.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "format::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-format-Debug-4c487199c71d3b4a0063.json",
+					"name" : "format",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "googletest_project::@e8f65fadc0462c4f74d8",
+					"jsonFile" : "target-googletest_project-Debug-b8f28a421b195ebf0e85.json",
+					"name" : "googletest_project",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "keyence_lib_static::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-keyence_lib_static-Debug-5fad6c93462a0fa8ba04.json",
+					"name" : "keyence_lib_static",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "keyence_sdk::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-keyence_sdk-Debug-92c7f177ddfdd730deb5.json",
+					"name" : "keyence_sdk",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "parse::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-parse-Debug-519de4d05093eadd4a85.json",
+					"name" : "parse",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "read::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-read-Debug-30cb9eec408d7f7b09fa.json",
+					"name" : "read",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "run-tests::@e8f65fadc0462c4f74d8",
+					"jsonFile" : "target-run-tests-Debug-feae9d69f9355b8b409f.json",
+					"name" : "run-tests",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sandbox::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-sandbox-Debug-bc1b4769403340c1e9f6.json",
+					"name" : "sandbox",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "sockpp-objs::@1ccc5558e4b94d79f986",
+					"jsonFile" : "target-sockpp-objs-Debug-ca04e67951064e8d7476.json",
+					"name" : "sockpp-objs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sockpp-static::@e6949179b2bb01c085fb",
+					"jsonFile" : "target-sockpp-static-Debug-ac9b4338e11fe8e9e227.json",
+					"name" : "sockpp-static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whs_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whs_controller-Debug-951d05da9eb3275b870f.json",
+					"name" : "whs_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whs_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whs_static-Debug-ecdde445be8c73cfe694.json",
+					"name" : "whs_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "yaml-cpp::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-yaml-cpp-Debug-f4eb9b116e6d72ebd107.json",
+					"name" : "yaml-cpp",
+					"projectIndex" : 3
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						15,
+						16
+					]
+				},
+				{
+					"build" : "dependencies/sockpp",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-dependencies.sockpp-Release-9e9c586fb97eb927a1ca.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "dependencies/sockpp",
+					"targetIndexes" : 
+					[
+						1,
+						14
+					]
+				},
+				{
+					"build" : "dependencies/sockpp/src",
+					"jsonFile" : "directory-dependencies.sockpp.src-Release-f6776151ed901f58ae38.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "dependencies/sockpp/src",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "dependencies/lib_keyence_sdk",
+					"jsonFile" : "directory-dependencies.lib_keyence_sdk-Release-8994b7b8bf651442e70a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "dependencies/lib_keyence_sdk",
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp",
+					"childIndexes" : 
+					[
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-dependencies.yaml-cpp-Release-479fde3440b2dc3c89f6.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp",
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						17
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp/test",
+					"jsonFile" : "directory-dependencies.yaml-cpp.test-Release-2bc3d457edd5091e1fa9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp/test",
+					"targetIndexes" : 
+					[
+						6,
+						11
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp/util",
+					"jsonFile" : "directory-dependencies.yaml-cpp.util-Release-98b57dc75c22c0cf24fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp/util",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						12
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "whs_controller",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						15,
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "sockpp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						13,
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "keyence_sdk",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4,
+						5,
+						6
+					],
+					"name" : "YAML_CPP",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-Release-2a47854be2d547bfd872.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@e6949179b2bb01c085fb",
+					"jsonFile" : "target-ALL_BUILD-Release-a9e56a056cb6f230922f.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-ALL_BUILD-Release-d38111b537cfb48ffabb.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-ALL_BUILD-Release-beeb0a6268dbbf087a11.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-Release-b623164dd217092154b2.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "format::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-format-Release-4c487199c71d3b4a0063.json",
+					"name" : "format",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "googletest_project::@e8f65fadc0462c4f74d8",
+					"jsonFile" : "target-googletest_project-Release-b8f28a421b195ebf0e85.json",
+					"name" : "googletest_project",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "keyence_lib_static::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-keyence_lib_static-Release-dcb0f19da5e26e8316cd.json",
+					"name" : "keyence_lib_static",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "keyence_sdk::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-keyence_sdk-Release-87e7531e574f53952fc7.json",
+					"name" : "keyence_sdk",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "parse::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-parse-Release-1892607369a4e39fc009.json",
+					"name" : "parse",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "read::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-read-Release-549580466eabbff1f09b.json",
+					"name" : "read",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "run-tests::@e8f65fadc0462c4f74d8",
+					"jsonFile" : "target-run-tests-Release-6b3962a4c4569459ec57.json",
+					"name" : "run-tests",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sandbox::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-sandbox-Release-7934a78112230cb80ab9.json",
+					"name" : "sandbox",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "sockpp-objs::@1ccc5558e4b94d79f986",
+					"jsonFile" : "target-sockpp-objs-Release-784022aacf376a38ebc0.json",
+					"name" : "sockpp-objs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sockpp-static::@e6949179b2bb01c085fb",
+					"jsonFile" : "target-sockpp-static-Release-35d7e64d3cc98fd58fc8.json",
+					"name" : "sockpp-static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whs_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whs_controller-Release-c5f2391221b6a53ea697.json",
+					"name" : "whs_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whs_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whs_static-Release-e6ea19365efd5e31a936.json",
+					"name" : "whs_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "yaml-cpp::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-yaml-cpp-Release-7bb3d457a4e2c3bfe5b2.json",
+					"name" : "yaml-cpp",
+					"projectIndex" : 3
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-MinSizeRel-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						15,
+						16
+					]
+				},
+				{
+					"build" : "dependencies/sockpp",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-dependencies.sockpp-MinSizeRel-e457fc4a9e3082448e1a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "dependencies/sockpp",
+					"targetIndexes" : 
+					[
+						1,
+						14
+					]
+				},
+				{
+					"build" : "dependencies/sockpp/src",
+					"jsonFile" : "directory-dependencies.sockpp.src-MinSizeRel-f6776151ed901f58ae38.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "dependencies/sockpp/src",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "dependencies/lib_keyence_sdk",
+					"jsonFile" : "directory-dependencies.lib_keyence_sdk-MinSizeRel-8994b7b8bf651442e70a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "dependencies/lib_keyence_sdk",
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp",
+					"childIndexes" : 
+					[
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-dependencies.yaml-cpp-MinSizeRel-a441bc8cca2d1fc6bef3.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp",
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						17
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp/test",
+					"jsonFile" : "directory-dependencies.yaml-cpp.test-MinSizeRel-2bc3d457edd5091e1fa9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp/test",
+					"targetIndexes" : 
+					[
+						6,
+						11
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp/util",
+					"jsonFile" : "directory-dependencies.yaml-cpp.util-MinSizeRel-98b57dc75c22c0cf24fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp/util",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						12
+					]
+				}
+			],
+			"name" : "MinSizeRel",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "whs_controller",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						15,
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "sockpp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						13,
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "keyence_sdk",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4,
+						5,
+						6
+					],
+					"name" : "YAML_CPP",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-2a47854be2d547bfd872.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@e6949179b2bb01c085fb",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-a9e56a056cb6f230922f.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-d38111b537cfb48ffabb.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-beeb0a6268dbbf087a11.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-MinSizeRel-b623164dd217092154b2.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "format::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-format-MinSizeRel-4c487199c71d3b4a0063.json",
+					"name" : "format",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "googletest_project::@e8f65fadc0462c4f74d8",
+					"jsonFile" : "target-googletest_project-MinSizeRel-b8f28a421b195ebf0e85.json",
+					"name" : "googletest_project",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "keyence_lib_static::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-keyence_lib_static-MinSizeRel-ca27b21c6eb9af990957.json",
+					"name" : "keyence_lib_static",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "keyence_sdk::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-keyence_sdk-MinSizeRel-879e3aecf984d2745906.json",
+					"name" : "keyence_sdk",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "parse::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-parse-MinSizeRel-eca6ff68879c4e7dffd2.json",
+					"name" : "parse",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "read::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-read-MinSizeRel-fa40dccb73511b1f46e2.json",
+					"name" : "read",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "run-tests::@e8f65fadc0462c4f74d8",
+					"jsonFile" : "target-run-tests-MinSizeRel-1d7b038c24f3a1fb0bb1.json",
+					"name" : "run-tests",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sandbox::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-sandbox-MinSizeRel-0822c1e8577bef712675.json",
+					"name" : "sandbox",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "sockpp-objs::@1ccc5558e4b94d79f986",
+					"jsonFile" : "target-sockpp-objs-MinSizeRel-1c2517e3806959858f93.json",
+					"name" : "sockpp-objs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sockpp-static::@e6949179b2bb01c085fb",
+					"jsonFile" : "target-sockpp-static-MinSizeRel-4334df6f6116fc6da5b6.json",
+					"name" : "sockpp-static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whs_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whs_controller-MinSizeRel-45c87fc7b2cb195ac864.json",
+					"name" : "whs_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whs_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whs_static-MinSizeRel-5d52b6571391fe1ad6d5.json",
+					"name" : "whs_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "yaml-cpp::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-yaml-cpp-MinSizeRel-f2067b9b50d99fb43b21.json",
+					"name" : "yaml-cpp",
+					"projectIndex" : 3
+				}
+			]
+		},
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						3,
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-RelWithDebInfo-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						15,
+						16
+					]
+				},
+				{
+					"build" : "dependencies/sockpp",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-dependencies.sockpp-RelWithDebInfo-934e107373c48f03e751.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "dependencies/sockpp",
+					"targetIndexes" : 
+					[
+						1,
+						14
+					]
+				},
+				{
+					"build" : "dependencies/sockpp/src",
+					"jsonFile" : "directory-dependencies.sockpp.src-RelWithDebInfo-f6776151ed901f58ae38.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 1,
+					"source" : "dependencies/sockpp/src",
+					"targetIndexes" : 
+					[
+						13
+					]
+				},
+				{
+					"build" : "dependencies/lib_keyence_sdk",
+					"jsonFile" : "directory-dependencies.lib_keyence_sdk-RelWithDebInfo-8994b7b8bf651442e70a.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "dependencies/lib_keyence_sdk",
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp",
+					"childIndexes" : 
+					[
+						5,
+						6
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-dependencies.yaml-cpp-RelWithDebInfo-9bff6a788cbb96938e4e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp",
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						17
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp/test",
+					"jsonFile" : "directory-dependencies.yaml-cpp.test-RelWithDebInfo-2bc3d457edd5091e1fa9.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp/test",
+					"targetIndexes" : 
+					[
+						6,
+						11
+					]
+				},
+				{
+					"build" : "dependencies/yaml-cpp/util",
+					"jsonFile" : "directory-dependencies.yaml-cpp.util-RelWithDebInfo-98b57dc75c22c0cf24fc.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 4,
+					"projectIndex" : 3,
+					"source" : "dependencies/yaml-cpp/util",
+					"targetIndexes" : 
+					[
+						9,
+						10,
+						12
+					]
+				}
+			],
+			"name" : "RelWithDebInfo",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2,
+						3
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "whs_controller",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						15,
+						16
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1,
+						2
+					],
+					"name" : "sockpp",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1,
+						13,
+						14
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3
+					],
+					"name" : "keyence_sdk",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						7,
+						8
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						4,
+						5,
+						6
+					],
+					"name" : "YAML_CPP",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						3,
+						5,
+						6,
+						9,
+						10,
+						11,
+						12,
+						17
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-2a47854be2d547bfd872.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "ALL_BUILD::@e6949179b2bb01c085fb",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-a9e56a056cb6f230922f.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "ALL_BUILD::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-d38111b537cfb48ffabb.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "ALL_BUILD::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-beeb0a6268dbbf087a11.json",
+					"name" : "ALL_BUILD",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ZERO_CHECK-RelWithDebInfo-b623164dd217092154b2.json",
+					"name" : "ZERO_CHECK",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "format::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-format-RelWithDebInfo-4c487199c71d3b4a0063.json",
+					"name" : "format",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "googletest_project::@e8f65fadc0462c4f74d8",
+					"jsonFile" : "target-googletest_project-RelWithDebInfo-b8f28a421b195ebf0e85.json",
+					"name" : "googletest_project",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "keyence_lib_static::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-keyence_lib_static-RelWithDebInfo-204045e105411dfbef11.json",
+					"name" : "keyence_lib_static",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "keyence_sdk::@0a7a7e2731b30d4fd3c1",
+					"jsonFile" : "target-keyence_sdk-RelWithDebInfo-d5b3cc5a988857128d80.json",
+					"name" : "keyence_sdk",
+					"projectIndex" : 2
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "parse::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-parse-RelWithDebInfo-02cbf1dd1deee790582a.json",
+					"name" : "parse",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "read::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-read-RelWithDebInfo-003d3b01e93130dfe7c9.json",
+					"name" : "read",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 5,
+					"id" : "run-tests::@e8f65fadc0462c4f74d8",
+					"jsonFile" : "target-run-tests-RelWithDebInfo-e65db4bcd2a4b4c50f46.json",
+					"name" : "run-tests",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 6,
+					"id" : "sandbox::@0c96d07569f4c0de5997",
+					"jsonFile" : "target-sandbox-RelWithDebInfo-819882619f2e973afd03.json",
+					"name" : "sandbox",
+					"projectIndex" : 3
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "sockpp-objs::@1ccc5558e4b94d79f986",
+					"jsonFile" : "target-sockpp-objs-RelWithDebInfo-8c6b981a71944e2cae5f.json",
+					"name" : "sockpp-objs",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "sockpp-static::@e6949179b2bb01c085fb",
+					"jsonFile" : "target-sockpp-static-RelWithDebInfo-502208dff815e7e1077d.json",
+					"name" : "sockpp-static",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whs_controller::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whs_controller-RelWithDebInfo-4f0e4b6b0cf43fcc0763.json",
+					"name" : "whs_controller",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "whs_static::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-whs_static-RelWithDebInfo-28b0df53b43545b56af5.json",
+					"name" : "whs_static",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "yaml-cpp::@bbf290e3af8838e0ff35",
+					"jsonFile" : "target-yaml-cpp-RelWithDebInfo-34e15cffc44ea6d41d55.json",
+					"name" : "yaml-cpp",
+					"projectIndex" : 3
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build",
+		"source" : "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

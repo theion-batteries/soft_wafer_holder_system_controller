@@ -331,7 +331,7 @@ whs_controller_IS_TOP_LEVEL:STATIC=ON
 whs_controller_SOURCE_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller
 
 //Dependencies for the target
-whs_static_LIB_DEPENDS:STATIC=general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/Debug/keyence_lib_static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/sockpp/Debug/sockpp-static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/Debug/libyaml-cppmdd.lib;
+whs_static_LIB_DEPENDS:STATIC=general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/Debug/keyence_lib_static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/Samples/VC_Src/Libx64/LKIF2.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/sockpp/Debug/sockpp-static.lib;general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/Debug/libyaml-cppmdd.lib;
 
 
 ########################
