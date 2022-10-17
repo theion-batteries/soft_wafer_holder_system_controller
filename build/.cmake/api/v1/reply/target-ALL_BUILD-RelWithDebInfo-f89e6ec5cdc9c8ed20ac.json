@@ -17,7 +17,7 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "whs_controller::@6890427a1f51a3e7e1df"
+			"id" : "keyence_lib_static::@0a7a7e2731b30d4fd3c1"
 		},
 		{
 			"id" : "sockpp-static::@e6949179b2bb01c085fb"
@@ -26,10 +26,10 @@
 			"id" : "whs_static::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "sockpp-objs::@1ccc5558e4b94d79f986"
+			"id" : "whs_controller::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "keyence_lib_static::@0a7a7e2731b30d4fd3c1"
+			"id" : "sockpp-objs::@1ccc5558e4b94d79f986"
 		},
 		{
 			"id" : "keyence_sdk::@0a7a7e2731b30d4fd3c1"
@@ -44,16 +44,16 @@
 			"id" : "run-tests::@e8f65fadc0462c4f74d8"
 		},
 		{
-			"id" : "parse::@0c96d07569f4c0de5997"
+			"id" : "read::@0c96d07569f4c0de5997"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "sandbox::@0c96d07569f4c0de5997"
 		},
 		{
-			"id" : "read::@0c96d07569f4c0de5997"
-		},
-		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"id" : "parse::@0c96d07569f4c0de5997"
 		}
 	],
 	"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",

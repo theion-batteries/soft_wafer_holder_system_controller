@@ -297,6 +297,9 @@ YAML_MSVC_SHARED_RT:BOOL=ON
 // VS .NET 2003)
 YAML_MSVC_STHREADED_RT:BOOL=OFF
 
+//Dependencies for the target
+keyence_lib_static_LIB_DEPENDS:STATIC=general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/Samples/VC_Src/Libx64/LKIF2.lib;
+
 //Value Computed by CMake
 keyence_sdk_BINARY_DIR:STATIC=C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk
 

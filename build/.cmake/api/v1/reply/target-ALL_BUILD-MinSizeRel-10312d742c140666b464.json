@@ -26,16 +26,16 @@
 			"id" : "run-tests::@e8f65fadc0462c4f74d8"
 		},
 		{
-			"id" : "parse::@0c96d07569f4c0de5997"
+			"id" : "read::@0c96d07569f4c0de5997"
+		},
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
 		},
 		{
 			"id" : "sandbox::@0c96d07569f4c0de5997"
 		},
 		{
-			"id" : "read::@0c96d07569f4c0de5997"
-		},
-		{
-			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+			"id" : "parse::@0c96d07569f4c0de5997"
 		}
 	],
 	"id" : "ALL_BUILD::@bbf290e3af8838e0ff35",

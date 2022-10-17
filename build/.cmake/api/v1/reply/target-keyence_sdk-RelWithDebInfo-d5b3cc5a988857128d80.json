@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "dependencies/lib_keyence_sdk/Debug/keyence_sdk.exe"
+			"path" : "dependencies/lib_keyence_sdk/RelWithDebInfo/keyence_sdk.exe"
 		},
 		{
-			"path" : "dependencies/lib_keyence_sdk/Debug/keyence_sdk.pdb"
+			"path" : "dependencies/lib_keyence_sdk/RelWithDebInfo/keyence_sdk.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -35,7 +35,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 32,
+				"line" : 30,
 				"parent" : 0
 			},
 			{
@@ -58,7 +58,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG"
 				},
 				{
 					"fragment" : "-std:c++20"
@@ -114,7 +114,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MDd /Zi /Ob0 /Od /RTC1",
+				"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /Zi /O2 /Ob1 /DNDEBUG",
 				"role" : "flags"
 			},
 			{

@@ -1562,6 +1562,18 @@
 			"value" : "C:/Program Files/whs_controller"
 		},
 		{
+			"name" : "keyence_lib_static_LIB_DEPENDS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Dependencies for the target"
+				}
+			],
+			"type" : "STATIC",
+			"value" : "general;C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/Samples/VC_Src/Libx64/LKIF2.lib;"
+		},
+		{
 			"name" : "keyence_sdk_BINARY_DIR",
 			"properties" : 
 			[
