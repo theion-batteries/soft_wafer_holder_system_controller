@@ -1,0 +1,8 @@
+# CMake generation dependency list for this directory.
+C:/Qt/Tools/CMake_64/share/cmake-3.23/Modules/CheckCSourceCompiles.cmake
+C:/Qt/Tools/CMake_64/share/cmake-3.23/Modules/CheckIncludeFile.cmake
+C:/Qt/Tools/CMake_64/share/cmake-3.23/Modules/CheckLibraryExists.cmake
+C:/Qt/Tools/CMake_64/share/cmake-3.23/Modules/FindPackageHandleStandardArgs.cmake
+C:/Qt/Tools/CMake_64/share/cmake-3.23/Modules/FindPackageMessage.cmake
+C:/Qt/Tools/CMake_64/share/cmake-3.23/Modules/FindThreads.cmake
+C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/test/gtest-1.8.0/googlemock/CMakeLists.txt

@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{9DB95F6A-91EB-3B77-847A-D08C06CF14F7}</ProjectGuid>
+    <ProjectGuid>{1BDEC55E-503C-3F9B-9AF3-ECB505B08C91}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">parse.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">parse</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">parse.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">parse</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">parse.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">parse</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">parse.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">parse</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.exe</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -103,10 +103,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -119,8 +119,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Debug/parse.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Debug/parse.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Debug/parse.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Debug/parse.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -129,7 +129,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -146,10 +146,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -162,8 +162,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Release/parse.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Release/parse.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Release/parse.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/Release/parse.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -172,7 +172,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -189,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -205,8 +205,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/MinSizeRel/parse.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/MinSizeRel/parse.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/MinSizeRel/parse.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/MinSizeRel/parse.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -215,7 +215,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -231,10 +231,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -247,8 +247,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/RelWithDebInfo/parse.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/RelWithDebInfo/parse.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/RelWithDebInfo/parse.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/RelWithDebInfo/parse.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -256,11 +256,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\util\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\util\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -269,11 +269,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -282,11 +282,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -295,11 +295,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/util/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/util/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -308,22 +308,22 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\util\parse.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\util\parse.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\ZERO_CHECK.vcxproj">
-      <Project>{5AA0F31C-2BCF-3E4F-8D81-1E1FA9764DAB}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\ZERO_CHECK.vcxproj">
+      <Project>{25F76D25-6DEC-3A7A-B5B9-D03A96D312BE}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\yaml-cpp.vcxproj">
-      <Project>{499BF2BC-DCC6-36A9-8F84-3F6E0F664A91}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\yaml-cpp.vcxproj">
+      <Project>{11197C1F-22A1-3300-AD8F-CB1BF2385011}</Project>
       <Name>yaml-cpp</Name>
     </ProjectReference>
   </ItemGroup>

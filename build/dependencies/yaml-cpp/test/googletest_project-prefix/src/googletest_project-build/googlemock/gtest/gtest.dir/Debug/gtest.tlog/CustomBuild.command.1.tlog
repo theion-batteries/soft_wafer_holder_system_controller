@@ -1,0 +1,10 @@
+^C:\USERS\SAMIDHIAB\THEION_REPOS\SOFT_WAFER_HOLDER_SYSTEM_CONTROLLER\DEPENDENCIES\YAML-CPP\TEST\GTEST-1.8.0\GOOGLETEST\CMAKELISTS.TXT
+setlocal
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/test/gtest-1.8.0 -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/test/googletest_project-prefix/src/googletest_project-build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/test/googletest_project-prefix/src/googletest_project-build/googlemock/gtest/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

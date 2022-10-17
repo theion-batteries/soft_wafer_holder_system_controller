@@ -5,7 +5,7 @@
 
 # Compute paths
 get_filename_component(YAML_CPP_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
-set(YAML_CPP_INCLUDE_DIR "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/include")
+set(YAML_CPP_INCLUDE_DIR "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/include")
 
 # Our library dependencies (contains definitions for IMPORTED targets)
 include("${YAML_CPP_CMAKE_DIR}/yaml-cpp-targets.cmake")

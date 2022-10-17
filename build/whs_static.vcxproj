@@ -78,7 +78,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -96,10 +96,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -112,7 +112,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -130,10 +130,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -146,7 +146,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -164,10 +164,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,7 +180,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -197,10 +197,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\sockpp\include;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -269,43 +269,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\acceptor.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\connector.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\datagram_socket.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\exception.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\inet6_address.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\inet_address.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\socket.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_distance_sensor\dependencies\sockpp\src\stream_socket.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\src\keyence_client.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\binary.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\convert.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\directives.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\emit.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\emitfromevents.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\emitter.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\emitterstate.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\emitterutils.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\exceptions.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\exp.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\memory.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\node.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\node_data.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\nodebuilder.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\nodeevents.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\null.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\ostream_wrapper.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\parse.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\parser.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\regex_yaml.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\scanner.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\scanscalar.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\scantag.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\scantoken.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\simplekey.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\singledocparser.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\stream.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\src\tag.cpp" />
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\src\main.cpp" />
     <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\src\whs_controller.cpp" />
   </ItemGroup>

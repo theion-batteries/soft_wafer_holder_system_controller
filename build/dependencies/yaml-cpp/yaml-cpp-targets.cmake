@@ -45,35 +45,35 @@ unset(_expectedTargets)
 add_library(yaml-cpp STATIC IMPORTED)
 
 set_target_properties(yaml-cpp PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/include"
+  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/include"
 )
 
 # Import target "yaml-cpp" for configuration "Debug"
 set_property(TARGET yaml-cpp APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(yaml-cpp PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/Debug/libyaml-cppmdd.lib"
+  IMPORTED_LOCATION_DEBUG "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/Debug/libyaml-cppmdd.lib"
   )
 
 # Import target "yaml-cpp" for configuration "Release"
 set_property(TARGET yaml-cpp APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(yaml-cpp PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/Release/libyaml-cppmd.lib"
+  IMPORTED_LOCATION_RELEASE "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/Release/libyaml-cppmd.lib"
   )
 
 # Import target "yaml-cpp" for configuration "MinSizeRel"
 set_property(TARGET yaml-cpp APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(yaml-cpp PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/MinSizeRel/libyaml-cppmd.lib"
+  IMPORTED_LOCATION_MINSIZEREL "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/MinSizeRel/libyaml-cppmd.lib"
   )
 
 # Import target "yaml-cpp" for configuration "RelWithDebInfo"
 set_property(TARGET yaml-cpp APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(yaml-cpp PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/RelWithDebInfo/libyaml-cppmd.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/RelWithDebInfo/libyaml-cppmd.lib"
   )
 
 # This file does not depend on other imported targets which have
