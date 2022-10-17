@@ -12,7 +12,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Release/whs_static.lib"
+			"path" : "MinSizeRel/whs_static.lib"
 		}
 	],
 	"backtrace" : 1,
@@ -35,13 +35,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 34,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 19,
+				"line" : 35,
 				"parent" : 0
 			},
 			{
@@ -61,6 +55,12 @@
 				"file" : 0,
 				"line" : 22,
 				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 23,
+				"parent" : 0
 			}
 		]
 	},
@@ -70,7 +70,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG"
+					"fragment" : "/DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O1 /Ob1 /DNDEBUG"
 				},
 				{
 					"fragment" : "-std:c++20"
