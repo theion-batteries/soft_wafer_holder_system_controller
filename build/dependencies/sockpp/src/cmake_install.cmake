@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/sockpp/src
+# Install script for directory: C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/sockpp/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

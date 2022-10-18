@@ -25,7 +25,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{00B5BF3F-7D58-3462-951F-9FFEDCE3FC7A}</ProjectGuid>
+    <ProjectGuid>{9C3C5800-669A-3333-8D8C-267683F7CC17}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -108,11 +108,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -120,12 +120,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config-version.cmake.in;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config-version.cmake.in;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -133,12 +133,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config-version.cmake.in;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config-version.cmake.in;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -146,12 +146,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config-version.cmake.in;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config-version.cmake.in;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/yaml-cpp/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -159,44 +159,44 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config-version.cmake.in;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCheckCompilerFlagCommonPatterns.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CheckCXXSourceCompiles.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckCompilerFlag.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckFlagCommonConfig.cmake;C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\Internal\CheckSourceCompiles.cmake;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config-version.cmake.in;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\yaml-cpp\yaml-cpp-config.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\ZERO_CHECK.vcxproj">
-      <Project>{25F76D25-6DEC-3A7A-B5B9-D03A96D312BE}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\ZERO_CHECK.vcxproj">
+      <Project>{5AA0F31C-2BCF-3E4F-8D81-1E1FA9764DAB}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\test\googletest_project.vcxproj">
-      <Project>{C3B9735E-62D5-308C-ADA3-AD0AAF7B7318}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\test\googletest_project.vcxproj">
+      <Project>{0E237949-B457-3DE8-AEAF-0BDEAEABAC66}</Project>
       <Name>googletest_project</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\parse.vcxproj">
-      <Project>{1BDEC55E-503C-3F9B-9AF3-ECB505B08C91}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\parse.vcxproj">
+      <Project>{9DB95F6A-91EB-3B77-847A-D08C06CF14F7}</Project>
       <Name>parse</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\read.vcxproj">
-      <Project>{E46CD6C5-DA5B-3B96-BF5F-EE8FB6C64BFC}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\read.vcxproj">
+      <Project>{AF0DCB07-B2E2-375A-BECF-9CE143DA0A5E}</Project>
       <Name>read</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\test\run-tests.vcxproj">
-      <Project>{F2D3509B-FF6A-3404-8934-7DA2C8FFC840}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\test\run-tests.vcxproj">
+      <Project>{9529EA18-6108-3360-9FB9-FE8D7DF03039}</Project>
       <Name>run-tests</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\sandbox.vcxproj">
-      <Project>{95FB571D-4EB9-334D-9027-753DCD94B7B8}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\util\sandbox.vcxproj">
+      <Project>{D61B6E0F-2BE7-36CB-82EC-F64E7A64EAF5}</Project>
       <Name>sandbox</Name>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\yaml-cpp.vcxproj">
-      <Project>{11197C1F-22A1-3300-AD8F-CB1BF2385011}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\yaml-cpp\yaml-cpp.vcxproj">
+      <Project>{499BF2BC-DCC6-36A9-8F84-3F6E0F664A91}</Project>
       <Name>yaml-cpp</Name>
     </ProjectReference>
   </ItemGroup>

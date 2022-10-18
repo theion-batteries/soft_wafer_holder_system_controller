@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\CMakeFiles\846c1af1f52f2bc52879658a1715a8aa\generate.stamp.rule">
+    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\1d5f78490be72c8db0adef5067fb8cfe\generate.stamp.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{CD584759-76A8-3618-8140-65331481ED03}</UniqueIdentifier>
+      <UniqueIdentifier>{656E3683-3761-374A-B0E3-BA3671E57114}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

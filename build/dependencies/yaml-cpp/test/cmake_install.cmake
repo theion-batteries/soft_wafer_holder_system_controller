@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/yaml-cpp/test
+# Install script for directory: C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/yaml-cpp/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files/whs_controller")
+  set(CMAKE_INSTALL_PREFIX "C:/")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

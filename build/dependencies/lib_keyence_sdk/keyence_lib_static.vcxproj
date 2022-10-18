@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{3E596F27-958B-3243-8B71-95927A00F4CD}</ProjectGuid>
+    <ProjectGuid>{C99EC8D2-09DC-3407-9FEA-2307C6A07541}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Platform>x64</Platform>
@@ -59,26 +59,26 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">keyence_lib_static.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">keyence_lib_static</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">keyence_lib_static.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">keyence_lib_static</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">keyence_lib_static.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">keyence_lib_static</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.lib</TargetExt>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">keyence_lib_static.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">keyence_lib_static</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.lib</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -96,10 +96,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;CMAKE_INTDIR=\"Debug\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -112,7 +112,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -130,10 +130,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"Release\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -146,7 +146,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -164,10 +164,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"MinSizeRel\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -180,7 +180,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -197,10 +197,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR=\"RelWithDebInfo\"</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\includes;C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -212,11 +212,11 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -225,11 +225,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -238,11 +238,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -251,11 +251,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/dependencies/lib_keyence_sdk/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/CMakeFiles/generate.stamp
+C:\Qt\Tools\CMake_64\bin\cmake.exe -SC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller -BC:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build --check-stamp-file C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/dependencies/lib_keyence_sdk/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -264,28 +264,28 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgGetTab1.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgGetTab2.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgMeasureCtlTab.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgModeTab.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgOtherTab.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgSetTab1.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgSetTab2.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\LKIF2Tools.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\LkIF2TestVC.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\LkIF2TestVCDlg.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\stdafx.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\src\keyence_client.cpp" />
-    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\src\main.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgGetTab1.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgGetTab2.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgMeasureCtlTab.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgModeTab.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgOtherTab.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgSetTab1.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\DlgSetTab2.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\LKIF2Tools.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\LkIF2TestVC.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\LkIF2TestVCDlg.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\Samples\VC_Src\stdafx.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\src\keyence_client.cpp" />
+    <ClCompile Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\dependencies\lib_keyence_sdk\src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\soft_wafer_holder_system_controller\build\ZERO_CHECK.vcxproj">
-      <Project>{25F76D25-6DEC-3A7A-B5B9-D03A96D312BE}</Project>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\ZERO_CHECK.vcxproj">
+      <Project>{5AA0F31C-2BCF-3E4F-8D81-1E1FA9764DAB}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
