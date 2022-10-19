@@ -8,6 +8,7 @@
    @copyright Copyright (c) 2022
 
 */
+#pragma once
 #include "sockpp/socket.h"
 #include <iostream>
 #include <string>
@@ -21,13 +22,11 @@
 #include <atomic>
 #include <filesystem>
 
-#pragma once
 /**
  * @brief responsible for executing subprocess, handle data in both directions
  * and process the data with developped algorithms
  *
  */
-
 enum class enum_sub_sys_feedback
 {
     sub_success = 3,
@@ -53,7 +52,7 @@ private:
     LPCWSTR pyFilePath; // = L"./delta_server.py";   // = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/delta_server.py";
     LPCWSTR pyCmd;  // = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
     LPCWSTR cppFile = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/build/Debug/keyence_bin.exe";
-     delta_server _delta_struct;
+    delta_server _delta_struct;
     keyence_server _keyence_struct;
     sockpp::socket_initializer sockInit;
     sockpp::tcp_connector* delta_client_sock;
@@ -91,7 +90,7 @@ private:
 
 public:
     /******* const/desctr ****/
-    whs_controller(LPCWSTR pythonPath,  LPCWSTR pythonScript) ;
+    whs_controller(LPCWSTR pythonPath, LPCWSTR pythonScript);
     ~whs_controller();
     /******* client controller methods ***/
     void close_all_sockets();

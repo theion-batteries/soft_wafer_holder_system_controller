@@ -8,10 +8,11 @@
  * @copyright Copyright (c) 2022
  *
  */
+#pragma once
+
 #include <iostream>
 #include <sstream>
 #include <string>
-#pragma once
 class cmdParser
 {
 private:
