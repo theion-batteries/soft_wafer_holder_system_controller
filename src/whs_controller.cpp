@@ -113,10 +113,11 @@ void whs_controller::connect_to_keyence_server()
     keyence_client_sock = new sockpp::tcp_connector({ _keyence_struct.ip, _keyence_struct.port });
     // Implicitly creates an inet_address from {host,port}
     // and then tries the connection.
-    if (!keyence_client_sock) {
+    if (!keyence_client_sock->is_connected()) {
         std::cerr << "Error connecting to server at "
             << sockpp::inet_address(_keyence_struct.ip, _keyence_struct.port)
             << "\n\t" << keyence_client_sock->last_error_str() << std::endl;
+        keyenceReady = false;
         return;
     }
     std::cout << "Created a connection from " << keyence_client_sock->address() << std::endl;
@@ -125,7 +126,10 @@ void whs_controller::connect_to_keyence_server()
     if (!keyence_client_sock->read_timeout(std::chrono::seconds(5))) {
         std::cerr << "Error setting timeout on TCP stream: "
             << keyence_client_sock->last_error_str() << std::endl;
+        keyenceReady = false;
+        return;
     }
+    keyenceReady = true;
 }
 /**
  * @brief
@@ -208,7 +212,12 @@ enum_sub_sys_feedback whs_controller::keyence_client_connect()
         keyenceReady = true;
         return enum_sub_sys_feedback::sub_success;
     }
-    return enum_sub_sys_feedback::sub_error;
+    else 
+    {
+        keyenceReady = false;
+        return enum_sub_sys_feedback::sub_error;
+    }
+    
 
 
 }
@@ -281,7 +290,7 @@ void whs_controller::keyence_client_get_value_all()
  * @brief
  *
  */
-void whs_controller::connect_to_delta_server()
+enum_sub_sys_feedback whs_controller::connect_to_delta_server()
 {
 
     std::cout << "connecting controller to delta server" << std::endl;
@@ -289,11 +298,12 @@ void whs_controller::connect_to_delta_server()
 
     // Implicitly creates an inet_address from {host,port}
     // and then tries the connection.
-    if (!delta_client_sock) {
-        std::cerr << "Error connecting to server at "
+    if (!delta_client_sock->is_connected()) {
+        std::cerr << "Error connecting to delta server at "
             << sockpp::inet_address(_delta_struct.ip, _delta_struct.port)
-            << "\n\t" << delta_client_sock->last_error_str() << std::endl;
-        return;
+            << " -> " << delta_client_sock->last_error_str();
+        deltaReady=false;
+        return enum_sub_sys_feedback::sub_error;
     }
     std::cout << "Created a connection from " << delta_client_sock->address() << std::endl;
     std::cout << "Created a connection to " << delta_client_sock->peer_address() << std::endl;
@@ -301,8 +311,12 @@ void whs_controller::connect_to_delta_server()
     if (!delta_client_sock->read_timeout(std::chrono::seconds(5))) {
         std::cerr << "Error setting timeout on TCP stream: "
             << delta_client_sock->last_error_str() << std::endl;
+        deltaReady=false;
+        return enum_sub_sys_feedback::sub_error;
     }
     deltaReady = true;
+            return enum_sub_sys_feedback::sub_success;
+ 
 
 }
 /**

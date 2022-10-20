@@ -1,0 +1,10 @@
+# Run the whs_controller.exe to execute the wafer holder motion automation
+# change parameters in config.yaml before running.
+# Note: Dlls and python scripts are inside same folder by default, do not change them
+
+
+
+
+if issues, refer to the author.
+author: sami dhiab
+contact: sami@theion.de

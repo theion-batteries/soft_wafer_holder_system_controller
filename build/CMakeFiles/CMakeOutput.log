@@ -7,7 +7,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.3.1+2badb37d1 for .NET Framework
-Build started 17/10/2022 17:51:21.
+Build started 20/10/2022 15:16:56.
 Project "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdC\CompilerIdC.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -41,7 +41,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.81
+Time Elapsed 00:00:01.94
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -58,7 +58,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.3.1+2badb37d1 for .NET Framework
-Build started 17/10/2022 17:51:23.
+Build started 20/10/2022 15:16:59.
 Project "C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\3.23.2\CompilerIdCXX\CompilerIdCXX.vcxproj" on node 1 (default targets).
 PrepareForBuild:
   Creating directory "Debug\".
@@ -92,7 +92,7 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.83
+Time Elapsed 00:00:01.66
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -104,24 +104,24 @@ The CXX compiler identification is MSVC, found in "C:/Users/SamiDhiab/Theion_Rep
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_2ad33.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_59a35.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
   Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
   CMakeCCompilerABI.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"C:\src\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2ad33.dir\Debug\\" /Fd"cmTC_2ad33.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
-  cmTC_2ad33.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\CMakeTmp\Debug\cmTC_2ad33.exe
+  cl /c /I"C:\src\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_59a35.dir\Debug\\" /Fd"cmTC_59a35.dir\Debug\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCCompilerABI.c"
+  cmTC_59a35.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\CMakeTmp\Debug\cmTC_59a35.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_88dd3.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_efe23.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.3.1+2badb37d1 for .NET Framework
   Microsoft (R) C/C++ Optimizing Compiler Version 19.33.31630 for x64
   CMakeCXXCompilerABI.cpp
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"C:\src\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_88dd3.dir\Debug\\" /Fd"cmTC_88dd3.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_88dd3.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\CMakeTmp\Debug\cmTC_88dd3.exe
+  cl /c /I"C:\src\vcpkg\installed\x64-windows\include" /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_efe23.dir\Debug\\" /Fd"cmTC_efe23.dir\Debug\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\Qt\Tools\CMake_64\share\cmake-3.23\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_efe23.vcxproj -> C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\CMakeFiles\CMakeTmp\Debug\cmTC_efe23.exe
 
 
 

@@ -173,13 +173,13 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
+    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\keyence_exe.vcxproj">
+      <Project>{EA022350-6B67-3820-9C9B-C81252F10BBF}</Project>
+      <Name>keyence_exe</Name>
+    </ProjectReference>
     <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\keyence_lib_static.vcxproj">
       <Project>{C99EC8D2-09DC-3407-9FEA-2307C6A07541}</Project>
       <Name>keyence_lib_static</Name>
-    </ProjectReference>
-    <ProjectReference Include="C:\Users\SamiDhiab\Theion_Repos\software_wgm_v2_cpp\dependencies\soft_wafer_holder_system_controller\build\dependencies\lib_keyence_sdk\keyence_sdk.vcxproj">
-      <Project>{C196E3D1-7B45-36AD-B455-6A1DECF11EFB}</Project>
-      <Name>keyence_sdk</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

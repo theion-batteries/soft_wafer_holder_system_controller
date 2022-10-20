@@ -21,7 +21,7 @@
 #include <thread>
 #include <atomic>
 #include <filesystem>
-
+#define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
 /**
  * @brief responsible for executing subprocess, handle data in both directions
  * and process the data with developped algorithms
@@ -96,17 +96,19 @@ public:
     void close_all_sockets();
     void run_delta_subprocess();
     void run_keyence_subprocess();
+    // keyence methods
     enum_sub_sys_feedback keyence_client_connect();
     double keyence_client_get_value_output0();
     double keyence_client_get_value_output1();
     double keyence_client_get_value_output2();
     void keyence_client_get_value_all();
     void run_all_subprocesses();
-    void connect_to_delta_server();
     void connect_to_keyence_server();
     void sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string args = std::string());
     void get_keyence_sensor_mesured_Values();
     void set_keyence_mesurement_mode();
+    // delta methods
+    enum_sub_sys_feedback connect_to_delta_server();
     double get_delta_position();
     void get_delta_speed();
     void set_delta_speed(double_t new_val);
