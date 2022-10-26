@@ -17,7 +17,7 @@
 #include <shellapi.h> 
 #include <map>
 #include <queue>
-#include "keyence_client.h"
+#include <keyence_client.h>
 #include <thread>
 #include <atomic>
 #include <filesystem>
