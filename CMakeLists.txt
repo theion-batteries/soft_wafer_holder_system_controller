@@ -19,7 +19,7 @@ add_subdirectory(dependencies/lib_keyence_sdk )
 #add_subdirectory(dependencies/sockpp EXCLUDE_FROM_ALL)
 #add_subdirectory(dependencies/yaml-cpp EXCLUDE_FROM_ALL)
 
-set(CMAKE_PREFIX_PATH "C:/Users/SamiDhiab/vcpkg/installed/x86-windows/share")
+set(CMAKE_PREFIX_PATH "C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share")
 
 find_package(yaml-cpp CONFIG REQUIRED)
 find_package(sockpp CONFIG REQUIRED)
