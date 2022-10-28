@@ -13,17 +13,22 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 if (MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
+########################## add subdirectory##################
+
+
+set(CMAKE_PREFIX_PATH "C:/vcpkg/installed/x64-windows/share")
+#find_package(yaml-cpp CONFIG REQUIRED)
+find_package(sockpp CONFIG REQUIRED)
 
 # add dependencies cmake
 add_subdirectory(dependencies/lib_keyence_sdk )
-#add_subdirectory(dependencies/sockpp EXCLUDE_FROM_ALL)
-#add_subdirectory(dependencies/yaml-cpp EXCLUDE_FROM_ALL)
+#add_subdirectory(dependencies/sockpp )
+if(NOT TARGET yaml-cpp)
+        add_subdirectory(dependencies/yaml-cpp )
+        install(TARGETS yaml-cpp)  
+endif()
 
-set(CMAKE_PREFIX_PATH "C:/Users/SamiDhiab/vcpkg/installed/x64-windows/share")
-
-find_package(yaml-cpp CONFIG REQUIRED)
-find_package(sockpp CONFIG REQUIRED)
-
+add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)  
 ###################### Build Library ############################
 
 # source *.cpp
@@ -37,38 +42,36 @@ target_link_libraries(whs_static
 # keyence interface lib
 PUBLIC keyence_lib_static
 # sockpp lib
-PRIVATE ${SOCKPP_LIBRARIES}
+PUBLIC ${SOCKPP_LIBRARIES}
 #yaml lib
-PRIVATE yaml-cpp
-
+PUBLIC yaml-cpp
 )
 # include libs
 target_include_directories(whs_static 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
-PRIVATE ${SOCKPP_INCLUDE_DIRS}
+PUBLIC ${SOCKPP_INCLUDE_DIRS}
 )
 ############################# build executable  ###################################
 
 ## source *.cpp
-#file(GLOB exe_SRCS
-#        "${PROJECT_SOURCE_DIR}/src/*.cpp"
-#)
-## add .exe
-#add_executable(whs_exe ${exe_SRCS})
-#
-## link againt static lib
-#target_link_libraries(whs_exe 
-## keyence interface lib
-#${PROJECT_SOURCE_DIR}/build/dependencies/lib_keyence_sdk/Debug/keyence_lib_static.lib
-## keyence sdk lib
-#${PROJECT_SOURCE_DIR}/dependencies/lib_keyence_sdk/Samples/VC_Src/Libx64/LKIF2.lib
-## sockpp lib
-#${PROJECT_SOURCE_DIR}/build/dependencies/sockpp/Debug/sockpp-static.lib
-## yaml lib
-#${PROJECT_SOURCE_DIR}/build/dependencies/yaml-cpp/Debug/libyaml-cppmdd.lib
-#
-#)
-#
+file(GLOB exe_SRCS
+        "${PROJECT_SOURCE_DIR}/src/*.cpp"
+)
+# add .exe
+add_executable(whs_exe ${exe_SRCS})
 
-
+target_link_libraries(whs_exe 
+# keyence interface lib
+PUBLIC keyence_lib_static
+# sockpp lib
+PUBLIC ${SOCKPP_LIBRARIES}
+#yaml lib
+PUBLIC yaml-cpp
+)
+# include libs
+target_include_directories(whs_exe 
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
+PUBLIC ${SOCKPP_INCLUDE_DIRS}
+)

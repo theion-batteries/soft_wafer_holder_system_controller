@@ -10,7 +10,7 @@ int main(int argc, char* argv[])
 	//cmdParser cli(argc, argv); // pass cmd line args to bject
 	// thread test
 	// laod config file
-	YAML::Node config = YAML::LoadFile("./config.yaml");
+	YAML::Node config = YAML::LoadFile("C:/Users/SamiDhiab/Theion_Repos/soft_wgm_user_interface_qt_cpp/dependencies/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/config/config.yaml");
 	std::cout << "config file loaded, printing parameters: " << std::endl;
 	std::cout << "mm_steps: " << config["mm_steps"].as<std::string>() << std::endl;
 	std::cout << "delay_to_move_request: " << config["delay_to_move_request"].as<std::string>() << std::endl;
