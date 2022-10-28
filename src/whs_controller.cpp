@@ -9,22 +9,32 @@
  *
  */
 #include "whs_controller.h"
- /*********** constructors and desctructions **********/
+#include <fstream>
 
- /**
-  * @brief
-  *
-  */
-whs_controller::whs_controller(LPCWSTR pythonPath, LPCWSTR pythonScript)
+
+whs_controller::whs_controller()
 {
     std::cout << "creating wafer holder motion controller " << std::endl;
-    pyCmd =pythonPath;
-    std::wcout << "loading python:  " << pyCmd << std::endl;
-    pyFilePath = pythonScript;
-    std::wcout << "loading script:  " << pyFilePath << std::endl;
+    #ifdef WHS_CONFIG
+    std::cout << WHS_CONFIG << std::endl;
+    std::cout << "loading config file" << std::endl;
+    std::ifstream filein(WHS_CONFIG);
+    for (std::string line; std::getline(filein, line); ) 
+    {
+        std::cout << line << std::endl;
+    }    
+    config= YAML::LoadFile(WHS_CONFIG);
+    auto script = config["script"].as<std::string>();
+    _whs_params.pyFile = (std::wstring(script.begin(), script.end())).c_str();
+    auto interpreter = config["interpreter"].as<std::string>();
+    _whs_params.pyInterpreter = (std::wstring(interpreter.begin(), interpreter.end())).c_str();
+    _whs_params.mm_steps = config["mm_steps"].as<double>();
+    _whs_params.mm_step_res = config["mm_step_res"].as<double>();
+    _whs_params.ref_dis = config["ref_dis"].as<double>();
+    _whs_params.delay_to_move_request = config["delay_to_move_request"].as<DWORD>();
+    _whs_params.thickness = config["thickness"].as<double>();
 
-
-
+    #endif 
 }
 /**
  * @brief Destroy the whs controller::whs controller object
@@ -54,20 +64,13 @@ void whs_controller::close_all_sockets()
  */
 void whs_controller::run_delta_subprocess() {
     std::cout << "Running delta program " << std::endl;
-    std::wcout << "loading python:  " << pyCmd << std::endl;
-    std::wcout << "Running script " << pyFilePath << std::endl;
-    //auto pp = L"C:/Users/SamiDhiab/Theion_Repos/software_wgm_v2_cpp/dependencies/soft_wafer_holder_system_controller/build/Debug/delta_server.py";
-     //auto py = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
-    HINSTANCE retVal = ShellExecuteW(NULL, L"open", pyCmd, pyFilePath, NULL, SW_SHOWDEFAULT);
+    HINSTANCE retVal = ShellExecuteW(NULL, L"open", _whs_params.pyInterpreter, _whs_params.pyFile, NULL, SW_SHOWDEFAULT);
     if (reinterpret_cast<INT_PTR>(retVal) != HINSTANCE_ERROR)
     {
-        std::cout << "executed succefully " << std::endl;
+        std::cout << "python script executed succefully " << std::endl;
         return;
     }
     std::cout << "error: " << GetLastError() << std::endl;
-
-
-
 }
 /**
  * @brief
@@ -75,7 +78,6 @@ void whs_controller::run_delta_subprocess() {
  */
 void whs_controller::run_keyence_subprocess() {
     std::cout << "Running keyence program " << std::endl;
-    ShellExecuteW(NULL, L"open", cppFile, NULL, NULL, SW_SHOWDEFAULT);
 }
 /**
  * @brief
@@ -212,12 +214,12 @@ enum_sub_sys_feedback whs_controller::keyence_client_connect()
         keyenceReady = true;
         return enum_sub_sys_feedback::sub_success;
     }
-    else 
+    else
     {
         keyenceReady = false;
         return enum_sub_sys_feedback::sub_error;
     }
-    
+
 
 
 }
@@ -302,7 +304,7 @@ enum_sub_sys_feedback whs_controller::connect_to_delta_server()
         std::cerr << "Error connecting to delta server at "
             << sockpp::inet_address(_delta_struct.ip, _delta_struct.port)
             << " -> " << delta_client_sock->last_error_str();
-        deltaReady=false;
+        deltaReady = false;
         return enum_sub_sys_feedback::sub_error;
     }
     std::cout << "Created a connection from " << delta_client_sock->address() << std::endl;
@@ -311,12 +313,12 @@ enum_sub_sys_feedback whs_controller::connect_to_delta_server()
     if (!delta_client_sock->read_timeout(std::chrono::seconds(5))) {
         std::cerr << "Error setting timeout on TCP stream: "
             << delta_client_sock->last_error_str() << std::endl;
-        deltaReady=false;
+        deltaReady = false;
         return enum_sub_sys_feedback::sub_error;
     }
     deltaReady = true;
-            return enum_sub_sys_feedback::sub_success;
- 
+    return enum_sub_sys_feedback::sub_success;
+
 
 }
 /**

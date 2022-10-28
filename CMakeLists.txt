@@ -28,7 +28,31 @@ if(NOT TARGET yaml-cpp)
         install(TARGETS yaml-cpp)  
 endif()
 
-add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)  
+
+################## search and append ##########################
+find_file(whs_config 
+        NAMES whs_config.yaml
+        PATHS ${CMAKE_CURRENT_SOURCE_DIR}/config
+        REQUIRED
+)
+find_file(delta_server 
+        NAMES delta_server.py
+        PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/software_repetier_rest_api/src/repetier_manager_lib/
+        REQUIRED
+)
+find_package(PythonInterp)
+message("found python interpreter: ${PYTHON_EXECUTABLE}")
+message("found whs config file: ${whs_config}")        
+message("found python script delta server: ${delta_server}")
+
+write_file(${whs_config} "interpreter: ${PYTHON_EXECUTABLE}" APPEND)
+write_file(${whs_config} "script: ${delta_server}" APPEND)
+set (WHS_CONFIG  "${whs_config}" )
+set (PY_INTERPRETER "${PYTHON_EXECUTABLE}")
+add_compile_definitions(_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING) 
+add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}") 
+
 ###################### Build Library ############################
 
 # source *.cpp

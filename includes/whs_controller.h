@@ -21,6 +21,8 @@
 #include <thread>
 #include <atomic>
 #include <filesystem>
+#include "yaml-cpp/yaml.h"
+
 #define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
 /**
  * @brief responsible for executing subprocess, handle data in both directions
@@ -46,12 +48,19 @@ struct delta_server
 class whs_controller
 {
 private:
-    // thread shared var
-    //std::atomic<int> shared_var{0};
-    std::string PyScriptName = "/delta_server.py";
-    LPCWSTR pyFilePath; // = L"./delta_server.py";   // = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/software_repetier_rest_api/src/repetier_manager_lib/delta_server.py";
-    LPCWSTR pyCmd;  // = L"C:/Users/SamiDhiab/AppData/Local/Programs/Python/Python39/python.exe";
-    LPCWSTR cppFile = L"C:/Users/SamiDhiab/Theion_Repos/soft_wafer_holder_system_controller/dependencies/lib_keyence_distance_sensor/build/Debug/keyence_bin.exe";
+    YAML::Node config;
+    struct whs_config_yaml_params
+    {
+    LPCWSTR pyInterpreter;
+    LPCWSTR pyFile;
+    double mm_steps; // distance to move down  default 10 mm
+    DWORD delay_to_move_request; // wait between move request  default 2000ms
+    double ref_dis;// parameter calibration sensor  default 158
+    double thickness; // thickness of wafer holder default 0.1mm
+    double mm_step_res;
+    };
+
+    whs_config_yaml_params _whs_params;
     delta_server _delta_struct;
     keyence_server _keyence_struct;
     sockpp::socket_initializer sockInit;
@@ -90,7 +99,7 @@ private:
 
 public:
     /******* const/desctr ****/
-    whs_controller(LPCWSTR pythonPath, LPCWSTR pythonScript);
+    whs_controller();
     ~whs_controller();
     /******* client controller methods ***/
     void close_all_sockets();
