@@ -15,26 +15,28 @@
 whs_controller::whs_controller()
 {
     std::cout << "creating wafer holder motion controller " << std::endl;
-    #ifdef WHS_CONFIG
+#ifdef WHS_CONFIG
     std::cout << WHS_CONFIG << std::endl;
     std::cout << "loading config file" << std::endl;
     std::ifstream filein(WHS_CONFIG);
-    for (std::string line; std::getline(filein, line); ) 
+    for (std::string line; std::getline(filein, line); )
     {
         std::cout << line << std::endl;
-    }    
-    config= YAML::LoadFile(WHS_CONFIG);
-    auto script = config["script"].as<std::string>();
-    _whs_params.pyFile = (std::wstring(script.begin(), script.end())).c_str();
-    auto interpreter = config["interpreter"].as<std::string>();
-    _whs_params.pyInterpreter = (std::wstring(interpreter.begin(), interpreter.end())).c_str();
+    }
+    config = YAML::LoadFile(WHS_CONFIG);
+    _whs_params.fi = (config["script"].as<std::string>());
+    _whs_params.py = (config["interpreter"].as<std::string>());
+    _whs_params.cmd = _whs_params.py + " " + _whs_params.fi;
+    _whs_params.pyCmd = &_whs_params.cmd[0];
+    _whs_params.pyFile = &_whs_params.fi[0];
+    _whs_params.pyInterpreter = _whs_params.py.c_str();
     _whs_params.mm_steps = config["mm_steps"].as<double>();
     _whs_params.mm_step_res = config["mm_step_res"].as<double>();
     _whs_params.ref_dis = config["ref_dis"].as<double>();
     _whs_params.delay_to_move_request = config["delay_to_move_request"].as<DWORD>();
     _whs_params.thickness = config["thickness"].as<double>();
 
-    #endif 
+#endif 
 }
 /**
  * @brief Destroy the whs controller::whs controller object
@@ -63,14 +65,37 @@ void whs_controller::close_all_sockets()
  *
  */
 void whs_controller::run_delta_subprocess() {
-    std::cout << "Running delta program " << std::endl;
-    HINSTANCE retVal = ShellExecuteW(NULL, L"open", _whs_params.pyInterpreter, _whs_params.pyFile, NULL, SW_SHOWDEFAULT);
-    if (reinterpret_cast<INT_PTR>(retVal) != HINSTANCE_ERROR)
+    std::cout << "Running delta program in new console" << std::endl;
+    STARTUPINFO si;
+    PROCESS_INFORMATION pi;
+
+    ZeroMemory( &si, sizeof(si) );
+    si.cb = sizeof(si);
+    ZeroMemory( &pi, sizeof(pi) );
+    // Start the child process. 
+    if( !CreateProcess(_whs_params.pyInterpreter,   // No module name (use command line)
+        _whs_params.pyCmd,        // Command line
+        NULL,           // Process handle not inheritable
+        NULL,           // Thread handle not inheritable
+        TRUE,          // Set handle inheritance to FALSE
+        CREATE_NEW_CONSOLE,              // No creation flags
+        NULL,           // Use parent's environment block
+        NULL,           // Use parent's starting directory 
+        &si,            // Pointer to STARTUPINFO structure
+        &pi )           // Pointer to PROCESS_INFORMATION structure
+    ) 
     {
-        std::cout << "python script executed succefully " << std::endl;
+        printf( "CreateProcess failed (%d).\n", GetLastError() );
         return;
     }
-    std::cout << "error: " << GetLastError() << std::endl;
+
+    // Wait until child process exits.
+    WaitForSingleObject( pi.hProcess, NULL );
+
+    // Close process and thread handles. 
+    CloseHandle( pi.hProcess );
+    CloseHandle( pi.hThread );
+
 }
 /**
  * @brief

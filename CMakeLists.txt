@@ -40,18 +40,21 @@ find_file(delta_server
         PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/software_repetier_rest_api/src/repetier_manager_lib/
         REQUIRED
 )
-find_package(PythonInterp)
+
+find_package(Python REQUIRED COMPONENTS Interpreter Development )
+
 message("found python interpreter: ${PYTHON_EXECUTABLE}")
 message("found whs config file: ${whs_config}")        
 message("found python script delta server: ${delta_server}")
 
-write_file(${whs_config} "interpreter: ${PYTHON_EXECUTABLE}" APPEND)
-write_file(${whs_config} "script: ${delta_server}" APPEND)
+write_file(${whs_config} "interpreter: \"${PYTHON_EXECUTABLE}\"" APPEND)
+write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
 set (WHS_CONFIG  "${whs_config}" )
 set (PY_INTERPRETER "${PYTHON_EXECUTABLE}")
 add_compile_definitions(_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING) 
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}") 
+
 
 ###################### Build Library ############################
 
@@ -69,13 +72,19 @@ PUBLIC keyence_lib_static
 PUBLIC ${SOCKPP_LIBRARIES}
 #yaml lib
 PUBLIC yaml-cpp
+# py
+PRIVATE ${Python_LIBRARIES}
 )
 # include libs
 target_include_directories(whs_static 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
 PUBLIC ${SOCKPP_INCLUDE_DIRS}
+PRIVATE ${Python_INCLUDE_DIRS}
+
 )
+target_link_directories(whs_static PRIVATE
+        ${Python_LIBRARY_DIRS})
 ############################# build executable  ###################################
 
 ## source *.cpp
@@ -92,10 +101,15 @@ PUBLIC keyence_lib_static
 PUBLIC ${SOCKPP_LIBRARIES}
 #yaml lib
 PUBLIC yaml-cpp
+# py
+PRIVATE ${Python_LIBRARIES}
 )
 # include libs
 target_include_directories(whs_exe 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
 PUBLIC ${SOCKPP_INCLUDE_DIRS}
+PRIVATE ${Python_INCLUDE_DIRS}
 )
+target_link_directories(whs_exe PRIVATE
+        ${Python_LIBRARY_DIRS})

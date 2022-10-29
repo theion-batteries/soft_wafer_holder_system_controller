@@ -51,8 +51,12 @@ private:
     YAML::Node config;
     struct whs_config_yaml_params
     {
-    LPCWSTR pyInterpreter;
-    LPCWSTR pyFile;
+    LPCTSTR pyInterpreter; 
+    LPSTR pyFile;
+    LPSTR pyCmd;
+    std::string py;
+    std::string fi;
+    std::string cmd;
     double mm_steps; // distance to move down  default 10 mm
     DWORD delay_to_move_request; // wait between move request  default 2000ms
     double ref_dis;// parameter calibration sensor  default 158
