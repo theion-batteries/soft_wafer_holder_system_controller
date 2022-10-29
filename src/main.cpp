@@ -14,8 +14,8 @@ int main(int argc, char* argv[])
 	wafer_sys_control.keyence_client_connect();
 	wafer_sys_control.keyence_client_get_value_all(); //ready
 	// controller  algorithm
-	//wafer_sys_control.move_down_until_data_availble(config["mm_steps"].as<double>(), config["delay_to_move_request"].as<DWORD>());
-	//wafer_sys_control.move_down_to_surface(config["ref_dis"].as<double>());
-	//wafer_sys_control.deep_wafer_holder_desired_thickness(config["thickness"].as<double>(), config["mm_step_res"].as<double>());
+	wafer_sys_control.move_down_until_data_availble();
+	wafer_sys_control.move_down_to_surface();
+	wafer_sys_control.deep_wafer_holder_desired_thickness();
 	return 0;
 }

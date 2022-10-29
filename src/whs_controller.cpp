@@ -527,7 +527,7 @@ double whs_controller::calculate_time_to_move_steps(float mm)
     return mm * 100; // assume time step
 }
 
-void whs_controller::move_down_until_data_availble(double mm_steps, DWORD delay_to_move_request)
+void whs_controller::move_down_until_data_availble()
 {
     // test version: delta z pos: 125, keyence get data
     double last_pos = 0;
@@ -541,10 +541,10 @@ void whs_controller::move_down_until_data_availble(double mm_steps, DWORD delay_
     std::cout << "start pos:  " << last_pos << std::endl;
     while (keyence_client_get_value_output1() == 0) // while data invalid, we go down further
     {
-        std::cout << "moving down by " << mm_steps << "mm_steps until reading values " << std::endl;
-        move_delta_down_by(mm_steps); // move down by mm steps
+        std::cout << "moving down by " << _whs_params.mm_steps << "mm_steps until reading values " << std::endl;
+        move_delta_down_by(_whs_params.mm_steps); // move down by mm steps
         std::cout << "wait for cmd moving down to finish, asking for new position  " << std::endl;
-        Sleep(delay_to_move_request);
+        Sleep(_whs_params.delay_to_move_request);
     }
 }
 /**
@@ -552,11 +552,11 @@ void whs_controller::move_down_until_data_availble(double mm_steps, DWORD delay_
  *
  * @param ref_dis
  */
-void whs_controller::move_down_to_surface(double ref_dis)
+void whs_controller::move_down_to_surface()
 {
-    if (ref_dis == 0) ref_dis = reference_distance;
+    if (_whs_params.ref_dis == 0) _whs_params.ref_dis = reference_distance;
     std::cout << "moving down to surface" << std::endl;
-    std::cout << "moving down until sensor reading is equal the refernce distance: " << ref_dis << std::endl;
+    std::cout << "moving down until sensor reading is equal the refernce distance: " << _whs_params.ref_dis << std::endl;
     // test version: delta z pos: 125, keyence get data
     double last_pos = 0;
     float mm_steps = 1; // 
@@ -567,7 +567,7 @@ void whs_controller::move_down_to_surface(double ref_dis)
     else {
         last_pos = get_delta_position();
     }
-    while (keyence_client_get_value_output1() >= ref_dis) // while keyence reading is <= to reference distance
+    while (keyence_client_get_value_output1() >= _whs_params.ref_dis) // while keyence reading is <= to reference distance
     {
         std::cout << "moving down by " << mm_steps << "mm_steps until reading values " << std::endl;
         move_delta_down_by(mm_steps); // move down by mm steps
@@ -584,15 +584,15 @@ void whs_controller::move_down_to_surface(double ref_dis)
  * @param thickness
  * @param mm_step_res
  */
-void whs_controller::deep_wafer_holder_desired_thickness(double thickness, double mm_step_res) //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
+void whs_controller::deep_wafer_holder_desired_thickness() //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
 {
-    this->thickness = thickness;
-    lowest_step_res = mm_step_res;
-    unsigned int steps = thickness / mm_step_res;
+    this->thickness = _whs_params.thickness;
+    lowest_step_res = _whs_params.mm_step_res;
+    unsigned int steps = thickness / _whs_params.mm_step_res;
     for (unsigned int step_counter = 0; step_counter < steps; step_counter++)
     {
         std::cout << "iteration number " << step_counter << std::endl;
-        move_delta_down_by(mm_step_res); // move mm step default 0.01 mm
+        move_delta_down_by(_whs_params.mm_step_res); // move mm step default 0.01 mm
         Sleep(200); //wait for movement to finish
         // to check
         keyence_client_get_value_output1();
