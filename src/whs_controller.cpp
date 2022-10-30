@@ -43,7 +43,7 @@ whs_controller::whs_controller()
  */
 whs_controller::~whs_controller()
 {
-    if (delta_client_sock != nullptr) delete delta_client_sock;
+     if (delta_client_sock != nullptr) delete delta_client_sock;
     if (Kclient != nullptr) delete Kclient;
 }
 /**

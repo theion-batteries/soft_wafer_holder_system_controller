@@ -49,7 +49,7 @@ message("found python script delta server: ${delta_server}")
 
 write_file(${whs_config} "interpreter: \"${PYTHON_EXECUTABLE}\"" APPEND)
 write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
-set (WHS_CONFIG  "${whs_config}" )
+set ( WHS_CONFIG  "${whs_config}" CACHE FILEPATH "${whs_config}")
 set (PY_INTERPRETER "${PYTHON_EXECUTABLE}")
 add_compile_definitions(_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING) 
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
