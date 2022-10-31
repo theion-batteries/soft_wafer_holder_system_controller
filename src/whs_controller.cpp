@@ -637,3 +637,16 @@ void whs_controller::monitor_and_calibrate()
 }
 
 
+    /********* helper functions */
+    bool whs_controller::get_delta_status()
+    {
+        return deltaReady;
+    }
+    bool whs_controller::get_keyence_status()
+    {
+        return keyenceReady;
+    }
+    bool whs_controller::get_whs_controller_status()
+    {
+        return waferHolderReady;
+    }

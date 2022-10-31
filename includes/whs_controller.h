@@ -136,5 +136,8 @@ public:
     void move_down_to_surface();
     void deep_wafer_holder_desired_thickness(); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
     void monitor_and_calibrate(); // we will launch a monitor to check if we are inside the desired depth during next processes
-
+    /********* helper functions */
+    bool get_delta_status();
+    bool get_keyence_status();
+    bool get_whs_controller_status();
 };
