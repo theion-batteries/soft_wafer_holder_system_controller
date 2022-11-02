@@ -61,6 +61,13 @@ add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}")
 # source *.cpp
 file(GLOB lib_SRCS
         "${PROJECT_SOURCE_DIR}/src/whs_controller.cpp"
+        "${PROJECT_SOURCE_DIR}/src/delta_motion.cpp"
+        "${PROJECT_SOURCE_DIR}/src/Iaxis_motion.cpp"
+        "${PROJECT_SOURCE_DIR}/src/Idistance_sensor.cpp"
+        "${PROJECT_SOURCE_DIR}/src/linear_motion.cpp"
+        "${PROJECT_SOURCE_DIR}/src/keyence_sensor.cpp"
+
+        
 )
 # add libraries
 add_library(whs_static STATIC ${lib_SRCS})
