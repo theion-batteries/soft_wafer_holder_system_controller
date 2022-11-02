@@ -36,8 +36,8 @@ whs_controller::whs_controller()
     _whs_params.thickness = config["thickness"].as<double>();
 
 #endif 
-    distSensor = new keyence_sensor();
-    linearMover = new delta_motion(_whs_params.pyInterpreter, _whs_params.pyCmd);
+    distSensor = std::make_shared< keyence_sensor>();
+    linearMover = std::make_shared< delta_motion>(_whs_params.pyInterpreter, _whs_params.pyCmd);
 }
 /**
  * @brief Destroy the whs controller::whs controller object
@@ -45,9 +45,7 @@ whs_controller::whs_controller()
  */
 whs_controller::~whs_controller()
 {
-
 }
-
 
 /**************** Algorithms conntroller ***************/
 
@@ -75,8 +73,8 @@ void whs_controller::move_down_to_surface()
     while (distSensor->getMesuredValue() >= _whs_params.ref_dis) // while distSensor reading is <= to reference distance
     {
         std::cout << "moving down by " << _whs_params.one_mm_steps << "mm_steps until reading values " << std::endl;
-        linearMover->move_down_by( _whs_params.one_mm_steps ); // move down by mm steps
-        std::cout << "current pos:  " << linearMover->get_position()<< std::endl;
+        linearMover->move_down_by(_whs_params.one_mm_steps); // move down by mm steps
+        std::cout << "current pos:  " << linearMover->get_position() << std::endl;
     }
 }
 /**
@@ -121,7 +119,7 @@ void whs_controller::monitor_and_calibrate()
         {
             if (diff < 0) // if diff negativ, we move up
             {
-              linearMover->move_up_by(diff);
+                linearMover->move_up_by(diff);
             }
             else
             {
@@ -149,4 +147,26 @@ bool whs_controller::get_sensor_status()
 bool whs_controller::get_whs_controller_status()
 {
     return waferHolderReady;
+}
+
+/*                getter interface              */
+
+double whs_controller::get_sensor_values()
+{
+
+    return distSensor->getMesuredValue();
+}
+double whs_controller::get_axis_position()
+{
+
+    return linearMover->get_position();
+}
+
+ Iaxis_motion* whs_controller::get_axis_ptr()
+{
+    return dynamic_cast<Iaxis_motion*>(linearMover.get());
+}
+Idistance_sensor*  whs_controller::get_dist_ptr()
+{
+    return dynamic_cast<Idistance_sensor*>(distSensor.get());
 }

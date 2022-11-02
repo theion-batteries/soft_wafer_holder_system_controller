@@ -48,7 +48,6 @@ private:
     std::deque<double> delta_last_position; // FIFO last 10 values
     std::string delta_incoming_data;
     u_int delta_data_length = 1024;
-    bool deltaReady = false;
 
 public:
     delta_motion(LPCTSTR pyInterp, LPSTR pyCmdFull);

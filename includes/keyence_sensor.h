@@ -55,7 +55,6 @@ public:
     virtual double getMesuredValue()override;
     virtual enum_sub_sys_feedback connect() override;
     virtual void disconnect() override;
-    virtual void sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string args = std::string());
     // keyence methods
     double keyence_client_get_value_output0();
     double keyence_client_get_value_output1();

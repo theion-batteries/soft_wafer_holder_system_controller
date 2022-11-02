@@ -17,6 +17,7 @@
 #include <shellapi.h> 
 #include <map>
 #include <queue>
+#include "memory.h"
 #include <keyence_client.h>
 #include <thread>
 #include <atomic>
@@ -48,8 +49,8 @@ private:
     YAML::Node config;
     whs_config_yaml_params _whs_params;
     bool waferHolderReady = false;
-    Idistance_sensor* distSensor;
-    Iaxis_motion* linearMover;
+    std::shared_ptr< Idistance_sensor> distSensor;
+    std::shared_ptr <Iaxis_motion> linearMover;
     double current_axis_position;
     double current_sensor_value;
 public:
@@ -57,6 +58,7 @@ public:
     whs_controller();
     ~whs_controller();
     /******** algorithms controller **********/
+
     void move_down_until_data_availble();
     void move_down_to_surface();
     void deep_wafer_holder_desired_thickness(); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
@@ -65,4 +67,10 @@ public:
     bool get_mover_status();
     bool get_sensor_status();
     bool get_whs_controller_status();
+    /*     helper getter */
+    double get_sensor_values();
+    double get_axis_position();
+    Iaxis_motion* get_axis_ptr();
+    Idistance_sensor* get_dist_ptr();
+
 };

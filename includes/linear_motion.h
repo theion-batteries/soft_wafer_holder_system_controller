@@ -27,18 +27,19 @@ struct whs_axis_motion_server
     uint16_t port = 80;
 };
 
+
 class linear_motion: public Iaxis_motion
 {
 private:
-    /* data */
 public:
-    linear_motion(/* args */);
+    linear_motion();
     virtual ~linear_motion();
     virtual void move_home() override;
     virtual void move_to(int new_position) override;
 
 
 };
+
 
 
 
