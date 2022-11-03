@@ -17,7 +17,7 @@ delta_motion::delta_motion(LPCTSTR pyInterp, LPSTR pyCmdFull)
 
 delta_motion::~delta_motion()
 {
-    delete delta_client_sock;
+   if(delta_client_sock!=nullptr) delete delta_client_sock;
 }
 
 bool delta_motion::getStatus()

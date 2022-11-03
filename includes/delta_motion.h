@@ -33,7 +33,7 @@ class delta_motion : public Iaxis_motion
 private:
     delta_server _delta_struct;
     sockpp::socket_initializer sockInit;
-    sockpp::tcp_connector* delta_client_sock;
+    sockpp::tcp_connector* delta_client_sock=nullptr;
     bool deltaReady = false;
     LPCTSTR pyInterpreter;
     LPSTR pyFile;
