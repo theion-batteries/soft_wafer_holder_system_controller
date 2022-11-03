@@ -41,16 +41,16 @@ find_file(delta_server
         REQUIRED
 )
 
-find_package(Python REQUIRED COMPONENTS Interpreter Development )
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development )
 
-message("found python interpreter: ${PYTHON_EXECUTABLE}")
+message("found python interpreter: ${Python3_EXECUTABLE}")
 message("found whs config file: ${whs_config}")        
 message("found python script delta server: ${delta_server}")
 
-write_file(${whs_config} "interpreter: \"${PYTHON_EXECUTABLE}\"" APPEND)
+write_file(${whs_config} "interpreter: \"${Python3_EXECUTABLE}\"" APPEND)
 write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
 set ( WHS_CONFIG  "${whs_config}" CACHE FILEPATH "${whs_config}")
-set (PY_INTERPRETER "${PYTHON_EXECUTABLE}")
+set (PY_INTERPRETER "${Python3_EXECUTABLE}")
 add_compile_definitions(_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING) 
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}") 
