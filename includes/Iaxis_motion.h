@@ -13,7 +13,7 @@
 #include <string>
 #include "sockpp/tcp_connector.h"
 #include <iostream>
-#include "enum_sub_sys_feedback.h"
+#include "subsystem_feedback.h"
 class Iaxis_motion
 {
 private:
@@ -21,7 +21,7 @@ private:
 public:
     Iaxis_motion(/* args */);
     virtual ~Iaxis_motion();
-    virtual enum_sub_sys_feedback connect() = 0;
+    virtual wgm_feedbacks::enum_sub_sys_feedback connect() = 0;
     virtual void disconnect() = 0;
     virtual void move_home() = 0;
     virtual void move_to(int new_position) = 0;

@@ -14,7 +14,7 @@
 #include <string>
 #include "sockpp/tcp_connector.h"
 #include <iostream>
-#include "enum_sub_sys_feedback.h"
+#include "subsystem_feedback.h"
 class Idistance_sensor
 {
 private:
@@ -23,7 +23,7 @@ public:
     Idistance_sensor(/* args */);
     virtual  ~Idistance_sensor();
     virtual double getMesuredValue()=0;
-    virtual enum_sub_sys_feedback connect() = 0;
+    virtual wgm_feedbacks::enum_sub_sys_feedback connect() = 0;
     virtual void disconnect() = 0;
     virtual void sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string args = std::string());
     virtual bool getStatus() =0;

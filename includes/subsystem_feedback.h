@@ -9,10 +9,12 @@
  *
  */
 #pragma once
+#ifndef _SUBSYSTEM_FEEDBACK
+#define _SUBSYSTEM_FEEDBACK
 
 #include <iostream>
-#include "hardware_feedback.h"
 
+#include "hardware_feedback.h"
 namespace wgm_feedbacks
 {
     /********* enumeration classes ***********/
@@ -36,3 +38,4 @@ namespace wgm_feedbacks
 }
 
 
+#endif

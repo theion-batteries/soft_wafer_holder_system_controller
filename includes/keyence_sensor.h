@@ -53,7 +53,7 @@ public:
     keyence_sensor(/* args */);
     ~keyence_sensor();
     virtual double getMesuredValue()override;
-    virtual enum_sub_sys_feedback connect() override;
+    virtual wgm_feedbacks::enum_sub_sys_feedback connect() override;
     virtual void disconnect() override;
     // keyence methods
     double keyence_client_get_value_output0();

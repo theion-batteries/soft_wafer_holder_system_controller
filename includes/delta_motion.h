@@ -54,7 +54,7 @@ public:
     virtual ~delta_motion();
     void move_home() override;
     void move_to(int new_position) override;
-    virtual enum_sub_sys_feedback connect()override;
+    virtual wgm_feedbacks::enum_sub_sys_feedback connect()override;
     virtual void disconnect() override;
     void run_delta_subprocess();
     double get_position() override;

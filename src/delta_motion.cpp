@@ -38,7 +38,7 @@ void delta_motion::move_to(int new_position)
     
 }
 
-enum_sub_sys_feedback delta_motion::connect() 
+wgm_feedbacks::enum_sub_sys_feedback delta_motion::connect() 
 {
      std::cout << "connecting controller to delta server" << std::endl;
     delta_client_sock = new sockpp::tcp_connector({ _delta_struct.ip, _delta_struct.port });
@@ -50,7 +50,7 @@ enum_sub_sys_feedback delta_motion::connect()
             << sockpp::inet_address(_delta_struct.ip, _delta_struct.port)
             << " -> " << delta_client_sock->last_error_str();
         deltaReady = false;
-        return enum_sub_sys_feedback::sub_error;
+        return wgm_feedbacks::enum_sub_sys_feedback::sub_error;
     }
     std::cout << "Created a connection from " << delta_client_sock->address() << std::endl;
     std::cout << "Created a connection to " << delta_client_sock->peer_address() << std::endl;
@@ -59,10 +59,10 @@ enum_sub_sys_feedback delta_motion::connect()
         std::cerr << "Error setting timeout on TCP stream: "
             << delta_client_sock->last_error_str() << std::endl;
         deltaReady = false;
-        return enum_sub_sys_feedback::sub_error;
+        return wgm_feedbacks::enum_sub_sys_feedback::sub_error;
     }
     deltaReady = true;
-    return enum_sub_sys_feedback::sub_success;
+    return wgm_feedbacks::enum_sub_sys_feedback::sub_success;
 
 }
 

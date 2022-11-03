@@ -31,20 +31,20 @@ double keyence_sensor::getMesuredValue()
  * @brief
  *
  */
-enum_sub_sys_feedback keyence_sensor::connect()
+wgm_feedbacks::enum_sub_sys_feedback keyence_sensor::connect()
 {
     std::cout << "Running keyence client " << std::endl;
     Kclient = new keyence_client(keyence_ip);
-    enum_hw_feedback Keyence_feedback = Kclient->connect();
-    if (Keyence_feedback == enum_hw_feedback::hw_success)
+    wgm_feedbacks::enum_hw_feedback Keyence_feedback = Kclient->connect();
+    if (Keyence_feedback == wgm_feedbacks::enum_hw_feedback::hw_success)
     {
         keyenceReady = true;
-        return enum_sub_sys_feedback::sub_success;
+        return wgm_feedbacks::enum_sub_sys_feedback::sub_success;
     }
     else
     {
         keyenceReady = false;
-        return enum_sub_sys_feedback::sub_error;
+        return wgm_feedbacks::enum_sub_sys_feedback::sub_error;
     }
 }
 /**
