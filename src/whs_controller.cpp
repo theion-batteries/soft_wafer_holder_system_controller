@@ -37,7 +37,7 @@ whs_controller::whs_controller()
 
 #endif 
     distSensor = std::make_shared< keyence_sensor>();
-    linearMover = std::make_shared< delta_motion>(_whs_params.pyInterpreter, _whs_params.pyCmd);
+    linearMover = std::make_shared< linear_motion>();
 }
 /**
  * @brief Destroy the whs controller::whs controller object
@@ -47,6 +47,28 @@ whs_controller::~whs_controller()
 {
 }
 
+void whs_controller::reload_config_file()
+{
+    std::cout << "reloading config file" << std::endl;
+    std::ifstream filein(WHS_CONFIG);
+    for (std::string line; std::getline(filein, line); )
+    {
+        std::cout << line << std::endl;
+    }
+    config = YAML::LoadFile(WHS_CONFIG);
+    _whs_params.fi = (config["script"].as<std::string>());
+    _whs_params.py = (config["interpreter"].as<std::string>());
+    _whs_params.cmd = _whs_params.py + " " + _whs_params.fi;
+    _whs_params.pyCmd = &_whs_params.cmd[0];
+    _whs_params.pyFile = &_whs_params.fi[0];
+    _whs_params.pyInterpreter = _whs_params.py.c_str();
+    _whs_params.mm_steps = config["mm_steps"].as<double>();
+    _whs_params.mm_step_res = config["mm_step_res"].as<double>();
+    _whs_params.ref_dis = config["ref_dis"].as<double>();
+    _whs_params.delay_to_move_request = config["delay_to_move_request"].as<DWORD>();
+    _whs_params.thickness = config["thickness"].as<double>();
+
+}
 /**************** Algorithms conntroller ***************/
 
 
@@ -169,4 +191,18 @@ double whs_controller::get_axis_position()
 Idistance_sensor*  whs_controller::get_dist_ptr()
 {
     return dynamic_cast<Idistance_sensor*>(distSensor.get());
+}
+/**
+ * @brief TODO implement direct send cmd to sensor if needed
+ * 
+ * @param cmd 
+ */
+void whs_controller::sendDirectCmdSensor(std::string& cmd)
+{
+    //distSensor->sendDirectCmd(cmd);
+
+}
+void whs_controller::sendDirectCmdAxis(std::string& cmd)
+{
+linearMover->sendDirectCmd(cmd);
 }

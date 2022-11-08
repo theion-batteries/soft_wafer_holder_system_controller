@@ -34,3 +34,4 @@ void Iaxis_motion::sendCmd(std::string& cmd, sockpp::tcp_connector* client, std:
     }
     std::cout << "command " << cmd + args << " sent" << std::endl;
 }
+

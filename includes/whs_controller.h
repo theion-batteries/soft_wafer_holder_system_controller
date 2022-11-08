@@ -23,7 +23,7 @@
 #include <atomic>
 #include <filesystem>
 #include "yaml-cpp/yaml.h"
-#include "delta_motion.h"
+#include "linear_motion.h"
 #include "keyence_sensor.h"
 
 #define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
@@ -45,9 +45,10 @@ struct whs_config_yaml_params
 
 class whs_controller
 {
+public:
+     YAML::Node config;
+     whs_config_yaml_params _whs_params;
 private:
-    YAML::Node config;
-    whs_config_yaml_params _whs_params;
     bool waferHolderReady = false;
     std::shared_ptr< Idistance_sensor> distSensor;
     std::shared_ptr <Iaxis_motion> linearMover;
@@ -72,5 +73,8 @@ public:
     double get_axis_position();
     Iaxis_motion* get_axis_ptr();
     Idistance_sensor* get_dist_ptr();
+    void sendDirectCmdSensor(std::string& cmd);
+    void sendDirectCmdAxis(std::string& cmd);
+     void reload_config_file();
 
 };

@@ -65,6 +65,7 @@ public:
     void move_up_by(double_t steps) override;
     void move_down_by(double_t steps) override;
     virtual bool getStatus() override;
+    virtual void sendDirectCmd(std::string& cmd) override;
 
 };
 

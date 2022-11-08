@@ -25,6 +25,14 @@ bool delta_motion::getStatus()
     return deltaReady;
 }
 
+ void delta_motion::sendDirectCmd(std::string& cmd) 
+ {
+        if (delta_client_sock->write(cmd ) != ssize_t(std::string(cmd ).length())) {
+        std::cerr << "Error writing to the TCP stream: "
+            << delta_client_sock->last_error_str() << std::endl;
+    }
+    std::cout << "command " << cmd  << " sent" << std::endl;
+ }
 
 /**
  * @brief TODO: change the function call
