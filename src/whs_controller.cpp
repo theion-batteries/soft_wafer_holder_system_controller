@@ -36,7 +36,11 @@ whs_controller::whs_controller()
     _whs_params.thickness = config["thickness"].as<double>();
 
 #endif 
+#ifdef MOCK_SENSOR
+    distSensor = std::make_shared< sensorMock>();
+#else
     distSensor = std::make_shared< keyence_sensor>();
+#endif
     linearMover = std::make_shared< linear_motion>();
 }
 /**
@@ -184,18 +188,18 @@ double whs_controller::get_axis_position()
     return linearMover->get_position();
 }
 
- Iaxis_motion* whs_controller::get_axis_ptr()
+Iaxis_motion* whs_controller::get_axis_ptr()
 {
     return dynamic_cast<Iaxis_motion*>(linearMover.get());
 }
-Idistance_sensor*  whs_controller::get_dist_ptr()
+Idistance_sensor* whs_controller::get_dist_ptr()
 {
     return dynamic_cast<Idistance_sensor*>(distSensor.get());
 }
 /**
  * @brief TODO implement direct send cmd to sensor if needed
- * 
- * @param cmd 
+ *
+ * @param cmd
  */
 void whs_controller::sendDirectCmdSensor(std::string& cmd)
 {
@@ -204,5 +208,5 @@ void whs_controller::sendDirectCmdSensor(std::string& cmd)
 }
 void whs_controller::sendDirectCmdAxis(std::string& cmd)
 {
-linearMover->sendDirectCmd(cmd);
+    linearMover->sendDirectCmd(cmd);
 }

@@ -24,8 +24,13 @@
 #include <filesystem>
 #include "yaml-cpp/yaml.h"
 #include "linear_motion.h"
-#include "keyence_sensor.h"
 
+//#define MOCK_SENSOR
+#ifdef MOCK_SENSOR
+#include "sensorMock.h"
+#else
+#include "keyence_sensor.h"
+#endif
 #define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
 struct whs_config_yaml_params
 {

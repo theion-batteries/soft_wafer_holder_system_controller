@@ -8,7 +8,7 @@ project(whs_controller VERSION "1.0")
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
- 
+enable_testing()
 #This is necessary for MSVC to create a symbol file, .lib, besides a shared library, .dll
 if (MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
@@ -27,6 +27,7 @@ if(NOT TARGET yaml-cpp)
         add_subdirectory(dependencies/yaml-cpp )
         install(TARGETS yaml-cpp)  
 endif()
+add_subdirectory(tests)
 
 
 ################## search and append ##########################
@@ -66,7 +67,8 @@ file(GLOB lib_SRCS
         "${PROJECT_SOURCE_DIR}/src/Idistance_sensor.cpp"
         "${PROJECT_SOURCE_DIR}/src/linear_motion.cpp"
         "${PROJECT_SOURCE_DIR}/src/keyence_sensor.cpp"
-
+        # mocking files
+        "${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
         
 )
 # add libraries
@@ -85,6 +87,8 @@ PRIVATE ${Python_LIBRARIES}
 # include libs
 target_include_directories(whs_static 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/tests/
+
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
 PUBLIC ${SOCKPP_INCLUDE_DIRS}
 PRIVATE ${Python_INCLUDE_DIRS}
@@ -97,6 +101,8 @@ target_link_directories(whs_static PRIVATE
 ## source *.cpp
 file(GLOB exe_SRCS
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
+        # mocking files
+        "${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
 )
 # add .exe
 add_executable(whs_exe ${exe_SRCS})
@@ -114,6 +120,8 @@ PRIVATE ${Python_LIBRARIES}
 # include libs
 target_include_directories(whs_exe 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
+PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/tests/
+
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
 PUBLIC ${SOCKPP_INCLUDE_DIRS}
 PRIVATE ${Python_INCLUDE_DIRS}
