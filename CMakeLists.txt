@@ -69,7 +69,8 @@ file(GLOB lib_SRCS
         "${PROJECT_SOURCE_DIR}/src/keyence_sensor.cpp"
         # mocking files
         "${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
-        
+        "${PROJECT_SOURCE_DIR}/tests/axisMock.cpp"
+
 )
 # add libraries
 add_library(whs_static STATIC ${lib_SRCS})
@@ -103,6 +104,7 @@ file(GLOB exe_SRCS
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
         # mocking files
         "${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
+        "${PROJECT_SOURCE_DIR}/tests/axisMock.cpp"
 )
 # add .exe
 add_executable(whs_exe ${exe_SRCS})

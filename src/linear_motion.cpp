@@ -3,33 +3,34 @@
  * @author sami dhiab
  * @version 0.1
  * @date 2022-11-01
- * 
+ *
  * @copyright Copyright (c) 2022
- * 
+ *
  */
 
 #include "linear_motion.h"
 
 linear_motion::linear_motion(/* args */)
 {
-    std::cout << "creating linear axis  client" <<std::endl;
+    std::cout << "creating linear axis  client" << std::endl;
 }
 
 linear_motion::~linear_motion()
 {
-    if(axis_client_sock!=nullptr) delete axis_client_sock;
+    if (axis_client_sock != nullptr) delete axis_client_sock;
 
 }
- void linear_motion::sendDirectCmd(std::string& cmd) 
- {
-        if (axis_client_sock->write(cmd ) != ssize_t(std::string(cmd ).length())) {
+std::string linear_motion::sendDirectCmd(std::string& cmd)
+{
+    if (axis_client_sock->write(cmd) != ssize_t(std::string(cmd).length())) {
         std::cerr << "Error writing to the TCP stream: "
             << axis_client_sock->last_error_str() << std::endl;
     }
-    std::cout << "command " << cmd  << " sent" << std::endl;
-waitForResponse();
- }
- 
+    std::cout << "command " << cmd << " sent" << std::endl;
+    waitForResponse();
+    return "";
+}
+
 bool linear_motion::getStatus()
 {
     return axisReady;
@@ -38,19 +39,19 @@ bool linear_motion::getStatus()
 
 /**
  * @brief TODO: change the function call
- * 
- * @param new_position 
+ *
+ * @param new_position
  */
-void linear_motion::move_to(int new_position) 
+void linear_motion::move_to(int new_position)
 {
 
     move_up_by(new_position);
-    
+
 }
 
-wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect() 
+wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
 {
-     std::cout << "connecting controller to axis server" << std::endl;
+    std::cout << "connecting controller to axis server" << std::endl;
     axis_client_sock = new sockpp::tcp_connector({ _motion_axis_struct.ip, _motion_axis_struct.port });
 
     // Implicitly creates an inet_address from {host,port}
@@ -76,7 +77,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
 
 }
 
-void linear_motion::disconnect() 
+void linear_motion::disconnect()
 {
     axis_client_sock->close();
 }
@@ -123,9 +124,9 @@ double linear_motion::get_position()
  */
 void linear_motion::move_home()
 {
-      auto command = axis_cmds.find(7);
+    auto command = axis_cmds.find(7);
     if (command != axis_cmds.end()) {
-        std::cout << "sending command: " << command->second <<  '\n';
+        std::cout << "sending command: " << command->second << '\n';
         sendCmd(command->second, axis_client_sock);
     }
 
@@ -235,7 +236,7 @@ void linear_motion::move_center()
 {
     auto command = axis_cmds.find(2);
     if (command != axis_cmds.end()) {
-        std::cout << "sending command: " << command->second <<  '\n';
+        std::cout << "sending command: " << command->second << '\n';
         sendCmd(command->second, axis_client_sock);
     }
 }
@@ -244,7 +245,7 @@ void linear_motion::unlock()
 {
     auto command = axis_cmds.find(0);
     if (command != axis_cmds.end()) {
-        std::cout << "sending command: " << command->second <<  '\n';
+        std::cout << "sending command: " << command->second << '\n';
         sendCmd(command->second, axis_client_sock);
     }
 

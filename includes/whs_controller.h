@@ -23,14 +23,19 @@
 #include <atomic>
 #include <filesystem>
 #include "yaml-cpp/yaml.h"
-#include "linear_motion.h"
 
 //#define MOCK_SENSOR
-#ifdef MOCK_SENSOR
+#ifdef SINK_SENSOR_MOCK
 #include "sensorMock.h"
 #else
 #include "keyence_sensor.h"
 #endif
+#ifdef SINK_AXIS_MOCK
+#include "axisMock.h"
+#else
+#include "linear_motion.h"
+#endif
+
 #define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
 struct whs_config_yaml_params
 {
@@ -79,7 +84,7 @@ public:
     Iaxis_motion* get_axis_ptr();
     Idistance_sensor* get_dist_ptr();
     void sendDirectCmdSensor(std::string& cmd);
-    void sendDirectCmdAxis(std::string& cmd);
+    std::string sendDirectCmdAxis(std::string& cmd);
      void reload_config_file();
 
 };

@@ -26,7 +26,7 @@ public:
     virtual void move_home() = 0;
     virtual void move_to(int new_position) = 0;
     void sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string args = std::string());
-    virtual void sendDirectCmd(std::string& cmd)=0;
+    virtual std::string sendDirectCmd(std::string& cmd)=0;
     virtual double get_position() = 0;
     virtual bool getStatus() =0;
     virtual void get_speed() =0;

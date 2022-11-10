@@ -36,12 +36,16 @@ whs_controller::whs_controller()
     _whs_params.thickness = config["thickness"].as<double>();
 
 #endif 
-#ifdef MOCK_SENSOR
+#ifdef SINK_SENSOR_MOCK
     distSensor = std::make_shared< sensorMock>();
 #else
     distSensor = std::make_shared< keyence_sensor>();
 #endif
+#ifdef SINK_AXIS_MOCK
+    linearMover = std::make_shared< axisMock>();
+#else
     linearMover = std::make_shared< linear_motion>();
+#endif
 }
 /**
  * @brief Destroy the whs controller::whs controller object
@@ -206,7 +210,7 @@ void whs_controller::sendDirectCmdSensor(std::string& cmd)
     //distSensor->sendDirectCmd(cmd);
 
 }
-void whs_controller::sendDirectCmdAxis(std::string& cmd)
+std::string whs_controller::sendDirectCmdAxis(std::string& cmd)
 {
-    linearMover->sendDirectCmd(cmd);
+    return linearMover->sendDirectCmd(cmd);
 }

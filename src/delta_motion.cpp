@@ -3,21 +3,21 @@
  * @author sami dhiab
  * @version 0.1
  * @date 2022-11-01
- * 
+ *
  * @copyright Copyright (c) 2022
- * 
+ *
  */
 #include "delta_motion.h"
 
 delta_motion::delta_motion(LPCTSTR pyInterp, LPSTR pyCmdFull)
 {
-    std::cout << "creating delta client" <<std::endl;
-    pyInterpreter= pyInterp; pyCmd= pyCmdFull;
+    std::cout << "creating delta client" << std::endl;
+    pyInterpreter = pyInterp; pyCmd = pyCmdFull;
 }
 
 delta_motion::~delta_motion()
 {
-   if(delta_client_sock!=nullptr) delete delta_client_sock;
+    if (delta_client_sock != nullptr) delete delta_client_sock;
 }
 
 bool delta_motion::getStatus()
@@ -25,30 +25,31 @@ bool delta_motion::getStatus()
     return deltaReady;
 }
 
- void delta_motion::sendDirectCmd(std::string& cmd) 
- {
-        if (delta_client_sock->write(cmd ) != ssize_t(std::string(cmd ).length())) {
+std::string delta_motion::sendDirectCmd(std::string& cmd)
+{
+    if (delta_client_sock->write(cmd) != ssize_t(std::string(cmd).length())) {
         std::cerr << "Error writing to the TCP stream: "
             << delta_client_sock->last_error_str() << std::endl;
     }
-    std::cout << "command " << cmd  << " sent" << std::endl;
- }
+    std::cout << "command " << cmd << " sent" << std::endl;
+    return "";
+}
 
 /**
  * @brief TODO: change the function call
- * 
- * @param new_position 
+ *
+ * @param new_position
  */
-void delta_motion::move_to(int new_position) 
+void delta_motion::move_to(int new_position)
 {
 
     move_up_by(new_position);
-    
+
 }
 
-wgm_feedbacks::enum_sub_sys_feedback delta_motion::connect() 
+wgm_feedbacks::enum_sub_sys_feedback delta_motion::connect()
 {
-     std::cout << "connecting controller to delta server" << std::endl;
+    std::cout << "connecting controller to delta server" << std::endl;
     delta_client_sock = new sockpp::tcp_connector({ _delta_struct.ip, _delta_struct.port });
 
     // Implicitly creates an inet_address from {host,port}
@@ -74,7 +75,7 @@ wgm_feedbacks::enum_sub_sys_feedback delta_motion::connect()
 
 }
 
-void delta_motion::disconnect() 
+void delta_motion::disconnect()
 {
     delta_client_sock->close();
 }
@@ -89,11 +90,11 @@ void delta_motion::run_delta_subprocess() {
     STARTUPINFO si;
     PROCESS_INFORMATION pi;
 
-    ZeroMemory( &si, sizeof(si) );
+    ZeroMemory(&si, sizeof(si));
     si.cb = sizeof(si);
-    ZeroMemory( &pi, sizeof(pi) );
+    ZeroMemory(&pi, sizeof(pi));
     // Start the child process. 
-    if( !CreateProcess(pyInterpreter,   // No module name (use command line)
+    if (!CreateProcess(pyInterpreter,   // No module name (use command line)
         pyCmd,        // Command line
         NULL,           // Process handle not inheritable
         NULL,           // Thread handle not inheritable
@@ -102,19 +103,19 @@ void delta_motion::run_delta_subprocess() {
         NULL,           // Use parent's environment block
         NULL,           // Use parent's starting directory 
         &si,            // Pointer to STARTUPINFO structure
-        &pi )           // Pointer to PROCESS_INFORMATION structure
-    ) 
+        &pi)           // Pointer to PROCESS_INFORMATION structure
+        )
     {
-        printf( "CreateProcess failed (%d).\n", GetLastError() );
+        printf("CreateProcess failed (%d).\n", GetLastError());
         return;
     }
 
     // Wait until child process exits.
-    WaitForSingleObject( pi.hProcess, NULL );
+    WaitForSingleObject(pi.hProcess, NULL);
 
     // Close process and thread handles. 
-    CloseHandle( pi.hProcess );
-    CloseHandle( pi.hThread );
+    CloseHandle(pi.hProcess);
+    CloseHandle(pi.hThread);
 
 }
 

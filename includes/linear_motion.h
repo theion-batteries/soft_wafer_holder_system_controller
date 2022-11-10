@@ -36,6 +36,7 @@ private:
     sockpp::socket_initializer sockInit;
     sockpp::tcp_connector* axis_client_sock=nullptr;
     bool axisReady = false;
+protected:
     std::map<u_int, std::string> axis_cmds = {
         {0,"$x"}, {1,"?"}, {2,"x160"},
         {3,"x"}, {4,"x"},
@@ -60,7 +61,7 @@ public:
     void move_up_by(double_t steps) override;
     void move_down_by(double_t steps) override;
     virtual bool getStatus() override;
-    virtual void sendDirectCmd(std::string& cmd) override;
+    virtual std::string sendDirectCmd(std::string& cmd) override;
     void waitForResponse();
     void move_center();
     void unlock();
