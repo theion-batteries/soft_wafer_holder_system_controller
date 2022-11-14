@@ -84,12 +84,16 @@ void whs_controller::move_down_until_data_availble()
 {
     current_axis_position = linearMover->get_position();
 
-    std::cout << "start pos:  " << current_axis_position << std::endl;
+    std::cout << "axis start pos:  " << current_axis_position << std::endl;
+
     while (distSensor->getMesuredValue() == 0) // while data invalid, we go down further
     {
         std::cout << "moving down by " << _whs_params.mm_steps << "mm_steps until reading values " << std::endl;
         linearMover->move_down_by(_whs_params.mm_steps); // move down by mm steps
     }
+    std::cout << "sensor data valid" << std::endl;
+    std::cout << "sensor value:  " << distSensor->getMesuredValue() << std::endl;
+
 }
 /**
  * @brief
@@ -99,10 +103,11 @@ void whs_controller::move_down_until_data_availble()
 void whs_controller::move_down_to_surface()
 {
     std::cout << "moving down to surface" << std::endl;
-    std::cout << "moving down until sensor reading is equal the refernce distance: " << _whs_params.ref_dis << std::endl;
+    
     while (distSensor->getMesuredValue() >= _whs_params.ref_dis) // while distSensor reading is <= to reference distance
     {
-        std::cout << "moving down by " << _whs_params.one_mm_steps << "mm_steps until reading values " << std::endl;
+        std::cout << "moving down until sensor reading is equal the refernce distance: " << _whs_params.ref_dis << std::endl;
+        std::cout << "moving down by " << _whs_params.one_mm_steps <<  std::endl;
         linearMover->move_down_by(_whs_params.one_mm_steps); // move down by mm steps
         std::cout << "current pos:  " << linearMover->get_position() << std::endl;
     }

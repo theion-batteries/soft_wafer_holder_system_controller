@@ -24,7 +24,7 @@ void sensorMock::disconnect()
 double sensorMock::getMesuredValue()
 {
 
-    return rand();    
+    return currentVal--;    
 }
 
 

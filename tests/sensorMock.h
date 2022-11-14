@@ -5,7 +5,7 @@
 class sensorMock: public Idistance_sensor
 {
 private:
-    /* data */
+    double currentVal = 303;
 public:
     sensorMock(/* args */);
     virtual  ~sensorMock();

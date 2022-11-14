@@ -21,7 +21,7 @@ std::string axisMock::sendDirectCmd(std::string& cmd)
             return "ok";
         }
     }
-std::cout << "command not found" << std::endl;
+    std::cout << "command not found" << std::endl;
     return "NA";
 }
 
@@ -66,7 +66,7 @@ double axisMock::get_position()
     double axis_pos = 0;
     std::cout << "get axis mock curent position" << std::endl;
 
-    return rand();
+    return currentPos;
 }
 /**
  * @brief
@@ -75,6 +75,7 @@ double axisMock::get_position()
 void axisMock::move_home()
 {
     std::cout << "moving home" << std::endl;
+    currentPos = 300;
 }
 /**
  * @brief
@@ -104,6 +105,8 @@ void axisMock::move_down_to(double_t new_pos)
 void axisMock::move_up_by(double_t steps)
 {
     std::cout << "moving up by " << steps << std::endl;
+    currentPos=currentPos+steps ;
+    std::cout << "new pos "<< currentPos << std::endl;
 
 }
 
@@ -116,6 +119,8 @@ void axisMock::move_down_by(double_t steps)
 {
 
     std::cout << "moving down by " << steps << std::endl;
+   currentPos= currentPos-steps;
+    std::cout << "new pos "<< currentPos << std::endl;
 
 }
 

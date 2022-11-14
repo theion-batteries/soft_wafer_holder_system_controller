@@ -4,7 +4,7 @@
 class axisMock : public linear_motion
 {
 private:
-    /* data */
+    double currentPos = 300;
 public:
     axisMock(/* args */);
     virtual ~axisMock();
