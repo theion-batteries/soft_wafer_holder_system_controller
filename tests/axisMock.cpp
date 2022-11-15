@@ -63,7 +63,6 @@ void axisMock::disconnect()
  */
 double axisMock::get_position()
 {
-    double axis_pos = 0;
     std::cout << "get axis mock curent position" << std::endl;
 
     return currentPos;
