@@ -1,6 +1,6 @@
 /**
  * @file Idistance_sensor.h
- * @author your name (you@domain.com)
+ * @author sami dhiab sami@theion.de
  * @brief 
  * @version 0.1
  * @date 2022-11-01

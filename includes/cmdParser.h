@@ -1,6 +1,6 @@
 /**
  * @file cmdParser.h
- * @author your name (you@domain.com)
+ * @author sami dhiab sami@theion.de
  * @brief
  * @version 0.1
  * @date 2022-08-15
