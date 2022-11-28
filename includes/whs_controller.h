@@ -36,7 +36,6 @@
 #include "linear_motion.h"
 #endif
 
-#define _SILENCE_ALL_CXX17_DEPRECATION_WARNINGS
 struct whs_config_yaml_params
 {
     LPCTSTR pyInterpreter;

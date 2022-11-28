@@ -46,6 +46,7 @@ project(sockpp VERSION "0.7.1")
 set(SOCKPP sockpp)
 set(SOCKPP_STATIC ${SOCKPP}-static)
 
+
 # --- Build Options ---
 
 if(WIN32)

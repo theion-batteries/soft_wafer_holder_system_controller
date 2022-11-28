@@ -15,20 +15,28 @@ if (MSVC)
 endif()
 ########################## add subdirectory##################
 
-
 set(CMAKE_PREFIX_PATH "C:/vcpkg/installed/x64-windows/share")
-#find_package(yaml-cpp CONFIG REQUIRED)
 find_package(sockpp CONFIG REQUIRED)
+
+find_package(yaml-cpp CONFIG REQUIRED)
 
 # add dependencies cmake
 add_subdirectory(dependencies/lib_keyence_sdk )
-#add_subdirectory(dependencies/sockpp )
-if(NOT TARGET yaml-cpp)
-        add_subdirectory(dependencies/yaml-cpp )
-        install(TARGETS yaml-cpp)  
-endif()
-add_subdirectory(tests)
 
+#add_subdirectory(dependencies/sockpp )
+#if(NOT TARGET sockpp-objs ${SOCKPP} ${SOCKPP_STATIC})
+#        add_subdirectory(dependencies/sockpp)
+#        install(TARGETS ${SOCKPP_STATIC})  
+#endif()
+
+#if(NOT TARGET yaml-cpp)
+#        add_subdirectory(dependencies/yaml-cpp )
+#        install(TARGETS yaml-cpp)  
+#endif()
+
+add_subdirectory(tests)
+add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)  
+add_definitions(-D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS)  
 
 ################## search and append ##########################
 find_file(whs_config 
@@ -52,7 +60,6 @@ message("found python script delta server: ${delta_server}")
 #write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
 set ( WHS_CONFIG  "${whs_config}" CACHE FILEPATH "${whs_config}")
 set (PY_INTERPRETER "${Python3_EXECUTABLE}")
-add_compile_definitions(_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING) 
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}") 
 
