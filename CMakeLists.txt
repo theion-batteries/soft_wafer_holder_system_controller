@@ -104,6 +104,12 @@ PRIVATE ${Python_INCLUDE_DIRS}
 )
 target_link_directories(whs_static PRIVATE
         ${Python_LIBRARY_DIRS})
+
+############################# install target lib ########################################
+install(TARGETS whs_static DESTINATION lib)
+FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h" 
+)
+INSTALL(FILES ${files} DESTINATION include)
 ############################# build executable  ###################################
 
 ## source *.cpp
