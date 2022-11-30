@@ -37,7 +37,7 @@
 # ---------------------------------------------------------------------------
 
 ## CMake required version
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.1)
 
 ## project
 project(sockpp VERSION "0.7.1")

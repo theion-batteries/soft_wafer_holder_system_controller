@@ -1,5 +1,5 @@
 # only for cmake --version >= 3.5.1
-cmake_minimum_required(VERSION 3.5.0)
+cmake_minimum_required(VERSION 3.1.0)
 
 # project name
 project(whs_controller VERSION "1.0")
@@ -109,7 +109,7 @@ target_link_directories(whs_static PRIVATE
 install(TARGETS whs_static DESTINATION lib)
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h" 
 )
-INSTALL(FILES ${files} DESTINATION include)
+INSTALL(FILES ${files} DESTINATION include/whs_static/)
 ############################# build executable  ###################################
 
 ## source *.cpp
