@@ -16,7 +16,7 @@ whs_controller::whs_controller()
 {
     std::cout << "creating subsystem wafer holder motion controller " << std::endl;
 #ifdef WHS_CONFIG
-    std::cout << "loading config file" << std::endl;
+    std::cout << "loading config file: "<< WHS_CONFIG<< std::endl;
     std::ifstream filein(WHS_CONFIG);
     for (std::string line; std::getline(filein, line); )
     {
@@ -57,7 +57,7 @@ whs_controller::~whs_controller()
 
 void whs_controller::reload_config_file()
 {
-    std::cout << "reloading config file" << std::endl;
+    std::cout << "reloading config file: " << WHS_CONFIG<<std::endl;
     std::ifstream filein(WHS_CONFIG);
     for (std::string line; std::getline(filein, line); )
     {

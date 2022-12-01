@@ -58,9 +58,9 @@ message("found python script delta server: ${delta_server}")
 
 #write_file(${whs_config} "interpreter: \"${Python3_EXECUTABLE}\"" APPEND)
 #write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
-set ( WHS_CONFIG  "${whs_config}" CACHE FILEPATH "${whs_config}")
+#set ( WHS_CONFIG  "${whs_config}" CACHE FILEPATH "${whs_config}")
 set (PY_INTERPRETER "${Python3_EXECUTABLE}")
-add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+
 add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}") 
 
 
@@ -110,6 +110,9 @@ install(TARGETS whs_static DESTINATION lib)
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h" 
 )
 INSTALL(FILES ${files} DESTINATION include/whs_static/)
+INSTALL(FILES ${WHS_CONFIG} DESTINATION config)
+message("config file install path: ${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
+add_definitions(-DWHS_CONFIG="${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml") 
 ############################# build executable  ###################################
 
 ## source *.cpp
