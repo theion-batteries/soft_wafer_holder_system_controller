@@ -64,6 +64,13 @@ set (PY_INTERPRETER "${Python3_EXECUTABLE}")
 add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}") 
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 
+# copy config one by one 
+function(copy_config target_exe config_file)
+add_custom_command(TARGET ${target_exe} POST_BUILD
+COMMAND ${CMAKE_COMMAND} -E copy_if_different ${config_file} "${CMAKE_INSTALL_PREFIX}/config/" 
+COMMENT "copy config from ${config_file} to ${CMAKE_INSTALL_PREFIX}/config/"
+    )
+endfunction()
 
 ###################### Build Library ############################
 
@@ -107,14 +114,18 @@ target_link_directories(whs_static PRIVATE
         ${Python_LIBRARY_DIRS})
 
 ############################# install target lib ########################################
+INSTALL(FILES ${WHS_CONFIG} DESTINATION config/)
+message("config file ${WHS_CONFIG} installed here: ${CMAKE_INSTALL_PREFIX}/config/")
+set(WHS_CONFIG "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
+add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 install(TARGETS whs_static DESTINATION lib)
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h" 
 )
 INSTALL(FILES ${files} DESTINATION include/whs_static/)
-INSTALL(FILES ${WHS_CONFIG} DESTINATION config/)
-message("config file install path: ${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
-#add_definitions(-DWHS_CONFIG="${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml") 
-############################# build executable  ###################################
+
+#copy_config(whs_static ${WHS_CONFIG})
+#
+############################# build executable ###################################
 
 ## source *.cpp
 file(GLOB exe_SRCS

@@ -10,7 +10,7 @@ axisMock::~axisMock()
 {
 
 }
-std::string axisMock::sendDirectCmd(std::string& cmd)
+std::string axisMock::sendDirectCmd(std::string cmd)
 {
     std::cout << "sending command " << cmd << std::endl;
     for (auto& command : axis_cmds)

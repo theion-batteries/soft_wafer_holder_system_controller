@@ -24,7 +24,7 @@ void keyence_sensor::disconnect()
 double keyence_sensor::getMesuredValue()
 {
 
-    return keyence_client_get_value_output0();    
+    return keyence_client_get_value_output1();    
 }
 /************************* keyence client methods*****************/
 /**

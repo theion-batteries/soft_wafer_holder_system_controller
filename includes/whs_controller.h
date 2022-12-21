@@ -20,6 +20,7 @@
 #include "memory.h"
 #include <keyence_client.h>
 #include <thread>
+#include <future>
 #include <atomic>
 #include <filesystem>
 #include "yaml-cpp/yaml.h"
@@ -50,6 +51,8 @@ struct whs_config_yaml_params
     double thickness; // thickness of wafer holder default 0.1mm
     double mm_step_res;
     int one_mm_steps = 1;
+    int MaxSafePos = 265;
+
 };
 
 class whs_controller
@@ -83,7 +86,7 @@ public:
     Iaxis_motion* get_axis_ptr();
     Idistance_sensor* get_dist_ptr();
     void sendDirectCmdSensor(std::string& cmd);
-    std::string sendDirectCmdAxis(std::string& cmd);
+    std::string sendDirectCmdAxis(std::string cmd);
      void reload_config_file();
 
 };

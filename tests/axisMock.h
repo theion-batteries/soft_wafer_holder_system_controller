@@ -12,7 +12,7 @@ public:
     virtual void disconnect() override;
     virtual void move_home() override;
     virtual void move_to(int new_position) override;
-    virtual std::string sendDirectCmd(std::string& cmd)override;
+    virtual std::string sendDirectCmd(std::string cmd)override;
     virtual double get_position() override;
     virtual bool getStatus() override;
     virtual void get_speed() override;

@@ -19,13 +19,13 @@
 #include <thread>
 #include <atomic>
 #include <queue>
-
+#include <future>
 #include "Iaxis_motion.h"
 
 struct whs_axis_motion_server
 {
-    const char* ip = "192.168.0.100";
-    uint16_t port = 80;
+    const char* ip = "192.168.0.209";
+    uint16_t port = 8882;
 };
 
 
@@ -38,14 +38,14 @@ private:
     bool axisReady = false;
 protected:
     std::map<u_int, std::string> axis_cmds = {
-        {0,"$x"}, {1,"?"}, {2,"x160"},
-        {3,"x"}, {4,"x"},
-        {5,"x"}, {6,"x"},
-        {7,"$h"}
+        {0,"$X"}, {1,"?"}, {2,"X160"},
+        {3,"$"}, {4,"X"},
+        {5,"X"}, {6,"X"},
+        {7,"$H"}
     };
     std::deque<double> axis_last_position; // FIFO last 10 values
     std::string axis_incoming_data;
-    u_int axis_data_length = 1024;
+    size_t axis_data_length = 1024;
 public:
     linear_motion();
     virtual ~linear_motion();
@@ -61,8 +61,8 @@ public:
     void move_up_by(double_t steps) override;
     void move_down_by(double_t steps) override;
     virtual bool getStatus() override;
-    virtual std::string sendDirectCmd(std::string& cmd) override;
-    void waitForResponse();
+    virtual std::string sendDirectCmd(std::string cmd) override;
+    std::string waitForResponse();
     void move_center();
     void unlock();
 };

@@ -25,7 +25,7 @@ bool delta_motion::getStatus()
     return deltaReady;
 }
 
-std::string delta_motion::sendDirectCmd(std::string& cmd)
+std::string delta_motion::sendDirectCmd(std::string cmd)
 {
     if (delta_client_sock->write(cmd) != ssize_t(std::string(cmd).length())) {
         std::cerr << "Error writing to the TCP stream: "
@@ -142,15 +142,14 @@ double delta_motion::get_position()
     {
         // Read_n data from keyence
         ssize_t n = delta_client_sock->read(&delta_incoming_data[0], 1024);
-        //std::cout << "n bytes: " << n << std::endl;
-        //std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
+        std::cout << "n bytes: " << n << std::endl;
+        std::cout << "cmd len: " << ssize_t(command->second.length()) << std::endl;
         if (n > 0)
         {
             std::cout << "server replied : " << delta_incoming_data.c_str() << std::endl;
             delta_pos = atof(delta_incoming_data.c_str()); // to double
             std::cout << "filter val : " << delta_pos << std::endl;
             delta_last_position.push_front(delta_pos); // add to table
-
             std::cout << "value added to table " << delta_last_position.front() << std::endl;
             break;
         }
