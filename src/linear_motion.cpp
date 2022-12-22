@@ -9,6 +9,8 @@
  */
 
 #include "linear_motion.h"
+#include <thread>
+#include <mutex>
 #include <string.h>
 linear_motion::linear_motion(/* args */)
 {
@@ -85,7 +87,6 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
 {
     std::cout << "connecting controller to axis server" << std::endl;
     axis_client_sock = new sockpp::tcp_connector({ _motion_axis_struct.ip, _motion_axis_struct.port });
-
     // Implicitly creates an inet_address from {host,port}
     // and then tries the connection.
     if (!axis_client_sock->is_connected()) {
