@@ -51,7 +51,7 @@ struct whs_config_yaml_params
     double thickness; // thickness of wafer holder default 0.1mm
     double mm_step_res;
     int one_mm_steps = 1;
-    int MaxSafePos = 265;
+    int MaxSafePos = 250;
 
 };
 
