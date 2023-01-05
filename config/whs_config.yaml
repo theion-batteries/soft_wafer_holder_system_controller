@@ -3,6 +3,7 @@
 mm_steps: 50 # distance to move down : default 10 mm
 delay_to_move_request: 2000 # wait between move request : default 2000ms
 ##### second step algorithm parameters ######
+MaxSafePos: 250 # safe max pos
 ref_dis: 130 # parameter calibration sensor : default 158
 ##### third step algorithm parameters ######
 thickness: 0.1 # thickness of wafer holder: default 0.1mm

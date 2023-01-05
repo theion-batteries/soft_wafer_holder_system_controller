@@ -115,16 +115,16 @@ target_link_directories(whs_static PRIVATE
 
 ############################# install target lib ########################################
 INSTALL(FILES ${WHS_CONFIG} DESTINATION config/)
-message("config file ${WHS_CONFIG} installed here: ${CMAKE_INSTALL_PREFIX}/config/")
+message("config file whs copied from ${WHS_CONFIG} to: ${CMAKE_INSTALL_PREFIX}/config/")
 set(WHS_CONFIG "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
+message("config file is moved to ${WHS_CONFIG}")
+
 install(TARGETS whs_static DESTINATION lib)
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h" 
 )
 INSTALL(FILES ${files} DESTINATION include/whs_static/)
 
-#copy_config(whs_static ${WHS_CONFIG})
-#
 ############################# build executable ###################################
 
 ## source *.cpp
