@@ -58,7 +58,9 @@ message("found python script delta server: ${delta_server}")
 
 #write_file(${whs_config} "interpreter: \"${Python3_EXECUTABLE}\"" APPEND)
 #write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
-set ( WHS_CONFIG  "${whs_config}" CACHE FILEPATH "${whs_config}")
+set ( WHS_CONFIG_BUILD  "${whs_config}" CACHE FILEPATH "${whs_config}")
+set ( WHS_CONFIG  "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml" CACHE FILEPATH "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
+
 set (PY_INTERPRETER "${Python3_EXECUTABLE}")
 
 add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}") 
@@ -114,8 +116,8 @@ target_link_directories(whs_static PRIVATE
         ${Python_LIBRARY_DIRS})
 
 ############################# install target lib ########################################
-INSTALL(FILES ${WHS_CONFIG} DESTINATION config/)
-message("config file whs copied from ${WHS_CONFIG} to: ${CMAKE_INSTALL_PREFIX}/config/")
+INSTALL(FILES ${WHS_CONFIG_BUILD} DESTINATION config/)
+message("config file whs copied from ${WHS_CONFIG_BUILD} to: ${CMAKE_INSTALL_PREFIX}/config/")
 set(WHS_CONFIG "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
 message("config file is moved to ${WHS_CONFIG}")
