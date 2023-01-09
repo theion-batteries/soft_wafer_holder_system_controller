@@ -120,7 +120,7 @@ INSTALL(FILES ${WHS_CONFIG_BUILD} DESTINATION config/)
 message("config file whs copied from ${WHS_CONFIG_BUILD} to: ${CMAKE_INSTALL_PREFIX}/config/")
 set(WHS_CONFIG "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
-message("config file is moved to ${WHS_CONFIG}")
+message("config file is copied to ${WHS_CONFIG}")
 
 install(TARGETS whs_static DESTINATION lib)
 FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h" 

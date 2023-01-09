@@ -24,6 +24,7 @@
 #include <atomic>
 #include <filesystem>
 #include "yaml-cpp/yaml.h"
+#include <fstream>
 
 //#define MOCK_SENSOR
 #ifdef SINK_SENSOR_MOCK
