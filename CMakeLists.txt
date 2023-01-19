@@ -56,8 +56,8 @@ message("found python interpreter: ${Python3_EXECUTABLE}")
 message("found whs config file: ${whs_config}")        
 message("found python script delta server: ${delta_server}")
 
-write_file(${whs_config} "interpreter: \"${Python3_EXECUTABLE}\"" APPEND)
-write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
+#write_file(${whs_config} "interpreter: \"${Python3_EXECUTABLE}\"" APPEND)
+#write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
 set ( WHS_CONFIG_BUILD  "${whs_config}" CACHE FILEPATH "${whs_config}")
 set ( WHS_CONFIG  "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml" CACHE FILEPATH "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
 
