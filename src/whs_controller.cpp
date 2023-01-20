@@ -23,12 +23,7 @@ whs_controller::whs_controller()
         std::cout << line << std::endl;
     }
     config = YAML::LoadFile(WHS_CONFIG);
-    _whs_params.fi = (config["script"].as<std::string>());
-    _whs_params.py = (config["interpreter"].as<std::string>());
-    _whs_params.cmd = _whs_params.py + " " + _whs_params.fi;
-    _whs_params.pyCmd = &_whs_params.cmd[0];
-    _whs_params.pyFile = &_whs_params.fi[0];
-    _whs_params.pyInterpreter = _whs_params.py.c_str();
+
     _whs_params.mm_steps = config["mm_steps"].as<double>();
     _whs_params.mm_step_res = config["mm_step_res"].as<double>();
     _whs_params.ref_dis = config["ref_dis"].as<double>();
@@ -65,12 +60,7 @@ void whs_controller::reload_config_file()
         std::cout << line << std::endl;
     }
     config = YAML::LoadFile(WHS_CONFIG);
-    _whs_params.fi = (config["script"].as<std::string>());
-    _whs_params.py = (config["interpreter"].as<std::string>());
-    _whs_params.cmd = _whs_params.py + " " + _whs_params.fi;
-    _whs_params.pyCmd = &_whs_params.cmd[0];
-    _whs_params.pyFile = &_whs_params.fi[0];
-    _whs_params.pyInterpreter = _whs_params.py.c_str();
+
     _whs_params.mm_steps = config["mm_steps"].as<double>();
     _whs_params.mm_step_res = config["mm_step_res"].as<double>();
     _whs_params.ref_dis = config["ref_dis"].as<double>();

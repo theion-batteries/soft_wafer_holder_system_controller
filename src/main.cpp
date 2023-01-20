@@ -7,15 +7,7 @@ int main(int argc, char* argv[])
 {
 	whs_controller wafer_sys_control;
 	wafer_sys_control.get_axis_ptr()->connect();
-	// axis
-	while (1)
-	{
-		std::string cmd;
-		std::cout << "Enter command: "; // no flush needed
-		std::cin >> cmd;
-		auto reply = wafer_sys_control.sendDirectCmdAxis(cmd);
-		std::cout << reply;
-	}
+
 
 
 	//// keyence
