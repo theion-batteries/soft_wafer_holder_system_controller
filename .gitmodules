@@ -1,20 +1,5 @@
 
-[submodule "dependencies/software_repetier_rest_api"]
-	path = dependencies/software_repetier_rest_api
-	url = https://github.com/samidh93/software_repetier_rest_api.git
-	branch = dev
 [submodule "dependencies/lib_keyence_sdk"]
 	path = dependencies/lib_keyence_sdk
 	url = https://github.com/theionSami/lib_keyence_sdk.git
-	branch = main
-[submodule "dependencies/yaml-cpp"]
-	path = dependencies/yaml-cpp
-	url = https://github.com/jbeder/yaml-cpp.git
-	branch = yaml-cpp-0.6.3
-[submodule "dependencies/lib_keyence_distance_sensor"]
-	path = dependencies/lib_keyence_distance_sensor
-	url = https://github.com/theionSami/lib_keyence_distance_sensor.git
-	branch = dev
-[submodule "sockpp"]
-	path = dependencies/sockpp
-	url = https://github.com/theionSami/sockpp.git
+	branch = dev_win_api
