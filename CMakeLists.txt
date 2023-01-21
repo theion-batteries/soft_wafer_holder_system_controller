@@ -31,7 +31,7 @@ find_file(whs_config
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development )
 message("found whs config file: ${whs_config}")        
 set (WHS_CONFIG  "${whs_config}" CACHE FILEPATH "${whs_config}")
-set(WHS_CONFIG_DIR ${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml) 
+set(WHS_CONFIG_DIR ${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml CACHE FILEPATH "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml") 
 add_definitions(-DWHS_CONFIG="${WHS_CONFIG_DIR}") 
 # copy config one by one 
 function(copy_whs_config target_exe config_file)
