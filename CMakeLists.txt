@@ -40,6 +40,12 @@ COMMAND ${CMAKE_COMMAND} -E copy ${config_file} ${WHS_CONFIG_DIR}
 COMMENT "copy config from ${config_file} to ${WHS_CONFIG_DIR}"
     )
 endfunction()
+# copy dlls one by one 
+function(copy_dlls_yaml_target_destination target_exe)
+add_custom_command(TARGET ${target_exe} POST_BUILD
+COMMAND ${CMAKE_COMMAND} -E copy_if_different  $<TARGET_FILE:yaml-cpp> $<TARGET_FILE_DIR:${target_exe}>
+COMMAND_EXPAND_LISTS)
+endfunction()
 ###################### Build Library ############################
 # source *.cpp
 file(GLOB lib_SRCS
@@ -97,6 +103,7 @@ PUBLIC ${SOCKPP_LIBRARIES}
 PUBLIC yaml-cpp
 # py
 PRIVATE ${Python_LIBRARIES}
+
 )
 # include libs
 target_include_directories(whs_exe 
@@ -110,6 +117,7 @@ target_link_directories(whs_exe PRIVATE
         ${Python_LIBRARY_DIRS})
 copy_dlls_keyence_target_destination(whs_exe)
 copy_whs_config(whs_exe ${WHS_CONFIG})
+copy_dlls_yaml_target_destination(whs_exe)
 
 ############################# install targets ########################################
         FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h")
