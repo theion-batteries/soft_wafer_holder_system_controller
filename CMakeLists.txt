@@ -14,7 +14,7 @@ if (MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
 ########################## add subdirectory##################
-set(CMAKE_PREFIX_PATH "C:/vcpkg/installed/x64-windows/share")
+set(CMAKE_PREFIX_PATH "${VCPKG_ROOT}/installed/x64-windows/share")
 find_package(sockpp CONFIG REQUIRED)
 find_package(yaml-cpp CONFIG REQUIRED)
 # add dependencies cmake
