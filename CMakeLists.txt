@@ -14,68 +14,33 @@ if (MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
 ########################## add subdirectory##################
-
 set(CMAKE_PREFIX_PATH "C:/vcpkg/installed/x64-windows/share")
 find_package(sockpp CONFIG REQUIRED)
-
 find_package(yaml-cpp CONFIG REQUIRED)
-
 # add dependencies cmake
 add_subdirectory(dependencies/lib_keyence_sdk )
-
-#add_subdirectory(dependencies/sockpp )
-#if(NOT TARGET sockpp-objs ${SOCKPP} ${SOCKPP_STATIC})
-#        add_subdirectory(dependencies/sockpp)
-#        install(TARGETS ${SOCKPP_STATIC})  
-#endif()
-
-#if(NOT TARGET yaml-cpp)
-#        add_subdirectory(dependencies/yaml-cpp )
-#        install(TARGETS yaml-cpp)  
-#endif()
-
 add_subdirectory(tests)
 add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)  
 add_definitions(-D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS)  
-
 ################## search and append ##########################
 find_file(whs_config 
         NAMES whs_config.yaml
         PATHS ${CMAKE_CURRENT_SOURCE_DIR}/config
         REQUIRED
 )
-find_file(delta_server 
-        NAMES delta_server.py
-        PATHS ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/software_repetier_rest_api/src/repetier_manager_lib/
-        REQUIRED
-)
-
 find_package(Python3 REQUIRED COMPONENTS Interpreter Development )
-
-message("found python interpreter: ${Python3_EXECUTABLE}")
 message("found whs config file: ${whs_config}")        
-message("found python script delta server: ${delta_server}")
-
-#write_file(${whs_config} "interpreter: \"${Python3_EXECUTABLE}\"" APPEND)
-#write_file(${whs_config} "script: \"${delta_server}\"" APPEND)
-set ( WHS_CONFIG_BUILD  "${whs_config}" CACHE FILEPATH "${whs_config}")
-set ( WHS_CONFIG  "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml" CACHE FILEPATH "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
-
-set (PY_INTERPRETER "${Python3_EXECUTABLE}")
-
-add_definitions(-DPY_INTERPRETER="${PY_INTERPRETER}") 
-add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
-
+set (WHS_CONFIG  "${whs_config}" CACHE FILEPATH "${whs_config}")
+set(WHS_CONFIG_DIR ${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml) 
+add_definitions(-DWHS_CONFIG="${WHS_CONFIG_DIR}") 
 # copy config one by one 
-function(copy_config target_exe config_file)
+function(copy_whs_config target_exe config_file)
 add_custom_command(TARGET ${target_exe} POST_BUILD
-COMMAND ${CMAKE_COMMAND} -E copy_if_different ${config_file} "${CMAKE_INSTALL_PREFIX}/config/" 
-COMMENT "copy config from ${config_file} to ${CMAKE_INSTALL_PREFIX}/config/"
+COMMAND ${CMAKE_COMMAND} -E copy ${config_file} ${WHS_CONFIG_DIR}  
+COMMENT "copy config from ${config_file} to ${WHS_CONFIG_DIR}"
     )
 endfunction()
-
 ###################### Build Library ############################
-
 # source *.cpp
 file(GLOB lib_SRCS
         "${PROJECT_SOURCE_DIR}/src/whs_controller.cpp"
@@ -85,9 +50,8 @@ file(GLOB lib_SRCS
         "${PROJECT_SOURCE_DIR}/src/linear_motion.cpp"
         "${PROJECT_SOURCE_DIR}/src/keyence_sensor.cpp"
         # mocking files
-        "${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
-        "${PROJECT_SOURCE_DIR}/tests/axisMock.cpp"
-
+        #"${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
+        #"${PROJECT_SOURCE_DIR}/tests/axisMock.cpp"
 )
 # add libraries
 add_library(whs_static STATIC ${lib_SRCS})
@@ -106,29 +70,15 @@ PRIVATE ${Python_LIBRARIES}
 target_include_directories(whs_static 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/tests/
-
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
 PUBLIC ${SOCKPP_INCLUDE_DIRS}
 PRIVATE ${Python_INCLUDE_DIRS}
-
 )
 target_link_directories(whs_static PRIVATE
         ${Python_LIBRARY_DIRS})
-
-############################# install target lib ########################################
-INSTALL(FILES ${WHS_CONFIG_BUILD} DESTINATION config/)
-message("config file whs copied from ${WHS_CONFIG_BUILD} to: ${CMAKE_INSTALL_PREFIX}/config/")
-set(WHS_CONFIG "${CMAKE_INSTALL_PREFIX}/config/whs_config.yaml")
-add_definitions(-DWHS_CONFIG="${WHS_CONFIG}") 
-message("config file is copied to ${WHS_CONFIG}")
-
-install(TARGETS whs_static DESTINATION lib)
-FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h" 
-)
-INSTALL(FILES ${files} DESTINATION include/whs_static/)
+copy_whs_config(whs_static ${WHS_CONFIG})
 
 ############################# build executable ###################################
-
 ## source *.cpp
 file(GLOB exe_SRCS
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
@@ -138,7 +88,6 @@ file(GLOB exe_SRCS
 )
 # add .exe
 add_executable(whs_exe ${exe_SRCS})
-
 target_link_libraries(whs_exe 
 # keyence interface lib
 PUBLIC keyence_lib_static
@@ -153,10 +102,19 @@ PRIVATE ${Python_LIBRARIES}
 target_include_directories(whs_exe 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/tests/
-
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
 PUBLIC ${SOCKPP_INCLUDE_DIRS}
 PRIVATE ${Python_INCLUDE_DIRS}
 )
 target_link_directories(whs_exe PRIVATE
         ${Python_LIBRARY_DIRS})
+copy_dlls_keyence_target_destination(whs_exe)
+copy_whs_config(whs_exe ${WHS_CONFIG})
+
+############################# install targets ########################################
+        FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h")
+        INSTALL(FILES ${files} DESTINATION include/whs_static/)
+        install(TARGETS whs_static whs_exe
+        CONFIGURATIONS Debug
+        RUNTIME DESTINATION bin/Debug
+        LIBRARY DESTINATION lib)
