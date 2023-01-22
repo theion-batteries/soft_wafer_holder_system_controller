@@ -14,7 +14,8 @@ if (MSVC)
     set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 endif()
 ########################## add subdirectory##################
-set(CMAKE_PREFIX_PATH "${VCPKG_ROOT}/installed/x64-windows/share")
+#set(CMAKE_PREFIX_PATH "${VCPKG_ROOT}/installed/x64-windows/share")
+message(" child: vcpkg root folder: ${VCPKG_ROOT}") 
 find_package(sockpp CONFIG REQUIRED)
 find_package(yaml-cpp CONFIG REQUIRED)
 # add dependencies cmake
@@ -65,6 +66,8 @@ add_library(whs_static STATIC ${lib_SRCS})
 target_link_libraries(whs_static 
 # keyence interface lib
 PUBLIC keyence_lib_static
+PUBLIC wsock32 
+PUBLIC ws2_32
 # sockpp lib
 PUBLIC ${SOCKPP_LIBRARIES}
 #yaml lib
@@ -97,13 +100,14 @@ add_executable(whs_exe ${exe_SRCS})
 target_link_libraries(whs_exe 
 # keyence interface lib
 PUBLIC keyence_lib_static
+PUBLIC wsock32 
+PUBLIC ws2_32
 # sockpp lib
 PUBLIC ${SOCKPP_LIBRARIES}
 #yaml lib
 PUBLIC yaml-cpp
 # py
 PRIVATE ${Python_LIBRARIES}
-
 )
 # include libs
 target_include_directories(whs_exe 
@@ -113,8 +117,7 @@ PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
 PUBLIC ${SOCKPP_INCLUDE_DIRS}
 PRIVATE ${Python_INCLUDE_DIRS}
 )
-target_link_directories(whs_exe PRIVATE
-        ${Python_LIBRARY_DIRS})
+
 copy_dlls_keyence_target_destination(whs_exe)
 copy_whs_config(whs_exe ${WHS_CONFIG})
 copy_dlls_yaml_target_destination(whs_exe)
