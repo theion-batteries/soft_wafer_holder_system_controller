@@ -57,8 +57,8 @@ file(GLOB lib_SRCS
         "${PROJECT_SOURCE_DIR}/src/linear_motion.cpp"
         "${PROJECT_SOURCE_DIR}/src/keyence_sensor.cpp"
         # mocking files
-        #"${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
-        #"${PROJECT_SOURCE_DIR}/tests/axisMock.cpp"
+        "${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
+        "${PROJECT_SOURCE_DIR}/tests/axisMock.cpp"
 )
 # add libraries
 add_library(whs_static STATIC ${lib_SRCS})

@@ -20,6 +20,7 @@
 #include <atomic>
 #include <queue>
 #include <future>
+#include <memory>
 #include "Iaxis_motion.h"
 
 struct whs_axis_motion_server
