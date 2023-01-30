@@ -40,21 +40,24 @@
 
 struct whs_config_yaml_params
 {
-    double mm_steps; // distance to move down  default 10 mm
-    DWORD delay_to_move_request; // wait between move request  default 2000ms
-    double ref_dis;// parameter calibration sensor  default 
-    double thickness; // thickness of wafer holder default 0.1mm
-    double mm_step_res;
+    double mm_steps=50; // distance to move down  default 10 mm
+    DWORD delay_to_move_request=2000; // wait between move request  default 2000ms
+    double ref_dis=130;// parameter calibration sensor  default 
+    double thickness=0.1; // thickness of wafer holder default 0.1mm
+    double mm_step_res= 0.01;
     int one_mm_steps = 1;
-    int MaxSafePos = 250;
-
+    int MaxSafePos = 130;
+    double wafer_travel = 100;                                     // used-- > // should be determined using the keyence sensor in the future
+    double wafer_max_travel = 130;                                      // used // DO NOT CHANGE IF YOU DONT KNOW WHAT YOU#RE DOING
+    double wafer_max_speed = 800;
 };
 
 class whs_controller
 {
 public:
-     YAML::Node config;
-     whs_config_yaml_params _whs_params;
+    YAML::Node config;
+    whs_config_yaml_params _whs_params;
+    whs_config_yaml_params _whs_params_default;
 private:
     bool waferHolderReady = false;
     std::shared_ptr< Idistance_sensor> distSensor;
@@ -82,6 +85,6 @@ public:
     Idistance_sensor* get_dist_ptr();
     void sendDirectCmdSensor(std::string& cmd);
     std::string sendDirectCmdAxis(std::string cmd);
-     void reload_config_file();
-
+    void reload_config_file();
+    void reset_config_file();
 };
