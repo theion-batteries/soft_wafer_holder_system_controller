@@ -74,6 +74,7 @@ public:
     void move_down_to_surface();
     void deep_wafer_holder_desired_thickness(); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
     void monitor_and_calibrate(); // we will launch a monitor to check if we are inside the desired depth during next processes
+    void extract_move_home();
     /********* helper functions */
     bool get_mover_status();
     bool get_sensor_status();

@@ -221,6 +221,10 @@ void whs_controller::monitor_and_calibrate()
 
 
 }
+void whs_controller::extract_move_home()
+{
+    linearMover->move_home();
+}
 
 
 /********* helper functions */
