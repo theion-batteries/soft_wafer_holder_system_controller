@@ -125,7 +125,7 @@ copy_dlls_yaml_target_destination(whs_exe)
 ############################# install targets ########################################
         FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h")
         INSTALL(FILES ${files} DESTINATION include/whs_static/)
-        install(TARGETS whs_static whs_exe 
+        install(TARGETS whs_static #whs_exe 
         CONFIGURATIONS Debug
         RUNTIME DESTINATION bin/Debug
         LIBRARY DESTINATION lib)
