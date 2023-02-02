@@ -25,7 +25,7 @@
 #include <filesystem>
 #include "yaml-cpp/yaml.h"
 #include <fstream>
-
+#include "subsystem_feedback.h"
 //#define MOCK_SENSOR
 #ifdef SINK_SENSOR_MOCK
 #include "sensorMock.h"
@@ -37,7 +37,8 @@
 #else
 #include "linear_motion.h"
 #endif
-
+using enum wgm_feedbacks::enum_hw_feedback;
+using enum wgm_feedbacks::enum_sub_sys_feedback; 
 struct whs_config_yaml_params
 {
     double mm_steps=50; // distance to move down  default 10 mm
@@ -69,12 +70,12 @@ public:
     whs_controller();
     ~whs_controller();
     /******** algorithms controller **********/
-
-    void move_down_until_data_availble();
-    void move_down_to_surface();
-    void deep_wafer_holder_desired_thickness(); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
-    void monitor_and_calibrate(); // we will launch a monitor to check if we are inside the desired depth during next processes
-    void extract_move_home();
+    wgm_feedbacks::enum_sub_sys_feedback connect_controller();
+    wgm_feedbacks::enum_sub_sys_feedback move_down_until_data_availble();
+    wgm_feedbacks::enum_sub_sys_feedback move_down_to_surface();
+    wgm_feedbacks::enum_sub_sys_feedback deep_wafer_holder_desired_thickness(); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
+    wgm_feedbacks::enum_sub_sys_feedback monitor_and_calibrate(); // we will launch a monitor to check if we are inside the desired depth during next processes
+    wgm_feedbacks::enum_sub_sys_feedback extract_move_home();
     /********* helper functions */
     bool get_mover_status();
     bool get_sensor_status();

@@ -87,7 +87,7 @@ void whs_controller::reset_config_file() // set config file params to default
     config["MaxSafePos"] = _whs_params_default.MaxSafePos;
     config["wafer_travel"] = _whs_params_default.wafer_travel;
     config["wafer_max_speed"] = _whs_params_default.wafer_max_speed;
-    
+
     std::ofstream fout(WHS_CONFIG);
     fout << config;
     fout.close();
@@ -99,10 +99,17 @@ void whs_controller::reset_config_file() // set config file params to default
 
 }
 /**************** Algorithms conntroller ***************/
-
-
-void whs_controller::move_down_until_data_availble()
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::connect_controller()
 {
+    if (linearMover->connect() == sub_error || distSensor->connect() == sub_error) return sub_error;
+    return sub_success;
+
+}
+
+
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_until_data_availble()
+{
+
     linearMover->move_home();
     current_axis_position = linearMover->get_position();
 
@@ -130,7 +137,7 @@ void whs_controller::move_down_until_data_availble()
     std::cout << "sensor data valid" << std::endl;
     std::cout << "algorithm finished succeffuly " << std::endl;
     std::cout << "<----------------------------------------------> " << std::endl;
-
+    return sub_success;
 
 
 }
@@ -139,7 +146,7 @@ void whs_controller::move_down_until_data_availble()
  *
  * @param ref_dis
  */
-void whs_controller::move_down_to_surface()
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_to_surface()
 {
     std::cout << "<----------------------------------------------> " << std::endl;
     std::cout << "algorithm surface contact launched" << std::endl;
@@ -159,6 +166,8 @@ void whs_controller::move_down_to_surface()
     std::cout << "sensor value: " << distSensor->getMesuredValue() << std::endl;
     std::cout << "algorithm finished succeffuly " << std::endl;
     std::cout << "<----------------------------------------------> " << std::endl;
+    return sub_success;
+
 }
 /*
  * @brief
@@ -166,7 +175,7 @@ void whs_controller::move_down_to_surface()
  * @param thickness
  * @param mm_step_res
  */
-void whs_controller::deep_wafer_holder_desired_thickness() //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::deep_wafer_holder_desired_thickness() //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
 {
     std::cout << "algorithm deeping launched " << std::endl;
     std::cout << "<----------------------------------------------> " << std::endl;
@@ -185,11 +194,13 @@ void whs_controller::deep_wafer_holder_desired_thickness() //default to 0.01 mm_
     waferHolderReady = true;
     std::cout << "algorithm finished succeffuly " << std::endl;
     std::cout << "<----------------------------------------------> " << std::endl;
+    return sub_success;
+
 }
 /**
  * @brief function to monitor the distance and calibrate depth
  */
-void whs_controller::monitor_and_calibrate()
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::monitor_and_calibrate()
 {
     std::cout << "monitor calibration started" << std::endl;
     // algorithm: if current distance is not equal desired thickness, calibrate
@@ -218,12 +229,16 @@ void whs_controller::monitor_and_calibrate()
         }
 
     }
+    return sub_success;
+
 
 
 }
-void whs_controller::extract_move_home()
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::extract_move_home()
 {
     linearMover->move_home();
+    return sub_success;
+
 }
 
 
