@@ -101,7 +101,7 @@ void whs_controller::reset_config_file() // set config file params to default
 /**************** Algorithms conntroller ***************/
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::connect_controller()
 {
-    if (linearMover->connect() == sub_error || distSensor->connect() == sub_error) return sub_error;
+    if ( distSensor->connect() == sub_error || linearMover->connect() == sub_error) return sub_error;
     return sub_success;
 
 }
