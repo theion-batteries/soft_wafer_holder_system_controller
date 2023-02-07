@@ -50,7 +50,7 @@ protected:
 public:
     linear_motion();
     virtual ~linear_motion();
-    virtual void move_home() override;
+    virtual wgm_feedbacks::enum_sub_sys_feedback move_home() override;
     virtual void move_to(int new_position) override;
     virtual wgm_feedbacks::enum_sub_sys_feedback connect()override;
     virtual void disconnect() override;
@@ -58,7 +58,7 @@ public:
     void get_speed() override;
     void set_speed(double_t new_val) override;
     void move_up_to(double_t new_pos) override;
-    void move_down_to(double_t new_pos) override;
+    wgm_feedbacks::enum_sub_sys_feedback move_down_to(double_t new_pos) override;
     void move_up_by(double_t steps) override;
     void move_down_by(double_t steps) override;
     virtual bool getStatus() override;

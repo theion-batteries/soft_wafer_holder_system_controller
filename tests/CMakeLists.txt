@@ -14,7 +14,7 @@ add_executable(whsTests
 )
 target_link_libraries(whsTests
   GTest::gtest_main
-  whs_static
+  whsLib
 )
 target_include_directories(whsTests
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../includes/

@@ -52,7 +52,7 @@ private:
 public:
     delta_motion(LPCTSTR pyInterp, LPSTR pyCmdFull);
     virtual ~delta_motion();
-    void move_home() override;
+    wgm_feedbacks::enum_sub_sys_feedback move_home() override;
     void move_to(int new_position) override;
     virtual wgm_feedbacks::enum_sub_sys_feedback connect()override;
     virtual void disconnect() override;

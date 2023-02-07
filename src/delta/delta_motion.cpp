@@ -160,17 +160,17 @@ double delta_motion::get_position()
  * @brief
  *
  */
-void delta_motion::move_home()
+wgm_feedbacks::enum_sub_sys_feedback delta_motion::move_home()
 {
     double last_pos = 0;
     if (!delta_last_position.empty())
     {
         last_pos = delta_last_position.front(); // this shall start at 300
-        if (last_pos == 300) return; //already
+        if (last_pos == 300) return sub_success; //already
     }
     else {
         last_pos = get_position();
-        if (last_pos == 300) return; //already
+        if (last_pos == 300) return sub_success; //already
     }
     //if (delta_last_position.front()==300) return ; // already homed
     auto command = delta_cmds.find(7);
@@ -199,7 +199,7 @@ void delta_motion::move_home()
     }
     // mandatory wait for mechanical movement: 1000-2000 ms
     Sleep(2000);
-
+    return sub_success;
 }
 /**
  * @brief

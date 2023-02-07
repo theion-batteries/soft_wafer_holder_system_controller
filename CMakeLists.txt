@@ -56,16 +56,14 @@ file(GLOB lib_SRCS
         "${PROJECT_SOURCE_DIR}/src/Idistance_sensor.cpp"
         "${PROJECT_SOURCE_DIR}/src/linear_motion.cpp"
         "${PROJECT_SOURCE_DIR}/src/keyence_sensor.cpp"
-        # mocking files
-        "${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
-        "${PROJECT_SOURCE_DIR}/tests/axisMock.cpp"
+
 )
 # add libraries
-add_library(whs_static STATIC ${lib_SRCS})
+add_library(whsLib STATIC ${lib_SRCS})
 # link againt static lib
-target_link_libraries(whs_static 
+target_link_libraries(whsLib 
 # keyence interface lib
-PUBLIC keyence_lib_static
+PUBLIC keyenceLib
 PUBLIC wsock32 
 PUBLIC ws2_32
 # sockpp lib
@@ -76,30 +74,28 @@ PUBLIC yaml-cpp
 PRIVATE ${Python_LIBRARIES}
 )
 # include libs
-target_include_directories(whs_static 
+target_include_directories(whsLib 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/tests/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
 PUBLIC ${SOCKPP_INCLUDE_DIRS}
 PRIVATE ${Python_INCLUDE_DIRS}
 )
-target_link_directories(whs_static PRIVATE
+target_link_directories(whsLib PRIVATE
         ${Python_LIBRARY_DIRS})
-copy_whs_config(whs_static ${WHS_CONFIG})
+copy_whs_config(whsLib ${WHS_CONFIG})
 
 ############################# build executable ###################################
 ## source *.cpp
 file(GLOB exe_SRCS
         "${PROJECT_SOURCE_DIR}/src/*.cpp"
-        # mocking files
-        "${PROJECT_SOURCE_DIR}/tests/sensorMock.cpp"
-        "${PROJECT_SOURCE_DIR}/tests/axisMock.cpp"
+
 )
 # add .exe
-add_executable(whs_exe ${exe_SRCS})
-target_link_libraries(whs_exe 
+add_executable(whsBin ${exe_SRCS})
+target_link_libraries(whsBin 
 # keyence interface lib
-PUBLIC keyence_lib_static
+PUBLIC keyenceLib
 PUBLIC wsock32 
 PUBLIC ws2_32
 # sockpp lib
@@ -110,7 +106,7 @@ PUBLIC yaml-cpp
 PRIVATE ${Python_LIBRARIES}
 )
 # include libs
-target_include_directories(whs_exe 
+target_include_directories(whsBin 
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/includes/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/tests/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/dependencies/lib_keyence_sdk/includes
@@ -118,14 +114,14 @@ PUBLIC ${SOCKPP_INCLUDE_DIRS}
 PRIVATE ${Python_INCLUDE_DIRS}
 )
 
-copy_dlls_keyence_target_destination(whs_exe)
-copy_whs_config(whs_exe ${WHS_CONFIG})
-copy_dlls_yaml_target_destination(whs_exe)
+copy_dlls_keyence_target_destination(whsBin)
+copy_whs_config(whsBin ${WHS_CONFIG})
+copy_dlls_yaml_target_destination(whsBin)
 
 ############################# install targets ########################################
         FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h")
-        INSTALL(FILES ${files} DESTINATION include/whs_static/)
-        install(TARGETS whs_static #whs_exe 
+        INSTALL(FILES ${files} DESTINATION include/whsLib/)
+        install(TARGETS whsLib #whsBin 
         CONFIGURATIONS Debug
         RUNTIME DESTINATION bin/Debug
         LIBRARY DESTINATION lib)

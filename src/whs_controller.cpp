@@ -102,6 +102,7 @@ void whs_controller::reset_config_file() // set config file params to default
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::connect_controller()
 {
     if ( distSensor->connect() == sub_error || linearMover->connect() == sub_error) return sub_error;
+    waferHolderReady = true;
     return sub_success;
 
 }
@@ -109,8 +110,8 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::connect_controller()
 
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_until_data_availble()
 {
-
-    linearMover->move_home();
+    if (!waferHolderReady) return sub_error;
+    if (linearMover->move_home() == sub_error) return sub_error;
     current_axis_position = linearMover->get_position();
 
     std::cout << "axis start pos:  " << current_axis_position << std::endl;
@@ -148,6 +149,9 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_until_data_availb
  */
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_to_surface()
 {
+
+    if (!waferHolderReady) return sub_error;
+
     std::cout << "<----------------------------------------------> " << std::endl;
     std::cout << "algorithm surface contact launched" << std::endl;
 
