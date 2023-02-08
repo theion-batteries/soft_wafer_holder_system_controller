@@ -127,7 +127,9 @@ double linear_motion::get_position()
     std::cout << "get axis curent position" << std::endl;
     auto command = axis_cmds.find(1);
     std::cout << "sending command: " << command->second << '\n';
+    
     auto resp = sendDirectCmd(command->second);
+    
     std::string extracted = resp.substr(resp.find_first_of(":") + 1, resp.find_first_of(",") - 1 - resp.find_first_of(":"));
     axis_pos = std::stod(extracted); // to double
     std::cout << "filter val : " << axis_pos << std::endl;

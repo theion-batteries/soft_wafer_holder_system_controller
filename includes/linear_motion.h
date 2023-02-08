@@ -47,6 +47,7 @@ protected:
     std::deque<double> axis_last_position; // FIFO last 10 values
     std::string axis_incoming_data;
     size_t axis_data_length = 1024;
+    wgm_feedbacks::enum_sub_sys_feedback error_handler;
 public:
     linear_motion();
     virtual ~linear_motion();
