@@ -121,6 +121,7 @@ copy_dlls_yaml_target_destination(whsBin)
 ############################# install targets ########################################
         FILE(GLOB files "${CMAKE_CURRENT_SOURCE_DIR}/includes/*.h")
         INSTALL(FILES ${files} DESTINATION include/whsLib/)
+        INSTALL(FILES ${WHS_CONFIG} DESTINATION config/)
         install(TARGETS whsLib #whsBin 
         CONFIGURATIONS Debug
         RUNTIME DESTINATION bin/Debug
