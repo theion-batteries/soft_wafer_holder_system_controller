@@ -1,25 +1,47 @@
 #include <gtest/gtest.h>
 #include "linear_motion.h"
 
-// Demonstrate some basic assertions.
-TEST(whsLinearMotionOBj, connect) {
-  // expect connect
-  linear_motion mover;
-  EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_error, mover.connect());
+class LinearMotionTest : public ::testing::Test {
+protected:
+    Iaxis_motion* mover_ ;
+
+    void SetUp() override {
+       mover_ = new linear_motion("127.0.0.1", 8882);
+       mover_->connect();
+    }
+
+    void TearDown() override {
+       mover_->disconnect();
+        delete mover_;
+    }
+};
+
+TEST_F(LinearMotionTest, Connect) {
+    EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->connect());
 }
-// Demonstrate some basic assertions.
-TEST(whsLinearMotionPtr, connect) {
-  // expect connect
-  linear_motion mover;
-  EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_error, mover.connect());
-  Iaxis_motion* moverPtr = new linear_motion();
-  EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_error, moverPtr->connect());
-  delete moverPtr;
+
+TEST_F(LinearMotionTest, IsConnected) {
+    EXPECT_TRUE(mover_->getStatus());
 }
-// Demonstrate some basic assertions.
-TEST(whsLinearMotionPtr, deletePtr) {
-  // expect connect
- std::unique_ptr< Iaxis_motion> moverPtr = std::make_unique< linear_motion>();
-   moverPtr.reset();
-  EXPECT_EQ(moverPtr, nullptr);
+
+TEST_F(LinearMotionTest, MoveHome) {
+    EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->move_home());
+}
+
+TEST_F(LinearMotionTest, getSpeed) {
+    EXPECT_EQ(800, mover_->get_speed());
+}
+
+TEST_F(LinearMotionTest, getPosition) {
+    EXPECT_EQ(-100, mover_->get_position());
+}
+
+TEST_F(LinearMotionTest, MoveCenter) {
+    EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->move_center());
+}
+TEST_F(LinearMotionTest, MoveDownTo) {
+    EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->move_down_to(100));
+}
+TEST_F(LinearMotionTest, MoveUpTo) {
+    EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->move_up_to(100));
 }

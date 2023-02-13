@@ -20,7 +20,7 @@ find_package(sockpp CONFIG REQUIRED)
 find_package(yaml-cpp CONFIG REQUIRED)
 # add dependencies cmake
 add_subdirectory(dependencies/lib_keyence_sdk )
-#add_subdirectory(tests)
+add_subdirectory(tests)
 add_definitions(-D_SILENCE_CXX17_ITERATOR_BASE_CLASS_DEPRECATION_WARNING)  
 add_definitions(-D_SILENCE_ALL_CXX17_DEPRECATION_WARNINGS)  
 ################## search and append ##########################

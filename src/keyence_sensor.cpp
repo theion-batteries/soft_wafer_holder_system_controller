@@ -6,6 +6,12 @@ keyence_sensor::keyence_sensor(/* args */)
         std::cout << "creating keyence client" <<std::endl;
 
 }
+keyence_sensor::keyence_sensor(const char* ip, uint16_t port)
+{
+        std::cout << "creating keyence client" <<std::endl;
+    _keyence_struct.ip = ip;
+    _keyence_struct.port = port;
+}
 
 keyence_sensor::~keyence_sensor()
 {
@@ -34,7 +40,7 @@ double keyence_sensor::getMesuredValue()
 wgm_feedbacks::enum_sub_sys_feedback keyence_sensor::connect()
 {
     std::cout << "Running keyence client " << std::endl;
-    Kclient = new keyence_client(keyence_ip);
+    Kclient = new keyence_client(_keyence_struct.ip);
     wgm_feedbacks::enum_hw_feedback Keyence_feedback = Kclient->connect();
     if (Keyence_feedback == wgm_feedbacks::enum_hw_feedback::hw_success)
     {

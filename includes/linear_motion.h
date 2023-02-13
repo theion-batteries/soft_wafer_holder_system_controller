@@ -22,12 +22,15 @@
 #include <future>
 #include <memory>
 #include "Iaxis_motion.h"
+#include <string>
 
 struct whs_axis_motion_server
 {
     const char* ip = "192.168.0.209";
     uint16_t port = 8882;
+    double max_travel = 130;
 };
+
 
 
 class linear_motion: public Iaxis_motion
@@ -39,34 +42,31 @@ private:
     bool axisReady = false;
 protected:
     std::map<u_int, std::string> axis_cmds = {
-        {0,"$X"}, {1,"?"}, {2,"X160"},
-        {3,"$"}, {4,"X"},
-        {5,"X"}, {6,"X"},
-        {7,"$H"}
+        {0,"$X"}, {1,"?"}, {2,"X130"},
+        {3,"$$"}, {4,"X"},{5,"$110="}, {6,"X"}, {7,"$H"}
     };
     std::deque<double> axis_last_position; // FIFO last 10 values
     std::string axis_incoming_data;
     size_t axis_data_length = 1024;
-    wgm_feedbacks::enum_sub_sys_feedback error_handler;
 public:
-    linear_motion();
+    linear_motion(const char* ip, uint16_t port);
     virtual ~linear_motion();
     virtual wgm_feedbacks::enum_sub_sys_feedback move_home() override;
-    virtual void move_to(int new_position) override;
+    virtual wgm_feedbacks::enum_sub_sys_feedback move_to(int new_position) override;
     virtual wgm_feedbacks::enum_sub_sys_feedback connect()override;
-    virtual void disconnect() override;
+    virtual wgm_feedbacks::enum_sub_sys_feedback disconnect() override;
     double get_position() override;
-    void get_speed() override;
-    void set_speed(double_t new_val) override;
-    void move_up_to(double_t new_pos) override;
+    double get_speed() override;
+    wgm_feedbacks::enum_sub_sys_feedback set_speed(double_t new_val) override;
+    wgm_feedbacks::enum_sub_sys_feedback move_up_to(double_t new_pos) override;
     wgm_feedbacks::enum_sub_sys_feedback move_down_to(double_t new_pos) override;
-    void move_up_by(double_t steps) override;
-    void move_down_by(double_t steps) override;
+    wgm_feedbacks::enum_sub_sys_feedback move_up_by(double_t steps) override;
+    wgm_feedbacks::enum_sub_sys_feedback move_down_by(double_t steps) override;
     virtual bool getStatus() override;
     virtual std::string sendDirectCmd(std::string cmd) override;
     std::string waitForResponse();
-    void move_center();
-    void unlock();
+    wgm_feedbacks::enum_sub_sys_feedback move_center();
+    wgm_feedbacks::enum_sub_sys_feedback unlock();
 };
 
 

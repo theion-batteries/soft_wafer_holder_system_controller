@@ -29,19 +29,25 @@ whs_controller::whs_controller()
     _whs_params.ref_dis = config["ref_dis"].as<double>();
     _whs_params.delay_to_move_request = config["delay_to_move_request"].as<DWORD>();
     _whs_params.thickness = config["thickness"].as<double>();
-    _whs_params.MaxSafePos = config["MaxSafePos"].as<double>();
+    _whs_params.MaxSafePos = config["MaxSafePos"].as<int>();
     _whs_params.wafer_travel = config["wafer_travel"].as<double>();
     _whs_params.wafer_max_speed = config["wafer_max_speed"].as<double>();
+
+    _whs_params.motion_server_ip = config["motion_server_ip"].as<std::string>().c_str();
+    _whs_params.motion_server_port = config["motion_server_port"].as<uint16_t>();
+    _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>().c_str();
+    _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
+
 #endif 
 #ifdef SINK_SENSOR_MOCK
     distSensor = std::make_shared< sensorMock>();
 #else
-    distSensor = std::make_shared< keyence_sensor>();
+    distSensor = std::make_shared< keyence_sensor>(_whs_params.distance_sensor_server_ip, _whs_params.distance_sensor_server_port);
 #endif
 #ifdef SINK_AXIS_MOCK
     linearMover = std::make_shared< axisMock>();
 #else
-    linearMover = std::make_shared< linear_motion>();
+    linearMover = std::make_shared< linear_motion>(_whs_params.motion_server_ip, _whs_params.motion_server_port);
 #endif
 }
 /**
@@ -67,9 +73,13 @@ void whs_controller::reload_config_file()
     _whs_params.ref_dis = config["ref_dis"].as<double>();
     _whs_params.delay_to_move_request = config["delay_to_move_request"].as<DWORD>();
     _whs_params.thickness = config["thickness"].as<double>();
-    _whs_params.MaxSafePos = config["MaxSafePos"].as<double>();
+    _whs_params.MaxSafePos = config["MaxSafePos"].as<int>();
     _whs_params.wafer_travel = config["wafer_travel"].as<double>();
     _whs_params.wafer_max_speed = config["wafer_max_speed"].as<double>();
+    _whs_params.motion_server_ip = config["motion_server_ip"].as<std::string>().c_str();
+    _whs_params.motion_server_port = config["motion_server_port"].as<uint16_t>();
+    _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>().c_str();
+    _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
 
 }
 
@@ -87,6 +97,10 @@ void whs_controller::reset_config_file() // set config file params to default
     config["MaxSafePos"] = _whs_params_default.MaxSafePos;
     config["wafer_travel"] = _whs_params_default.wafer_travel;
     config["wafer_max_speed"] = _whs_params_default.wafer_max_speed;
+    config["motion_server_ip"] = _whs_params.motion_server_ip;
+    config["motion_server_port"] = _whs_params.motion_server_port;
+    config["distance_sensor_server_ip"] = _whs_params.distance_sensor_server_ip;
+    config["distance_sensor_server_port"] = _whs_params.distance_sensor_server_port ;
 
     std::ofstream fout(WHS_CONFIG);
     fout << config;
@@ -101,7 +115,7 @@ void whs_controller::reset_config_file() // set config file params to default
 /**************** Algorithms conntroller ***************/
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::connect_controller()
 {
-    if ( distSensor->connect() == sub_error || linearMover->connect() == sub_error) return sub_error;
+    if (distSensor->connect() == sub_error || linearMover->connect() == sub_error) return sub_error;
     waferHolderReady = true;
     return sub_success;
 
@@ -196,6 +210,8 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::deep_wafer_holder_desired_t
     distSensor->getMesuredValue();
     linearMover->get_position();
     waferHolderReady = true;
+    // TODO: on success, calibrate is true
+    // calibrate = true;
     std::cout << "algorithm finished succeffuly " << std::endl;
     std::cout << "<----------------------------------------------> " << std::endl;
     return sub_success;
@@ -211,7 +227,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::monitor_and_calibrate()
     // 1. check if diff is a value that is below the step resolution, continue or
     // 2. move up if diff negativ
     // 3. move down if diff positiv
-    while (true)
+    while (calibrate) // TODO: add calibrate variable
     {
         double diff = distSensor->getMesuredValue() - _whs_params.thickness;
         if (abs(diff) <= _whs_params.mm_step_res) // if the difference mesured lower than min step res, we skip calibration
@@ -240,9 +256,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::monitor_and_calibrate()
 }
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::extract_move_home()
 {
-    linearMover->move_home();
-    return sub_success;
-
+    return linearMover->move_home();
 }
 
 
@@ -293,5 +307,13 @@ void whs_controller::sendDirectCmdSensor(std::string& cmd)
 std::string whs_controller::sendDirectCmdAxis(std::string cmd)
 {
     return  linearMover->sendDirectCmd(cmd);
+}
+
+void whs_controller::open_config_file()
+{
+    std::string file = WHS_CONFIG; 
+    std::cout<<"opening config file in notepad \n";
+    std::string command = "notepad.exe " + file;
+    system(command.c_str());
 }
 

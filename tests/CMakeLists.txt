@@ -14,14 +14,16 @@ add_executable(whsTests
 )
 target_link_libraries(whsTests
   GTest::gtest_main
+  GTest::gmock_main
   whsLib
 )
 target_include_directories(whsTests
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/../includes/
 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/
 )
+#add_test(NAME whsTests COMMAND whsTests)
+#set_tests_properties(whsTests PROPERTIES OUTPUT_ON_SUCCESS TRUE)
+
+enable_testing()
 include(GoogleTest)
 gtest_discover_tests(whsTests)
-
-#add_test(NAME whsTests COMMAND whsTests)
-enable_testing()
