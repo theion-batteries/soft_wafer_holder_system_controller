@@ -20,7 +20,9 @@ protected:
 TEST_F(LinearMotionTest, Connect) {
     EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->connect());
 }
-
+TEST_F(LinearMotionTest, Disconnect) {
+    EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->disconnect());
+}
 TEST_F(LinearMotionTest, IsConnected) {
     EXPECT_TRUE(mover_->getStatus());
 }

@@ -18,11 +18,12 @@ whs_controller::whs_controller()
 #ifdef WHS_CONFIG
     std::cout << "loading config file: " << WHS_CONFIG << std::endl;
     std::ifstream filein(WHS_CONFIG);
-    for (std::string line; std::getline(filein, line); )
-    {
-        std::cout << line << std::endl;
-    }
+    //for (std::string line; std::getline(filein, line); )
+    //{
+    //    std::cout << line << std::endl;
+    //}
     config = YAML::LoadFile(WHS_CONFIG);
+
 
     _whs_params.mm_steps = config["mm_steps"].as<double>();
     _whs_params.mm_step_res = config["mm_step_res"].as<double>();
@@ -32,11 +33,13 @@ whs_controller::whs_controller()
     _whs_params.MaxSafePos = config["MaxSafePos"].as<int>();
     _whs_params.wafer_travel = config["wafer_travel"].as<double>();
     _whs_params.wafer_max_speed = config["wafer_max_speed"].as<double>();
-
-    _whs_params.motion_server_ip = config["motion_server_ip"].as<std::string>().c_str();
+    _whs_params.motion_server_ip = config["motion_server_ip"].as<std::string>(); 
     _whs_params.motion_server_port = config["motion_server_port"].as<uint16_t>();
-    _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>().c_str();
+    _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>();
     _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
+
+    std::cout << "axis server ip:  " << _whs_params.motion_server_ip << std::endl;
+    std::cout << "keyence server ip:  " << _whs_params.distance_sensor_server_ip << std::endl;
 
 #endif 
 #ifdef SINK_SENSOR_MOCK
@@ -58,7 +61,7 @@ whs_controller::~whs_controller()
 {
 }
 
-void whs_controller::reload_config_file()
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::reload_config_file()
 {
     std::cout << "reloading config file: " << WHS_CONFIG << std::endl;
     std::ifstream filein(WHS_CONFIG);
@@ -81,9 +84,11 @@ void whs_controller::reload_config_file()
     _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>().c_str();
     _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
 
+    return sub_success;
+
 }
 
-void whs_controller::reset_config_file() // set config file params to default
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::reset_config_file() // set config file params to default
 {
 
     std::cout << "resetting config file: " << WHS_CONFIG << std::endl;
@@ -100,7 +105,7 @@ void whs_controller::reset_config_file() // set config file params to default
     config["motion_server_ip"] = _whs_params.motion_server_ip;
     config["motion_server_port"] = _whs_params.motion_server_port;
     config["distance_sensor_server_ip"] = _whs_params.distance_sensor_server_ip;
-    config["distance_sensor_server_port"] = _whs_params.distance_sensor_server_port ;
+    config["distance_sensor_server_port"] = _whs_params.distance_sensor_server_port;
 
     std::ofstream fout(WHS_CONFIG);
     fout << config;
@@ -110,8 +115,21 @@ void whs_controller::reset_config_file() // set config file params to default
     {
         std::cout << line << std::endl;
     }
+    return sub_success;
 
 }
+
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::open_config_file()
+{
+    std::string file = WHS_CONFIG;
+    std::cout << "opening config file in notepad \n";
+    std::string command = "notepad.exe " + file;
+    auto val = system(command.c_str());
+    if (val == 0) return sub_success;
+    return sub_error;
+}
+
+
 /**************** Algorithms conntroller ***************/
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::connect_controller()
 {
@@ -121,6 +139,12 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::connect_controller()
 
 }
 
+wgm_feedbacks::enum_sub_sys_feedback whs_controller::disconnect_controller()
+{
+    if (distSensor->disconnect() == sub_error || linearMover->disconnect() == sub_error) return sub_error;
+    waferHolderReady = false;
+    return sub_success;
+}
 
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_until_data_availble()
 {
@@ -307,13 +331,5 @@ void whs_controller::sendDirectCmdSensor(std::string& cmd)
 std::string whs_controller::sendDirectCmdAxis(std::string cmd)
 {
     return  linearMover->sendDirectCmd(cmd);
-}
-
-void whs_controller::open_config_file()
-{
-    std::string file = WHS_CONFIG; 
-    std::cout<<"opening config file in notepad \n";
-    std::string command = "notepad.exe " + file;
-    system(command.c_str());
 }
 

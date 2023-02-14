@@ -51,9 +51,9 @@ struct whs_config_yaml_params
     double wafer_travel = 100;                                     // used-- > // should be determined using the keyence sensor in the future
     double wafer_max_travel = 130;                                      // used // DO NOT CHANGE IF YOU DONT KNOW WHAT YOU#RE DOING
     double wafer_max_speed = 800;
-    const char* motion_server_ip= "192.168.0.209";
+    std::string motion_server_ip= "192.168.0.209";
     uint16_t motion_server_port= 8882;
-    const char* distance_sensor_server_ip= "192.168.0.104";
+    std::string distance_sensor_server_ip= "192.168.0.104";
     uint16_t distance_sensor_server_port= 6555;
 };
 
@@ -74,6 +74,7 @@ public:
     ~whs_controller();
     /******** algorithms controller **********/
     wgm_feedbacks::enum_sub_sys_feedback connect_controller();
+    wgm_feedbacks::enum_sub_sys_feedback disconnect_controller();
     wgm_feedbacks::enum_sub_sys_feedback move_down_until_data_availble();
     wgm_feedbacks::enum_sub_sys_feedback move_down_to_surface();
     wgm_feedbacks::enum_sub_sys_feedback deep_wafer_holder_desired_thickness(); //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
@@ -90,7 +91,7 @@ public:
     Idistance_sensor* get_dist_ptr();
     void sendDirectCmdSensor(std::string& cmd);
     std::string sendDirectCmdAxis(std::string cmd);
-    void reload_config_file();
-    void reset_config_file();
-    void open_config_file();
+    wgm_feedbacks::enum_sub_sys_feedback reload_config_file();
+    wgm_feedbacks::enum_sub_sys_feedback reset_config_file();
+    wgm_feedbacks::enum_sub_sys_feedback open_config_file();
 };

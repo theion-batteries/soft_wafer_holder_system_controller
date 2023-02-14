@@ -13,7 +13,7 @@
 #include <mutex>
 #include <string.h>
 
-linear_motion::linear_motion(const char* ip, uint16_t port)
+linear_motion::linear_motion(std::string ip, uint16_t port)
 {
     std::cout << "creating linear axis client" << std::endl;
     _motion_axis_struct.ip = ip;
@@ -96,6 +96,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_to(int new_position)
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
 {
     std::cout << "connecting controller to axis server" << std::endl;
+    std::cout << "axis server ip:  " << _motion_axis_struct.ip << std::endl;
     axis_client_sock = new sockpp::tcp_connector({ _motion_axis_struct.ip, _motion_axis_struct.port });
     // Implicitly creates an inet_address from {host,port}
     // and then tries the connection.
@@ -122,6 +123,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
 
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::disconnect()
 {
+        axisReady = false;
     if (axis_client_sock->close()) return sub_success;
     return sub_error;
 }

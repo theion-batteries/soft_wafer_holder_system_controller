@@ -24,9 +24,10 @@ public:
     virtual  ~Idistance_sensor();
     virtual double getMesuredValue()=0;
     virtual wgm_feedbacks::enum_sub_sys_feedback connect() = 0;
-    virtual void disconnect() = 0;
+    virtual wgm_feedbacks::enum_sub_sys_feedback disconnect() = 0;
     virtual void sendCmd(std::string& cmd, sockpp::tcp_connector* client, std::string args = std::string());
     virtual bool getStatus() =0;
+    virtual double keyence_client_get_value_output_all()=0;
 
 };
 

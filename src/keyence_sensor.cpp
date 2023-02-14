@@ -3,14 +3,19 @@
 
 keyence_sensor::keyence_sensor(/* args */)
 {
-        std::cout << "creating keyence client" <<std::endl;
+    std::cout << "creating keyence client" << std::endl;
 
 }
-keyence_sensor::keyence_sensor(const char* ip, uint16_t port)
+keyence_sensor::keyence_sensor(std::string ip, uint16_t port)
 {
-        std::cout << "creating keyence client" <<std::endl;
+
+    std::cout << "creating keyence client" << std::endl;
+
     _keyence_struct.ip = ip;
     _keyence_struct.port = port;
+    Kclient = new keyence_client(_keyence_struct.ip);
+    std::cout << "keyence server port:  " << _keyence_struct.port << std::endl;
+
 }
 
 keyence_sensor::~keyence_sensor()
@@ -23,14 +28,20 @@ bool keyence_sensor::getStatus()
 }
 
 
-void keyence_sensor::disconnect() 
+wgm_feedbacks::enum_sub_sys_feedback keyence_sensor::disconnect()
 {
     Kclient->disconnect();
+    keyenceReady = false;
+
+    return wgm_feedbacks::enum_sub_sys_feedback::sub_success;
 }
 double keyence_sensor::getMesuredValue()
 {
-
-    return keyence_client_get_value_output1();    
+    //return keyence_client_get_value_output_all(); 
+     //return keyence_client_get_value_output0();    
+    return keyence_client_get_value_output1();
+    // return keyence_client_get_value_output2(); 
+    // return 0;   
 }
 /************************* keyence client methods*****************/
 /**
@@ -40,7 +51,6 @@ double keyence_sensor::getMesuredValue()
 wgm_feedbacks::enum_sub_sys_feedback keyence_sensor::connect()
 {
     std::cout << "Running keyence client " << std::endl;
-    Kclient = new keyence_client(_keyence_struct.ip);
     wgm_feedbacks::enum_hw_feedback Keyence_feedback = Kclient->connect();
     if (Keyence_feedback == wgm_feedbacks::enum_hw_feedback::hw_success)
     {
@@ -104,13 +114,18 @@ double  keyence_sensor::keyence_client_get_value_output2()
     return current_value;
 
 }
+
+double  keyence_sensor::keyence_client_get_value_output_all()
+{
+
+    std::cout << "get reading keyence sensor all ouputs" << std::endl;
+    double current_value = Kclient->get_value_all();
+    if (current_value == 0) return 0;
+    return current_value;
+
+}
 /**
  * @brief
  *
  */
-void keyence_sensor::keyence_client_get_value_all()
-{
-    keyence_client_get_value_output0();
-    keyence_client_get_value_output1();
-    keyence_client_get_value_output2();
-}
+

@@ -26,7 +26,7 @@
 
 struct whs_axis_motion_server
 {
-    const char* ip = "192.168.0.209";
+    std::string ip = "192.168.0.209";
     uint16_t port = 8882;
     double max_travel = 130;
 };
@@ -49,7 +49,7 @@ protected:
     std::string axis_incoming_data;
     size_t axis_data_length = 1024;
 public:
-    linear_motion(const char* ip, uint16_t port);
+    linear_motion(std::string ip, uint16_t port);
     virtual ~linear_motion();
     virtual wgm_feedbacks::enum_sub_sys_feedback move_home() override;
     virtual wgm_feedbacks::enum_sub_sys_feedback move_to(int new_position) override;

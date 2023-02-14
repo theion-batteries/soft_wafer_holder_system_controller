@@ -1,44 +1,51 @@
-# first of all import the socket library
 import socket
-from struct import *
-# next create a socket object
-s = socket.socket()
-print("Socket successfully created")
 
-# reserve a port on your computer in our
-# case it is 12345 but it can be anything
-port = 6555
+def run_server():
+    s = socket.socket()
+    print("Socket successfully created")
+    val = "MS,01,100\r".encode('utf-8')
+    hex_val = ''.join('\\x{:02x}'.format(b) for b in val)
 
-# Next bind to the port
-# we have not typed any ip in the ip field
-# instead we have inputted an empty string
-# this makes the server listen to requests
-# coming from other computers on the network
-s.bind(('', port))
-print("socket binded to %s" % (port))
+    port = 24687
+    s.bind(('', port))
+    print("socket binded to %s" % (port))
+    s.listen(5)
+    print("socket is listening")
 
-# put the socket into listening mode
-s.listen(5)
-print("socket is listening")
+    while True:
+        try:
+            c, addr = s.accept()
+            print('Got connection from', addr)
 
-# a forever loop until we interrupt it or
-# an error occurs
-c, addr = s.accept()
-print('Got connection from', addr)
-while True:
+            while True:
+                data = c.recv(5012)
+                if not data:
+                    # Connection lost, break out of inner loop and reconnect
+                    print("Connection lost, reconnecting...")
+                    c.close()
+                    break
 
-        # Establish connection with client.
+                if data == b'MS,01\r':
+                    print(f"received: {data}")
+                    print(f"sent: {val}")
+                    c.send(val)
+                if data == b'\x07\x00\x07\x14\x00\x00\x00':
+                    print(f"received: {data}")
+                    print(f"sent: {hex_val}")
+                    #c.send(bytes.fromhex(hex_val.replace('\\x', '')))
+                    c.send(b'\x07\x00\x07\x14\x00\x00\x00')
+                else:
+                    print(f"new data coming: {data}")
 
-    data = c.recv(1024)
-    print(f"received: {data}")
-    if data == b'get1':
-        a="123.456"
-        c.sendall(bytes(a,encoding="utf-8"))
-        print(f"sent: {a}")   
-        continue
-    else:         
-        c.send(data)
-        print(f"sent: {data}")
-        continue
-        
-    
+
+            
+        except KeyboardInterrupt:
+            print("Program stopped by user.")
+            break
+        except Exception as e:
+            print("Error occurred:", e)
+
+    s.close()
+
+if __name__ == "__main__":
+    run_server()
