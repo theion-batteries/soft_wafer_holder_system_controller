@@ -30,6 +30,7 @@ std::string linear_motion::sendDirectCmd(std::string cmd)
     if (axis_client_sock == nullptr) return "not connected";
     std::cout << "sending linear axis command " << cmd << std::endl;
     cmd = cmd + "\r\n";
+
     if (axis_client_sock->write(cmd) != ssize_t(std::string(cmd).length())) {
         std::cout << "Error writing to the TCP stream: "
             << axis_client_sock->last_error_str() << std::endl;
@@ -39,18 +40,11 @@ std::string linear_motion::sendDirectCmd(std::string cmd)
 
 std::string linear_motion::waitForResponse()
 {
-    static int attempts = 0;
-    if (attempts == 10)
-    {
-        std::cout << "attempts: " << attempts << std::endl;
-        attempts = 0;
-        return "NA";
-    }
     std::cout << "awaiting server response" << std::endl;
     if (axis_client_sock->is_connected())
     {
         char Strholder[1024];
-        ssize_t n = axis_client_sock->read_n(&Strholder, 1024);
+        ssize_t n = axis_client_sock->read_n(&Strholder, 5012);
         if (n > 0)
         {
             std::cout << "n bytes received: " << n << std::endl;
@@ -62,12 +56,25 @@ std::string linear_motion::waitForResponse()
         else
         {
             std::cout << "no server response " << n << std::endl;
-            attempts++;
-            return waitForResponse();
+            return "NA";
         }
 
     }
+    return "NA";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 bool linear_motion::getStatus()
 {
     return axisReady;
@@ -180,7 +187,7 @@ double linear_motion::get_speed()
         size_t found2 = resp.find("$111=");
         if (found1 != std::string::npos && found2 != std::string::npos) {
             auto rep = resp.substr(found1 + 5, found2);
-            std::cout << "Substring found "<<rep << std::endl;
+            std::cout << "Substring found " << rep << std::endl;
             return rep;
 
         }
@@ -215,7 +222,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_up_to(double_t new_pos)
     auto command = axis_cmds.find(6);
     if (command != axis_cmds.end()) {
         std::cout << "sending command: " << command->second << " args: " << new_pos << '\n';
-        std::string args = std::to_string(-new_pos);
+        std::string args = "-" + std::to_string(new_pos);
         auto cmd = (command->second) + args;
         // X-new_pos
         auto reply = sendDirectCmd(cmd);

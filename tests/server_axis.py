@@ -79,15 +79,18 @@ def run_server():
                     print(f"received: {data}")
                     print(f"sent: ok")
                     c.send(b'ok')
-                elif data == b'X100\r\n':         
+                elif data == b'X100.000000\r\n':         
                     print(f"received: {data}")
                     print(f"sent: ok")
                     c.send(b'ok')
-                elif data == b'-X100\r\n':         
+                elif data == b'X-100.000000\r\n':         
                     print(f"received: {data}")
                     print(f"sent: ok")
                     c.send(b'ok')
-                 
+                elif data == b'$110=100.000000\r\n':         
+                    print(f"received: {data}")
+                    print(f"sent: ok")
+                    c.send(b'ok')                 
         except KeyboardInterrupt:
             print("Program stopped by user.")
             break

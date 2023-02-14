@@ -1,4 +1,5 @@
 #include <gtest/gtest.h>
+
 #include "linear_motion.h"
 
 class LinearMotionTest : public ::testing::Test {
@@ -28,10 +29,13 @@ TEST_F(LinearMotionTest, MoveHome) {
     EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->move_home());
 }
 
+
 TEST_F(LinearMotionTest, getSpeed) {
     EXPECT_EQ(800, mover_->get_speed());
 }
-
+TEST_F(LinearMotionTest, setSpeed) {
+    EXPECT_EQ(sub_success, mover_->set_speed(100));
+}
 TEST_F(LinearMotionTest, getPosition) {
     EXPECT_EQ(-100, mover_->get_position());
 }
@@ -45,3 +49,5 @@ TEST_F(LinearMotionTest, MoveDownTo) {
 TEST_F(LinearMotionTest, MoveUpTo) {
     EXPECT_EQ(wgm_feedbacks::enum_sub_sys_feedback::sub_success, mover_->move_up_to(100));
 }
+
+
