@@ -1,7 +1,7 @@
 ## config file: default and user defined parameters 
-motion_server_ip: "127.0.0.1" # 192.168.0.209
+motion_server_ip: "192.168.0.209" # 192.168.0.209 "127.0.0.1"
 motion_server_port: 8882
-distance_sensor_server_ip: "127.0.0.1" #192.168.0.104
+distance_sensor_server_ip: "192.168.0.104" # 192.168.0.104 "127.0.0.1"
 distance_sensor_server_port: 24687 #6555
 ##### first step algorithm paarmeters ######
 mm_steps: 50 # distance to move down : default 10 mm

@@ -160,13 +160,13 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_until_data_availb
         if (_whs_params.MaxSafePos > _whs_params.mm_steps)
         {
             std::cout << "moving all way down to " << _whs_params.MaxSafePos << "mm_steps until reading values " << std::endl;
-            linearMover->move_down_to(-_whs_params.MaxSafePos); // move down to max
+            linearMover->move_down_to(_whs_params.MaxSafePos); // move down to max
         }
         // algo2: move long steps
         else
         {
             std::cout << "moving down by " << _whs_params.mm_steps << "mm_steps until reading values " << std::endl;
-            linearMover->move_down_to(current_axis_position - _whs_params.mm_steps); // move down by mm steps
+            linearMover->move_down_to(abs(current_axis_position - _whs_params.mm_steps)); // move down by mm steps
             current_axis_position = current_axis_position - _whs_params.mm_steps;
             std::cout << "new axis position " << current_axis_position << std::endl;
         }
@@ -201,7 +201,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_to_surface()
     {
         std::cout << "moving down until sensor reading is equal the refernce distance: " << _whs_params.ref_dis << std::endl;
         std::cout << "moving down by " << _whs_params.one_mm_steps << std::endl;
-        linearMover->move_down_to(current_axis_position - _whs_params.one_mm_steps); // move down by mm steps
+        linearMover->move_down_to(abs(current_axis_position - _whs_params.one_mm_steps)); // move down by mm steps
         current_axis_position = current_axis_position - _whs_params.one_mm_steps;
         std::cout << "new axis position " << current_axis_position << std::endl;
     }
@@ -226,7 +226,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::deep_wafer_holder_desired_t
     for (unsigned int step_counter = 0; step_counter < steps; step_counter++)
     {
         std::cout << "iteration number " << step_counter << std::endl;
-        linearMover->move_down_to(current_axis_position - _whs_params.mm_step_res); // move mm step default 0.01 mm
+        linearMover->move_down_to(abs(current_axis_position - _whs_params.mm_step_res)); // move mm step default 0.01 mm
         current_axis_position -= _whs_params.mm_step_res;
         distSensor->getMesuredValue();
         linearMover->get_position();
@@ -262,11 +262,11 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::monitor_and_calibrate()
         {
             if (diff < 0) // if diff negativ, we move up
             {
-                linearMover->move_up_by(diff);
+                linearMover->move_up_by(abs(diff));
             }
             else
             {
-                linearMover->move_down_by(diff);
+                linearMover->move_down_by(abs(diff));
 
             }
 
