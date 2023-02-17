@@ -42,7 +42,6 @@ private:
     sockpp::socket_initializer sockInit;
     sockpp::tcp_connector* axis_client_sock = nullptr;
     bool axisReady = false;
-protected:
     std::map<std::string, std::string> axis_cmds = {
         {"unlock","$X"}, {"get_position","?"}, {"move","X"},
         {"get_setting","$$"}, {"set_speed","$110="}, {"home","$H"},
