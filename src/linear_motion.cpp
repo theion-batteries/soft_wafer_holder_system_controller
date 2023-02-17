@@ -18,8 +18,8 @@ linear_motion::linear_motion(std::string ip, uint16_t port)
     std::cout << "creating linear axis client" << std::endl;
     _motion_axis_struct.ip = ip;
     _motion_axis_struct.port = port;
-
 }
+
 linear_motion::~linear_motion()
 {
     if (axis_client_sock != nullptr) delete axis_client_sock;
@@ -89,7 +89,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_to(int new_position)
     } 
     else
     {
-        if(move_down_to(abs(new_position)) == sub_success) return sub_success;
+        if(move_up_to(abs(new_position)) == sub_success) return sub_success;
                 return sub_error;
 
     }
