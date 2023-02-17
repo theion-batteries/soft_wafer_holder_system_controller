@@ -44,6 +44,7 @@ std::string linear_motion::waitForResponse()
     if (axis_client_sock->is_connected())
     {
         char Strholder[5012];
+        
         ssize_t n = axis_client_sock->read_n(&Strholder, 5012);
         if (n > 0)
         {

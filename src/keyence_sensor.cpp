@@ -38,8 +38,8 @@ wgm_feedbacks::enum_sub_sys_feedback keyence_sensor::disconnect()
 double keyence_sensor::getMesuredValue()
 {
     //return keyence_client_get_value_output_all(); 
-     //return keyence_client_get_value_output0();    
-    return keyence_client_get_value_output1();
+     return keyence_client_get_value_output0();    
+    //return keyence_client_get_value_output1();
     // return keyence_client_get_value_output2(); 
     // return 0;   
 }

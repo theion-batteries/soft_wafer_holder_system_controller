@@ -148,6 +148,14 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::disconnect_controller()
 
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_until_data_availble()
 {
+
+ //   if (!waferHolderReady) return sub_error;
+        std::cout << "moving home" << std::endl;
+
+    if (linearMover->move_home() == sub_error) return sub_error;
+
+    std::cout << "<----------------------------------------------> " << std::endl;
+    std::cout << "algorithm move down until data valid launched" << std::endl;
     if (!waferHolderReady) return sub_error;
     if (linearMover->move_home() == sub_error) return sub_error;
     current_axis_position = linearMover->get_position();
