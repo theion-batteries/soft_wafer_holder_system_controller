@@ -309,10 +309,10 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_center()
     auto command = axis_cmds.find("move");
     if (command != axis_cmds.end()) {
         std::cout << "sending command: " << command->second << '\n';
-        auto reply = sendDirectCmd(command->second);
-        std::cout << "move center reply received " << reply << '\n';
         std::string args = std::to_string(-_motion_axis_struct.max_travel);
         auto cmd = (command->second) + args;
+        auto reply = sendDirectCmd(cmd);
+        std::cout << "move center reply received " << reply << '\n';
         if (reply == "ok") return sub_success;
         return sub_error;
     }

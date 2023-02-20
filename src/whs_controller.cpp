@@ -45,12 +45,55 @@ whs_controller::whs_controller()
 #ifdef SINK_SENSOR_MOCK
     distSensor = std::make_shared< sensorMock>();
 #else
+
     distSensor = std::make_shared< keyence_sensor>(_whs_params.distance_sensor_server_ip, _whs_params.distance_sensor_server_port);
 #endif
 #ifdef SINK_AXIS_MOCK
     linearMover = std::make_shared< axisMock>();
 #else
     linearMover = std::make_shared< linear_motion>(_whs_params.motion_server_ip, _whs_params.motion_server_port);
+#endif
+}
+whs_controller::whs_controller(std::string ip_motion, uint16_t port_motion, std::string ip_keyence, uint16_t port_keyence)
+{
+    std::cout << "creating subsystem wafer holder motion controller " << std::endl;
+#ifdef WHS_CONFIG
+    std::cout << "loading config file: " << WHS_CONFIG << std::endl;
+    std::ifstream filein(WHS_CONFIG);
+    //for (std::string line; std::getline(filein, line); )
+    //{
+    //    std::cout << line << std::endl;
+    //}
+    config = YAML::LoadFile(WHS_CONFIG);
+
+
+    _whs_params.mm_steps = config["mm_steps"].as<double>();
+    _whs_params.mm_step_res = config["mm_step_res"].as<double>();
+    _whs_params.ref_dis = config["ref_dis"].as<double>();
+    _whs_params.delay_to_move_request = config["delay_to_move_request"].as<DWORD>();
+    _whs_params.thickness = config["thickness"].as<double>();
+    _whs_params.MaxSafePos = config["MaxSafePos"].as<int>();
+    _whs_params.wafer_travel = config["wafer_travel"].as<double>();
+    _whs_params.wafer_max_speed = config["wafer_max_speed"].as<double>();
+   // _whs_params.motion_server_ip = config["motion_server_ip"].as<std::string>(); 
+   // _whs_params.motion_server_port = config["motion_server_port"].as<uint16_t>();
+  //  _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>();
+  //  _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
+
+    std::cout << "axis server ip:  " << _whs_params.motion_server_ip << std::endl;
+    std::cout << "keyence server ip:  " << _whs_params.distance_sensor_server_ip << std::endl;
+
+#endif 
+#ifdef SINK_SENSOR_MOCK
+    distSensor = std::make_shared< sensorMock>();
+#else
+
+    distSensor = std::make_shared< keyence_sensor>(ip_keyence, port_keyence);
+#endif
+#ifdef SINK_AXIS_MOCK
+    linearMover = std::make_shared< axisMock>();
+#else
+    linearMover = std::make_shared< linear_motion>(ip_motion, port_motion);
 #endif
 }
 /**
