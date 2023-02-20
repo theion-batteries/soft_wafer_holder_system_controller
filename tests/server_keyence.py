@@ -33,7 +33,7 @@ def run_server():
                     print(f"received: {data}")
                     print(f"sent: {hex_val}")
                     #c.send(bytes.fromhex(hex_val.replace('\\x', '')))
-                    c.send(b'\x07\x00\x07\x14\x00\x00\x00')
+                    c.send(b'0')
                 else:
                     print(f"new data coming: {data}")
 

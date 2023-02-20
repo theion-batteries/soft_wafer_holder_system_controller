@@ -38,7 +38,7 @@ def run_server():
                 $131=10.000\
                 $132=10.000\
                 ok".encode('utf-8')
-    positions = "<Idle|MPos:-100.000,0.000,0.000|FS:0,0|WCO:0.000,0.000,0.000>\
+    positions = "<Idle|MPos:-120.000,50.000,0.000|FS:0,0|WCO:0.000,0.000,0.000>\
                 ok".encode('utf-8')
     port = 8882
     s.bind(('', port))
@@ -90,7 +90,12 @@ def run_server():
                 elif data == b'$110=100.000000\r\n':         
                     print(f"received: {data}")
                     print(f"sent: ok")
-                    c.send(b'ok')                 
+                    c.send(b'ok')   
+                ## treat all cases with move down X-<val>      
+                elif b'X-' in data:         
+                    print(f"received: {data}")
+                    print(f"sent: ok")
+                    c.send(b'ok')           
         except KeyboardInterrupt:
             print("Program stopped by user.")
             break

@@ -200,31 +200,21 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_until_data_availb
     std::cout << "<----------------------------------------------> " << std::endl;
     std::cout << "algorithm move down until data valid launched" << std::endl;
     if (!waferHolderReady) return sub_error;
-    if (linearMover->move_home() == sub_error) return sub_error;
+
     current_axis_position = linearMover->get_position();
 
     std::cout << "axis start pos:  " << current_axis_position << std::endl;
 
     while (distSensor->getMesuredValue() == 0) // while data invalid, we go down further
     {
-        // algo1: given max trajectory 
-        if (_whs_params.MaxSafePos > _whs_params.mm_steps)
-        {
-            std::cout << "moving all way down to " << _whs_params.MaxSafePos << "mm_steps until reading values " << std::endl;
-            linearMover->move_down_to(_whs_params.MaxSafePos); // move down to max
-        }
-        // algo2: move long steps
-        else
-        {
+
+            if (abs(current_axis_position) >= _whs_params.MaxSafePos) break; // break condition            
             std::cout << "moving down by " << _whs_params.mm_steps << "mm_steps until reading values " << std::endl;
             linearMover->move_down_to(abs(current_axis_position - _whs_params.mm_steps)); // move down by mm steps
             current_axis_position = current_axis_position - _whs_params.mm_steps;
             std::cout << "new axis position " << current_axis_position << std::endl;
-        }
 
     }
-    std::cout << "sensor value: " << distSensor->getMesuredValue() << std::endl;
-    std::cout << "sensor data valid" << std::endl;
     std::cout << "algorithm finished succeffuly " << std::endl;
     std::cout << "<----------------------------------------------> " << std::endl;
     return sub_success;
@@ -248,15 +238,17 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_to_surface()
     current_axis_position = linearMover->get_position();
     std::cout << "current pos:  " << current_axis_position << std::endl;
 
-    while (distSensor->getMesuredValue() >= _whs_params.ref_dis) // while distSensor reading is <= to reference distance
+    while (distSensor->getMesuredValue() <= _whs_params.ref_dis) // while distSensor reading is <= to reference distance
     {
+        if (abs(current_axis_position) >= _whs_params.MaxSafePos) break; // break condition            
+
         std::cout << "moving down until sensor reading is equal the refernce distance: " << _whs_params.ref_dis << std::endl;
         std::cout << "moving down by " << _whs_params.one_mm_steps << std::endl;
         linearMover->move_down_to(abs(current_axis_position - _whs_params.one_mm_steps)); // move down by mm steps
         current_axis_position = current_axis_position - _whs_params.one_mm_steps;
         std::cout << "new axis position " << current_axis_position << std::endl;
     }
-    std::cout << "sensor value: " << distSensor->getMesuredValue() << std::endl;
+    //std::cout << "sensor value: " << distSensor->getMesuredValue() << std::endl;
     std::cout << "algorithm finished succeffuly " << std::endl;
     std::cout << "<----------------------------------------------> " << std::endl;
     return sub_success;
@@ -276,11 +268,13 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::deep_wafer_holder_desired_t
     current_axis_position = get_axis_position();
     for (unsigned int step_counter = 0; step_counter < steps; step_counter++)
     {
+        if (abs(current_axis_position) >= _whs_params.MaxSafePos) break; // break condition            
+
         std::cout << "iteration number " << step_counter << std::endl;
         linearMover->move_down_to(abs(current_axis_position - _whs_params.mm_step_res)); // move mm step default 0.01 mm
         current_axis_position -= _whs_params.mm_step_res;
-        distSensor->getMesuredValue();
-        linearMover->get_position();
+       // distSensor->getMesuredValue();
+       // linearMover->get_position();
     }
     distSensor->getMesuredValue();
     linearMover->get_position();

@@ -27,7 +27,7 @@
 struct keyence_server
 {
     std::string ip = "192.168.0.104";
-    uint16_t port = 6555;
+    uint16_t port = 24687;
 };
 
 class keyence_sensor: public Idistance_sensor
