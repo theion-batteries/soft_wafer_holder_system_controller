@@ -1,4 +1,5 @@
 import socket
+import time
 
 def run_server():
     s = socket.socket()
@@ -73,6 +74,7 @@ def run_server():
                     c.send(b'ok')
                 elif data == b'$H\r\n':         
                     print(f"received: {data}")
+                    time.sleep(20)
                     print(f"sent: ok")
                     c.send(b'ok')
                 elif data == b'X-130.000000\r\n':         

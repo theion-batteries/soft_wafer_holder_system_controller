@@ -12,6 +12,7 @@ enum options {
 	RUN_ALGO1 = 6,
 	RUN_ALGO2 = 7,
 	RUN_ALGO3 = 8,
+	HOME = 9,
 };
 
 int main(int argc, char* argv[]) {
@@ -32,6 +33,7 @@ int main(int argc, char* argv[]) {
 		std::cout << "6: ALGO1: move down until data valid\n";
 		std::cout << "7: ALGO2: move down to surface\n";
 		std::cout << "8: ALGO3: deep wafer thickness\n";
+		std::cout << "9: HOME: move home\n";
 		std::cin >> choice;
 
 		switch (choice) {
@@ -64,6 +66,9 @@ int main(int argc, char* argv[]) {
 			break;
 		case RUN_ALGO3:
 			wafer_sys_control.deep_wafer_holder_desired_thickness();
+			break;
+		case HOME:
+			wafer_sys_control.get_axis_ptr()->move_home();
 			break;
 		default:
 			std::cout << "Invalid option. Please choose again.\n";
