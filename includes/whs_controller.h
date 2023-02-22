@@ -43,7 +43,7 @@ struct whs_config_yaml_params
 {
     double mm_steps = 50; // distance to move down  default 10 mm
     DWORD delay_to_move_request = 2000; // wait between move request  default 2000ms
-    double ref_dis = 130;// parameter calibration sensor  default 
+    double ref_dis = 138;// parameter calibration sensor  default 
     double thickness = 0.1; // thickness of wafer holder default 0.1mm
     double mm_step_res = 0.01;
     int one_mm_steps = 1;
