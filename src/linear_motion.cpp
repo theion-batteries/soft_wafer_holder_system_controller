@@ -22,18 +22,18 @@ linear_motion::linear_motion(std::string ip, uint16_t port)
 
 linear_motion::~linear_motion()
 {
-    if (axis_client_sock != nullptr) delete axis_client_sock;
+    if (_client != nullptr) delete _client;
 
 }
 std::string linear_motion::sendDirectCmd(std::string cmd)
 {
-    if (axis_client_sock == nullptr) return "not connected";
+    if (_client == nullptr) return "not connected";
     std::cout << "sending linear axis command " << cmd << std::endl;
     cmd = cmd + "\r\n";
 
-    if (axis_client_sock->write(cmd) != ssize_t(std::string(cmd).length())) {
+    if (_client->write(cmd) != ssize_t(std::string(cmd).length())) {
         std::cout << "Error writing to the TCP stream: "
-            << axis_client_sock->last_error_str() << std::endl;
+            << _client->last_error_str() << std::endl;
     }
     return waitForResponse();
 }
@@ -41,26 +41,37 @@ std::string linear_motion::sendDirectCmd(std::string cmd)
 std::string linear_motion::waitForResponse()
 {
     std::cout << "awaiting server response" << std::endl;
-    if (axis_client_sock->is_connected())
+    auto start = std::chrono::steady_clock::now();
+    while (_client->is_connected())
     {
+
         char Strholder[5012];
-        ssize_t n = axis_client_sock->read_n(&Strholder, 5012);
+        
+            ssize_t n = _client->read_n(&Strholder, sizeof(Strholder));
         if (n > 0)
         {
             std::cout << "n bytes received: " << n << std::endl;
-            axis_incoming_data = Strholder;
-            axis_incoming_data.resize(n);
-            std::cout << "server replied : " << axis_incoming_data << std::endl;
-            return axis_incoming_data;
+            incoming_data = Strholder;
+            incoming_data.resize(n);
+            std::cout << "server replied : " << incoming_data << std::endl;
+            break;
         }
         else
         {
-            std::cout << "no server response " << n << std::endl;
-            return "NA";
+            std::cout << "no server response, retry " << n << std::endl;
+            incoming_data = "NA";
+            long long timeout = 10;
+            auto duration = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start).count();
+            if(duration >= timeout)
+            {
+            std::cout << "no response within a timeout of "<<duration<< " seconds, " <<"aborting.."<< std::endl;
+            break;
+            } 
+            continue;
         }
 
     }
-    return "NA";
+    return incoming_data;
 }
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::set_center_position(double new_target)
 {
@@ -82,18 +93,18 @@ bool linear_motion::getStatus()
  */
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_to(int new_position)
 {
-    if (new_position < 0) 
+    if (new_position < 0)
     {
-        if(move_down_to(abs(new_position)) == sub_success) return sub_success;
+        if (move_down_to(abs(new_position)) == sub_success) return sub_success;
         return sub_error;
-    } 
+    }
     else
     {
         if(move_up_to(abs(new_position)) == sub_success) return sub_success;
                 return sub_error;
 
     }
-    
+
     return sub_error;
 }
 
@@ -101,22 +112,22 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
 {
     std::cout << "connecting controller to axis server" << std::endl;
     std::cout << "axis server ip:  " << _motion_axis_struct.ip << std::endl;
-    axis_client_sock = new sockpp::tcp_connector({ _motion_axis_struct.ip, _motion_axis_struct.port });
+    _client = new sockpp::tcp_connector({ _motion_axis_struct.ip, _motion_axis_struct.port });
     // Implicitly creates an inet_address from {host,port}
     // and then tries the connection.
-    if (!axis_client_sock->is_connected()) {
+    if (!_client->is_connected()) {
         std::cerr << "Error connecting to axis server at "
             << sockpp::inet_address(_motion_axis_struct.ip, _motion_axis_struct.port)
-            << " -> " << axis_client_sock->last_error_str();
+            << " -> " << _client->last_error_str();
         axisReady = false;
         return wgm_feedbacks::enum_sub_sys_feedback::sub_error;
     }
-    std::cout << "Created a connection from " << axis_client_sock->address() << std::endl;
-    std::cout << "Created a connection to " << axis_client_sock->peer_address() << std::endl;
+    std::cout << "Created a connection from " << _client->address() << std::endl;
+    std::cout << "Created a connection to " << _client->peer_address() << std::endl;
     // Set a timeout for the responses
-    if (!axis_client_sock->read_timeout(std::chrono::seconds(5))) {
+    if (!_client->read_timeout(std::chrono::seconds(5))) {
         std::cerr << "Error setting timeout on TCP stream: "
-            << axis_client_sock->last_error_str() << std::endl;
+            << _client->last_error_str() << std::endl;
         axisReady = false;
         return wgm_feedbacks::enum_sub_sys_feedback::sub_error;
     }
@@ -127,8 +138,11 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
 
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::disconnect()
 {
-    axisReady = false;
-    if (axis_client_sock->close()) return sub_success;
+
+    if (_client->close()) {
+        axisReady = false;
+        return sub_success;
+    }
     return sub_error;
 }
 
@@ -308,10 +322,10 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_center()
     auto command = axis_cmds.find("move");
     if (command != axis_cmds.end()) {
         std::cout << "sending command: " << command->second << '\n';
-        auto reply = sendDirectCmd(command->second);
-        std::cout << "move center reply received " << reply << '\n';
         std::string args = std::to_string(-_motion_axis_struct.max_travel);
         auto cmd = (command->second) + args;
+        auto reply = sendDirectCmd(cmd);
+        std::cout << "move center reply received " << reply << '\n';
         if (reply == "ok") return sub_success;
         return sub_error;
     }

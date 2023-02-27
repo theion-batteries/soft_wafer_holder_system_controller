@@ -38,23 +38,23 @@
 #include "linear_motion.h"
 #endif
 using enum wgm_feedbacks::enum_hw_feedback;
-using enum wgm_feedbacks::enum_sub_sys_feedback; 
+using enum wgm_feedbacks::enum_sub_sys_feedback;
 struct whs_config_yaml_params
 {
-    double mm_steps=50; // distance to move down  default 10 mm
-    DWORD delay_to_move_request=2000; // wait between move request  default 2000ms
-    double ref_dis=130;// parameter calibration sensor  default 
-    double thickness=0.1; // thickness of wafer holder default 0.1mm
-    double mm_step_res= 0.01;
+    double mm_steps = 50; // distance to move down  default 10 mm
+    DWORD delay_to_move_request = 2000; // wait between move request  default 2000ms
+    double ref_dis = 138;// parameter calibration sensor  default 
+    double thickness = 0.1; // thickness of wafer holder default 0.1mm
+    double mm_step_res = 0.01;
     int one_mm_steps = 1;
     int MaxSafePos = 130;
     double wafer_travel = 100;                                     // used-- > // should be determined using the keyence sensor in the future
     double wafer_max_travel = 130;                                      // used // DO NOT CHANGE IF YOU DONT KNOW WHAT YOU#RE DOING
     double wafer_max_speed = 800;
-    std::string motion_server_ip= "192.168.0.209";
-    uint16_t motion_server_port= 8882;
-    std::string distance_sensor_server_ip= "192.168.0.104";
-    uint16_t distance_sensor_server_port= 6555;
+    std::string motion_server_ip = "192.168.0.209";
+    uint16_t motion_server_port = 8882;
+    std::string distance_sensor_server_ip = "192.168.0.104";
+    uint16_t distance_sensor_server_port = 6555;
 };
 
 class whs_controller
@@ -70,6 +70,7 @@ class whs_controller
     bool calibrate = false;
 public:
     /******* const/desctr ****/
+    whs_controller(std::string ip_motion, uint16_t port_motion, std::string ip_keyence, uint16_t port_keyence);
     whs_controller();
     ~whs_controller();
     /******** algorithms controller **********/
