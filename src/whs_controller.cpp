@@ -37,6 +37,7 @@ whs_controller::whs_controller()
     _whs_params.motion_server_port = config["motion_server_port"].as<uint16_t>();
     _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>();
     _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
+    _whs_params.timeout = config["timeout"].as<uint16_t>();
 
     std::cout << "axis server ip:  " << _whs_params.motion_server_ip << std::endl;
     std::cout << "keyence server ip:  " << _whs_params.distance_sensor_server_ip << std::endl;
@@ -51,7 +52,7 @@ whs_controller::whs_controller()
 #ifdef SINK_AXIS_MOCK
     linearMover = std::make_shared< axisMock>();
 #else
-    linearMover = std::make_shared< linear_motion>(_whs_params.motion_server_ip, _whs_params.motion_server_port);
+    linearMover = std::make_shared< linear_motion>(_whs_params.motion_server_ip, _whs_params.motion_server_port,_whs_params.timeout);
 #endif
 }
 whs_controller::whs_controller(std::string ip_motion, uint16_t port_motion, std::string ip_keyence, uint16_t port_keyence)
@@ -79,6 +80,7 @@ whs_controller::whs_controller(std::string ip_motion, uint16_t port_motion, std:
     // _whs_params.motion_server_port = config["motion_server_port"].as<uint16_t>();
    //  _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>();
    //  _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
+    _whs_params.timeout = config["timeout"].as<uint16_t>();
 
     std::cout << "axis server ip:  " << _whs_params.motion_server_ip << std::endl;
     std::cout << "keyence server ip:  " << _whs_params.distance_sensor_server_ip << std::endl;
@@ -93,7 +95,7 @@ whs_controller::whs_controller(std::string ip_motion, uint16_t port_motion, std:
 #ifdef SINK_AXIS_MOCK
     linearMover = std::make_shared< axisMock>();
 #else
-    linearMover = std::make_shared< linear_motion>(ip_motion, port_motion);
+    linearMover = std::make_shared< linear_motion>(ip_motion, port_motion, _whs_params.timeout);
 #endif
 }
 /**
@@ -126,6 +128,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::reload_config_file()
     _whs_params.motion_server_port = config["motion_server_port"].as<uint16_t>();
     _whs_params.distance_sensor_server_ip = config["distance_sensor_server_ip"].as<std::string>().c_str();
     _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
+    _whs_params.timeout = config["timeout"].as<uint16_t>();
 
     return sub_success;
 
@@ -149,6 +152,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::reset_config_file() // set 
     config["motion_server_port"] = _whs_params.motion_server_port;
     config["distance_sensor_server_ip"] = _whs_params.distance_sensor_server_ip;
     config["distance_sensor_server_port"] = _whs_params.distance_sensor_server_port;
+    config["timeout"] = _whs_params.timeout;
 
     std::ofstream fout(WHS_CONFIG);
     fout << config;

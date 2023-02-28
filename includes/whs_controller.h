@@ -55,6 +55,8 @@ struct whs_config_yaml_params
     uint16_t motion_server_port = 8882;
     std::string distance_sensor_server_ip = "192.168.0.104";
     uint16_t distance_sensor_server_port = 6555;
+    uint16_t timeout = 10;
+
 };
 
 class whs_controller

@@ -31,6 +31,8 @@ struct whs_axis_motion_server
     double max_travel = 130;
     double wafer_travel = 100 ;       //# used --> # should be determined using the keyence sensor in the future
     double wafer_max_speed = 800  ;   //# used
+    uint16_t timeout = 10;
+
 };
 
 
@@ -51,7 +53,7 @@ private:
     std::string incoming_data;
     size_t axis_data_length = 5012;
 public:
-    linear_motion(std::string ip, uint16_t port);
+    linear_motion(std::string ip, uint16_t port, const uint16_t timeout);
     virtual ~linear_motion();
     virtual wgm_feedbacks::enum_sub_sys_feedback move_home() override;
     virtual wgm_feedbacks::enum_sub_sys_feedback move_to(int new_position) override;
@@ -60,6 +62,9 @@ public:
     wgm_feedbacks::enum_sub_sys_feedback set_center_position(double new_target) ;
     double get_position() override;
     double get_speed() override;
+    virtual wgm_feedbacks::enum_sub_sys_feedback pause() override;
+    virtual wgm_feedbacks::enum_sub_sys_feedback resume() override;
+    virtual std::string get_settings() override;
     wgm_feedbacks::enum_sub_sys_feedback set_speed(double_t new_val) override;
     wgm_feedbacks::enum_sub_sys_feedback move_up_to(double_t new_pos) override;
     wgm_feedbacks::enum_sub_sys_feedback move_down_to(double_t new_pos) override;
