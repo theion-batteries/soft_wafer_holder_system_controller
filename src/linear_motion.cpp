@@ -13,11 +13,12 @@
 #include <mutex>
 #include <string.h>
 
-linear_motion::linear_motion(std::string ip, uint16_t port)
+linear_motion::linear_motion(std::string ip, uint16_t port, const uint16_t timeout)
 {
     std::cout << "creating linear axis client" << std::endl;
     _motion_axis_struct.ip = ip;
     _motion_axis_struct.port = port;
+    _motion_axis_struct.timeout = timeout;
 }
 
 linear_motion::~linear_motion()
@@ -27,6 +28,8 @@ linear_motion::~linear_motion()
 }
 std::string linear_motion::sendDirectCmd(std::string cmd)
 {
+            if (blocking) _client->set_non_blocking(false);
+
     if (_client == nullptr) return "not connected";
     std::cout << "sending linear axis command " << cmd << std::endl;
     cmd = cmd + "\r\n";
@@ -60,7 +63,7 @@ std::string linear_motion::waitForResponse()
         {
             std::cout << "no server response, retry " << n << std::endl;
             incoming_data = "NA";
-            long long timeout = 10;
+            long long timeout = _motion_axis_struct.timeout;
             auto duration = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start).count();
             if(duration >= timeout)
             {
@@ -69,8 +72,9 @@ std::string linear_motion::waitForResponse()
             } 
             continue;
         }
-
     }
+    blocking = false;
+    _client->set_non_blocking(true);
     return incoming_data;
 }
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::set_center_position(double new_target)
@@ -113,6 +117,8 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
     std::cout << "connecting controller to axis server" << std::endl;
     std::cout << "axis server ip:  " << _motion_axis_struct.ip << std::endl;
     _client = new sockpp::tcp_connector({ _motion_axis_struct.ip, _motion_axis_struct.port });
+    _client->set_non_blocking();
+    
     // Implicitly creates an inet_address from {host,port}
     // and then tries the connection.
     if (!_client->is_connected()) {
@@ -154,19 +160,27 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::disconnect()
  */
 double linear_motion::get_position()
 {
+            _client->set_non_blocking(false);
+
     double axis_pos = 0;
     std::cout << "get axis curent position" << std::endl;
     auto command = axis_cmds.find("get_position");
     std::cout << "sending command: " << command->second << '\n';
-
     auto resp = sendDirectCmd(command->second);
-
     std::string extracted = resp.substr(resp.find_first_of(":") + 1, resp.find_first_of(",") - 1 - resp.find_first_of(":"));
-    axis_pos = std::stod(extracted); // to double
-    std::cout << "filter val : " << axis_pos << std::endl;
-    axis_last_position.push_front(axis_pos); // add to table
-    std::cout << "value added to table " << axis_last_position.front() << std::endl;
-    return axis_pos;
+    try
+    {
+        axis_pos = std::stod(extracted); // to double
+        std::cout << "filter val : " << axis_pos << std::endl;
+        axis_last_position.push_front(axis_pos); // add to table
+        std::cout << "value added to table " << axis_last_position.front() << std::endl;
+    }
+    catch (std::exception &e)
+    {
+        std::cerr << "Exception caught in getting position " << __FILE__ << " " << __LINE__ << " " << e.what() << "\n";
+    }  
+  
+   return axis_pos;
 }
 /**
  * @brief
@@ -190,6 +204,8 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_home()
  */
 double linear_motion::get_speed()
 {
+        _client->set_non_blocking(false);
+
     double speed = 0;
     std::cout << "get axis curent spped" << std::endl;
     auto command = axis_cmds.find("get_setting");
@@ -209,7 +225,6 @@ double linear_motion::get_speed()
             auto rep = resp.substr(found1 + 5, found2);
             std::cout << "Substring found " << rep << std::endl;
             return rep;
-
         }
         else {
             std::cout << "Substring not found" << std::endl;
@@ -343,4 +358,70 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::unlock()
         return sub_error;
     }
     return sub_error;
+}
+
+/**
+ * @brief
+ *
+ */
+wgm_feedbacks::enum_sub_sys_feedback linear_motion::pause()
+{
+    auto command = axis_cmds.find("pause");
+    if (command != axis_cmds.end())
+    {
+        std::cout << "sending command: " << command->second << '\n';
+        auto reply = sendDirectCmd(command->second);
+        std::cout << "unlock reply received " << reply << '\n';
+        if (reply == "ok")
+            return sub_success;
+        return sub_error;
+    }
+    return sub_error;
+}
+
+/**
+ * @brief
+ *
+ */
+wgm_feedbacks::enum_sub_sys_feedback linear_motion::resume()
+{
+    auto command = axis_cmds.find("resume");
+    if (command != axis_cmds.end())
+    {
+        std::cout << "sending command: " << command->second << '\n';
+        auto reply = sendDirectCmd(command->second);
+        std::cout << "unlock reply received " << reply << '\n';
+        if (reply == "ok")
+            return sub_success;
+        return sub_error;
+    }
+    return sub_error;
+}
+
+/**
+ * @brief
+ *
+ */
+std::string linear_motion::get_settings()
+{
+        _client->set_non_blocking(false);
+
+    std::cout << "get axis curent speed" << std::endl;
+    auto command = axis_cmds.find("get_setting");
+    std::cout << "sending command: " << command->second << '\n';
+
+    auto resp = sendDirectCmd(command->second);
+        _client->set_non_blocking(true);
+
+    if (!resp.find("ok"))
+    {
+        std::cout << "missing ok, error" << std::endl;
+        return "NA";
+    }
+    return resp;
+}
+
+void linear_motion::setModeBlocking(bool setblockingMode)
+{
+    if (setblockingMode) blocking = true;
 }

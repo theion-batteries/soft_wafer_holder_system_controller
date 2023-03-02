@@ -7,7 +7,7 @@ protected:
     Iaxis_motion* mover_ ;
 
     void SetUp() override {
-       mover_ = new linear_motion("127.0.0.1", 8882);
+       mover_ = new linear_motion("127.0.0.1", 8882,10);
        mover_->connect();
     }
 

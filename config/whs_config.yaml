@@ -15,3 +15,4 @@ mm_step_res: 0.01 # the lowest step resolution for axis mechanism: default 0.01 
 wafer_travel : 100                                          # used --> # should be determined using the keyence sensor in the future
 wafer_max_travel : 130                                      # used # DO NOT CHANGE IF YOU DONT KNOW WHAT YOU#RE DOING
 wafer_max_speed : 800                                       # used
+timeout: 10  
