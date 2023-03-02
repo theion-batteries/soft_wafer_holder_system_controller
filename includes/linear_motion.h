@@ -52,6 +52,8 @@ private:
     std::deque<double> axis_last_position; // FIFO last 10 values
     std::string incoming_data;
     size_t axis_data_length = 5012;
+    static inline bool blocking = false;
+
 public:
     linear_motion(std::string ip, uint16_t port, const uint16_t timeout);
     virtual ~linear_motion();
@@ -75,6 +77,8 @@ public:
     std::string waitForResponse();
     wgm_feedbacks::enum_sub_sys_feedback move_center();
     wgm_feedbacks::enum_sub_sys_feedback unlock();
+    static void setModeBlocking(bool setblockingMode);
+
 };
 
 
