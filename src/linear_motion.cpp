@@ -19,8 +19,8 @@ linear_motion::linear_motion(std::string ip, uint16_t port, const uint16_t timeo
     _motion_axis_struct.ip = ip;
     _motion_axis_struct.port = port;
     _motion_axis_struct.timeout = timeout;
-
 }
+
 linear_motion::~linear_motion()
 {
     if (_client != nullptr) delete _client;
@@ -104,8 +104,8 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_to(int new_position)
     }
     else
     {
-        if (move_down_to(abs(new_position)) == sub_success) return sub_success;
-        return sub_error;
+        if(move_up_to(abs(new_position)) == sub_success) return sub_success;
+                return sub_error;
 
     }
 
