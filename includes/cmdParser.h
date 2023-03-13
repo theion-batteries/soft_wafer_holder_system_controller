@@ -21,21 +21,21 @@ private:
     char* AppName = values[5];
 public:
     cmdParser(int args, char* args_values[5]) : args(args) {
-        std::cout << "getting command line args" << std::endl;
+        std::cout << "getting command line args" << "\n";
         for (int i = 0; i < args; i++)
         {
-            std::cout << "passing array content internally: "<< args_values[i]<< std::endl;
+            std::cout << "passing array content internally: "<< args_values[i]<< "\n";
             values[i] = args_values[i];
         }
     }
     double parse_arg_float(std::string Sarg)
     {
-        std::cout << "getting value arg " << Sarg << std::endl;
+        std::cout << "getting value arg " << Sarg << "\n";
         for (int arg = 0; arg < args; arg++)
         {
             if (Sarg == values[arg]) // we found this arg
             {
-                std::cout << "value arg " << Sarg << " is " << values[arg + 1] << std::endl;
+                std::cout << "value arg " << Sarg << " is " << values[arg + 1] << "\n";
                 return std::stod(std::string(values[arg + 1]));// return its value
             }
         }

@@ -51,12 +51,12 @@ int main(int argc, char* argv[]) {
 		case SEND_CMD:
 			std::cout << "Enter command: ";
 			std::cin >> cmd;
-			std::cout << wafer_sys_control.sendDirectCmdAxis(cmd) << std::endl;
+			std::cout << wafer_sys_control.sendDirectCmdAxis(cmd) << "\n";
 			break;
 		case CHANGE_IP:
 			std::cout << "Enter IP: ";
 			std::cin >> ip;
-			std::cout << "New IP: " << ip << std::endl;
+			std::cout << "New IP: " << ip << "\n";
 			break;
 		case RUN_ALGO1:
 			wafer_sys_control.move_down_until_data_availble();
