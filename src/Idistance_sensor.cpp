@@ -22,7 +22,7 @@ void Idistance_sensor::sendCmd(std::string& cmd, sockpp::tcp_connector* client, 
 {
     if (client->write(cmd + args) != ssize_t(std::string(cmd + args).length())) {
         std::cerr << "Error writing to the TCP stream: "
-            << client->last_error_str() << std::endl;
+            << client->last_error_str() << "\n";
     }
-    std::cout << "command " << cmd + args << " sent" << std::endl;
+    std::cout << "command " << cmd + args << " sent" << "\n";
 }

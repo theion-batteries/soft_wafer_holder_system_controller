@@ -15,7 +15,7 @@
 
 linear_motion::linear_motion(std::string ip, uint16_t port, const uint16_t timeout)
 {
-    std::cout << "creating linear axis client" << std::endl;
+    std::cout << "creating linear axis client" << "\n";
     _motion_axis_struct.ip = ip;
     _motion_axis_struct.port = port;
     _motion_axis_struct.timeout = timeout;
@@ -31,19 +31,19 @@ std::string linear_motion::sendDirectCmd(std::string cmd)
             if (blocking) _client->set_non_blocking(false);
 
     if (_client == nullptr) return "not connected";
-    std::cout << "sending linear axis command " << cmd << std::endl;
+    std::cout << "sending linear axis command " << cmd << "\n";
     cmd = cmd + "\r\n";
 
     if (_client->write(cmd) != ssize_t(std::string(cmd).length())) {
         std::cout << "Error writing to the TCP stream: "
-            << _client->last_error_str() << std::endl;
+            << _client->last_error_str() << "\n";
     }
     return waitForResponse();
 }
 
 std::string linear_motion::waitForResponse()
 {
-    std::cout << "awaiting server response" << std::endl;
+    // std::cout << "awaiting server response" << "\n";
     auto start = std::chrono::steady_clock::now();
     while (_client->is_connected())
     {
@@ -53,21 +53,21 @@ std::string linear_motion::waitForResponse()
             ssize_t n = _client->read_n(&Strholder, sizeof(Strholder));
         if (n > 0)
         {
-            std::cout << "n bytes received: " << n << std::endl;
+            std::cout << "n bytes received: " << n << "\n";
             incoming_data = Strholder;
             incoming_data.resize(n);
-            std::cout << "server replied : " << incoming_data << std::endl;
+            std::cout << "server replied : " << incoming_data << "\n";
             break;
         }
         else
         {
-            std::cout << "no server response, retry " << n << std::endl;
+            // std::cout << "no server response, retry " << n << "\n";
             incoming_data = "NA";
             long long timeout = _motion_axis_struct.timeout;
             auto duration = std::chrono::duration_cast<std::chrono::seconds>(std::chrono::steady_clock::now() - start).count();
             if(duration >= timeout)
             {
-            std::cout << "no response within a timeout of "<<duration<< " seconds, " <<"aborting.."<< std::endl;
+            std::cout << "no response within a timeout of "<<duration<< " seconds, " <<"aborting.."<< "\n";
             break;
             } 
             continue;
@@ -114,8 +114,8 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_to(int new_position)
 
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
 {
-    std::cout << "connecting controller to axis server" << std::endl;
-    std::cout << "axis server ip:  " << _motion_axis_struct.ip << std::endl;
+    std::cout << "connecting controller to axis server" << "\n";
+    std::cout << "axis server ip:  " << _motion_axis_struct.ip << "\n";
     _client = new sockpp::tcp_connector({ _motion_axis_struct.ip, _motion_axis_struct.port });
     _client->set_non_blocking();
     
@@ -128,12 +128,12 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::connect()
         axisReady = false;
         return wgm_feedbacks::enum_sub_sys_feedback::sub_error;
     }
-    std::cout << "Created a connection from " << _client->address() << std::endl;
-    std::cout << "Created a connection to " << _client->peer_address() << std::endl;
+    std::cout << "Created a connection from " << _client->address() << "\n";
+    std::cout << "Created a connection to " << _client->peer_address() << "\n";
     // Set a timeout for the responses
     if (!_client->read_timeout(std::chrono::seconds(5))) {
         std::cerr << "Error setting timeout on TCP stream: "
-            << _client->last_error_str() << std::endl;
+            << _client->last_error_str() << "\n";
         axisReady = false;
         return wgm_feedbacks::enum_sub_sys_feedback::sub_error;
     }
@@ -163,7 +163,7 @@ double linear_motion::get_position()
             _client->set_non_blocking(false);
 
     double axis_pos = 0;
-    std::cout << "get axis curent position" << std::endl;
+    std::cout << "get axis curent position" << "\n";
     auto command = axis_cmds.find("get_position");
     std::cout << "sending command: " << command->second << '\n';
     auto resp = sendDirectCmd(command->second);
@@ -171,9 +171,9 @@ double linear_motion::get_position()
     try
     {
         axis_pos = std::stod(extracted); // to double
-        std::cout << "filter val : " << axis_pos << std::endl;
+        std::cout << "filter val : " << axis_pos << "\n";
         axis_last_position.push_front(axis_pos); // add to table
-        std::cout << "value added to table " << axis_last_position.front() << std::endl;
+        std::cout << "value added to table " << axis_last_position.front() << "\n";
     }
     catch (std::exception &e)
     {
@@ -207,14 +207,14 @@ double linear_motion::get_speed()
         _client->set_non_blocking(false);
 
     double speed = 0;
-    std::cout << "get axis curent spped" << std::endl;
+    std::cout << "get axis curent spped" << "\n";
     auto command = axis_cmds.find("get_setting");
     std::cout << "sending command: " << command->second << '\n';
 
     auto resp = sendDirectCmd(command->second);
     if (!resp.find("ok"))
     {
-        std::cout << "missing ok, error" << std::endl;
+        std::cout << "missing ok, error" << "\n";
         return 0;
     }
     //$110=800.000
@@ -223,21 +223,21 @@ double linear_motion::get_speed()
         size_t found2 = resp.find("$111=");
         if (found1 != std::string::npos && found2 != std::string::npos) {
             auto rep = resp.substr(found1 + 5, found2);
-            std::cout << "Substring found " << rep << std::endl;
+            std::cout << "Substring found " << rep << "\n";
             return rep;
         }
         else {
-            std::cout << "Substring not found" << std::endl;
+            std::cout << "Substring not found" << "\n";
             return std::string("0");
         }
     }(); // Note the added semicolon here
     speed = std::stod(extracted); // to double
-    std::cout << "filter val : " << speed << std::endl;
+    std::cout << "filter val : " << speed << "\n";
     return speed;
 }
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::set_speed(double_t new_val)
 {
-    std::cout << "set  axis curent spped" << std::endl;
+    std::cout << "set  axis curent spped" << "\n";
     auto command = axis_cmds.find("set_speed");
     if (command != axis_cmds.end()) {
         std::cout << "sending command: " << command->second << " args: " << new_val << '\n';
@@ -253,7 +253,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::set_speed(double_t new_val)
 }
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_up_to(double_t new_pos)
 {
-    std::cout << "moving up by " << new_pos << std::endl;
+    std::cout << "moving up by " << new_pos << "\n";
     auto command = axis_cmds.find("move");
     if (command != axis_cmds.end()) {
         std::cout << "sending command: " << command->second << " args: " << new_pos << '\n';
@@ -269,7 +269,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_up_to(double_t new_pos)
 }
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_down_to(double_t new_pos)
 {
-    std::cout << "moving down to " << new_pos << std::endl;
+    std::cout << "moving down to " << new_pos << "\n";
     auto command = axis_cmds.find("move");
     if (command != axis_cmds.end()) {
         std::cout << "sending command: " << command->second << " args: " << new_pos << '\n';
@@ -290,7 +290,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_down_to(double_t new_po
  */
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_up_by(double_t steps)
 {
-    std::cout << "moving up by " << steps << std::endl;
+    std::cout << "moving up by " << steps << "\n";
     auto command = axis_cmds.find("move");
     if (command != axis_cmds.end()) {
         std::cout << "sending command: " << command->second << " args: " << steps << '\n';
@@ -313,7 +313,7 @@ wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_up_by(double_t steps)
 wgm_feedbacks::enum_sub_sys_feedback linear_motion::move_down_by(double_t steps)
 {
 
-    std::cout << "moving down by " << steps << std::endl;
+    std::cout << "moving down by " << steps << "\n";
     auto command = axis_cmds.find("move");
     if (command != axis_cmds.end()) {
         std::cout << "sending command: " << command->second << " args: " << steps << '\n';
@@ -406,7 +406,7 @@ std::string linear_motion::get_settings()
 {
         _client->set_non_blocking(false);
 
-    std::cout << "get axis curent speed" << std::endl;
+    std::cout << "get axis curent speed" << "\n";
     auto command = axis_cmds.find("get_setting");
     std::cout << "sending command: " << command->second << '\n';
 
@@ -415,7 +415,7 @@ std::string linear_motion::get_settings()
 
     if (!resp.find("ok"))
     {
-        std::cout << "missing ok, error" << std::endl;
+        std::cout << "missing ok, error" << "\n";
         return "NA";
     }
     return resp;
