@@ -3,18 +3,18 @@
 
 keyence_sensor::keyence_sensor(/* args */)
 {
-    std::cout << "creating keyence client" << std::endl;
+    std::cout << "creating keyence client" << "\n";
 
 }
 keyence_sensor::keyence_sensor(std::string ip, uint16_t port)
 {
 
-    std::cout << "creating keyence client" << std::endl;
+    std::cout << "creating keyence client" << "\n";
 
     _keyence_struct.ip = ip;
     _keyence_struct.port = port;
     Kclient = new keyence_client(_keyence_struct.ip);
-    std::cout << "keyence server port:  " << _keyence_struct.port << std::endl;
+    std::cout << "keyence server port:  " << _keyence_struct.port << "\n";
 
 }
 
@@ -50,7 +50,7 @@ double keyence_sensor::getMesuredValue()
  */
 wgm_feedbacks::enum_sub_sys_feedback keyence_sensor::connect()
 {
-    std::cout << "Running keyence client " << std::endl;
+    std::cout << "Running keyence client " << "\n";
     wgm_feedbacks::enum_hw_feedback Keyence_feedback = Kclient->connect();
     if (Keyence_feedback == wgm_feedbacks::enum_hw_feedback::hw_success)
     {
@@ -70,12 +70,12 @@ wgm_feedbacks::enum_sub_sys_feedback keyence_sensor::connect()
  */
 double  keyence_sensor::keyence_client_get_value_output0()
 {
-    std::cout << "get reading keyence sensor output0" << std::endl;
+    std::cout << "get reading keyence sensor output0" << "\n";
     if (keyence_last_mesured_output0.size() > 10) keyence_last_mesured_output0.pop_back(); // remove last if 10
     double current_value = Kclient->get_value_output(0);
     if (current_value == 0) return 0;
     keyence_last_mesured_output0.push_back(current_value); // add to table
-    std::cout << "value added to table " << keyence_last_mesured_output0.front() << std::endl;
+    std::cout << "value added to table " << keyence_last_mesured_output0.front() << "\n";
     return current_value;
 
 }
@@ -88,12 +88,12 @@ double  keyence_sensor::keyence_client_get_value_output0()
 double  keyence_sensor::keyence_client_get_value_output1()
 {
 
-    std::cout << "get reading keyence sensor output1" << std::endl;
+    std::cout << "get reading keyence sensor output1" << "\n";
     if (keyence_last_mesured_output1.size() > 10) keyence_last_mesured_output1.pop_back(); // remove last if 10
     double current_value = Kclient->get_value_output(1);
     if (current_value == 0) return 0;
     keyence_last_mesured_output1.push_back(current_value); // add to table
-    std::cout << "value added to table " << keyence_last_mesured_output1.front() << std::endl;
+    std::cout << "value added to table " << keyence_last_mesured_output1.front() << "\n";
     return current_value;
 
 }
@@ -105,12 +105,12 @@ double  keyence_sensor::keyence_client_get_value_output1()
 double  keyence_sensor::keyence_client_get_value_output2()
 {
 
-    std::cout << "get reading keyence sensor output2" << std::endl;
+    std::cout << "get reading keyence sensor output2" << "\n";
     if (keyence_last_mesured_output2.size() > 10) keyence_last_mesured_output2.pop_back(); // remove last if 10
     double current_value = Kclient->get_value_output(2);
     if (current_value == 0) return 0;
     keyence_last_mesured_output2.push_back(current_value); // add to table
-    std::cout << "value added to table " << keyence_last_mesured_output2.front() << std::endl;
+    std::cout << "value added to table " << keyence_last_mesured_output2.front() << "\n";
     return current_value;
 
 }
@@ -118,7 +118,7 @@ double  keyence_sensor::keyence_client_get_value_output2()
 double  keyence_sensor::keyence_client_get_value_output_all()
 {
 
-    std::cout << "get reading keyence sensor all ouputs" << std::endl;
+    std::cout << "get reading keyence sensor all ouputs" << "\n";
     double current_value = Kclient->get_value_all();
     if (current_value == 0) return 0;
     return current_value;

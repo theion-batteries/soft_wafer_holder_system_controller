@@ -14,13 +14,13 @@
 
 whs_controller::whs_controller()
 {
-    std::cout << "creating subsystem wafer holder motion controller " << std::endl;
+    std::cout << "creating subsystem wafer holder motion controller " << "\n";
 #ifdef WHS_CONFIG
-    std::cout << "loading config file: " << WHS_CONFIG << std::endl;
+    std::cout << "loading config file: " << WHS_CONFIG << "\n";
     std::ifstream filein(WHS_CONFIG);
     //for (std::string line; std::getline(filein, line); )
     //{
-    //    std::cout << line << std::endl;
+    //    std::cout << line << "\n";
     //}
     config = YAML::LoadFile(WHS_CONFIG);
 
@@ -39,8 +39,8 @@ whs_controller::whs_controller()
     _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
     _whs_params.timeout = config["timeout"].as<uint16_t>();
 
-    std::cout << "axis server ip:  " << _whs_params.motion_server_ip << std::endl;
-    std::cout << "keyence server ip:  " << _whs_params.distance_sensor_server_ip << std::endl;
+    std::cout << "axis server ip:  " << _whs_params.motion_server_ip << "\n";
+    std::cout << "keyence server ip:  " << _whs_params.distance_sensor_server_ip << "\n";
 
 #endif 
 #ifdef SINK_SENSOR_MOCK
@@ -57,13 +57,13 @@ whs_controller::whs_controller()
 }
 whs_controller::whs_controller(std::string ip_motion, uint16_t port_motion, std::string ip_keyence, uint16_t port_keyence)
 {
-    std::cout << "creating subsystem wafer holder motion controller " << std::endl;
+    std::cout << "creating subsystem wafer holder motion controller " << "\n";
 #ifdef WHS_CONFIG
-    std::cout << "loading config file: " << WHS_CONFIG << std::endl;
+    std::cout << "loading config file: " << WHS_CONFIG << "\n";
     std::ifstream filein(WHS_CONFIG);
     //for (std::string line; std::getline(filein, line); )
     //{
-    //    std::cout << line << std::endl;
+    //    std::cout << line << "\n";
     //}
     config = YAML::LoadFile(WHS_CONFIG);
 
@@ -82,8 +82,8 @@ whs_controller::whs_controller(std::string ip_motion, uint16_t port_motion, std:
    //  _whs_params.distance_sensor_server_port = config["distance_sensor_server_port"].as<uint16_t>();
     _whs_params.timeout = config["timeout"].as<uint16_t>();
 
-    std::cout << "axis server ip:  " << _whs_params.motion_server_ip << std::endl;
-    std::cout << "keyence server ip:  " << _whs_params.distance_sensor_server_ip << std::endl;
+    std::cout << "axis server ip:  " << _whs_params.motion_server_ip << "\n";
+    std::cout << "keyence server ip:  " << _whs_params.distance_sensor_server_ip << "\n";
 
 #endif 
 #ifdef SINK_SENSOR_MOCK
@@ -108,11 +108,11 @@ whs_controller::~whs_controller()
 
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::reload_config_file()
 {
-    std::cout << "reloading config file: " << WHS_CONFIG << std::endl;
+    std::cout << "reloading config file: " << WHS_CONFIG << "\n";
     std::ifstream filein(WHS_CONFIG);
     for (std::string line; std::getline(filein, line); )
     {
-        std::cout << line << std::endl;
+        std::cout << line << "\n";
     }
     config = YAML::LoadFile(WHS_CONFIG);
 
@@ -137,7 +137,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::reload_config_file()
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::reset_config_file() // set config file params to default
 {
 
-    std::cout << "resetting config file: " << WHS_CONFIG << std::endl;
+    std::cout << "resetting config file: " << WHS_CONFIG << "\n";
     config = YAML::LoadFile(WHS_CONFIG);
 
     config["mm_steps"] = _whs_params_default.mm_steps;
@@ -160,7 +160,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::reset_config_file() // set 
     std::ifstream filein(WHS_CONFIG);
     for (std::string line; std::getline(filein, line); )
     {
-        std::cout << line << std::endl;
+        std::cout << line << "\n";
     }
     return sub_success;
 
@@ -198,25 +198,25 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_until_data_availb
 
     // if (!waferHolderReady) return sub_error;
 
-    std::cout << "<----------------------------------------------> " << std::endl;
-    std::cout << "algorithm move down until data valid launched" << std::endl;
+    std::cout << "<----------------------------------------------> " << "\n";
+    std::cout << "algorithm move down until data valid launched" << "\n";
 
     current_axis_position = linearMover->get_position();
 
-    std::cout << "axis start pos:  " << current_axis_position << std::endl;
+    std::cout << "axis start pos:  " << current_axis_position << "\n";
 
     while (distSensor->getMesuredValue() == 0) // while data invalid, we go down further
     {
 
         if (abs(current_axis_position) >= _whs_params.MaxSafePos) break; // break condition            
-        std::cout << "moving down by " << _whs_params.mm_steps << "mm_steps until reading values " << std::endl;
+        std::cout << "moving down by " << _whs_params.mm_steps << "mm_steps until reading values " << "\n";
         linearMover->move_down_to(abs(current_axis_position - _whs_params.mm_steps)); // move down by mm steps
         current_axis_position = current_axis_position - _whs_params.mm_steps;
-        std::cout << "new axis position " << current_axis_position << std::endl;
+        std::cout << "new axis position " << current_axis_position << "\n";
 
     }
-    std::cout << "algorithm finished succeffuly " << std::endl;
-    std::cout << "<----------------------------------------------> " << std::endl;
+    std::cout << "algorithm finished succeffuly " << "\n";
+    std::cout << "<----------------------------------------------> " << "\n";
     return sub_success;
 
 
@@ -231,31 +231,31 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_to_surface()
 
     // if (!waferHolderReady) return sub_error;
 
-    std::cout << "<----------------------------------------------> " << std::endl;
-    std::cout << "algorithm surface contact launched" << std::endl;
+    std::cout << "<----------------------------------------------> " << "\n";
+    std::cout << "algorithm surface contact launched" << "\n";
 
-    std::cout << "moving down to surface" << std::endl;
+    std::cout << "moving down to surface" << "\n";
     current_axis_position = linearMover->get_position();
-    std::cout << "current pos:  " << current_axis_position << std::endl;
-    std::cout << "while distance mesured:  " << distSensor->getMesuredValue() << "bigger then " << _whs_params.ref_dis<< std::endl;
+    std::cout << "current pos:  " << current_axis_position << "\n";
+    std::cout << "while distance mesured:  " << distSensor->getMesuredValue() << "bigger then " << _whs_params.ref_dis<< "\n";
 
     while (distSensor->getMesuredValue() >= _whs_params.ref_dis) // while distSensor reading is <= to reference distance
     {
         if (abs(current_axis_position) >= _whs_params.MaxSafePos) {
-            std::cout << "abs current pos:  " << abs(current_axis_position) << "bigger then " << _whs_params.MaxSafePos << std::endl;
-            std::cout << "aborting" << std::endl;
+            std::cout << "abs current pos:  " << abs(current_axis_position) << "bigger then " << _whs_params.MaxSafePos << "\n";
+            std::cout << "aborting" << "\n";
             break; // break condition    
         }
 
-        std::cout << "moving down until sensor reading is equal the refernce distance: " << _whs_params.ref_dis << std::endl;
-        std::cout << "moving down by " << _whs_params.one_mm_steps << std::endl;
+        std::cout << "moving down until sensor reading is equal the refernce distance: " << _whs_params.ref_dis << "\n";
+        std::cout << "moving down by " << _whs_params.one_mm_steps << "\n";
         linearMover->move_down_to(abs(current_axis_position - _whs_params.one_mm_steps)); // move down by mm steps
         current_axis_position = current_axis_position - _whs_params.one_mm_steps;
-        std::cout << "new axis position " << current_axis_position << std::endl;
+        std::cout << "new axis position " << current_axis_position << "\n";
     }
-    //std::cout << "sensor value: " << distSensor->getMesuredValue() << std::endl;
-    std::cout << "algorithm finished succeffuly " << std::endl;
-    std::cout << "<----------------------------------------------> " << std::endl;
+    //std::cout << "sensor value: " << distSensor->getMesuredValue() << "\n";
+    std::cout << "algorithm finished succeffuly " << "\n";
+    std::cout << "<----------------------------------------------> " << "\n";
     return sub_success;
 
 }
@@ -267,15 +267,15 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::move_down_to_surface()
  */
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::deep_wafer_holder_desired_thickness() //default to 0.01 mm_step x 10 steps= 0.1mm or 100µm
 {
-    std::cout << "algorithm deeping launched " << std::endl;
-    std::cout << "<----------------------------------------------> " << std::endl;
+    std::cout << "algorithm deeping launched " << "\n";
+    std::cout << "<----------------------------------------------> " << "\n";
     auto steps = _whs_params.thickness / _whs_params.mm_step_res;
     current_axis_position = get_axis_position();
     for (unsigned int step_counter = 0; step_counter < steps; step_counter++)
     {
         if (abs(current_axis_position) >= _whs_params.MaxSafePos) break; // break condition            
 
-        std::cout << "iteration number " << step_counter << std::endl;
+        std::cout << "iteration number " << step_counter << "\n";
         linearMover->move_down_to(abs(current_axis_position - _whs_params.mm_step_res)); // move mm step default 0.01 mm
         current_axis_position -= _whs_params.mm_step_res;
         // distSensor->getMesuredValue();
@@ -286,8 +286,8 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::deep_wafer_holder_desired_t
     waferHolderReady = true;
     // TODO: on success, calibrate is true
     // calibrate = true;
-    std::cout << "algorithm finished succeffuly " << std::endl;
-    std::cout << "<----------------------------------------------> " << std::endl;
+    std::cout << "algorithm finished succeffuly " << "\n";
+    std::cout << "<----------------------------------------------> " << "\n";
     return sub_success;
 
 }
@@ -296,7 +296,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::deep_wafer_holder_desired_t
  */
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::monitor_and_calibrate()
 {
-    std::cout << "monitor calibration started" << std::endl;
+    std::cout << "monitor calibration started" << "\n";
     // algorithm: if current distance is not equal desired thickness, calibrate
     // 1. check if diff is a value that is below the step resolution, continue or
     // 2. move up if diff negativ
@@ -330,7 +330,7 @@ wgm_feedbacks::enum_sub_sys_feedback whs_controller::monitor_and_calibrate()
 }
 wgm_feedbacks::enum_sub_sys_feedback whs_controller::extract_move_home()
 {
-    std::cout << "moving home" << std::endl;
+    std::cout << "moving home" << "\n";
     return linearMover->move_home();
 }
 
