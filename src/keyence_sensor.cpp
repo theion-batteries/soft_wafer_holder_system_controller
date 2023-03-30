@@ -70,12 +70,13 @@ wgm_feedbacks::enum_sub_sys_feedback keyence_sensor::connect()
  */
 double  keyence_sensor::keyence_client_get_value_output0()
 {
-    std::cout << "get reading keyence sensor output0" << "\n";
-    if (keyence_last_mesured_output0.size() > 10) keyence_last_mesured_output0.pop_back(); // remove last if 10
+    std::cout << "get reading keyence sensor output0 ";
+    if (keyence_last_mesured_output0.size() > 10) keyence_last_mesured_output0.pop_front(); // remove last if 10
     double current_value = Kclient->get_value_output(0);
+    std::cout<<"value :"<<current_value<<"\n";
     if (current_value == 0) return 0;
     keyence_last_mesured_output0.push_back(current_value); // add to table
-    std::cout << "value added to table " << keyence_last_mesured_output0.front() << "\n";
+    std::cout << "value added to table " << keyence_last_mesured_output0.back() << "\n";
     return current_value;
 
 }
@@ -95,7 +96,6 @@ double  keyence_sensor::keyence_client_get_value_output1()
     keyence_last_mesured_output1.push_back(current_value); // add to table
     std::cout << "value added to table " << keyence_last_mesured_output1.front() << "\n";
     return current_value;
-
 }
 /**
  * @brief

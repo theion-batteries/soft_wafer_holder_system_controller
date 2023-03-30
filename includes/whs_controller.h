@@ -41,7 +41,7 @@ using enum wgm_feedbacks::enum_hw_feedback;
 using enum wgm_feedbacks::enum_sub_sys_feedback;
 struct whs_config_yaml_params
 {
-    double mm_steps = 50; // distance to move down  default 10 mm
+    double mm_steps = 10; // distance to move down  default 10 mm
     DWORD delay_to_move_request = 2000; // wait between move request  default 2000ms
     double ref_dis = 138;// parameter calibration sensor  default 
     double thickness = 0.1; // thickness of wafer holder default 0.1mm
@@ -55,7 +55,7 @@ struct whs_config_yaml_params
     uint16_t motion_server_port = 8882;
     std::string distance_sensor_server_ip = "192.168.0.104";
     uint16_t distance_sensor_server_port = 6555;
-    uint16_t timeout = 10;
+    uint16_t timeout = 20;
 
 };
 
